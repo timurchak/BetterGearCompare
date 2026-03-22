@@ -10,9 +10,46 @@ $stagingRoot = Join-Path $releaseRoot "staging"
 $addonName = "BetterGearCompare"
 $addonRoot = Join-Path $stagingRoot $addonName
 
+$generatorScript = Join-Path $source "scripts\generate_wowhead_trinket_lua.py"
+$generatedLuaPath = Join-Path $source "BetterGearCompare_TrinketData.lua"
+
+function Get-PythonCommand {
+    $candidates = @(
+        @("python.exe"),
+        @("py", "-3"),
+        @("python")
+    )
+
+    foreach ($candidate in $candidates) {
+        $command = $candidate[0]
+        if (Get-Command $command -ErrorAction SilentlyContinue) {
+            return $candidate
+        }
+    }
+
+    throw "Python was not found. Install Python or make python.exe/py available in PATH."
+}
+
 $tocPath = Join-Path $source "BetterGearCompare.toc"
 if (-not (Test-Path $tocPath)) {
     throw "TOC file not found: $tocPath"
+}
+
+if (-not (Test-Path $generatorScript)) {
+    throw "Generator script not found: $generatorScript"
+}
+
+$pythonCommand = Get-PythonCommand
+Write-Host "Generating trinket data Lua file..."
+if ($pythonCommand.Length -gt 1) {
+    $pythonArgs = @($pythonCommand[1..($pythonCommand.Length - 1)]) + @($generatorScript)
+    & $pythonCommand[0] @pythonArgs
+} else {
+    & $pythonCommand[0] $generatorScript
+}
+
+if (-not (Test-Path $generatedLuaPath)) {
+    throw "Generated Lua file not found after running generator: $generatedLuaPath"
 }
 
 if (-not $Version) {
@@ -34,6 +71,7 @@ $files = @(
     "BetterGearCompare_DB.lua",
     "BetterGearCompare_Stats.lua",
     "BetterGearCompare_SpecRules.lua",
+    "BetterGearCompare_TrinketData.lua",
     "BetterGearCompare_Compare.lua",
     "BetterGearCompare_Tooltip.lua",
     "BetterGearCompare_Options.lua",
