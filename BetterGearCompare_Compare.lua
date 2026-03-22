@@ -255,24 +255,43 @@ local function BuildTrinketComparison(itemLink)
     }
   end
 
-  local result = BuildComparisonResult(
-    GetStateFromDelta(newState.score - chosenState.score),
-    chosenState.slotID,
-    itemLink,
-    chosenState.itemLink,
-    newState.score,
-    chosenState.score,
-    nil,
-    newState.itemLevel,
-    chosenState.itemLevel
-  )
+  local delta = newState.score - chosenState.score
+  local state
+  if delta > 0.01 then
+    state = "better"
+  elseif delta < -0.01 then
+    state = "worse"
+  else
+    state = "equal"
+  end
 
-  result.comparisonMethod = "trinket_tier"
-  result.newTier = newState.tier
-  result.equippedTier = chosenState.tier
-  result.newItemID = newState.itemID
-  result.equippedItemID = chosenState.itemID
-  return result
+  local percent = 0
+  if math.abs(chosenState.score) > 0.001 then
+    percent = (delta / chosenState.score) * 100
+  elseif delta > 0 then
+    percent = 100
+  elseif delta < 0 then
+    percent = -100
+  end
+
+  return {
+    state = state,
+    slotID = chosenState.slotID,
+    slotLabelOverride = nil,
+    itemLink = itemLink,
+    equippedLink = chosenState.itemLink,
+    newScore = newState.score,
+    equippedScore = chosenState.score,
+    newItemLevel = newState.itemLevel or 0,
+    equippedItemLevel = chosenState.itemLevel or 0,
+    delta = delta,
+    percent = percent,
+    comparisonMethod = "trinket_tier",
+    newTier = newState.tier,
+    equippedTier = chosenState.tier,
+    newItemID = newState.itemID,
+    equippedItemID = chosenState.itemID,
+  }
 end
 
 local function BuildComparisonResult(state, slotID, itemLink, equippedLink, newScore, equippedScore, slotLabelOverride, newItemLevel, equippedItemLevel)

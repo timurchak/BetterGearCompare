@@ -1,7 +1,7 @@
 local _, ns = ...
 
 ns.TrinketData = {
-  ["generatedAtUtc"] = "2026-03-22T19:18:55+00:00",
+  ["generatedAtUtc"] = "2026-03-22T20:36:26+00:00",
   ["source"] = "Wowhead Trinket Tier List",
   ["orderedTiers"] = {
     "S",

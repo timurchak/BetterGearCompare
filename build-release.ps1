@@ -23,7 +23,7 @@ function Get-PythonCommand {
     foreach ($candidate in $candidates) {
         $command = $candidate[0]
         if (Get-Command $command -ErrorAction SilentlyContinue) {
-            return $candidate
+            return ,$candidate
         }
     }
 
