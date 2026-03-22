@@ -31,7 +31,7 @@ function ns.Icons:InitBaganator()
   Syndicator.CallbackRegistry:RegisterCallback("EquippedCacheUpdate", PostBaganatorRefresh)
 
   Baganator.API.RegisterCornerWidget(L.ADDON_NAME, "bettergearcompare", function(_, details)
-    return details.itemLink and ns.Compare:IsUpgrade(details.itemLink)
+    return details.itemLink and ns.Compare:ShouldShowUpgradeIcon(details.itemLink)
   end, function(itemButton)
     local arrow = itemButton:CreateTexture(nil, "OVERLAY")
     arrow:SetAtlas("bags-greenarrow", true)

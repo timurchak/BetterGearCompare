@@ -1,1 +1,8 @@
 deploy-test.ps1
+Release/
+.vscode/
+.vscode
+/scripts/__pycache__
+scripts/wowhead_trinket_verification.json
+_tmp_fetch_devourer.py
+_tmp_devourer_overview.html

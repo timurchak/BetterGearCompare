@@ -86,6 +86,33 @@ local function AddComparisonLines(tooltip, itemLink)
   tooltip:AddLine(" ")
   tooltip:AddLine(L.TOOLTIP_HEADER, 0.35, 0.82, 1)
 
+  if comparison.comparisonMethod == "trinket_tier" then
+    local slotLabel = comparison.slotLabelOverride or ns.Compare:GetSlotLabel(comparison.slotID)
+    local newTier = comparison.newTier or L.TOOLTIP_TRINKET_UNLISTED
+    local equippedTier = comparison.equippedTier or L.TOOLTIP_TRINKET_UNLISTED
+
+    if not comparison.newTier then
+      tooltip:AddLine(L.TOOLTIP_TRINKET_NOT_IN_TIERLIST, 0.8, 0.8, 0.8)
+      return
+    end
+
+    if comparison.state == "no_compare" then
+      tooltip:AddLine(string.format(L.TOOLTIP_TRINKET_NO_COMPARE, newTier), 0.8, 0.8, 0.8)
+      return
+    end
+
+    if comparison.state == "better" then
+      tooltip:AddLine(string.format(L.TOOLTIP_TRINKET_BETTER, slotLabel), 0.1, 1, 0.1)
+    elseif comparison.state == "worse" then
+      tooltip:AddLine(string.format(L.TOOLTIP_TRINKET_WORSE, slotLabel), 1, 0.15, 0.15)
+    else
+      tooltip:AddLine(string.format(L.TOOLTIP_TRINKET_EQUAL, slotLabel), 0.85, 0.85, 0.85)
+    end
+
+    tooltip:AddLine(string.format(L.TOOLTIP_TRINKET_TIER, newTier, equippedTier), 0.8, 0.8, 0.8)
+    return
+  end
+
   if comparison.state == "no_compare" then
     tooltip:AddLine(string.format(L.TOOLTIP_NO_COMPARE, comparison.newScore), 0.8, 0.8, 0.8)
     return

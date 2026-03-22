@@ -4,6 +4,7 @@ ns.Compare = {}
 
 local Constants = ns.Constants
 local L = ns.L
+local SpecRules = ns.SpecRules
 
 local ARMOR_SUBCLASS = {
   CLOTH = Enum and Enum.ItemArmorSubclass and Enum.ItemArmorSubclass.Cloth or 1,
@@ -12,24 +13,6 @@ local ARMOR_SUBCLASS = {
   PLATE = Enum and Enum.ItemArmorSubclass and Enum.ItemArmorSubclass.Plate or 4,
   GENERIC = Enum and Enum.ItemArmorSubclass and Enum.ItemArmorSubclass.Generic or 0,
   COSMETIC = Enum and Enum.ItemArmorSubclass and Enum.ItemArmorSubclass.Cosmetic or -1,
-}
-
-local WEAPON_SUBCLASS = {
-  AXE1H = Enum and Enum.ItemWeaponSubclass and Enum.ItemWeaponSubclass.Axe1H or 0,
-  AXE2H = Enum and Enum.ItemWeaponSubclass and Enum.ItemWeaponSubclass.Axe2H or 1,
-  BOW = Enum and Enum.ItemWeaponSubclass and Enum.ItemWeaponSubclass.Bows or 2,
-  GUN = Enum and Enum.ItemWeaponSubclass and Enum.ItemWeaponSubclass.Guns or 3,
-  MACE1H = Enum and Enum.ItemWeaponSubclass and Enum.ItemWeaponSubclass.Mace1H or 4,
-  MACE2H = Enum and Enum.ItemWeaponSubclass and Enum.ItemWeaponSubclass.Mace2H or 5,
-  POLEARM = Enum and Enum.ItemWeaponSubclass and Enum.ItemWeaponSubclass.Polearm or 6,
-  SWORD1H = Enum and Enum.ItemWeaponSubclass and Enum.ItemWeaponSubclass.Sword1H or 7,
-  SWORD2H = Enum and Enum.ItemWeaponSubclass and Enum.ItemWeaponSubclass.Sword2H or 8,
-  WARGLAIVE = Enum and Enum.ItemWeaponSubclass and Enum.ItemWeaponSubclass.Warglaive or 9,
-  STAFF = Enum and Enum.ItemWeaponSubclass and Enum.ItemWeaponSubclass.Staff or 10,
-  FIST = Enum and Enum.ItemWeaponSubclass and Enum.ItemWeaponSubclass.Unarmed or 13,
-  DAGGER = Enum and Enum.ItemWeaponSubclass and Enum.ItemWeaponSubclass.Dagger or 15,
-  CROSSBOW = Enum and Enum.ItemWeaponSubclass and Enum.ItemWeaponSubclass.Crossbow or 18,
-  WAND = Enum and Enum.ItemWeaponSubclass and Enum.ItemWeaponSubclass.Wand or 19,
 }
 
 local CLASS_ARMOR_PREFERENCE = {
@@ -48,111 +31,6 @@ local CLASS_ARMOR_PREFERENCE = {
   WARLOCK = ARMOR_SUBCLASS.CLOTH,
 }
 
-local DUAL_WIELD_CLASSES = {
-  WARRIOR = true,
-  ROGUE = true,
-  SHAMAN = true,
-  MONK = true,
-  DEMONHUNTER = true,
-  DEATHKNIGHT = true,
-}
-
-local CLASS_WEAPON_PROFICIENCIES = {
-  WARRIOR = {
-    [WEAPON_SUBCLASS.AXE1H] = true, [WEAPON_SUBCLASS.AXE2H] = true,
-    [WEAPON_SUBCLASS.MACE1H] = true, [WEAPON_SUBCLASS.MACE2H] = true,
-    [WEAPON_SUBCLASS.POLEARM] = true,
-    [WEAPON_SUBCLASS.SWORD1H] = true, [WEAPON_SUBCLASS.SWORD2H] = true,
-    [WEAPON_SUBCLASS.STAFF] = true,
-    [WEAPON_SUBCLASS.FIST] = true,
-    [WEAPON_SUBCLASS.DAGGER] = true,
-    [WEAPON_SUBCLASS.BOW] = true, [WEAPON_SUBCLASS.GUN] = true, [WEAPON_SUBCLASS.CROSSBOW] = true,
-  },
-  PALADIN = {
-    [WEAPON_SUBCLASS.AXE1H] = true, [WEAPON_SUBCLASS.AXE2H] = true,
-    [WEAPON_SUBCLASS.MACE1H] = true, [WEAPON_SUBCLASS.MACE2H] = true,
-    [WEAPON_SUBCLASS.POLEARM] = true,
-    [WEAPON_SUBCLASS.SWORD1H] = true, [WEAPON_SUBCLASS.SWORD2H] = true,
-  },
-  DEATHKNIGHT = {
-    [WEAPON_SUBCLASS.AXE1H] = true, [WEAPON_SUBCLASS.AXE2H] = true,
-    [WEAPON_SUBCLASS.MACE1H] = true, [WEAPON_SUBCLASS.MACE2H] = true,
-    [WEAPON_SUBCLASS.POLEARM] = true,
-    [WEAPON_SUBCLASS.SWORD1H] = true, [WEAPON_SUBCLASS.SWORD2H] = true,
-  },
-  HUNTER = {
-    [WEAPON_SUBCLASS.AXE1H] = true, [WEAPON_SUBCLASS.AXE2H] = true,
-    [WEAPON_SUBCLASS.POLEARM] = true,
-    [WEAPON_SUBCLASS.SWORD1H] = true, [WEAPON_SUBCLASS.SWORD2H] = true,
-    [WEAPON_SUBCLASS.STAFF] = true,
-    [WEAPON_SUBCLASS.DAGGER] = true,
-    [WEAPON_SUBCLASS.BOW] = true, [WEAPON_SUBCLASS.GUN] = true, [WEAPON_SUBCLASS.CROSSBOW] = true,
-  },
-  SHAMAN = {
-    [WEAPON_SUBCLASS.AXE1H] = true, [WEAPON_SUBCLASS.AXE2H] = true,
-    [WEAPON_SUBCLASS.MACE1H] = true, [WEAPON_SUBCLASS.MACE2H] = true,
-    [WEAPON_SUBCLASS.STAFF] = true,
-    [WEAPON_SUBCLASS.DAGGER] = true,
-    [WEAPON_SUBCLASS.FIST] = true,
-  },
-  EVOKER = {
-    [WEAPON_SUBCLASS.AXE1H] = true,
-    [WEAPON_SUBCLASS.MACE1H] = true,
-    [WEAPON_SUBCLASS.SWORD1H] = true,
-    [WEAPON_SUBCLASS.DAGGER] = true,
-    [WEAPON_SUBCLASS.FIST] = true,
-    [WEAPON_SUBCLASS.STAFF] = true,
-  },
-  ROGUE = {
-    [WEAPON_SUBCLASS.AXE1H] = true,
-    [WEAPON_SUBCLASS.MACE1H] = true,
-    [WEAPON_SUBCLASS.SWORD1H] = true,
-    [WEAPON_SUBCLASS.DAGGER] = true,
-    [WEAPON_SUBCLASS.FIST] = true,
-    [WEAPON_SUBCLASS.BOW] = true, [WEAPON_SUBCLASS.GUN] = true, [WEAPON_SUBCLASS.CROSSBOW] = true,
-  },
-  DRUID = {
-    [WEAPON_SUBCLASS.MACE1H] = true, [WEAPON_SUBCLASS.MACE2H] = true,
-    [WEAPON_SUBCLASS.POLEARM] = true,
-    [WEAPON_SUBCLASS.STAFF] = true,
-    [WEAPON_SUBCLASS.DAGGER] = true,
-    [WEAPON_SUBCLASS.FIST] = true,
-  },
-  MONK = {
-    [WEAPON_SUBCLASS.AXE1H] = true,
-    [WEAPON_SUBCLASS.MACE1H] = true,
-    [WEAPON_SUBCLASS.SWORD1H] = true,
-    [WEAPON_SUBCLASS.POLEARM] = true,
-    [WEAPON_SUBCLASS.STAFF] = true,
-    [WEAPON_SUBCLASS.FIST] = true,
-  },
-  DEMONHUNTER = {
-    [WEAPON_SUBCLASS.AXE1H] = true,
-    [WEAPON_SUBCLASS.SWORD1H] = true,
-    [WEAPON_SUBCLASS.WARGLAIVE] = true,
-    [WEAPON_SUBCLASS.FIST] = true,
-    [WEAPON_SUBCLASS.DAGGER] = true,
-  },
-  PRIEST = {
-    [WEAPON_SUBCLASS.MACE1H] = true,
-    [WEAPON_SUBCLASS.DAGGER] = true,
-    [WEAPON_SUBCLASS.STAFF] = true,
-    [WEAPON_SUBCLASS.WAND] = true,
-  },
-  MAGE = {
-    [WEAPON_SUBCLASS.SWORD1H] = true,
-    [WEAPON_SUBCLASS.DAGGER] = true,
-    [WEAPON_SUBCLASS.STAFF] = true,
-    [WEAPON_SUBCLASS.WAND] = true,
-  },
-  WARLOCK = {
-    [WEAPON_SUBCLASS.SWORD1H] = true,
-    [WEAPON_SUBCLASS.DAGGER] = true,
-    [WEAPON_SUBCLASS.STAFF] = true,
-    [WEAPON_SUBCLASS.WAND] = true,
-  },
-}
-
 local function Debug(...)
   if ns.DebugLog then
     ns:DebugLog(...)
@@ -166,6 +44,14 @@ end
 local function GetItemClassAndSubclass(itemLink)
   local _, _, _, _, _, classID, subClassID = C_Item.GetItemInfoInstant(itemLink)
   return classID, subClassID
+end
+
+local function GetItemLevel(itemLink)
+  return ns.Stats:GetItemLevel(itemLink)
+end
+
+local function GetItemID(itemLink)
+  return C_Item.GetItemInfoInstant(itemLink)
 end
 
 local function IsArmorEquipLocation(equipLocation)
@@ -192,8 +78,16 @@ local function IsWeaponEquipLocation(equipLocation)
     or equipLocation == "INVTYPE_RELIC"
 end
 
+local function IsTrinketEquipLocation(equipLocation)
+  return equipLocation == "INVTYPE_TRINKET"
+end
+
 local function IsTwoHandEquipLocation(equipLocation)
   return equipLocation == "INVTYPE_2HWEAPON"
+end
+
+local function IsGenericOneHandEquipLocation(equipLocation)
+  return equipLocation == "INVTYPE_WEAPON"
 end
 
 local function IsMainHandOnlyEquipLocation(equipLocation)
@@ -206,18 +100,13 @@ local function IsOffHandOnlyEquipLocation(equipLocation)
     or equipLocation == "INVTYPE_SHIELD"
 end
 
-local function IsPairableOneHandEquipLocation(equipLocation)
-  return equipLocation == "INVTYPE_WEAPON"
+local function IsWeaponInOffhand(equipLocation)
+  return equipLocation == "INVTYPE_WEAPON" or equipLocation == "INVTYPE_WEAPONOFFHAND"
 end
 
 local function GetPlayerPreferredArmorSubclass()
   local _, classTag = UnitClass("player")
   return classTag and CLASS_ARMOR_PREFERENCE[classTag] or nil
-end
-
-local function CanPlayerDualWield()
-  local _, classTag = UnitClass("player")
-  return classTag and DUAL_WIELD_CLASSES[classTag] or false
 end
 
 local function IsPreferredArmorType(itemLink)
@@ -243,7 +132,7 @@ local function IsPreferredArmorType(itemLink)
   return subClassID == preferredSubclass
 end
 
-local function IsUsableWeaponType(itemLink)
+local function IsAllowedBySpecRules(itemLink)
   local equipLocation = GetEquipLocation(itemLink)
   if not equipLocation or not IsWeaponEquipLocation(equipLocation) then
     return true
@@ -254,28 +143,139 @@ local function IsUsableWeaponType(itemLink)
     return true
   end
 
-  local _, classTag = UnitClass("player")
-  local allowed = classTag and CLASS_WEAPON_PROFICIENCIES[classTag] or nil
-  if not allowed then
-    Debug("weapon proficiency", equipLocation, "subclass=", subClassID, "class=", classTag or "nil", "allowed=", true, "reason=no map")
-    return true
+  local policy, classTag, specID = SpecRules:GetCurrentWeaponPolicy()
+  local allowed = SpecRules:IsWeaponSubclassAllowed(subClassID)
+  Debug("spec policy", policy and policy.name or "nil", "class=", classTag or "nil", "specID=", specID or "nil", "subclass=", subClassID, "allowed=", allowed)
+  return allowed
+end
+
+local function GetEquippedItemState(slotID, weights)
+  local itemLink = GetInventoryItemLink("player", slotID)
+  if not itemLink then
+    return nil
   end
 
-  local result = allowed[subClassID] == true
-  Debug("weapon proficiency", equipLocation, "subclass=", subClassID, "class=", classTag or "nil", "allowed=", result)
+  local classID, subClassID = GetItemClassAndSubclass(itemLink)
+  return {
+    slotID = slotID,
+    itemLink = itemLink,
+    score = ns.Stats:CalculateScore(itemLink, weights),
+    itemLevel = GetItemLevel(itemLink),
+    equipLocation = GetEquipLocation(itemLink),
+    classID = classID,
+    subClassID = subClassID,
+  }
+end
+
+local function GetCurrentSpecTrinketData()
+  local trinketData = ns.TrinketData
+  if not trinketData or not trinketData.specIDs or not trinketData.specs then
+    return nil
+  end
+
+  local specID = ns.DB:GetCurrentSpecID()
+  local specSlug = specID and trinketData.specIDs[specID] or nil
+  if not specSlug then
+    return nil
+  end
+
+  return trinketData.specs[specSlug]
+end
+
+local function GetTrinketRankingState(itemLink, specData)
+  local itemID = GetItemID(itemLink)
+  if not itemID then
+    return nil
+  end
+
+  local itemScores = specData and specData.itemScores or nil
+  local itemTiers = specData and specData.itemTiers or nil
+
+  return {
+    itemID = itemID,
+    itemLink = itemLink,
+    score = itemScores and itemScores[itemID] or 0,
+    tier = itemTiers and itemTiers[itemID] or nil,
+    itemLevel = GetItemLevel(itemLink),
+    equipLocation = GetEquipLocation(itemLink),
+  }
+end
+
+local function GetEquippedTrinketState(slotID, specData)
+  local itemLink = GetInventoryItemLink("player", slotID)
+  if not itemLink then
+    return nil
+  end
+
+  local state = GetTrinketRankingState(itemLink, specData)
+  if not state then
+    return nil
+  end
+
+  state.slotID = slotID
+  return state
+end
+
+local function BuildTrinketComparison(itemLink)
+  local specData = GetCurrentSpecTrinketData()
+  if not specData then
+    return nil
+  end
+
+  local newState = GetTrinketRankingState(itemLink, specData)
+  if not newState then
+    return nil
+  end
+
+  local slots = Constants.slotCandidates.INVTYPE_TRINKET
+  local chosenState
+
+  for _, slotID in ipairs(slots) do
+    local equippedState = GetEquippedTrinketState(slotID, specData)
+    if equippedState then
+      if not chosenState or equippedState.score < chosenState.score then
+        chosenState = equippedState
+      end
+
+      if #slots == 1 then
+        chosenState = equippedState
+      end
+    end
+  end
+
+  if not chosenState then
+    return {
+      state = "no_compare",
+      slotID = slots[1],
+      newScore = newState.score,
+      newItemLevel = newState.itemLevel,
+      comparisonMethod = "trinket_tier",
+      newTier = newState.tier,
+      newItemID = newState.itemID,
+    }
+  end
+
+  local result = BuildComparisonResult(
+    GetStateFromDelta(newState.score - chosenState.score),
+    chosenState.slotID,
+    itemLink,
+    chosenState.itemLink,
+    newState.score,
+    chosenState.score,
+    nil,
+    newState.itemLevel,
+    chosenState.itemLevel
+  )
+
+  result.comparisonMethod = "trinket_tier"
+  result.newTier = newState.tier
+  result.equippedTier = chosenState.tier
+  result.newItemID = newState.itemID
+  result.equippedItemID = chosenState.itemID
   return result
 end
 
-local function GetEquippedItemScore(slotID, weights)
-  local itemLink = GetInventoryItemLink("player", slotID)
-  if not itemLink then
-    return nil, nil
-  end
-
-  return itemLink, ns.Stats:CalculateScore(itemLink, weights)
-end
-
-local function BuildComparisonResult(state, slotID, itemLink, equippedLink, newScore, equippedScore, slotLabelOverride)
+local function BuildComparisonResult(state, slotID, itemLink, equippedLink, newScore, equippedScore, slotLabelOverride, newItemLevel, equippedItemLevel)
   local delta = newScore - equippedScore
   local percent = 0
 
@@ -287,7 +287,7 @@ local function BuildComparisonResult(state, slotID, itemLink, equippedLink, newS
     percent = -100
   end
 
-  Debug("comparison result", "state=", state, "slot=", slotID, "new=", newScore, "equipped=", equippedScore, "percent=", percent, "label=", slotLabelOverride or "-")
+  Debug("comparison result", "state=", state, "slot=", slotID, "new=", newScore, "equipped=", equippedScore, "percent=", percent, "newIlvl=", newItemLevel or 0, "equippedIlvl=", equippedItemLevel or 0, "label=", slotLabelOverride or "-")
 
   return {
     state = state,
@@ -297,6 +297,8 @@ local function BuildComparisonResult(state, slotID, itemLink, equippedLink, newS
     equippedLink = equippedLink,
     newScore = newScore,
     equippedScore = equippedScore,
+    newItemLevel = newItemLevel or 0,
+    equippedItemLevel = equippedItemLevel or 0,
     delta = delta,
     percent = percent,
   }
@@ -315,36 +317,173 @@ local function GetStateFromDelta(delta)
 end
 
 local function GetEquippedWeaponState(weights)
-  local mainLink, mainScore = GetEquippedItemScore(INVSLOT_MAINHAND, weights)
-  local offLink, offScore = GetEquippedItemScore(INVSLOT_OFFHAND, weights)
-  local mainEquipLocation = mainLink and GetEquipLocation(mainLink) or nil
-  local offEquipLocation = offLink and GetEquipLocation(offLink) or nil
+  local main = GetEquippedItemState(INVSLOT_MAINHAND, weights)
+  local off = GetEquippedItemState(INVSLOT_OFFHAND, weights)
 
-  Debug("equipped weapons", "mh=", mainEquipLocation or "nil", "mhScore=", mainScore or "nil", "oh=", offEquipLocation or "nil", "ohScore=", offScore or "nil")
+  Debug(
+    "equipped weapons",
+    "mh=", main and (main.equipLocation or "nil") or "nil",
+    "mhScore=", main and main.score or "nil",
+    "mhIlvl=", main and main.itemLevel or "nil",
+    "oh=", off and (off.equipLocation or "nil") or "nil",
+    "ohScore=", off and off.score or "nil",
+    "ohIlvl=", off and off.itemLevel or "nil"
+  )
 
   return {
-    mainLink = mainLink,
-    mainScore = mainScore,
-    mainEquipLocation = mainEquipLocation,
-    offLink = offLink,
-    offScore = offScore,
-    offEquipLocation = offEquipLocation,
+    main = main,
+    off = off,
   }
 end
 
-local function IsWeaponInOffhand(equipLocation)
-  return equipLocation == "INVTYPE_WEAPON" or equipLocation == "INVTYPE_WEAPONOFFHAND"
+local function AddCandidate(candidates, slotID, itemLink, equippedLink, newScore, equippedScore, slotLabelOverride, newItemLevel, equippedItemLevel)
+  if not equippedLink or equippedScore == nil then
+    return
+  end
+
+  candidates[#candidates + 1] = {
+    slotID = slotID,
+    itemLink = itemLink,
+    equippedLink = equippedLink,
+    newScore = newScore,
+    equippedScore = equippedScore,
+    newItemLevel = newItemLevel or 0,
+    equippedItemLevel = equippedItemLevel or 0,
+    slotLabelOverride = slotLabelOverride,
+    delta = newScore - equippedScore,
+  }
+end
+
+local function ChooseBestCandidate(candidates)
+  local best
+  for _, candidate in ipairs(candidates) do
+    if not best or candidate.delta > best.delta then
+      best = candidate
+    end
+  end
+  return best
+end
+
+local function GetWeaponSetLabel(offState)
+  if offState and IsWeaponInOffhand(offState.equipLocation) then
+    return L.SLOT_WEAPON_PAIR
+  end
+  return L.SLOT_WEAPON_SET or L.SLOT_WEAPON_PAIR
+end
+
+local function BuildWeaponCandidates(itemLink, baseNewScore, weights)
+  local equipLocation = GetEquipLocation(itemLink)
+  if not equipLocation or not IsWeaponEquipLocation(equipLocation) then
+    return nil
+  end
+
+  local classID = GetItemClassAndSubclass(itemLink)
+  if classID ~= Enum.ItemClass.Weapon then
+    return nil
+  end
+
+  local policy, classTag, specID = SpecRules:GetCurrentWeaponPolicy()
+  local weapons = GetEquippedWeaponState(weights)
+  local candidates = {}
+  local newItemLevel = GetItemLevel(itemLink)
+
+  Debug("weapon candidates", policy and policy.name or "nil", "class=", classTag or "nil", "specID=", specID or "nil", "equipLoc=", equipLocation, "newIlvl=", newItemLevel)
+
+  if not policy then
+    return candidates
+  end
+
+  if IsTwoHandEquipLocation(equipLocation) then
+    if not policy.twoHand then
+      Debug("branch miss", "2h disallowed by spec")
+      return candidates
+    end
+
+    if policy.dualWieldTwoHand then
+      if weapons.main then
+        AddCandidate(candidates, INVSLOT_MAINHAND, itemLink, weapons.main.itemLink, baseNewScore, weapons.main.score, nil, newItemLevel, weapons.main.itemLevel)
+      end
+      if weapons.off and IsTwoHandEquipLocation(weapons.off.equipLocation) then
+        AddCandidate(candidates, INVSLOT_OFFHAND, itemLink, weapons.off.itemLink, baseNewScore, weapons.off.score, nil, newItemLevel, weapons.off.itemLevel)
+      end
+    end
+
+    if (policy.mainHandOffHand or policy.dualWieldOneHand) and weapons.main and not IsTwoHandEquipLocation(weapons.main.equipLocation) then
+      local equippedScore = (weapons.main.score or 0) + (weapons.off and weapons.off.score or 0)
+      local equippedLink = weapons.off and (weapons.main.itemLink .. "\n" .. weapons.off.itemLink) or weapons.main.itemLink
+      local equippedItemLevel = math.max(weapons.main.itemLevel or 0, weapons.off and weapons.off.itemLevel or 0)
+      AddCandidate(candidates, INVSLOT_MAINHAND, itemLink, equippedLink, baseNewScore, equippedScore, GetWeaponSetLabel(weapons.off), newItemLevel, equippedItemLevel)
+    elseif weapons.main and not policy.dualWieldTwoHand then
+      AddCandidate(candidates, INVSLOT_MAINHAND, itemLink, weapons.main.itemLink, baseNewScore, weapons.main.score, nil, newItemLevel, weapons.main.itemLevel)
+    end
+
+    return candidates
+  end
+
+  if IsMainHandOnlyEquipLocation(equipLocation) then
+    if not (policy.oneHand or policy.mainHandOffHand or policy.dualWieldOneHand) then
+      Debug("branch miss", "main-hand item disallowed by spec")
+      return candidates
+    end
+
+    if weapons.main then
+      AddCandidate(candidates, INVSLOT_MAINHAND, itemLink, weapons.main.itemLink, baseNewScore, weapons.main.score, nil, newItemLevel, weapons.main.itemLevel)
+    end
+
+    return candidates
+  end
+
+  if IsOffHandOnlyEquipLocation(equipLocation) then
+    if not (policy.mainHandOffHand or policy.dualWieldOneHand) then
+      Debug("branch miss", "off-hand item disallowed by spec")
+      return candidates
+    end
+
+    if weapons.off then
+      AddCandidate(candidates, INVSLOT_OFFHAND, itemLink, weapons.off.itemLink, baseNewScore, weapons.off.score, nil, newItemLevel, weapons.off.itemLevel)
+    end
+
+    return candidates
+  end
+
+  if IsGenericOneHandEquipLocation(equipLocation) then
+    if not policy.oneHand then
+      Debug("branch miss", "1h disallowed by spec")
+      return candidates
+    end
+
+    if weapons.main and IsTwoHandEquipLocation(weapons.main.equipLocation) then
+      if policy.dualWieldOneHand then
+        AddCandidate(candidates, INVSLOT_MAINHAND, itemLink, weapons.main.itemLink, baseNewScore * 2, weapons.main.score, L.SLOT_TWO_HAND_WEAPON, newItemLevel, weapons.main.itemLevel)
+      else
+        Debug("branch miss", "1h vs equipped 2h invalid for this spec")
+      end
+      return candidates
+    end
+
+    if weapons.main then
+      AddCandidate(candidates, INVSLOT_MAINHAND, itemLink, weapons.main.itemLink, baseNewScore, weapons.main.score, nil, newItemLevel, weapons.main.itemLevel)
+    end
+
+    if policy.dualWieldOneHand and weapons.off and IsWeaponInOffhand(weapons.off.equipLocation) then
+      AddCandidate(candidates, INVSLOT_OFFHAND, itemLink, weapons.off.itemLink, baseNewScore, weapons.off.score, nil, newItemLevel, weapons.off.itemLevel)
+    end
+
+    return candidates
+  end
+
+  return candidates
 end
 
 function ns.Compare:CanCompareItem(itemLink)
   local equipLocation = itemLink and GetEquipLocation(itemLink)
   local hasSlot = equipLocation and Constants.slotCandidates[equipLocation] ~= nil
   local armorOk = itemLink and IsPreferredArmorType(itemLink) or false
-  local weaponOk = itemLink and IsUsableWeaponType(itemLink) or false
+  local specOk = itemLink and IsAllowedBySpecRules(itemLink) or false
 
-  Debug("can compare", equipLocation or "nil", "hasSlot=", hasSlot, "armorOk=", armorOk, "weaponOk=", weaponOk)
+  Debug("can compare", equipLocation or "nil", "hasSlot=", hasSlot, "armorOk=", armorOk, "specOk=", specOk)
 
-  return equipLocation and hasSlot and armorOk and weaponOk
+  return equipLocation and hasSlot and armorOk and specOk
 end
 
 function ns.Compare:GetComparison(itemLink)
@@ -357,117 +496,118 @@ function ns.Compare:GetComparison(itemLink)
 
   local weights = ns.DB:GetActiveWeights()
   local baseNewScore = ns.Stats:CalculateScore(itemLink, weights)
+  local baseNewItemLevel = GetItemLevel(itemLink)
   local equipLocation = GetEquipLocation(itemLink)
   local slots = Constants.slotCandidates[equipLocation]
 
-  Debug("item context", "equipLoc=", equipLocation, "score=", baseNewScore, "slots=", table.concat(slots, ","))
+  Debug("item context", "equipLoc=", equipLocation, "score=", baseNewScore, "newIlvl=", baseNewItemLevel, "slots=", table.concat(slots, ","))
 
-  if IsTwoHandEquipLocation(equipLocation) then
-    local weapons = GetEquippedWeaponState(weights)
-
-    if weapons.mainLink and not IsTwoHandEquipLocation(weapons.mainEquipLocation) then
-      local equippedScore = (weapons.mainScore or 0) + (weapons.offScore or 0)
-      local equippedLink = weapons.offLink and (weapons.mainLink .. "\n" .. weapons.offLink) or weapons.mainLink
-      local slotLabelOverride = weapons.offLink and L.SLOT_WEAPON_PAIR or self:GetSlotLabel(INVSLOT_MAINHAND)
-      local state = GetStateFromDelta(baseNewScore - equippedScore)
-
-      Debug("branch", "2h vs current weapon set", "equippedScore=", equippedScore)
-      return BuildComparisonResult(state, INVSLOT_MAINHAND, itemLink, equippedLink, baseNewScore, equippedScore, slotLabelOverride)
+  if IsTrinketEquipLocation(equipLocation) then
+    local trinketComparison = BuildTrinketComparison(itemLink)
+    if trinketComparison then
+      Debug(
+        "branch",
+        "trinket tier comparison",
+        "state=",
+        trinketComparison.state,
+        "newTier=",
+        trinketComparison.newTier or "nil",
+        "equippedTier=",
+        trinketComparison.equippedTier or "nil"
+      )
+      return trinketComparison
     end
-
-    Debug("branch miss", "2h path not used")
   end
 
-  if IsMainHandOnlyEquipLocation(equipLocation) then
-    local mainLink, mainScore = GetEquippedItemScore(INVSLOT_MAINHAND, weights)
-    if mainLink then
-      Debug("branch", "main-hand only")
-      return BuildComparisonResult(GetStateFromDelta(baseNewScore - mainScore), INVSLOT_MAINHAND, itemLink, mainLink, baseNewScore, mainScore)
+  local weaponCandidates = BuildWeaponCandidates(itemLink, baseNewScore, weights)
+  if weaponCandidates then
+    local bestWeaponCandidate = ChooseBestCandidate(weaponCandidates)
+    if bestWeaponCandidate then
+      Debug("branch", "spec-rule weapon candidate", "slot=", bestWeaponCandidate.slotID, "delta=", bestWeaponCandidate.delta)
+      return BuildComparisonResult(
+        GetStateFromDelta(bestWeaponCandidate.delta),
+        bestWeaponCandidate.slotID,
+        bestWeaponCandidate.itemLink,
+        bestWeaponCandidate.equippedLink,
+        bestWeaponCandidate.newScore,
+        bestWeaponCandidate.equippedScore,
+        bestWeaponCandidate.slotLabelOverride,
+        bestWeaponCandidate.newItemLevel,
+        bestWeaponCandidate.equippedItemLevel
+      )
     end
 
-    Debug("branch miss", "main-hand only no equipped main hand")
+    Debug("branch miss", "no valid weapon candidates")
+    return nil
   end
 
-  if IsOffHandOnlyEquipLocation(equipLocation) then
-    local offLink, offScore = GetEquippedItemScore(INVSLOT_OFFHAND, weights)
-    if offLink then
-      Debug("branch", "off-hand only")
-      return BuildComparisonResult(GetStateFromDelta(baseNewScore - offScore), INVSLOT_OFFHAND, itemLink, offLink, baseNewScore, offScore)
-    end
-
-    Debug("branch miss", "off-hand only no equipped off hand")
-  end
-
-  if IsPairableOneHandEquipLocation(equipLocation) then
-    local weapons = GetEquippedWeaponState(weights)
-
-    if weapons.mainLink and IsTwoHandEquipLocation(weapons.mainEquipLocation) and CanPlayerDualWield() then
-      local pairedScore = baseNewScore * 2
-      local state = GetStateFromDelta(pairedScore - weapons.mainScore)
-      Debug("branch", "1h pair vs equipped 2h", "pairedScore=", pairedScore)
-      return BuildComparisonResult(state, INVSLOT_MAINHAND, itemLink, weapons.mainLink, pairedScore, weapons.mainScore, L.SLOT_TWO_HAND_WEAPON)
-    end
-
-    if weapons.offLink and IsWeaponInOffhand(weapons.offEquipLocation) and CanPlayerDualWield() then
-      local chosenSlot = INVSLOT_MAINHAND
-      local chosenLink = weapons.mainLink
-      local chosenScore = weapons.mainScore
-
-      if weapons.offScore and weapons.mainScore and weapons.offScore < weapons.mainScore then
-        chosenSlot = INVSLOT_OFFHAND
-        chosenLink = weapons.offLink
-        chosenScore = weapons.offScore
-      end
-
-      Debug("branch", "1h vs dual wield weapon", "chosenSlot=", chosenSlot, "chosenScore=", chosenScore)
-      return BuildComparisonResult(GetStateFromDelta(baseNewScore - chosenScore), chosenSlot, itemLink, chosenLink, baseNewScore, chosenScore)
-    end
-
-    if weapons.mainLink then
-      Debug("branch", "1h vs main hand only", "mainEquipLoc=", weapons.mainEquipLocation or "nil")
-      return BuildComparisonResult(GetStateFromDelta(baseNewScore - weapons.mainScore), INVSLOT_MAINHAND, itemLink, weapons.mainLink, baseNewScore, weapons.mainScore)
-    end
-
-    Debug("branch miss", "1h path no equipped main hand")
-  end
-
-  local chosenLink
-  local chosenScore
-  local chosenSlot
+  local chosenState
 
   for _, slotID in ipairs(slots) do
-    local equippedLink, equippedScore = GetEquippedItemScore(slotID, weights)
-    if equippedLink then
-      if not chosenScore or equippedScore < chosenScore then
-        chosenLink = equippedLink
-        chosenScore = equippedScore
-        chosenSlot = slotID
+    local equippedState = GetEquippedItemState(slotID, weights)
+    if equippedState then
+      if not chosenState or equippedState.score < chosenState.score then
+        chosenState = equippedState
       end
 
       if #slots == 1 then
-        chosenLink = equippedLink
-        chosenScore = equippedScore
-        chosenSlot = slotID
+        chosenState = equippedState
       end
     end
   end
 
-  if not chosenLink then
+  if not chosenState then
     Debug("no compare target", "slot=", slots[1])
     return {
       state = "no_compare",
       newScore = baseNewScore,
+      newItemLevel = baseNewItemLevel,
       slotID = slots[1],
     }
   end
 
-  Debug("fallback branch", "slot=", chosenSlot, "equippedScore=", chosenScore)
-  return BuildComparisonResult(GetStateFromDelta(baseNewScore - chosenScore), chosenSlot, itemLink, chosenLink, baseNewScore, chosenScore)
+  Debug("fallback branch", "slot=", chosenState.slotID, "equippedScore=", chosenState.score, "equippedIlvl=", chosenState.itemLevel)
+  return BuildComparisonResult(
+    GetStateFromDelta(baseNewScore - chosenState.score),
+    chosenState.slotID,
+    itemLink,
+    chosenState.itemLink,
+    baseNewScore,
+    chosenState.score,
+    nil,
+    baseNewItemLevel,
+    chosenState.itemLevel
+  )
 end
 
 function ns.Compare:IsUpgrade(itemLink)
   local comparison = self:GetComparison(itemLink)
   return comparison and comparison.state == "better" or false
+end
+
+function ns.Compare:ShouldShowUpgradeIcon(itemLink)
+  local comparison = self:GetComparison(itemLink)
+  if not comparison or comparison.state == "no_compare" then
+    return false
+  end
+
+  if comparison.comparisonMethod == "trinket_tier" then
+    return comparison.state == "better"
+  end
+
+  if not ns.DB:GetConsiderItemLevelForIcons() then
+    return comparison.state == "better"
+  end
+
+  if comparison.newItemLevel > comparison.equippedItemLevel then
+    return true
+  end
+
+  if comparison.newItemLevel < comparison.equippedItemLevel then
+    return false
+  end
+
+  return comparison.state == "better"
 end
 
 function ns.Compare:GetSlotLabel(slotID)

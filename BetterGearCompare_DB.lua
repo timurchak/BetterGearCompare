@@ -61,6 +61,10 @@ function ns.DB:Init()
     BetterGearCompareCharDB.debugEnabled = false
   end
 
+  if BetterGearCompareCharDB.considerItemLevelForIcons == nil then
+    BetterGearCompareCharDB.considerItemLevelForIcons = false
+  end
+
   if ns.SetDebugEnabled then
     ns:SetDebugEnabled(BetterGearCompareCharDB.debugEnabled)
   end
@@ -182,4 +186,13 @@ end
 
 function ns.DB:CloneWeightsFromSpec(specID)
   return DeepCopy(self:GetWeightsForSpec(specID))
+end
+
+function ns.DB:GetConsiderItemLevelForIcons()
+  return BetterGearCompareCharDB and BetterGearCompareCharDB.considerItemLevelForIcons == true or false
+end
+
+function ns.DB:SetConsiderItemLevelForIcons(enabled)
+  BetterGearCompareCharDB = BetterGearCompareCharDB or {}
+  BetterGearCompareCharDB.considerItemLevelForIcons = enabled and true or false
 end

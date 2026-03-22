@@ -13,6 +13,28 @@ function ns.Stats:GetItemStats(itemLink)
   return GetItemStatsAPI(itemLink)
 end
 
+function ns.Stats:GetItemLevel(itemLink)
+  if not itemLink then
+    return 0
+  end
+
+  if C_Item and C_Item.GetDetailedItemLevelInfo then
+    local level = C_Item.GetDetailedItemLevelInfo(itemLink)
+    if level then
+      return level
+    end
+  end
+
+  if GetDetailedItemLevelInfo then
+    local level = GetDetailedItemLevelInfo(itemLink)
+    if level then
+      return level
+    end
+  end
+
+  return 0
+end
+
 function ns.Stats:SanitizeWeight(value)
   local numericValue = tonumber((tostring(value or "0"):gsub(",", ".")))
   if not numericValue then

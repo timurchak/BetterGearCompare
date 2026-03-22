@@ -135,6 +135,15 @@ local function BuildPanel(panel)
   note:SetPoint("TOPLEFT", anchor, "BOTTOMLEFT", 0, -20)
   note:SetWidth(760)
 
+  local itemLevelCheck = CreateFrame("CheckButton", nil, panel, "InterfaceOptionsCheckButtonTemplate")
+  itemLevelCheck:SetPoint("TOPLEFT", note, "BOTTOMLEFT", -4, -14)
+  itemLevelCheck.Text:SetText(L.SETTINGS_ICON_ITEM_LEVEL)
+  itemLevelCheck:SetScript("OnClick", function(self)
+    ns.DB:SetConsiderItemLevelForIcons(self:GetChecked())
+    ns.Icons:Refresh()
+  end)
+  panel.itemLevelCheck = itemLevelCheck
+
   saveButton:SetScript("OnClick", function()
     local specID = GetSelectedSpecID()
     local name = strtrim(profileNameBox:GetText() or "")
@@ -228,6 +237,8 @@ function ns.Options:Refresh()
     local value = weights[row.statKey] or 0
     row.input:SetText(FormatWeight(value))
   end
+
+  panel.itemLevelCheck:SetChecked(ns.DB:GetConsiderItemLevelForIcons())
 end
 
 function ns.Options:Open()
