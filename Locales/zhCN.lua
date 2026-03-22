@@ -1,0 +1,26 @@
+local _, ns = ...
+
+ns.Locale:AddTranslations("zhCN", {
+  ADDON_NAME = "BetterGearCompare",
+  ADDON_DESCRIPTION = "基于属性权重的装备比较。可以为每个专精分别指定配置。",
+  SETTINGS_CATEGORY = "BetterGearCompare",
+  SETTINGS_SPEC = "专精",
+  SETTINGS_PROFILE = "配置",
+  SETTINGS_PROFILE_NAME = "配置名称",
+  SETTINGS_SAVE = "保存",
+  SETTINGS_DELETE = "删除",
+  SETTINGS_NOTE = "支持小数，例如 1.25 或 7.5。升级物品会显示箭头。",
+  ERROR_ENTER_PROFILE_NAME = "请输入配置名称。",
+  ERROR_DEFAULT_PROFILE_DELETE = "不能删除 Default 配置。",
+  TOOLTIP_HEADER = "BetterGearCompare",
+  TOOLTIP_NO_COMPARE = "没有可比较的已装备物品。评分：%.1f",
+  TOOLTIP_BETTER = "|A:bags-greenarrow:0:0|a 对%s更好 %.1f%%",
+  TOOLTIP_WORSE = "对%s更差 %.1f%%",
+  TOOLTIP_EQUAL = "对%s相同",
+  TOOLTIP_SCORE = "评分：%.1f 对 %.1f",
+  SLOT_GENERIC = "已装备物品",
+  SLOT_WEAPON_PAIR = "双持武器组合",
+  SLOT_TWO_HAND_WEAPON = "双手武器",
+  DEBUG_ENABLED = "BetterGearCompare 调试已启用。",
+  DEBUG_DISABLED = "BetterGearCompare 调试已禁用。",
+})

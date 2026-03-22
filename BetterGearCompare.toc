@@ -1,0 +1,18 @@
+## Interface: 120000
+## Title: BetterGearCompare
+## Notes: Lightweight weighted stat comparison for gear tooltips.
+## Author: OpenAI
+## Version: 0.1.0
+## SavedVariables: BetterGearCompareDB
+## SavedVariablesPerCharacter: BetterGearCompareCharDB
+
+BetterGearCompare.lua
+BetterGearCompare_Localization.lua
+Locales\Localization.xml
+BetterGearCompare_Constants.lua
+BetterGearCompare_DB.lua
+BetterGearCompare_Stats.lua
+BetterGearCompare_Compare.lua
+BetterGearCompare_Tooltip.lua
+BetterGearCompare_Options.lua
+BetterGearCompare_Icons.lua

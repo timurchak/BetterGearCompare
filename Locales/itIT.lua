@@ -1,0 +1,26 @@
+local _, ns = ...
+
+ns.Locale:AddTranslations("itIT", {
+  ADDON_NAME = "BetterGearCompare",
+  ADDON_DESCRIPTION = "Confronto equipaggiamento con pesi statistiche. I profili possono essere assegnati separatamente per ogni specializzazione.",
+  SETTINGS_CATEGORY = "BetterGearCompare",
+  SETTINGS_SPEC = "Specializzazione",
+  SETTINGS_PROFILE = "Profilo",
+  SETTINGS_PROFILE_NAME = "Nome profilo",
+  SETTINGS_SAVE = "Salva",
+  SETTINGS_DELETE = "Elimina",
+  SETTINGS_NOTE = "Sono consentiti valori decimali, ad esempio 1.25 o 7.5. Le frecce di upgrade vengono mostrate per i miglioramenti.",
+  ERROR_ENTER_PROFILE_NAME = "Inserisci un nome profilo.",
+  ERROR_DEFAULT_PROFILE_DELETE = "Il profilo Default non può essere eliminato.",
+  TOOLTIP_HEADER = "BetterGearCompare",
+  TOOLTIP_NO_COMPARE = "Nessun oggetto equipaggiato da confrontare. Punteggio: %.1f",
+  TOOLTIP_BETTER = "|A:bags-greenarrow:0:0|a Migliore per %s del %.1f%%",
+  TOOLTIP_WORSE = "Peggiore per %s del %.1f%%",
+  TOOLTIP_EQUAL = "Uguale per %s",
+  TOOLTIP_SCORE = "Punteggio: %.1f vs %.1f",
+  SLOT_GENERIC = "oggetto equipaggiato",
+  SLOT_WEAPON_PAIR = "coppia di armi",
+  SLOT_TWO_HAND_WEAPON = "arma a due mani",
+  DEBUG_ENABLED = "Debug BetterGearCompare attivato.",
+  DEBUG_DISABLED = "Debug BetterGearCompare disattivato.",
+})

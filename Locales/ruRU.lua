@@ -1,0 +1,26 @@
+local _, ns = ...
+
+ns.Locale:AddTranslations("ruRU", {
+  ADDON_NAME = "BetterGearCompare",
+  ADDON_DESCRIPTION = "Сравнение экипировки по весам статов. Профили можно назначать отдельно для каждой специализации.",
+  SETTINGS_CATEGORY = "BetterGearCompare",
+  SETTINGS_SPEC = "Специализация",
+  SETTINGS_PROFILE = "Профиль",
+  SETTINGS_PROFILE_NAME = "Имя профиля",
+  SETTINGS_SAVE = "Сохранить",
+  SETTINGS_DELETE = "Удалить",
+  SETTINGS_NOTE = "Допускаются дробные значения, например 1.25 или 7.5. Стрелка на предмете показывается для улучшений.",
+  ERROR_ENTER_PROFILE_NAME = "Введите имя профиля.",
+  ERROR_DEFAULT_PROFILE_DELETE = "Профиль Default удалять нельзя.",
+  TOOLTIP_HEADER = "BetterGearCompare",
+  TOOLTIP_NO_COMPARE = "Нет предмета для сравнения. Score: %.1f",
+  TOOLTIP_BETTER = "|A:bags-greenarrow:0:0|a Лучше, чем %s, на %.1f%%",
+  TOOLTIP_WORSE = "Хуже, чем %s, на %.1f%%",
+  TOOLTIP_EQUAL = "Равно по сравнению с %s",
+  TOOLTIP_SCORE = "Score: %.1f vs %.1f",
+  SLOT_GENERIC = "экипированный предмет",
+  SLOT_WEAPON_PAIR = "пара оружия",
+  SLOT_TWO_HAND_WEAPON = "двуручное оружие",
+  DEBUG_ENABLED = "Отладка BetterGearCompare включена.",
+  DEBUG_DISABLED = "Отладка BetterGearCompare выключена.",
+})

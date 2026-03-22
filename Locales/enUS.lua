@@ -1,0 +1,26 @@
+local _, ns = ...
+
+ns.Locale:AddTranslations("enUS", {
+  ADDON_NAME = "BetterGearCompare",
+  ADDON_DESCRIPTION = "Gear comparison using weighted stats. Profiles can be assigned separately for each specialization.",
+  SETTINGS_CATEGORY = "BetterGearCompare",
+  SETTINGS_SPEC = "Specialization",
+  SETTINGS_PROFILE = "Profile",
+  SETTINGS_PROFILE_NAME = "Profile name",
+  SETTINGS_SAVE = "Save",
+  SETTINGS_DELETE = "Delete",
+  SETTINGS_NOTE = "Decimal values are allowed, for example 1.25 or 7.5. Upgrade arrows are shown for upgrades.",
+  ERROR_ENTER_PROFILE_NAME = "Enter a profile name.",
+  ERROR_DEFAULT_PROFILE_DELETE = "The Default profile cannot be deleted.",
+  TOOLTIP_HEADER = "BetterGearCompare",
+  TOOLTIP_NO_COMPARE = "No equipped item to compare. Score: %.1f",
+  TOOLTIP_BETTER = "|A:bags-greenarrow:0:0|a Better for %s by %.1f%%",
+  TOOLTIP_WORSE = "Worse for %s by %.1f%%",
+  TOOLTIP_EQUAL = "Equal for %s",
+  TOOLTIP_SCORE = "Score: %.1f vs %.1f",
+  SLOT_GENERIC = "equipped item",
+  SLOT_WEAPON_PAIR = "weapon pair",
+  SLOT_TWO_HAND_WEAPON = "two-handed weapon",
+  DEBUG_ENABLED = "BetterGearCompare debug enabled.",
+  DEBUG_DISABLED = "BetterGearCompare debug disabled.",
+})

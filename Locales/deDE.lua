@@ -1,0 +1,26 @@
+local _, ns = ...
+
+ns.Locale:AddTranslations("deDE", {
+  ADDON_NAME = "BetterGearCompare",
+  ADDON_DESCRIPTION = "Ausrüstungsvergleich mit Attributgewichten. Profile können pro Spezialisierung separat zugewiesen werden.",
+  SETTINGS_CATEGORY = "BetterGearCompare",
+  SETTINGS_SPEC = "Spezialisierung",
+  SETTINGS_PROFILE = "Profil",
+  SETTINGS_PROFILE_NAME = "Profilname",
+  SETTINGS_SAVE = "Speichern",
+  SETTINGS_DELETE = "Löschen",
+  SETTINGS_NOTE = "Dezimalwerte sind erlaubt, zum Beispiel 1.25 oder 7.5. Upgrade-Pfeile werden für Verbesserungen angezeigt.",
+  ERROR_ENTER_PROFILE_NAME = "Profilnamen eingeben.",
+  ERROR_DEFAULT_PROFILE_DELETE = "Das Default-Profil kann nicht gelöscht werden.",
+  TOOLTIP_HEADER = "BetterGearCompare",
+  TOOLTIP_NO_COMPARE = "Kein ausgerüsteter Gegenstand zum Vergleichen. Wert: %.1f",
+  TOOLTIP_BETTER = "|A:bags-greenarrow:0:0|a Besser für %s um %.1f%%",
+  TOOLTIP_WORSE = "Schlechter für %s um %.1f%%",
+  TOOLTIP_EQUAL = "Gleich für %s",
+  TOOLTIP_SCORE = "Wert: %.1f vs %.1f",
+  SLOT_GENERIC = "ausgerüsteten Gegenstand",
+  SLOT_WEAPON_PAIR = "Waffenpaar",
+  SLOT_TWO_HAND_WEAPON = "Zweihandwaffe",
+  DEBUG_ENABLED = "BetterGearCompare-Debug aktiviert.",
+  DEBUG_DISABLED = "BetterGearCompare-Debug deaktiviert.",
+})
