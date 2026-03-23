@@ -11,6 +11,8 @@ ns.Locale:AddTranslations("ruRU", {
   SETTINGS_DELETE = "Удалить",
   SETTINGS_NOTE = "Допускаются дробные значения, например 1.25 или 7.5. Стрелка на предмете показывается для улучшений.",
   SETTINGS_ICON_ITEM_LEVEL = "Учитывать уровень предмета для стрелки",
+  WELCOME_MESSAGE = "Чтобы сравнение экипировки было корректным, сначала задайте веса статов. Откройте настройки, чтобы настроить их для этого персонажа.",
+  WELCOME_OPEN_SETTINGS = "Открыть настройки",
   ERROR_ENTER_PROFILE_NAME = "Введите имя профиля.",
   ERROR_DEFAULT_PROFILE_DELETE = "Профиль Default удалять нельзя.",
   TOOLTIP_HEADER = "BetterGearCompare",

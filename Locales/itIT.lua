@@ -11,6 +11,8 @@ ns.Locale:AddTranslations("itIT", {
   SETTINGS_DELETE = "Elimina",
   SETTINGS_NOTE = "Sono consentiti valori decimali, ad esempio 1.25 o 7.5. Le frecce di upgrade vengono mostrate per i miglioramenti.",
   SETTINGS_ICON_ITEM_LEVEL = "Usa il livello oggetto per la freccia upgrade",
+  WELCOME_MESSAGE = "Per confrontare correttamente l'equipaggiamento, imposta prima i pesi delle statistiche. Apri le impostazioni per configurarli per questo personaggio.",
+  WELCOME_OPEN_SETTINGS = "Apri impostazioni",
   ERROR_ENTER_PROFILE_NAME = "Inserisci un nome profilo.",
   ERROR_DEFAULT_PROFILE_DELETE = "Il profilo Default non può essere eliminato.",
   TOOLTIP_HEADER = "BetterGearCompare",

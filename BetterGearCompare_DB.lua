@@ -65,6 +65,10 @@ function ns.DB:Init()
     BetterGearCompareCharDB.considerItemLevelForIcons = false
   end
 
+  if BetterGearCompareCharDB.welcomeSeen == nil then
+    BetterGearCompareCharDB.welcomeSeen = false
+  end
+
   if ns.SetDebugEnabled then
     ns:SetDebugEnabled(BetterGearCompareCharDB.debugEnabled)
   end
@@ -195,4 +199,13 @@ end
 function ns.DB:SetConsiderItemLevelForIcons(enabled)
   BetterGearCompareCharDB = BetterGearCompareCharDB or {}
   BetterGearCompareCharDB.considerItemLevelForIcons = enabled and true or false
+end
+
+function ns.DB:HasSeenWelcome()
+  return BetterGearCompareCharDB and BetterGearCompareCharDB.welcomeSeen == true or false
+end
+
+function ns.DB:MarkWelcomeSeen()
+  BetterGearCompareCharDB = BetterGearCompareCharDB or {}
+  BetterGearCompareCharDB.welcomeSeen = true
 end

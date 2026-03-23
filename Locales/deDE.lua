@@ -11,6 +11,8 @@ ns.Locale:AddTranslations("deDE", {
   SETTINGS_DELETE = "Löschen",
   SETTINGS_NOTE = "Dezimalwerte sind erlaubt, zum Beispiel 1.25 oder 7.5. Upgrade-Pfeile werden für Verbesserungen angezeigt.",
   SETTINGS_ICON_ITEM_LEVEL = "Gegenstandsstufe für Upgrade-Pfeil verwenden",
+  WELCOME_MESSAGE = "Damit der Ausrüstungsvergleich korrekt funktioniert, lege zuerst Attributgewichte fest. Öffne die Einstellungen, um sie für diesen Charakter zu konfigurieren.",
+  WELCOME_OPEN_SETTINGS = "Einstellungen öffnen",
   ERROR_ENTER_PROFILE_NAME = "Profilnamen eingeben.",
   ERROR_DEFAULT_PROFILE_DELETE = "Das Default-Profil kann nicht gelöscht werden.",
   TOOLTIP_HEADER = "BetterGearCompare",

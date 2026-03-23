@@ -11,6 +11,8 @@ ns.Locale:AddTranslations("zhTW", {
   SETTINGS_DELETE = "刪除",
   SETTINGS_NOTE = "支援小數，例如 1.25 或 7.5。升級物品會顯示箭頭。",
   SETTINGS_ICON_ITEM_LEVEL = "升級箭頭考慮物品等級",
+  WELCOME_MESSAGE = "為了正確比較裝備，請先設定屬性權重。開啟設定即可為此角色完成配置。",
+  WELCOME_OPEN_SETTINGS = "開啟設定",
   ERROR_ENTER_PROFILE_NAME = "請輸入設定檔名稱。",
   ERROR_DEFAULT_PROFILE_DELETE = "不能刪除 Default 設定檔。",
   TOOLTIP_HEADER = "BetterGearCompare",

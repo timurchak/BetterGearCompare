@@ -51,6 +51,19 @@ local function OnAddonLoaded(addonName)
   end
 end
 
+local function TryShowFirstRunWelcome()
+  if not ns.DB or not ns.Options then
+    return
+  end
+
+  if ns.DB:HasSeenWelcome() then
+    return
+  end
+
+  ns.DB:MarkWelcomeSeen()
+  ns.Options:ShowFirstRunWelcome()
+end
+
 local function OnSpecializationChanged()
   if not BetterGearCompareDB or not BetterGearCompareCharDB then
     return
@@ -67,11 +80,18 @@ local function OnSpecializationChanged()
   end
 end
 
+local hasHandledInitialPlayerEnter = false
+
 ns.frame:SetScript("OnEvent", function(_, event, ...)
   if event == "ADDON_LOADED" then
     OnAddonLoaded(...)
   elseif event == "PLAYER_ENTERING_WORLD" or event == "PLAYER_SPECIALIZATION_CHANGED" or event == "ACTIVE_TALENT_GROUP_CHANGED" then
     OnSpecializationChanged()
+
+    if event == "PLAYER_ENTERING_WORLD" and not hasHandledInitialPlayerEnter then
+      hasHandledInitialPlayerEnter = true
+      TryShowFirstRunWelcome()
+    end
   end
 end)
 

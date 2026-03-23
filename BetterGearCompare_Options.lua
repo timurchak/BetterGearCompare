@@ -247,6 +247,25 @@ function ns.Options:Open()
   end
 end
 
+function ns.Options:ShowFirstRunWelcome()
+  if not StaticPopupDialogs["BETTERGEARCOMPARE_FIRST_RUN"] then
+    StaticPopupDialogs["BETTERGEARCOMPARE_FIRST_RUN"] = {
+      text = L.WELCOME_MESSAGE,
+      button1 = L.WELCOME_OPEN_SETTINGS,
+      button2 = CLOSE,
+      OnAccept = function()
+        ns.Options:Open()
+      end,
+      timeout = 0,
+      whileDead = 1,
+      hideOnEscape = 1,
+      preferredIndex = STATICPOPUP_NUMDIALOGS,
+    }
+  end
+
+  StaticPopup_Show("BETTERGEARCOMPARE_FIRST_RUN")
+end
+
 function ns.Options:Init()
   local panel = CreateFrame("Frame")
   panel.name = Constants.settingsCategoryName

@@ -11,6 +11,8 @@ ns.Locale:AddTranslations("enUS", {
   SETTINGS_DELETE = "Delete",
   SETTINGS_NOTE = "Decimal values are allowed, for example 1.25 or 7.5. Upgrade arrows are shown for upgrades.",
   SETTINGS_ICON_ITEM_LEVEL = "Use item level for upgrade arrow",
+  WELCOME_MESSAGE = "To compare gear correctly, set stat weights first. Open the settings to configure them for this character.",
+  WELCOME_OPEN_SETTINGS = "Open settings",
   ERROR_ENTER_PROFILE_NAME = "Enter a profile name.",
   ERROR_DEFAULT_PROFILE_DELETE = "The Default profile cannot be deleted.",
   TOOLTIP_HEADER = "BetterGearCompare",

@@ -78,6 +78,12 @@ local function IsWeaponEquipLocation(equipLocation)
     or equipLocation == "INVTYPE_RELIC"
 end
 
+local function IsRangedEquipLocation(equipLocation)
+  return equipLocation == "INVTYPE_RANGED"
+    or equipLocation == "INVTYPE_RANGEDRIGHT"
+    or equipLocation == "INVTYPE_THROWN"
+end
+
 local function IsTrinketEquipLocation(equipLocation)
   return equipLocation == "INVTYPE_TRINKET"
 end
@@ -390,6 +396,13 @@ local function GetWeaponSetLabel(offState)
   return L.SLOT_WEAPON_SET or L.SLOT_WEAPON_PAIR
 end
 
+local function IsRangedWeaponSubclass(subClassID)
+  local weaponSubclass = SpecRules:GetWeaponSubclassConstants()
+  return subClassID == weaponSubclass.BOW
+    or subClassID == weaponSubclass.CROSSBOW
+    or subClassID == weaponSubclass.GUN
+end
+
 local function BuildWeaponCandidates(itemLink, baseNewScore, weights)
   local equipLocation = GetEquipLocation(itemLink)
   if not equipLocation or not IsWeaponEquipLocation(equipLocation) then
@@ -405,10 +418,32 @@ local function BuildWeaponCandidates(itemLink, baseNewScore, weights)
   local weapons = GetEquippedWeaponState(weights)
   local candidates = {}
   local newItemLevel = GetItemLevel(itemLink)
+  local _, newSubClassID = GetItemClassAndSubclass(itemLink)
 
   Debug("weapon candidates", policy and policy.name or "nil", "class=", classTag or "nil", "specID=", specID or "nil", "equipLoc=", equipLocation, "newIlvl=", newItemLevel)
 
   if not policy then
+    return candidates
+  end
+
+  if IsRangedEquipLocation(equipLocation) then
+    local equippedMain = weapons.main
+    local equippedIsRanged = equippedMain
+      and IsRangedEquipLocation(equippedMain.equipLocation)
+      and IsRangedWeaponSubclass(equippedMain.subClassID)
+
+    if not IsRangedWeaponSubclass(newSubClassID) then
+      Debug("branch miss", "ranged item subclass unsupported", "subclass=", newSubClassID)
+      return candidates
+    end
+
+    if equippedIsRanged then
+      AddCandidate(candidates, INVSLOT_MAINHAND, itemLink, equippedMain.itemLink, baseNewScore, equippedMain.score, nil, newItemLevel, equippedMain.itemLevel)
+      Debug("branch", "ranged family compare", "slot=", INVSLOT_MAINHAND, "equippedSubClass=", equippedMain.subClassID, "newSubClass=", newSubClassID)
+    else
+      Debug("branch miss", "no equipped ranged weapon to compare")
+    end
+
     return candidates
   end
 
