@@ -21,19 +21,7 @@ local function ShouldAnnotateTooltip(tooltip)
 end
 
 local function TooltipAlreadyAnnotated(tooltip)
-  local name = tooltip:GetName()
-  if not name then
-    return false
-  end
-
-  for lineIndex = 1, tooltip:NumLines() do
-    local leftText = _G[name .. "TextLeft" .. lineIndex]
-    if leftText and leftText:GetText() == "BetterGearCompare" then
-      return true
-    end
-  end
-
-  return false
+  return tooltip.__bgcAnnotated == true
 end
 
 local function ExtractItemLink(tooltip, data)
@@ -149,6 +137,7 @@ local function HandleTooltipItem(tooltip, data)
 
   tooltip.__bgcProcessing = true
   AddComparisonLines(tooltip, itemLink)
+  tooltip.__bgcAnnotated = true
   tooltip:Show()
   tooltip.__bgcProcessing = false
 end
@@ -197,8 +186,16 @@ function ns.Tooltip:Init()
     return
   end
 
+  local function ResetAnnotationFlag(tip)
+    tip.__bgcAnnotated = false
+  end
+
   HookBasicTooltip(GameTooltip)
   HookProcessInfoTooltip(GameTooltip)
+
+  if GameTooltip:HasScript("OnTooltipCleared") then
+    GameTooltip:HookScript("OnTooltipCleared", ResetAnnotationFlag)
+  end
 
   for _, methodName in ipairs(ns.Constants.tooltipMethods) do
     if methodName == "SetHyperlink" then
