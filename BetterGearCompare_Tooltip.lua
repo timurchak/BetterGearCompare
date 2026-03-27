@@ -60,22 +60,10 @@ local function ExtractItemLink(tooltip, data)
   return nil
 end
 
-local function AddComparisonLines(tooltip, itemLink)
-  local comparison = ns.Compare:GetComparison(itemLink)
-  if not comparison then
-    if ns.DebugLog then
-      ns:DebugLog("tooltip skip", "no comparison result")
-    end
-    return
-  end
-
+local function AddSingleComparisonLines(tooltip, comparison)
   local slotLabel = comparison.slotLabelOverride or ns.Compare:GetSlotLabel(comparison.slotID)
 
-  tooltip:AddLine(" ")
-  tooltip:AddLine(L.TOOLTIP_HEADER, 0.35, 0.82, 1)
-
   if comparison.comparisonMethod == "trinket_tier" then
-    local slotLabel = comparison.slotLabelOverride or ns.Compare:GetSlotLabel(comparison.slotID)
     local newTier = comparison.newTier or L.TOOLTIP_TRINKET_UNLISTED
     local equippedTier = comparison.equippedTier or L.TOOLTIP_TRINKET_UNLISTED
 
@@ -115,6 +103,23 @@ local function AddComparisonLines(tooltip, itemLink)
   end
 
   tooltip:AddLine(string.format(L.TOOLTIP_SCORE, comparison.newScore, comparison.equippedScore), 0.8, 0.8, 0.8)
+end
+
+local function AddComparisonLines(tooltip, itemLink)
+  local comparisons = ns.Compare:GetAllComparisons(itemLink)
+  if not comparisons or #comparisons == 0 then
+    if ns.DebugLog then
+      ns:DebugLog("tooltip skip", "no comparison result")
+    end
+    return
+  end
+
+  tooltip:AddLine(" ")
+  tooltip:AddLine(L.TOOLTIP_HEADER, 0.35, 0.82, 1)
+
+  for _, comparison in ipairs(comparisons) do
+    AddSingleComparisonLines(tooltip, comparison)
+  end
 end
 
 local function HandleTooltipItem(tooltip, data)

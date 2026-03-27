@@ -88,6 +88,10 @@ local function IsTrinketEquipLocation(equipLocation)
   return equipLocation == "INVTYPE_TRINKET"
 end
 
+local function IsRingEquipLocation(equipLocation)
+  return equipLocation == "INVTYPE_FINGER"
+end
+
 local function IsTwoHandEquipLocation(equipLocation)
   return equipLocation == "INVTYPE_2HWEAPON"
 end
@@ -666,4 +670,59 @@ end
 
 function ns.Compare:GetSlotLabel(slotID)
   return Constants.slotLabels[slotID] or L.SLOT_GENERIC
+end
+
+function ns.Compare:GetAllComparisons(itemLink)
+  Debug("start all comparisons", itemLink or "nil")
+
+  if not self:CanCompareItem(itemLink) then
+    Debug("stop all comparisons", "CanCompareItem=false")
+    return nil
+  end
+
+  local equipLocation = GetEquipLocation(itemLink)
+
+  if not IsRingEquipLocation(equipLocation) then
+    local comparison = self:GetComparison(itemLink)
+    if comparison then
+      return { comparison }
+    end
+    return nil
+  end
+
+  local weights = ns.DB:GetActiveWeights()
+  local baseNewScore = ns.Stats:CalculateScore(itemLink, weights)
+  local baseNewItemLevel = GetItemLevel(itemLink)
+  local slots = Constants.slotCandidates[equipLocation]
+  local results = {}
+
+  for _, slotID in ipairs(slots) do
+    local equippedState = GetEquippedItemState(slotID, weights)
+    if equippedState then
+      local delta = baseNewScore - equippedState.score
+      local result = BuildComparisonResult(
+        GetStateFromDelta(delta),
+        slotID,
+        itemLink,
+        equippedState.itemLink,
+        baseNewScore,
+        equippedState.score,
+        nil,
+        baseNewItemLevel,
+        equippedState.itemLevel
+      )
+      results[#results + 1] = result
+    end
+  end
+
+  if #results == 0 then
+    return { {
+      state = "no_compare",
+      newScore = baseNewScore,
+      newItemLevel = baseNewItemLevel,
+      slotID = slots[1],
+    } }
+  end
+
+  return results
 end
