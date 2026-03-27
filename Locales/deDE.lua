@@ -28,6 +28,7 @@ ns.Locale:AddTranslations("deDE", {
   TOOLTIP_TRINKET_TIER = "Tier: %s vs %s",
   TOOLTIP_TRINKET_UNLISTED = "Nicht gelistet",
   TOOLTIP_TRINKET_NOT_IN_TIERLIST = "Schmuckstück ist nicht in der Tier-Liste.",
+  TOOLTIP_BIS = "|A:bags-greenarrow:0:0|a Best in Slot (Wowhead)",
   SLOT_GENERIC = "ausgerüsteten Gegenstand",
   SLOT_WEAPON_PAIR = "Waffenpaar",
   SLOT_WEAPON_SET = "Waffenset",

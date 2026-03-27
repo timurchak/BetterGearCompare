@@ -28,6 +28,7 @@ ns.Locale:AddTranslations("itIT", {
   TOOLTIP_TRINKET_TIER = "Tier: %s vs %s",
   TOOLTIP_TRINKET_UNLISTED = "Non in elenco",
   TOOLTIP_TRINKET_NOT_IN_TIERLIST = "Il trinket non e presente nella tier list.",
+  TOOLTIP_BIS = "|A:bags-greenarrow:0:0|a Best in Slot (Wowhead)",
   SLOT_GENERIC = "oggetto equipaggiato",
   SLOT_WEAPON_PAIR = "coppia di armi",
   SLOT_WEAPON_SET = "set d'armi",

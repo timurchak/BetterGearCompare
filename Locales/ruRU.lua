@@ -28,6 +28,7 @@ ns.Locale:AddTranslations("ruRU", {
   TOOLTIP_TRINKET_TIER = "Тир: %s vs %s",
   TOOLTIP_TRINKET_UNLISTED = "Нет в списке",
   TOOLTIP_TRINKET_NOT_IN_TIERLIST = "Тринкет отсутствует в тир-листе.",
+  TOOLTIP_BIS = "|A:bags-greenarrow:0:0|a Best in Slot (Wowhead)",
   SLOT_GENERIC = "экипированный предмет",
   SLOT_WEAPON_PAIR = "пара оружия",
   SLOT_WEAPON_SET = "комплект оружия",

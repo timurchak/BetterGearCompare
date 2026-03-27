@@ -173,6 +173,27 @@ local function GetEquippedItemState(slotID, weights)
   }
 end
 
+local function IsItemBis(itemLink)
+  local bisData = ns.BisData
+  if not bisData or not bisData.specIDs or not bisData.specs then
+    return false
+  end
+
+  local specID = ns.DB:GetCurrentSpecID()
+  local specSlug = specID and bisData.specIDs[specID] or nil
+  if not specSlug then
+    return false
+  end
+
+  local specData = bisData.specs[specSlug]
+  if not specData or not specData.bisItems then
+    return false
+  end
+
+  local itemID = GetItemID(itemLink)
+  return itemID and specData.bisItems[itemID] == true or false
+end
+
 local function GetCurrentSpecTrinketData()
   local trinketData = ns.TrinketData
   if not trinketData or not trinketData.specIDs or not trinketData.specs then
@@ -258,6 +279,7 @@ local function BuildTrinketComparison(itemLink)
       comparisonMethod = "trinket_tier",
       newTier = newState.tier,
       newItemID = newState.itemID,
+      isBis = IsItemBis(itemLink),
     }
   end
 
@@ -297,6 +319,7 @@ local function BuildTrinketComparison(itemLink)
     equippedTier = chosenState.tier,
     newItemID = newState.itemID,
     equippedItemID = chosenState.itemID,
+    isBis = IsItemBis(itemLink),
   }
 end
 
@@ -326,6 +349,7 @@ local function BuildComparisonResult(state, slotID, itemLink, equippedLink, newS
     equippedItemLevel = equippedItemLevel or 0,
     delta = delta,
     percent = percent,
+    isBis = IsItemBis(itemLink),
   }
 end
 
@@ -617,6 +641,7 @@ function ns.Compare:GetComparison(itemLink)
       newScore = baseNewScore,
       newItemLevel = baseNewItemLevel,
       slotID = slots[1],
+      isBis = IsItemBis(itemLink),
     }
   end
 
