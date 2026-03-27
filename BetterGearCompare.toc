@@ -2,7 +2,7 @@
 ## Title: BetterGearCompare
 ## Notes: Lightweight weighted stat comparison for gear tooltips.
 ## Author: timurchak
-## Version: 0.3.2
+## Version: 0.4.0
 ## SavedVariables: BetterGearCompareDB
 ## SavedVariablesPerCharacter: BetterGearCompareCharDB
 
