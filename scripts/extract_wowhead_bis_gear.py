@@ -118,9 +118,30 @@ def extract_bis_table(markup: str) -> str:
     return table_match.group(1)
 
 
-def parse_bis_items(table_markup: str) -> dict[str, list[int]]:
-    """Parse table rows into {slot: [itemID, ...]}."""
-    items: dict[str, list[int]] = {}
+def _extract_source(cells: list[str], row: str) -> str:
+    """Try to extract item source text from the row cells."""
+    # Look through all cells (skip first = slot, skip cells containing [item=])
+    for cell in cells:
+        if re.search(r"\[item=", cell):
+            continue
+        # Guide URL: [url guide=33231]Chimaerus[/url]
+        guide = re.search(r"\[url guide=\d+\]([^\[]+)\[/url\]", cell)
+        if guide:
+            return guide.group(1).strip()
+        # Skill (crafting): [skill=164]
+        if re.search(r"\[skill=\d+\]", cell):
+            return "Crafted"
+    # Fallback: strip all tags from last non-empty cell
+    for cell in reversed(cells):
+        text = re.sub(r"\[/?[^\]]+\]", "", cell).strip()
+        if text and not re.search(r"^\d+$", text):
+            return text
+    return ""
+
+
+def parse_bis_items(table_markup: str) -> dict[str, list[dict]]:
+    """Parse table rows into {slot: [{itemID, source}, ...]}."""
+    items: dict[str, list[dict]] = {}
 
     for row_match in re.finditer(
         r"\[tr\](.*?)\[/tr\]",
@@ -149,9 +170,12 @@ def parse_bis_items(table_markup: str) -> dict[str, list[int]]:
         if not item_ids:
             continue
 
+        source = _extract_source(cells[1:], row)
+
         if slot not in items:
             items[slot] = []
-        items[slot].extend(item_ids)
+        for item_id in item_ids:
+            items[slot].append({"itemID": item_id, "source": source})
 
     return items
 
@@ -176,8 +200,8 @@ def main() -> int:
 
     # Flatten to a simple list of all BIS item IDs
     all_ids = []
-    for slot_ids in items.values():
-        all_ids.extend(slot_ids)
+    for slot_items in items.values():
+        all_ids.extend(entry["itemID"] for entry in slot_items)
 
     result = {
         "itemsBySlot": items,

@@ -1,7 +1,7 @@
 local _, ns = ...
 
 ns.BisData = {
-  ["generatedAtUtc"] = "2026-03-26T18:48:38+00:00",
+  ["generatedAtUtc"] = "2026-03-27T14:04:37+00:00",
   ["source"] = "Wowhead Best in Slot Guides",
   ["specIDs"] = {
     [62] = "mage/arcane",
@@ -53,45 +53,90 @@ ns.BisData = {
       ["sourceUrl"] = "https://www.wowhead.com/guide/classes/death-knight/blood/bis-gear",
       ["itemsBySlot"] = {
         ["Weapon"] = {
-          49802,
+          {
+            ["itemID"] = 49802,
+            ["source"] = "Pit of Saron",
+          },
         },
         ["Head"] = {
-          249970,
+          {
+            ["itemID"] = 249970,
+            ["source"] = "Tier Set",
+          },
         },
         ["Neck"] = {
-          249368,
+          {
+            ["itemID"] = 249368,
+            ["source"] = "Crown of the Cosmos",
+          },
         },
         ["Shoulders"] = {
-          249968,
+          {
+            ["itemID"] = 249968,
+            ["source"] = "Tier Set",
+          },
         },
         ["Back"] = {
-          260312,
+          {
+            ["itemID"] = 260312,
+            ["source"] = "Magister's Terrace",
+          },
         },
         ["Chest"] = {
-          249973,
+          {
+            ["itemID"] = 249973,
+            ["source"] = "",
+          },
         },
         ["Wrist"] = {
-          237834,
+          {
+            ["itemID"] = 237834,
+            ["source"] = "Crafting",
+          },
         },
         ["Hands"] = {
-          151332,
+          {
+            ["itemID"] = 151332,
+            ["source"] = "Seat of the Triumvirate",
+          },
         },
         ["Waist"] = {
-          49808,
+          {
+            ["itemID"] = 49808,
+            ["source"] = "Pit of Saron",
+          },
         },
         ["Legs"] = {
-          249969,
+          {
+            ["itemID"] = 249969,
+            ["source"] = "Tier Set",
+          },
         },
         ["Feet"] = {
-          249381,
+          {
+            ["itemID"] = 249381,
+            ["source"] = "Chimaerus",
+          },
         },
         ["Ring"] = {
-          249920,
-          251513,
+          {
+            ["itemID"] = 249920,
+            ["source"] = "Midnight Falls",
+          },
+          {
+            ["itemID"] = 251513,
+            ["source"] = "Crafting",
+          },
         },
         ["Trinket"] = {
-          249343,
-          249344,
+          {
+            ["itemID"] = 249343,
+            ["source"] = "Chimaerus",
+          },
+          {
+            ["itemID"] = 249344,
+            ["source"] = "Imperator Averzian",
+          },
         },
       },
       ["bisItems"] = {
@@ -111,6 +156,22 @@ ns.BisData = {
         [251513] = true,
         [260312] = true,
       },
+      ["itemSources"] = {
+        [49802] = "Pit of Saron",
+        [49808] = "Pit of Saron",
+        [151332] = "Seat of the Triumvirate",
+        [237834] = "Crafting",
+        [249343] = "Chimaerus",
+        [249344] = "Imperator Averzian",
+        [249368] = "Crown of the Cosmos",
+        [249381] = "Chimaerus",
+        [249920] = "Midnight Falls",
+        [249968] = "Tier Set",
+        [249969] = "Tier Set",
+        [249970] = "Tier Set",
+        [251513] = "Crafting",
+        [260312] = "Magister's Terrace",
+      },
     },
     ["death-knight/frost"] = {
       ["specID"] = 251,
@@ -119,42 +180,84 @@ ns.BisData = {
       ["sourceUrl"] = "https://www.wowhead.com/guide/classes/death-knight/frost/bis-gear",
       ["itemsBySlot"] = {
         ["Head"] = {
-          249970,
+          {
+            ["itemID"] = 249970,
+            ["source"] = "Tier Set",
+          },
         },
         ["Neck"] = {
-          250247,
+          {
+            ["itemID"] = 250247,
+            ["source"] = "Midnight Falls",
+          },
         },
         ["Shoulders"] = {
-          50234,
+          {
+            ["itemID"] = 50234,
+            ["source"] = "Pit of Saron",
+          },
         },
         ["Back"] = {
-          239656,
+          {
+            ["itemID"] = 239656,
+            ["source"] = "Crafting/Misc",
+          },
         },
         ["Chest"] = {
-          249973,
+          {
+            ["itemID"] = 249973,
+            ["source"] = "Tier Set",
+          },
         },
         ["Wrist"] = {
-          237834,
+          {
+            ["itemID"] = 237834,
+            ["source"] = "Crafting/Misc",
+          },
         },
         ["Hands"] = {
-          249971,
+          {
+            ["itemID"] = 249971,
+            ["source"] = "Tier Set",
+          },
         },
         ["Waist"] = {
-          249380,
+          {
+            ["itemID"] = 249380,
+            ["source"] = "Crown of the Cosmos",
+          },
         },
         ["Legs"] = {
-          249969,
+          {
+            ["itemID"] = 249969,
+            ["source"] = "Tier Set",
+          },
         },
         ["Feet"] = {
-          249381,
+          {
+            ["itemID"] = 249381,
+            ["source"] = "Chimaerus",
+          },
         },
         ["Ring"] = {
-          193708,
-          249919,
+          {
+            ["itemID"] = 193708,
+            ["source"] = "Algeth'ar Academy",
+          },
+          {
+            ["itemID"] = 249919,
+            ["source"] = "Belo'ren",
+          },
         },
         ["Trinket"] = {
-          249344,
-          249343,
+          {
+            ["itemID"] = 249344,
+            ["source"] = "Imperator Averzian",
+          },
+          {
+            ["itemID"] = 249343,
+            ["source"] = "Chimaerus",
+          },
         },
       },
       ["bisItems"] = {
@@ -173,6 +276,22 @@ ns.BisData = {
         [249973] = true,
         [250247] = true,
       },
+      ["itemSources"] = {
+        [50234] = "Pit of Saron",
+        [193708] = "Algeth'ar Academy",
+        [237834] = "Crafting/Misc",
+        [239656] = "Crafting/Misc",
+        [249343] = "Chimaerus",
+        [249344] = "Imperator Averzian",
+        [249380] = "Crown of the Cosmos",
+        [249381] = "Chimaerus",
+        [249919] = "Belo'ren",
+        [249969] = "Tier Set",
+        [249970] = "Tier Set",
+        [249971] = "Tier Set",
+        [249973] = "Tier Set",
+        [250247] = "Midnight Falls",
+      },
     },
     ["death-knight/unholy"] = {
       ["specID"] = 252,
@@ -181,45 +300,90 @@ ns.BisData = {
       ["sourceUrl"] = "https://www.wowhead.com/guide/classes/death-knight/unholy/bis-gear",
       ["itemsBySlot"] = {
         ["Weapon"] = {
-          249277,
+          {
+            ["itemID"] = 249277,
+            ["source"] = "Lightblinded Vanguard",
+          },
         },
         ["Head"] = {
-          249970,
+          {
+            ["itemID"] = 249970,
+            ["source"] = "Tier Set",
+          },
         },
         ["Neck"] = {
-          250247,
+          {
+            ["itemID"] = 250247,
+            ["source"] = "Midnight Falls",
+          },
         },
         ["Shoulders"] = {
-          50234,
+          {
+            ["itemID"] = 50234,
+            ["source"] = "Pit of Saron",
+          },
         },
         ["Back"] = {
-          239656,
+          {
+            ["itemID"] = 239656,
+            ["source"] = "Crafting",
+          },
         },
         ["Chest"] = {
-          249973,
+          {
+            ["itemID"] = 249973,
+            ["source"] = "Tier Set",
+          },
         },
         ["Wrist"] = {
-          237834,
+          {
+            ["itemID"] = 237834,
+            ["source"] = "Crafting",
+          },
         },
         ["Hands"] = {
-          249971,
+          {
+            ["itemID"] = 249971,
+            ["source"] = "Tier Set",
+          },
         },
         ["Waist"] = {
-          249967,
+          {
+            ["itemID"] = 249967,
+            ["source"] = "Catalyst",
+          },
         },
         ["Legs"] = {
-          249969,
+          {
+            ["itemID"] = 249969,
+            ["source"] = "Tier Set",
+          },
         },
         ["Feet"] = {
-          249381,
+          {
+            ["itemID"] = 249381,
+            ["source"] = "Chimaerus",
+          },
         },
         ["Ring"] = {
-          193708,
-          249919,
+          {
+            ["itemID"] = 193708,
+            ["source"] = "Algeth'ar Academy",
+          },
+          {
+            ["itemID"] = 249919,
+            ["source"] = "Belo'ren",
+          },
         },
         ["Trinket"] = {
-          249343,
-          249344,
+          {
+            ["itemID"] = 249343,
+            ["source"] = "Chimaerus",
+          },
+          {
+            ["itemID"] = 249344,
+            ["source"] = "Imperator Averzian",
+          },
         },
       },
       ["bisItems"] = {
@@ -239,6 +403,23 @@ ns.BisData = {
         [249973] = true,
         [250247] = true,
       },
+      ["itemSources"] = {
+        [50234] = "Pit of Saron",
+        [193708] = "Algeth'ar Academy",
+        [237834] = "Crafting",
+        [239656] = "Crafting",
+        [249277] = "Lightblinded Vanguard",
+        [249343] = "Chimaerus",
+        [249344] = "Imperator Averzian",
+        [249381] = "Chimaerus",
+        [249919] = "Belo'ren",
+        [249967] = "Catalyst",
+        [249969] = "Tier Set",
+        [249970] = "Tier Set",
+        [249971] = "Tier Set",
+        [249973] = "Tier Set",
+        [250247] = "Midnight Falls",
+      },
     },
     ["demon-hunter/devourer"] = {
       ["specID"] = 1480,
@@ -247,50 +428,104 @@ ns.BisData = {
       ["sourceUrl"] = "https://www.wowhead.com/guide/classes/demon-hunter/devourer/bis-gear",
       ["itemsBySlot"] = {
         ["Weapon"] = {
-          260408,
+          {
+            ["itemID"] = 260408,
+            ["source"] = "Midnight Falls",
+          },
         },
         ["Offhand"] = {
-          237840,
-          245876,
+          {
+            ["itemID"] = 237840,
+            ["source"] = "Crafting",
+          },
+          {
+            ["itemID"] = 245876,
+            ["source"] = "Crafting",
+          },
         },
         ["Head"] = {
-          250033,
+          {
+            ["itemID"] = 250033,
+            ["source"] = "Tier Set",
+          },
         },
         ["Neck"] = {
-          249368,
+          {
+            ["itemID"] = 249368,
+            ["source"] = "Crown of the Cosmos",
+          },
         },
         ["Shoulders"] = {
-          250031,
+          {
+            ["itemID"] = 250031,
+            ["source"] = "Tier Set",
+          },
         },
         ["Back"] = {
-          249370,
+          {
+            ["itemID"] = 249370,
+            ["source"] = "Vaelgor & Ezzorak",
+          },
         },
         ["Chest"] = {
-          250036,
+          {
+            ["itemID"] = 250036,
+            ["source"] = "Tier Set",
+          },
         },
         ["Wrist"] = {
-          193714,
+          {
+            ["itemID"] = 193714,
+            ["source"] = "Algeth'ar Academy",
+          },
         },
         ["Hands"] = {
-          250034,
+          {
+            ["itemID"] = 250034,
+            ["source"] = "Tier Set",
+          },
         },
         ["Waist"] = {
-          244573,
-          240167,
+          {
+            ["itemID"] = 244573,
+            ["source"] = "Crafting",
+          },
+          {
+            ["itemID"] = 240167,
+            ["source"] = "Crafting",
+          },
         },
         ["Legs"] = {
-          49817,
+          {
+            ["itemID"] = 49817,
+            ["source"] = "Pit of Saron",
+          },
         },
         ["Feet"] = {
-          250035,
+          {
+            ["itemID"] = 250035,
+            ["source"] = "Catalyst",
+          },
         },
         ["Ring"] = {
-          249369,
-          249920,
+          {
+            ["itemID"] = 249369,
+            ["source"] = "Lightblinded Vanguard",
+          },
+          {
+            ["itemID"] = 249920,
+            ["source"] = "Midnight Falls",
+          },
         },
         ["Trinket"] = {
-          249343,
-          249346,
+          {
+            ["itemID"] = 249343,
+            ["source"] = "Chimaerus",
+          },
+          {
+            ["itemID"] = 249346,
+            ["source"] = "Vaelgor & Ezzorak",
+          },
         },
       },
       ["bisItems"] = {
@@ -313,6 +548,26 @@ ns.BisData = {
         [250036] = true,
         [260408] = true,
       },
+      ["itemSources"] = {
+        [49817] = "Pit of Saron",
+        [193714] = "Algeth'ar Academy",
+        [237840] = "Crafting",
+        [240167] = "Crafting",
+        [244573] = "Crafting",
+        [245876] = "Crafting",
+        [249343] = "Chimaerus",
+        [249346] = "Vaelgor & Ezzorak",
+        [249368] = "Crown of the Cosmos",
+        [249369] = "Lightblinded Vanguard",
+        [249370] = "Vaelgor & Ezzorak",
+        [249920] = "Midnight Falls",
+        [250031] = "Tier Set",
+        [250033] = "Tier Set",
+        [250034] = "Tier Set",
+        [250035] = "Catalyst",
+        [250036] = "Tier Set",
+        [260408] = "Midnight Falls",
+      },
     },
     ["demon-hunter/havoc"] = {
       ["specID"] = 577,
@@ -321,48 +576,96 @@ ns.BisData = {
       ["sourceUrl"] = "https://www.wowhead.com/guide/classes/demon-hunter/havoc/bis-gear",
       ["itemsBySlot"] = {
         ["Weapon"] = {
-          260408,
+          {
+            ["itemID"] = 260408,
+            ["source"] = "Midnight Falls",
+          },
         },
         ["Offhand"] = {
-          249280,
+          {
+            ["itemID"] = 249280,
+            ["source"] = "Vaelgor & Ezzorak",
+          },
         },
         ["Head"] = {
-          251109,
+          {
+            ["itemID"] = 251109,
+            ["source"] = "Magister's Terrace",
+          },
         },
         ["Neck"] = {
-          250247,
+          {
+            ["itemID"] = 250247,
+            ["source"] = "Midnight Falls",
+          },
         },
         ["Shoulders"] = {
-          250031,
+          {
+            ["itemID"] = 250031,
+            ["source"] = "Tier Set",
+          },
         },
         ["Back"] = {
-          239656,
+          {
+            ["itemID"] = 239656,
+            ["source"] = "Crafting/Misc",
+          },
         },
         ["Chest"] = {
-          250036,
+          {
+            ["itemID"] = 250036,
+            ["source"] = "Tier Set",
+          },
         },
         ["Wrist"] = {
-          244576,
+          {
+            ["itemID"] = 244576,
+            ["source"] = "Crafting/Misc",
+          },
         },
         ["Hands"] = {
-          250034,
+          {
+            ["itemID"] = 250034,
+            ["source"] = "Tier Set",
+          },
         },
         ["Waist"] = {
-          251082,
+          {
+            ["itemID"] = 251082,
+            ["source"] = "Windrunner Spire",
+          },
         },
         ["Legs"] = {
-          250032,
+          {
+            ["itemID"] = 250032,
+            ["source"] = "Tier Set",
+          },
         },
         ["Feet"] = {
-          258577,
+          {
+            ["itemID"] = 258577,
+            ["source"] = "Skyreach",
+          },
         },
         ["Ring"] = {
-          249919,
-          193708,
+          {
+            ["itemID"] = 249919,
+            ["source"] = "Belo'ren",
+          },
+          {
+            ["itemID"] = 193708,
+            ["source"] = "Algeth'ar Academy",
+          },
         },
         ["Trinket"] = {
-          193701,
-          260235,
+          {
+            ["itemID"] = 193701,
+            ["source"] = "Algeth'ar Academy",
+          },
+          {
+            ["itemID"] = 260235,
+            ["source"] = "Belo'ren",
+          },
         },
       },
       ["bisItems"] = {
@@ -383,6 +686,24 @@ ns.BisData = {
         [260235] = true,
         [260408] = true,
       },
+      ["itemSources"] = {
+        [193701] = "Algeth'ar Academy",
+        [193708] = "Algeth'ar Academy",
+        [239656] = "Crafting/Misc",
+        [244576] = "Crafting/Misc",
+        [249280] = "Vaelgor & Ezzorak",
+        [249919] = "Belo'ren",
+        [250031] = "Tier Set",
+        [250032] = "Tier Set",
+        [250034] = "Tier Set",
+        [250036] = "Tier Set",
+        [250247] = "Midnight Falls",
+        [251082] = "Windrunner Spire",
+        [251109] = "Magister's Terrace",
+        [258577] = "Skyreach",
+        [260235] = "Belo'ren",
+        [260408] = "Midnight Falls",
+      },
     },
     ["demon-hunter/vengeance"] = {
       ["specID"] = 581,
@@ -391,49 +712,100 @@ ns.BisData = {
       ["sourceUrl"] = "https://www.wowhead.com/guide/classes/demon-hunter/vengeance/bis-gear",
       ["itemsBySlot"] = {
         ["Weapon"] = {
-          260408,
+          {
+            ["itemID"] = 260408,
+            ["source"] = "Midnight Falls",
+          },
         },
         ["Offhand"] = {
-          249298,
-          237840,
+          {
+            ["itemID"] = 249298,
+            ["source"] = "Fallen-King Salhadaar",
+          },
+          {
+            ["itemID"] = 237840,
+            ["source"] = "Fallen-King Salhadaar",
+          },
         },
         ["Head"] = {
-          250033,
+          {
+            ["itemID"] = 250033,
+            ["source"] = "Lightblinded Vanguard",
+          },
         },
         ["Neck"] = {
-          151309,
+          {
+            ["itemID"] = 151309,
+            ["source"] = "Seat of the Triumvirate",
+          },
         },
         ["Shoulders"] = {
-          250031,
+          {
+            ["itemID"] = 250031,
+            ["source"] = "Fallen-King Salhadaar",
+          },
         },
         ["Back"] = {
-          239656,
-          239656,
+          {
+            ["itemID"] = 239656,
+            ["source"] = "Crafting",
+          },
+          {
+            ["itemID"] = 239656,
+            ["source"] = "Crafting",
+          },
         },
         ["Chest"] = {
-          151313,
+          {
+            ["itemID"] = 151313,
+            ["source"] = "Seat of the Triumvirate",
+          },
         },
         ["Wrist"] = {
-          50264,
+          {
+            ["itemID"] = 50264,
+            ["source"] = "Pit of Saron",
+          },
         },
         ["Hands"] = {
-          250034,
+          {
+            ["itemID"] = 250034,
+            ["source"] = "Vorasius",
+          },
         },
         ["Waist"] = {
-          49806,
+          {
+            ["itemID"] = 49806,
+            ["source"] = "Pit of Saron",
+          },
         },
         ["Legs"] = {
-          250032,
+          {
+            ["itemID"] = 250032,
+            ["source"] = "Vaelgor & Ezzorak",
+          },
         },
         ["Feet"] = {
-          251210,
+          {
+            ["itemID"] = 251210,
+            ["source"] = "Nexus Point Xenas",
+          },
         },
         ["Ring"] = {
-          251513,
+          {
+            ["itemID"] = 251513,
+            ["source"] = "Crafting",
+          },
         },
         ["Trinket"] = {
-          249343,
-          249344,
+          {
+            ["itemID"] = 249343,
+            ["source"] = "Chimaerus",
+          },
+          {
+            ["itemID"] = 249344,
+            ["source"] = "Imperator Averzian",
+          },
         },
       },
       ["bisItems"] = {
@@ -454,6 +826,24 @@ ns.BisData = {
         [251513] = true,
         [260408] = true,
       },
+      ["itemSources"] = {
+        [49806] = "Pit of Saron",
+        [50264] = "Pit of Saron",
+        [151309] = "Seat of the Triumvirate",
+        [151313] = "Seat of the Triumvirate",
+        [237840] = "Fallen-King Salhadaar",
+        [239656] = "Crafting",
+        [249298] = "Fallen-King Salhadaar",
+        [249343] = "Chimaerus",
+        [249344] = "Imperator Averzian",
+        [250031] = "Fallen-King Salhadaar",
+        [250032] = "Vaelgor & Ezzorak",
+        [250033] = "Lightblinded Vanguard",
+        [250034] = "Vorasius",
+        [251210] = "Nexus Point Xenas",
+        [251513] = "Crafting",
+        [260408] = "Midnight Falls",
+      },
     },
     ["druid/balance"] = {
       ["specID"] = 102,
@@ -462,48 +852,96 @@ ns.BisData = {
       ["sourceUrl"] = "https://www.wowhead.com/guide/classes/druid/balance/bis-gear",
       ["itemsBySlot"] = {
         ["Weapon"] = {
-          249283,
+          {
+            ["itemID"] = 249283,
+            ["source"] = "Belo'ren",
+          },
         },
         ["Offhand"] = {
-          245769,
+          {
+            ["itemID"] = 245769,
+            ["source"] = "Crafting",
+          },
         },
         ["Head"] = {
-          250024,
+          {
+            ["itemID"] = 250024,
+            ["source"] = "Tier Set",
+          },
         },
         ["Neck"] = {
-          250247,
+          {
+            ["itemID"] = 250247,
+            ["source"] = "Midnight Falls",
+          },
         },
         ["Shoulders"] = {
-          250022,
+          {
+            ["itemID"] = 250022,
+            ["source"] = "Tier Set",
+          },
         },
         ["Back"] = {
-          249370,
+          {
+            ["itemID"] = 249370,
+            ["source"] = "Vaelgor & Ezzorak",
+          },
         },
         ["Chest"] = {
-          250027,
+          {
+            ["itemID"] = 250027,
+            ["source"] = "Tier Set",
+          },
         },
         ["Wrist"] = {
-          244576,
+          {
+            ["itemID"] = 244576,
+            ["source"] = "Crafting",
+          },
         },
         ["Hands"] = {
-          251113,
+          {
+            ["itemID"] = 251113,
+            ["source"] = "Magister's Terrace",
+          },
         },
         ["Waist"] = {
-          251082,
+          {
+            ["itemID"] = 251082,
+            ["source"] = "Windrunner Spire",
+          },
         },
         ["Legs"] = {
-          250023,
+          {
+            ["itemID"] = 250023,
+            ["source"] = "Tier Set",
+          },
         },
         ["Feet"] = {
-          249382,
+          {
+            ["itemID"] = 249382,
+            ["source"] = "Crown of the Cosmos",
+          },
         },
         ["Ring"] = {
-          193708,
-          251217,
+          {
+            ["itemID"] = 193708,
+            ["source"] = "Algeth'ar Academy",
+          },
+          {
+            ["itemID"] = 251217,
+            ["source"] = "Nexus-Point Xenas",
+          },
         },
         ["Trinket"] = {
-          249346,
-          249809,
+          {
+            ["itemID"] = 249346,
+            ["source"] = "Vaelgor & Ezzorak",
+          },
+          {
+            ["itemID"] = 249809,
+            ["source"] = "Crown of the Cosmos",
+          },
         },
       },
       ["bisItems"] = {
@@ -524,6 +962,24 @@ ns.BisData = {
         [251113] = true,
         [251217] = true,
       },
+      ["itemSources"] = {
+        [193708] = "Algeth'ar Academy",
+        [244576] = "Crafting",
+        [245769] = "Crafting",
+        [249283] = "Belo'ren",
+        [249346] = "Vaelgor & Ezzorak",
+        [249370] = "Vaelgor & Ezzorak",
+        [249382] = "Crown of the Cosmos",
+        [249809] = "Crown of the Cosmos",
+        [250022] = "Tier Set",
+        [250023] = "Tier Set",
+        [250024] = "Tier Set",
+        [250027] = "Tier Set",
+        [250247] = "Midnight Falls",
+        [251082] = "Windrunner Spire",
+        [251113] = "Magister's Terrace",
+        [251217] = "Nexus-Point Xenas",
+      },
     },
     ["druid/feral"] = {
       ["specID"] = 103,
@@ -532,45 +988,90 @@ ns.BisData = {
       ["sourceUrl"] = "https://www.wowhead.com/guide/classes/druid/feral/bis-gear",
       ["itemsBySlot"] = {
         ["Weapon"] = {
-          249302,
+          {
+            ["itemID"] = 249302,
+            ["source"] = "Vorasius",
+          },
         },
         ["Head"] = {
-          250024,
+          {
+            ["itemID"] = 250024,
+            ["source"] = "Tier Set",
+          },
         },
         ["Neck"] = {
-          250247,
+          {
+            ["itemID"] = 250247,
+            ["source"] = "Midnight Falls",
+          },
         },
         ["Shoulders"] = {
-          250022,
+          {
+            ["itemID"] = 250022,
+            ["source"] = "Tier Set",
+          },
         },
         ["Back"] = {
-          249370,
+          {
+            ["itemID"] = 249370,
+            ["source"] = "Vaelgor & Ezzorak",
+          },
         },
         ["Chest"] = {
-          250027,
+          {
+            ["itemID"] = 250027,
+            ["source"] = "Tier Set",
+          },
         },
         ["Wrist"] = {
-          244576,
+          {
+            ["itemID"] = 244576,
+            ["source"] = "Crafting/Misc",
+          },
         },
         ["Hands"] = {
-          244575,
+          {
+            ["itemID"] = 244575,
+            ["source"] = "Crafting/Misc",
+          },
         },
         ["Waist"] = {
-          251082,
+          {
+            ["itemID"] = 251082,
+            ["source"] = "Windrunner Spire",
+          },
         },
         ["Legs"] = {
-          250023,
+          {
+            ["itemID"] = 250023,
+            ["source"] = "Tier Set",
+          },
         },
         ["Feet"] = {
-          249382,
+          {
+            ["itemID"] = 249382,
+            ["source"] = "Crown of the Cosmos",
+          },
         },
         ["Ring"] = {
-          249920,
-          251115,
+          {
+            ["itemID"] = 249920,
+            ["source"] = "Midnight Falls",
+          },
+          {
+            ["itemID"] = 251115,
+            ["source"] = "Magister's Terrace",
+          },
         },
         ["Trinket"] = {
-          193701,
-          249806,
+          {
+            ["itemID"] = 193701,
+            ["source"] = "Algeth'ar Academy",
+          },
+          {
+            ["itemID"] = 249806,
+            ["source"] = "Belo'ren",
+          },
         },
       },
       ["bisItems"] = {
@@ -590,6 +1091,23 @@ ns.BisData = {
         [251082] = true,
         [251115] = true,
       },
+      ["itemSources"] = {
+        [193701] = "Algeth'ar Academy",
+        [244575] = "Crafting/Misc",
+        [244576] = "Crafting/Misc",
+        [249302] = "Vorasius",
+        [249370] = "Vaelgor & Ezzorak",
+        [249382] = "Crown of the Cosmos",
+        [249806] = "Belo'ren",
+        [249920] = "Midnight Falls",
+        [250022] = "Tier Set",
+        [250023] = "Tier Set",
+        [250024] = "Tier Set",
+        [250027] = "Tier Set",
+        [250247] = "Midnight Falls",
+        [251082] = "Windrunner Spire",
+        [251115] = "Magister's Terrace",
+      },
     },
     ["druid/guardian"] = {
       ["specID"] = 104,
@@ -598,45 +1116,90 @@ ns.BisData = {
       ["sourceUrl"] = "https://www.wowhead.com/guide/classes/druid/guardian/bis-gear",
       ["itemsBySlot"] = {
         ["Weapon"] = {
-          249278,
+          {
+            ["itemID"] = 249278,
+            ["source"] = "Chimaerus",
+          },
         },
         ["Head"] = {
-          249913,
+          {
+            ["itemID"] = 249913,
+            ["source"] = "Midnight Falls",
+          },
         },
         ["Neck"] = {
-          249368,
+          {
+            ["itemID"] = 249368,
+            ["source"] = "Crown of the Cosmos",
+          },
         },
         ["Shoulders"] = {
-          250022,
+          {
+            ["itemID"] = 250022,
+            ["source"] = "Tier Set",
+          },
         },
         ["Back"] = {
-          249370,
+          {
+            ["itemID"] = 249370,
+            ["source"] = "Vaelgor & Ezzorak",
+          },
         },
         ["Chest"] = {
-          250027,
+          {
+            ["itemID"] = 250027,
+            ["source"] = "Tier Set",
+          },
         },
         ["Wrist"] = {
-          249327,
+          {
+            ["itemID"] = 249327,
+            ["source"] = "Vorasius",
+          },
         },
         ["Hands"] = {
-          250025,
+          {
+            ["itemID"] = 250025,
+            ["source"] = "Tier Set",
+          },
         },
         ["Waist"] = {
-          249374,
+          {
+            ["itemID"] = 249374,
+            ["source"] = "Chimaerus",
+          },
         },
         ["Legs"] = {
-          250023,
+          {
+            ["itemID"] = 250023,
+            ["source"] = "Tier Set",
+          },
         },
         ["Feet"] = {
-          249334,
+          {
+            ["itemID"] = 249334,
+            ["source"] = "Imperator Averzian",
+          },
         },
         ["Ring"] = {
-          251093,
-          249920,
+          {
+            ["itemID"] = 251093,
+            ["source"] = "Nexus Point Xenas",
+          },
+          {
+            ["itemID"] = 249920,
+            ["source"] = "Midnight Falls",
+          },
         },
         ["Trinket"] = {
-          249343,
-          193701,
+          {
+            ["itemID"] = 249343,
+            ["source"] = "Chimaerus",
+          },
+          {
+            ["itemID"] = 193701,
+            ["source"] = "Algeth'ar Academy",
+          },
         },
       },
       ["bisItems"] = {
@@ -656,6 +1219,23 @@ ns.BisData = {
         [250027] = true,
         [251093] = true,
       },
+      ["itemSources"] = {
+        [193701] = "Algeth'ar Academy",
+        [249278] = "Chimaerus",
+        [249327] = "Vorasius",
+        [249334] = "Imperator Averzian",
+        [249343] = "Chimaerus",
+        [249368] = "Crown of the Cosmos",
+        [249370] = "Vaelgor & Ezzorak",
+        [249374] = "Chimaerus",
+        [249913] = "Midnight Falls",
+        [249920] = "Midnight Falls",
+        [250022] = "Tier Set",
+        [250023] = "Tier Set",
+        [250025] = "Tier Set",
+        [250027] = "Tier Set",
+        [251093] = "Nexus Point Xenas",
+      },
     },
     ["druid/restoration"] = {
       ["specID"] = 105,
@@ -664,41 +1244,80 @@ ns.BisData = {
       ["sourceUrl"] = "https://www.wowhead.com/guide/classes/druid/restoration/bis-gear",
       ["itemsBySlot"] = {
         ["Head"] = {
-          250024,
+          {
+            ["itemID"] = 250024,
+            ["source"] = "Raid",
+          },
         },
         ["Neck"] = {
-          250247,
+          {
+            ["itemID"] = 250247,
+            ["source"] = "Midnight Falls",
+          },
         },
         ["Shoulders"] = {
-          250022,
+          {
+            ["itemID"] = 250022,
+            ["source"] = "Raid",
+          },
         },
         ["Back"] = {
-          249370,
+          {
+            ["itemID"] = 249370,
+            ["source"] = "Vaelgor & Ezzorak",
+          },
         },
         ["Chest"] = {
-          251216,
+          {
+            ["itemID"] = 251216,
+            ["source"] = "Nexus Point Xenas",
+          },
         },
         ["Wrist"] = {
-          193714,
+          {
+            ["itemID"] = 193714,
+            ["source"] = "Algeth'ar Academy",
+          },
         },
         ["Hands"] = {
-          250025,
+          {
+            ["itemID"] = 250025,
+            ["source"] = "Raid",
+          },
         },
         ["Waist"] = {
-          249314,
+          {
+            ["itemID"] = 249314,
+            ["source"] = "Fallen-King Salhadaar",
+          },
         },
         ["Legs"] = {
-          250023,
+          {
+            ["itemID"] = 250023,
+            ["source"] = "Raid",
+          },
         },
         ["Feet"] = {
-          251210,
+          {
+            ["itemID"] = 251210,
+            ["source"] = "Nexus Point Xenas",
+          },
         },
         ["Ring"] = {
-          249920,
-          251115,
+          {
+            ["itemID"] = 249920,
+            ["source"] = "Midnight Falls",
+          },
+          {
+            ["itemID"] = 251115,
+            ["source"] = "Magister's Terrace",
+          },
         },
         ["Offhand"] = {
-          249922,
+          {
+            ["itemID"] = 249922,
+            ["source"] = "Chimaerus",
+          },
         },
       },
       ["bisItems"] = {
@@ -716,6 +1335,21 @@ ns.BisData = {
         [251210] = true,
         [251216] = true,
       },
+      ["itemSources"] = {
+        [193714] = "Algeth'ar Academy",
+        [249314] = "Fallen-King Salhadaar",
+        [249370] = "Vaelgor & Ezzorak",
+        [249920] = "Midnight Falls",
+        [249922] = "Chimaerus",
+        [250022] = "Raid",
+        [250023] = "Raid",
+        [250024] = "Raid",
+        [250025] = "Raid",
+        [250247] = "Midnight Falls",
+        [251115] = "Magister's Terrace",
+        [251210] = "Nexus Point Xenas",
+        [251216] = "Nexus Point Xenas",
+      },
     },
     ["evoker/augmentation"] = {
       ["specID"] = 1473,
@@ -724,48 +1358,96 @@ ns.BisData = {
       ["sourceUrl"] = "https://www.wowhead.com/guide/classes/evoker/augmentation/bis-gear",
       ["itemsBySlot"] = {
         ["Weapon"] = {
-          251178,
+          {
+            ["itemID"] = 251178,
+            ["source"] = "Maisara Caverns",
+          },
         },
         ["Offhand"] = {
-          249276,
+          {
+            ["itemID"] = 249276,
+            ["source"] = "Vorasius",
+          },
         },
         ["Head"] = {
-          133506,
+          {
+            ["itemID"] = 133506,
+            ["source"] = "Pit of Saron",
+          },
         },
         ["Neck"] = {
-          249337,
+          {
+            ["itemID"] = 249337,
+            ["source"] = "Fallen-King Salhadaar",
+          },
         },
         ["Shoulders"] = {
-          249995,
+          {
+            ["itemID"] = 249995,
+            ["source"] = "Tier Set",
+          },
         },
         ["Back"] = {
-          239656,
+          {
+            ["itemID"] = 239656,
+            ["source"] = "Crafting",
+          },
         },
         ["Chest"] = {
-          250000,
+          {
+            ["itemID"] = 250000,
+            ["source"] = "Tier Set",
+          },
         },
         ["Wrist"] = {
-          244584,
+          {
+            ["itemID"] = 244584,
+            ["source"] = "Crafting",
+          },
         },
         ["Hands"] = {
-          249998,
+          {
+            ["itemID"] = 249998,
+            ["source"] = "Tier Set",
+          },
         },
         ["Waist"] = {
-          49810,
+          {
+            ["itemID"] = 49810,
+            ["source"] = "Pit of Saron",
+          },
         },
         ["Legs"] = {
-          249996,
+          {
+            ["itemID"] = 249996,
+            ["source"] = "Tier Set",
+          },
         },
         ["Feet"] = {
-          249999,
+          {
+            ["itemID"] = 249999,
+            ["source"] = "The Catalyst",
+          },
         },
         ["Ring"] = {
-          249920,
-          49812,
+          {
+            ["itemID"] = 249920,
+            ["source"] = "Midnight Falls",
+          },
+          {
+            ["itemID"] = 49812,
+            ["source"] = "Pit of Saron",
+          },
         },
         ["Trinket"] = {
-          249810,
-          250256,
+          {
+            ["itemID"] = 249810,
+            ["source"] = "Midnight Falls",
+          },
+          {
+            ["itemID"] = 250256,
+            ["source"] = "Windrunner Spire",
+          },
         },
       },
       ["bisItems"] = {
@@ -786,6 +1468,24 @@ ns.BisData = {
         [250256] = true,
         [251178] = true,
       },
+      ["itemSources"] = {
+        [49810] = "Pit of Saron",
+        [49812] = "Pit of Saron",
+        [133506] = "Pit of Saron",
+        [239656] = "Crafting",
+        [244584] = "Crafting",
+        [249276] = "Vorasius",
+        [249337] = "Fallen-King Salhadaar",
+        [249810] = "Midnight Falls",
+        [249920] = "Midnight Falls",
+        [249995] = "Tier Set",
+        [249996] = "Tier Set",
+        [249998] = "Tier Set",
+        [249999] = "The Catalyst",
+        [250000] = "Tier Set",
+        [250256] = "Windrunner Spire",
+        [251178] = "Maisara Caverns",
+      },
     },
     ["evoker/devastation"] = {
       ["specID"] = 1467,
@@ -794,48 +1494,96 @@ ns.BisData = {
       ["sourceUrl"] = "https://www.wowhead.com/guide/classes/evoker/devastation/bis-gear",
       ["itemsBySlot"] = {
         ["Weapon"] = {
-          249283,
+          {
+            ["itemID"] = 249283,
+            ["source"] = "Belo'ren",
+          },
         },
         ["Offhand"] = {
-          249276,
+          {
+            ["itemID"] = 249276,
+            ["source"] = "Vorasius",
+          },
         },
         ["Head"] = {
-          249997,
+          {
+            ["itemID"] = 249997,
+            ["source"] = "Tier Set",
+          },
         },
         ["Neck"] = {
-          250247,
+          {
+            ["itemID"] = 250247,
+            ["source"] = "Midnight Falls",
+          },
         },
         ["Shoulders"] = {
-          249995,
+          {
+            ["itemID"] = 249995,
+            ["source"] = "Tier Set",
+          },
         },
         ["Back"] = {
-          239656,
+          {
+            ["itemID"] = 239656,
+            ["source"] = "Crafting",
+          },
         },
         ["Chest"] = {
-          250000,
+          {
+            ["itemID"] = 250000,
+            ["source"] = "Tier Set",
+          },
         },
         ["Wrist"] = {
-          244584,
+          {
+            ["itemID"] = 244584,
+            ["source"] = "Crafting",
+          },
         },
         ["Hands"] = {
-          249325,
+          {
+            ["itemID"] = 249325,
+            ["source"] = "Crown of the Cosmos",
+          },
         },
         ["Waist"] = {
-          49810,
+          {
+            ["itemID"] = 49810,
+            ["source"] = "Pit of Saron",
+          },
         },
         ["Legs"] = {
-          249996,
+          {
+            ["itemID"] = 249996,
+            ["source"] = "Tier Set",
+          },
         },
         ["Feet"] = {
-          249377,
+          {
+            ["itemID"] = 249377,
+            ["source"] = "Belo'ren",
+          },
         },
         ["Ring"] = {
-          249919,
-          249920,
+          {
+            ["itemID"] = 249919,
+            ["source"] = "Belo'ren",
+          },
+          {
+            ["itemID"] = 249920,
+            ["source"] = "Midnight Falls",
+          },
         },
         ["Trinket"] = {
-          249346,
-          249809,
+          {
+            ["itemID"] = 249346,
+            ["source"] = "Vaelgor & Ezzorak",
+          },
+          {
+            ["itemID"] = 249809,
+            ["source"] = "Crown of the Cosmos",
+          },
         },
       },
       ["bisItems"] = {
@@ -856,6 +1604,24 @@ ns.BisData = {
         [250000] = true,
         [250247] = true,
       },
+      ["itemSources"] = {
+        [49810] = "Pit of Saron",
+        [239656] = "Crafting",
+        [244584] = "Crafting",
+        [249276] = "Vorasius",
+        [249283] = "Belo'ren",
+        [249325] = "Crown of the Cosmos",
+        [249346] = "Vaelgor & Ezzorak",
+        [249377] = "Belo'ren",
+        [249809] = "Crown of the Cosmos",
+        [249919] = "Belo'ren",
+        [249920] = "Midnight Falls",
+        [249995] = "Tier Set",
+        [249996] = "Tier Set",
+        [249997] = "Tier Set",
+        [250000] = "Tier Set",
+        [250247] = "Midnight Falls",
+      },
     },
     ["evoker/preservation"] = {
       ["specID"] = 1468,
@@ -864,38 +1630,74 @@ ns.BisData = {
       ["sourceUrl"] = "https://www.wowhead.com/guide/classes/evoker/preservation/bis-gear",
       ["itemsBySlot"] = {
         ["Head"] = {
-          249914,
+          {
+            ["itemID"] = 249914,
+            ["source"] = "Midnight Falls",
+          },
         },
         ["Neck"] = {
-          250247,
+          {
+            ["itemID"] = 250247,
+            ["source"] = "Midnight Falls",
+          },
         },
         ["Shoulders"] = {
-          249995,
+          {
+            ["itemID"] = 249995,
+            ["source"] = "Raid",
+          },
         },
         ["Back"] = {
-          251206,
+          {
+            ["itemID"] = 251206,
+            ["source"] = "Nexus Point Xenas",
+          },
         },
         ["Chest"] = {
-          250000,
+          {
+            ["itemID"] = 250000,
+            ["source"] = "Raid",
+          },
         },
         ["Wrist"] = {
-          251079,
+          {
+            ["itemID"] = 251079,
+            ["source"] = "Windrunner Spire",
+          },
         },
         ["Hands"] = {
-          249998,
+          {
+            ["itemID"] = 249998,
+            ["source"] = "Raid",
+          },
         },
         ["Waist"] = {
-          193722,
+          {
+            ["itemID"] = 193722,
+            ["source"] = "Algeth'ar Academy",
+          },
         },
         ["Legs"] = {
-          249996,
+          {
+            ["itemID"] = 249996,
+            ["source"] = "Raid",
+          },
         },
         ["Feet"] = {
-          251084,
+          {
+            ["itemID"] = 251084,
+            ["source"] = "Windrunner Spire",
+          },
         },
         ["Ring"] = {
-          249369,
-          249920,
+          {
+            ["itemID"] = 249369,
+            ["source"] = "Lightblinded Vanguard",
+          },
+          {
+            ["itemID"] = 249920,
+            ["source"] = "Midnight Falls",
+          },
         },
       },
       ["bisItems"] = {
@@ -912,6 +1714,20 @@ ns.BisData = {
         [251084] = true,
         [251206] = true,
       },
+      ["itemSources"] = {
+        [193722] = "Algeth'ar Academy",
+        [249369] = "Lightblinded Vanguard",
+        [249914] = "Midnight Falls",
+        [249920] = "Midnight Falls",
+        [249995] = "Raid",
+        [249996] = "Raid",
+        [249998] = "Raid",
+        [250000] = "Raid",
+        [250247] = "Midnight Falls",
+        [251079] = "Windrunner Spire",
+        [251084] = "Windrunner Spire",
+        [251206] = "Nexus Point Xenas",
+      },
     },
     ["hunter/beast-mastery"] = {
       ["specID"] = 253,
@@ -920,45 +1736,90 @@ ns.BisData = {
       ["sourceUrl"] = "https://www.wowhead.com/guide/classes/hunter/beast-mastery/bis-gear",
       ["itemsBySlot"] = {
         ["Weapon"] = {
-          251174,
+          {
+            ["itemID"] = 251174,
+            ["source"] = "Maisara Caverns",
+          },
         },
         ["Head"] = {
-          249988,
+          {
+            ["itemID"] = 249988,
+            ["source"] = "Tier Set",
+          },
         },
         ["Neck"] = {
-          250247,
+          {
+            ["itemID"] = 250247,
+            ["source"] = "Midnight Falls",
+          },
         },
         ["Shoulders"] = {
-          151323,
+          {
+            ["itemID"] = 151323,
+            ["source"] = "Seat of the Triumvirate",
+          },
         },
         ["Back"] = {
-          258575,
+          {
+            ["itemID"] = 258575,
+            ["source"] = "Skyreach",
+          },
         },
         ["Chest"] = {
-          249991,
+          {
+            ["itemID"] = 249991,
+            ["source"] = "Tier Set",
+          },
         },
         ["Wrist"] = {
-          251209,
+          {
+            ["itemID"] = 251209,
+            ["source"] = "Nexus Point Xenas",
+          },
         },
         ["Hands"] = {
-          249989,
+          {
+            ["itemID"] = 249989,
+            ["source"] = "Tier Set",
+          },
         },
         ["Waist"] = {
-          244611,
+          {
+            ["itemID"] = 244611,
+            ["source"] = "Crafted",
+          },
         },
         ["Legs"] = {
-          249987,
+          {
+            ["itemID"] = 249987,
+            ["source"] = "Tier Set",
+          },
         },
         ["Feet"] = {
-          244610,
+          {
+            ["itemID"] = 244610,
+            ["source"] = "Crafted",
+          },
         },
         ["Ring"] = {
-          249920,
-          249369,
+          {
+            ["itemID"] = 249920,
+            ["source"] = "Midnight Falls",
+          },
+          {
+            ["itemID"] = 249369,
+            ["source"] = "Lightblinded Vanguard",
+          },
         },
         ["Trinket"] = {
-          249806,
-          193701,
+          {
+            ["itemID"] = 249806,
+            ["source"] = "Belo'ren",
+          },
+          {
+            ["itemID"] = 193701,
+            ["source"] = "Algeth'ar Academy",
+          },
         },
       },
       ["bisItems"] = {
@@ -978,6 +1839,23 @@ ns.BisData = {
         [251209] = true,
         [258575] = true,
       },
+      ["itemSources"] = {
+        [151323] = "Seat of the Triumvirate",
+        [193701] = "Algeth'ar Academy",
+        [244610] = "Crafted",
+        [244611] = "Crafted",
+        [249369] = "Lightblinded Vanguard",
+        [249806] = "Belo'ren",
+        [249920] = "Midnight Falls",
+        [249987] = "Tier Set",
+        [249988] = "Tier Set",
+        [249989] = "Tier Set",
+        [249991] = "Tier Set",
+        [250247] = "Midnight Falls",
+        [251174] = "Maisara Caverns",
+        [251209] = "Nexus Point Xenas",
+        [258575] = "Skyreach",
+      },
     },
     ["hunter/marksmanship"] = {
       ["specID"] = 254,
@@ -986,45 +1864,90 @@ ns.BisData = {
       ["sourceUrl"] = "https://www.wowhead.com/guide/classes/hunter/marksmanship/bis-gear",
       ["itemsBySlot"] = {
         ["Weapon"] = {
-          249288,
+          {
+            ["itemID"] = 249288,
+            ["source"] = "Crown of the Cosmos",
+          },
         },
         ["Head"] = {
-          249988,
+          {
+            ["itemID"] = 249988,
+            ["source"] = "Tier Set",
+          },
         },
         ["Neck"] = {
-          250247,
+          {
+            ["itemID"] = 250247,
+            ["source"] = "Midnight Falls",
+          },
         },
         ["Shoulders"] = {
-          151323,
+          {
+            ["itemID"] = 151323,
+            ["source"] = "Seat of the Triumvirate",
+          },
         },
         ["Back"] = {
-          249335,
+          {
+            ["itemID"] = 249335,
+            ["source"] = "Imperator Averzian",
+          },
         },
         ["Chest"] = {
-          249991,
+          {
+            ["itemID"] = 249991,
+            ["source"] = "Tier Set",
+          },
         },
         ["Wrist"] = {
-          249304,
+          {
+            ["itemID"] = 249304,
+            ["source"] = "Fallen-King Salhadaar",
+          },
         },
         ["Hands"] = {
-          249989,
+          {
+            ["itemID"] = 249989,
+            ["source"] = "Tier Set",
+          },
         },
         ["Waist"] = {
-          244611,
+          {
+            ["itemID"] = 244611,
+            ["source"] = "Crafting",
+          },
         },
         ["Legs"] = {
-          249987,
+          {
+            ["itemID"] = 249987,
+            ["source"] = "Tier Set",
+          },
         },
         ["Feet"] = {
-          244610,
+          {
+            ["itemID"] = 244610,
+            ["source"] = "Crafting",
+          },
         },
         ["Ring"] = {
-          249919,
-          249336,
+          {
+            ["itemID"] = 249919,
+            ["source"] = "Belo'ren",
+          },
+          {
+            ["itemID"] = 249336,
+            ["source"] = "Vorasius",
+          },
         },
         ["Trinket"] = {
-          193701,
-          260235,
+          {
+            ["itemID"] = 193701,
+            ["source"] = "Algeth'ar Academy",
+          },
+          {
+            ["itemID"] = 260235,
+            ["source"] = "Belo'ren",
+          },
         },
       },
       ["bisItems"] = {
@@ -1044,6 +1967,23 @@ ns.BisData = {
         [250247] = true,
         [260235] = true,
       },
+      ["itemSources"] = {
+        [151323] = "Seat of the Triumvirate",
+        [193701] = "Algeth'ar Academy",
+        [244610] = "Crafting",
+        [244611] = "Crafting",
+        [249288] = "Crown of the Cosmos",
+        [249304] = "Fallen-King Salhadaar",
+        [249335] = "Imperator Averzian",
+        [249336] = "Vorasius",
+        [249919] = "Belo'ren",
+        [249987] = "Tier Set",
+        [249988] = "Tier Set",
+        [249989] = "Tier Set",
+        [249991] = "Tier Set",
+        [250247] = "Midnight Falls",
+        [260235] = "Belo'ren",
+      },
     },
     ["hunter/survival"] = {
       ["specID"] = 255,
@@ -1052,48 +1992,96 @@ ns.BisData = {
       ["sourceUrl"] = "https://www.wowhead.com/guide/classes/hunter/survival/bis-gear",
       ["itemsBySlot"] = {
         ["Weapon"] = {
-          249284,
+          {
+            ["itemID"] = 249284,
+            ["source"] = "Belo'ren",
+          },
         },
         ["Offhand"] = {
-          237837,
+          {
+            ["itemID"] = 237837,
+            ["source"] = "Crafting",
+          },
         },
         ["Head"] = {
-          249988,
+          {
+            ["itemID"] = 249988,
+            ["source"] = "Tier Set",
+          },
         },
         ["Neck"] = {
-          250247,
+          {
+            ["itemID"] = 250247,
+            ["source"] = "March on Quel'Danas",
+          },
         },
         ["Shoulders"] = {
-          151323,
+          {
+            ["itemID"] = 151323,
+            ["source"] = "",
+          },
         },
         ["Back"] = {
-          249370,
+          {
+            ["itemID"] = 249370,
+            ["source"] = "Vaelgor",
+          },
         },
         ["Chest"] = {
-          249991,
+          {
+            ["itemID"] = 249991,
+            ["source"] = "Tier Set",
+          },
         },
         ["Wrist"] = {
-          249304,
+          {
+            ["itemID"] = 249304,
+            ["source"] = "Fallen-King Salhadaar",
+          },
         },
         ["Hands"] = {
-          249989,
+          {
+            ["itemID"] = 249989,
+            ["source"] = "Tier Set",
+          },
         },
         ["Waist"] = {
-          249371,
+          {
+            ["itemID"] = 249371,
+            ["source"] = "Chimaerus",
+          },
         },
         ["Legs"] = {
-          249987,
+          {
+            ["itemID"] = 249987,
+            ["source"] = "Tier Set",
+          },
         },
         ["Feet"] = {
-          244577,
+          {
+            ["itemID"] = 244577,
+            ["source"] = "Crafting",
+          },
         },
         ["Ring"] = {
-          251093,
-          251217,
+          {
+            ["itemID"] = 251093,
+            ["source"] = "Nexus Point Xenas",
+          },
+          {
+            ["itemID"] = 251217,
+            ["source"] = "Nexus Point Xenas",
+          },
         },
         ["Trinket"] = {
-          249343,
-          249806,
+          {
+            ["itemID"] = 249343,
+            ["source"] = "Chimaerus",
+          },
+          {
+            ["itemID"] = 249806,
+            ["source"] = "Belo'ren",
+          },
         },
       },
       ["bisItems"] = {
@@ -1114,6 +2102,23 @@ ns.BisData = {
         [251093] = true,
         [251217] = true,
       },
+      ["itemSources"] = {
+        [237837] = "Crafting",
+        [244577] = "Crafting",
+        [249284] = "Belo'ren",
+        [249304] = "Fallen-King Salhadaar",
+        [249343] = "Chimaerus",
+        [249370] = "Vaelgor",
+        [249371] = "Chimaerus",
+        [249806] = "Belo'ren",
+        [249987] = "Tier Set",
+        [249988] = "Tier Set",
+        [249989] = "Tier Set",
+        [249991] = "Tier Set",
+        [250247] = "March on Quel'Danas",
+        [251093] = "Nexus Point Xenas",
+        [251217] = "Nexus Point Xenas",
+      },
     },
     ["mage/arcane"] = {
       ["specID"] = 62,
@@ -1122,48 +2127,96 @@ ns.BisData = {
       ["sourceUrl"] = "https://www.wowhead.com/guide/classes/mage/arcane/bis-gear",
       ["itemsBySlot"] = {
         ["Weapon"] = {
-          258218,
+          {
+            ["itemID"] = 258218,
+            ["source"] = "Skyreach",
+          },
         },
         ["Offhand"] = {
-          251094,
+          {
+            ["itemID"] = 251094,
+            ["source"] = "Windrunner Spire",
+          },
         },
         ["Head"] = {
-          250060,
+          {
+            ["itemID"] = 250060,
+            ["source"] = "Tier Set",
+          },
         },
         ["Neck"] = {
-          250247,
+          {
+            ["itemID"] = 250247,
+            ["source"] = "Midnight Falls",
+          },
         },
         ["Shoulders"] = {
-          250058,
+          {
+            ["itemID"] = 250058,
+            ["source"] = "Tier Set",
+          },
         },
         ["Back"] = {
-          239661,
+          {
+            ["itemID"] = 239661,
+            ["source"] = "Crafting",
+          },
         },
         ["Chest"] = {
-          250063,
+          {
+            ["itemID"] = 250063,
+            ["source"] = "Tier Set",
+          },
         },
         ["Wrist"] = {
-          239660,
+          {
+            ["itemID"] = 239660,
+            ["source"] = "Crafting",
+          },
         },
         ["Hands"] = {
-          250061,
+          {
+            ["itemID"] = 250061,
+            ["source"] = "Tier Set",
+          },
         },
         ["Waist"] = {
-          249376,
+          {
+            ["itemID"] = 249376,
+            ["source"] = "Belo'ren",
+          },
         },
         ["Legs"] = {
-          251090,
+          {
+            ["itemID"] = 251090,
+            ["source"] = "Windrunner Spire",
+          },
         },
         ["Feet"] = {
-          249373,
+          {
+            ["itemID"] = 249373,
+            ["source"] = "Chimaerus",
+          },
         },
         ["Ring"] = {
-          249919,
-          249920,
+          {
+            ["itemID"] = 249919,
+            ["source"] = "Belo'ren",
+          },
+          {
+            ["itemID"] = 249920,
+            ["source"] = "Midnight Falls",
+          },
         },
         ["Trinket"] = {
-          249346,
-          249343,
+          {
+            ["itemID"] = 249346,
+            ["source"] = "Vaelgor & Ezzorak",
+          },
+          {
+            ["itemID"] = 249343,
+            ["source"] = "Chimaerus",
+          },
         },
       },
       ["bisItems"] = {
@@ -1184,6 +2237,24 @@ ns.BisData = {
         [251094] = true,
         [258218] = true,
       },
+      ["itemSources"] = {
+        [239660] = "Crafting",
+        [239661] = "Crafting",
+        [249343] = "Chimaerus",
+        [249346] = "Vaelgor & Ezzorak",
+        [249373] = "Chimaerus",
+        [249376] = "Belo'ren",
+        [249919] = "Belo'ren",
+        [249920] = "Midnight Falls",
+        [250058] = "Tier Set",
+        [250060] = "Tier Set",
+        [250061] = "Tier Set",
+        [250063] = "Tier Set",
+        [250247] = "Midnight Falls",
+        [251090] = "Windrunner Spire",
+        [251094] = "Windrunner Spire",
+        [258218] = "Skyreach",
+      },
     },
     ["mage/fire"] = {
       ["specID"] = 63,
@@ -1192,45 +2263,90 @@ ns.BisData = {
       ["sourceUrl"] = "https://www.wowhead.com/guide/classes/mage/fire/bis-gear",
       ["itemsBySlot"] = {
         ["Weapon"] = {
-          249286,
+          {
+            ["itemID"] = 249286,
+            ["source"] = "Midnight Falls",
+          },
         },
         ["Head"] = {
-          250060,
+          {
+            ["itemID"] = 250060,
+            ["source"] = "Tier Set",
+          },
         },
         ["Neck"] = {
-          250247,
+          {
+            ["itemID"] = 250247,
+            ["source"] = "Midnight Falls",
+          },
         },
         ["Shoulders"] = {
-          250058,
+          {
+            ["itemID"] = 250058,
+            ["source"] = "Tier Set",
+          },
         },
         ["Back"] = {
-          239656,
+          {
+            ["itemID"] = 239656,
+            ["source"] = "Crafting",
+          },
         },
         ["Chest"] = {
-          249912,
+          {
+            ["itemID"] = 249912,
+            ["source"] = "Midnight Falls",
+          },
         },
         ["Wrist"] = {
-          239648,
+          {
+            ["itemID"] = 239648,
+            ["source"] = "Crafting",
+          },
         },
         ["Hands"] = {
-          250061,
+          {
+            ["itemID"] = 250061,
+            ["source"] = "Tier Set",
+          },
         },
         ["Waist"] = {
-          249376,
+          {
+            ["itemID"] = 249376,
+            ["source"] = "Belo'ren",
+          },
         },
         ["Legs"] = {
-          250059,
+          {
+            ["itemID"] = 250059,
+            ["source"] = "Tier Set",
+          },
         },
         ["Feet"] = {
-          258584,
+          {
+            ["itemID"] = 258584,
+            ["source"] = "Skyreach",
+          },
         },
         ["Ring"] = {
-          249920,
-          249369,
+          {
+            ["itemID"] = 249920,
+            ["source"] = "Midnight Falls",
+          },
+          {
+            ["itemID"] = 249369,
+            ["source"] = "Lightblinded Vanguard",
+          },
         },
         ["Trinket"] = {
-          250144,
-          249809,
+          {
+            ["itemID"] = 250144,
+            ["source"] = "Windrunner Spire",
+          },
+          {
+            ["itemID"] = 249809,
+            ["source"] = "Crown of the Cosmos",
+          },
         },
       },
       ["bisItems"] = {
@@ -1250,6 +2366,23 @@ ns.BisData = {
         [250247] = true,
         [258584] = true,
       },
+      ["itemSources"] = {
+        [239648] = "Crafting",
+        [239656] = "Crafting",
+        [249286] = "Midnight Falls",
+        [249369] = "Lightblinded Vanguard",
+        [249376] = "Belo'ren",
+        [249809] = "Crown of the Cosmos",
+        [249912] = "Midnight Falls",
+        [249920] = "Midnight Falls",
+        [250058] = "Tier Set",
+        [250059] = "Tier Set",
+        [250060] = "Tier Set",
+        [250061] = "Tier Set",
+        [250144] = "Windrunner Spire",
+        [250247] = "Midnight Falls",
+        [258584] = "Skyreach",
+      },
     },
     ["mage/frost"] = {
       ["specID"] = 64,
@@ -1258,45 +2391,90 @@ ns.BisData = {
       ["sourceUrl"] = "https://www.wowhead.com/guide/classes/mage/frost/bis-gear",
       ["itemsBySlot"] = {
         ["Weapon"] = {
-          258514,
+          {
+            ["itemID"] = 258514,
+            ["source"] = "Seat of the Triumvirate",
+          },
         },
         ["Head"] = {
-          250060,
+          {
+            ["itemID"] = 250060,
+            ["source"] = "Tier Set",
+          },
         },
         ["Neck"] = {
-          250247,
+          {
+            ["itemID"] = 250247,
+            ["source"] = "Midnight Falls",
+          },
         },
         ["Shoulders"] = {
-          251085,
+          {
+            ["itemID"] = 251085,
+            ["source"] = "Windrunner Spire",
+          },
         },
         ["Back"] = {
-          258575,
+          {
+            ["itemID"] = 258575,
+            ["source"] = "Skyreach",
+          },
         },
         ["Chest"] = {
-          250063,
+          {
+            ["itemID"] = 250063,
+            ["source"] = "Tier Set",
+          },
         },
         ["Wrist"] = {
-          258580,
+          {
+            ["itemID"] = 258580,
+            ["source"] = "Skyreach",
+          },
         },
         ["Hands"] = {
-          250061,
+          {
+            ["itemID"] = 250061,
+            ["source"] = "Tier Set",
+          },
         },
         ["Waist"] = {
-          250057,
+          {
+            ["itemID"] = 250057,
+            ["source"] = "The Catalyst",
+          },
         },
         ["Legs"] = {
-          250059,
+          {
+            ["itemID"] = 250059,
+            ["source"] = "Tier Set",
+          },
         },
         ["Feet"] = {
-          249373,
+          {
+            ["itemID"] = 249373,
+            ["source"] = "Chimaerus",
+          },
         },
         ["Ring"] = {
-          249919,
-          193708,
+          {
+            ["itemID"] = 249919,
+            ["source"] = "Belo'ren",
+          },
+          {
+            ["itemID"] = 193708,
+            ["source"] = "Algeth'ar Academy",
+          },
         },
         ["Trinket"] = {
-          249343,
-          249346,
+          {
+            ["itemID"] = 249343,
+            ["source"] = "Chimaerus",
+          },
+          {
+            ["itemID"] = 249346,
+            ["source"] = "Vaelgor & Ezzorak",
+          },
         },
       },
       ["bisItems"] = {
@@ -1316,6 +2494,23 @@ ns.BisData = {
         [258575] = true,
         [258580] = true,
       },
+      ["itemSources"] = {
+        [193708] = "Algeth'ar Academy",
+        [249343] = "Chimaerus",
+        [249346] = "Vaelgor & Ezzorak",
+        [249373] = "Chimaerus",
+        [249919] = "Belo'ren",
+        [250057] = "The Catalyst",
+        [250059] = "Tier Set",
+        [250060] = "Tier Set",
+        [250061] = "Tier Set",
+        [250063] = "Tier Set",
+        [250247] = "Midnight Falls",
+        [251085] = "Windrunner Spire",
+        [258514] = "Seat of the Triumvirate",
+        [258575] = "Skyreach",
+        [258580] = "Skyreach",
+      },
     },
     ["monk/brewmaster"] = {
       ["specID"] = 268,
@@ -1324,36 +2519,72 @@ ns.BisData = {
       ["sourceUrl"] = "https://www.wowhead.com/guide/classes/monk/brewmaster/bis-gear",
       ["itemsBySlot"] = {
         ["Head"] = {
-          250015,
+          {
+            ["itemID"] = 250015,
+            ["source"] = "Catalyst",
+          },
         },
         ["Neck"] = {
-          240950,
-          245792,
-          251490,
+          {
+            ["itemID"] = 240950,
+            ["source"] = "Jewelcrafting",
+          },
+          {
+            ["itemID"] = 245792,
+            ["source"] = "Jewelcrafting",
+          },
+          {
+            ["itemID"] = 251490,
+            ["source"] = "Jewelcrafting",
+          },
         },
         ["Shoulders"] = {
-          250013,
+          {
+            ["itemID"] = 250013,
+            ["source"] = "Catalyst",
+          },
         },
         ["Back"] = {
-          249335,
+          {
+            ["itemID"] = 249335,
+            ["source"] = "Imperator Averzian",
+          },
         },
         ["Chest"] = {
-          250018,
+          {
+            ["itemID"] = 250018,
+            ["source"] = "Catalyst",
+          },
         },
         ["Wrist"] = {
-          250011,
+          {
+            ["itemID"] = 250011,
+            ["source"] = "Catalyst",
+          },
         },
         ["Hands"] = {
-          250016,
+          {
+            ["itemID"] = 250016,
+            ["source"] = "Catalyst",
+          },
         },
         ["Waist"] = {
-          251082,
+          {
+            ["itemID"] = 251082,
+            ["source"] = "Windrunner Spire",
+          },
         },
         ["Legs"] = {
-          151314,
+          {
+            ["itemID"] = 151314,
+            ["source"] = "Seat of the Triumvirate",
+          },
         },
         ["Feet"] = {
-          151317,
+          {
+            ["itemID"] = 151317,
+            ["source"] = "Seat of the Triumvirate",
+          },
         },
       },
       ["bisItems"] = {
@@ -1370,6 +2601,20 @@ ns.BisData = {
         [251082] = true,
         [251490] = true,
       },
+      ["itemSources"] = {
+        [151314] = "Seat of the Triumvirate",
+        [151317] = "Seat of the Triumvirate",
+        [240950] = "Jewelcrafting",
+        [245792] = "Jewelcrafting",
+        [249335] = "Imperator Averzian",
+        [250011] = "Catalyst",
+        [250013] = "Catalyst",
+        [250015] = "Catalyst",
+        [250016] = "Catalyst",
+        [250018] = "Catalyst",
+        [251082] = "Windrunner Spire",
+        [251490] = "Jewelcrafting",
+      },
     },
     ["monk/mistweaver"] = {
       ["specID"] = 270,
@@ -1378,48 +2623,96 @@ ns.BisData = {
       ["sourceUrl"] = "https://www.wowhead.com/guide/classes/monk/mistweaver/bis-gear",
       ["itemsBySlot"] = {
         ["Weapon"] = {
-          258050,
+          {
+            ["itemID"] = 258050,
+            ["source"] = "Skyreach",
+          },
         },
         ["Offhand"] = {
-          249276,
+          {
+            ["itemID"] = 249276,
+            ["source"] = "Vorasius",
+          },
         },
         ["Head"] = {
-          249913,
+          {
+            ["itemID"] = 249913,
+            ["source"] = "Midnight Falls",
+          },
         },
         ["Neck"] = {
-          249337,
+          {
+            ["itemID"] = 249337,
+            ["source"] = "Fallen-King Salhadaar",
+          },
         },
         ["Shoulders"] = {
-          250013,
+          {
+            ["itemID"] = 250013,
+            ["source"] = "Tier Set",
+          },
         },
         ["Back"] = {
-          260312,
+          {
+            ["itemID"] = 260312,
+            ["source"] = "Magister's Terrace",
+          },
         },
         ["Chest"] = {
-          250018,
+          {
+            ["itemID"] = 250018,
+            ["source"] = "Tier Set",
+          },
         },
         ["Wrist"] = {
-          50264,
+          {
+            ["itemID"] = 50264,
+            ["source"] = "Pit of Saron",
+          },
         },
         ["Hands"] = {
-          250016,
+          {
+            ["itemID"] = 250016,
+            ["source"] = "Tier Set",
+          },
         },
         ["Waist"] = {
-          49806,
+          {
+            ["itemID"] = 49806,
+            ["source"] = "Pit of Saron",
+          },
         },
         ["Legs"] = {
-          250014,
+          {
+            ["itemID"] = 250014,
+            ["source"] = "Tier Set",
+          },
         },
         ["Feet"] = {
-          251210,
+          {
+            ["itemID"] = 251210,
+            ["source"] = "Nexus-Point Xenas",
+          },
         },
         ["Ring"] = {
-          249920,
-          151311,
+          {
+            ["itemID"] = 249920,
+            ["source"] = "Midnight Falls",
+          },
+          {
+            ["itemID"] = 151311,
+            ["source"] = "Seat of the Triumvirate",
+          },
         },
         ["Trinket"] = {
-          250256,
-          249808,
+          {
+            ["itemID"] = 250256,
+            ["source"] = "Windrunner Spire",
+          },
+          {
+            ["itemID"] = 249808,
+            ["source"] = "Lightblinded Vanguard",
+          },
         },
       },
       ["bisItems"] = {
@@ -1440,6 +2733,24 @@ ns.BisData = {
         [258050] = true,
         [260312] = true,
       },
+      ["itemSources"] = {
+        [49806] = "Pit of Saron",
+        [50264] = "Pit of Saron",
+        [151311] = "Seat of the Triumvirate",
+        [249276] = "Vorasius",
+        [249337] = "Fallen-King Salhadaar",
+        [249808] = "Lightblinded Vanguard",
+        [249913] = "Midnight Falls",
+        [249920] = "Midnight Falls",
+        [250013] = "Tier Set",
+        [250014] = "Tier Set",
+        [250016] = "Tier Set",
+        [250018] = "Tier Set",
+        [250256] = "Windrunner Spire",
+        [251210] = "Nexus-Point Xenas",
+        [258050] = "Skyreach",
+        [260312] = "Magister's Terrace",
+      },
     },
     ["monk/windwalker"] = {
       ["specID"] = 269,
@@ -1448,38 +2759,74 @@ ns.BisData = {
       ["sourceUrl"] = "https://www.wowhead.com/guide/classes/monk/windwalker/bis-gear",
       ["itemsBySlot"] = {
         ["Head"] = {
-          250015,
+          {
+            ["itemID"] = 250015,
+            ["source"] = "Tier Set",
+          },
         },
         ["Neck"] = {
-          250247,
+          {
+            ["itemID"] = 250247,
+            ["source"] = "Midnight Falls",
+          },
         },
         ["Shoulders"] = {
-          250013,
+          {
+            ["itemID"] = 250013,
+            ["source"] = "Tier Set",
+          },
         },
         ["Back"] = {
-          250010,
+          {
+            ["itemID"] = 250010,
+            ["source"] = "The Catalyst",
+          },
         },
         ["Chest"] = {
-          250018,
+          {
+            ["itemID"] = 250018,
+            ["source"] = "Tier Set",
+          },
         },
         ["Wrist"] = {
-          249327,
+          {
+            ["itemID"] = 249327,
+            ["source"] = "Vorasius",
+          },
         },
         ["Hands"] = {
-          249321,
+          {
+            ["itemID"] = 249321,
+            ["source"] = "Vaelgor & Ezzorak",
+          },
         },
         ["Waist"] = {
-          251082,
+          {
+            ["itemID"] = 251082,
+            ["source"] = "Windrunner Spire",
+          },
         },
         ["Legs"] = {
-          250014,
+          {
+            ["itemID"] = 250014,
+            ["source"] = "Tier Set",
+          },
         },
         ["Feet"] = {
-          250017,
+          {
+            ["itemID"] = 250017,
+            ["source"] = "The Catalyst",
+          },
         },
         ["Ring"] = {
-          251513,
-          249920,
+          {
+            ["itemID"] = 251513,
+            ["source"] = "Crafting",
+          },
+          {
+            ["itemID"] = 249920,
+            ["source"] = "Midnight Falls",
+          },
         },
       },
       ["bisItems"] = {
@@ -1496,6 +2843,20 @@ ns.BisData = {
         [251082] = true,
         [251513] = true,
       },
+      ["itemSources"] = {
+        [249321] = "Vaelgor & Ezzorak",
+        [249327] = "Vorasius",
+        [249920] = "Midnight Falls",
+        [250010] = "The Catalyst",
+        [250013] = "Tier Set",
+        [250014] = "Tier Set",
+        [250015] = "Tier Set",
+        [250017] = "The Catalyst",
+        [250018] = "Tier Set",
+        [250247] = "Midnight Falls",
+        [251082] = "Windrunner Spire",
+        [251513] = "Crafting",
+      },
     },
     ["paladin/holy"] = {
       ["specID"] = 65,
@@ -1504,48 +2865,96 @@ ns.BisData = {
       ["sourceUrl"] = "https://www.wowhead.com/guide/classes/paladin/holy/bis-gear",
       ["itemsBySlot"] = {
         ["Weapon"] = {
-          193710,
+          {
+            ["itemID"] = 193710,
+            ["source"] = "Algeth'ar Academy",
+          },
         },
         ["Offhand"] = {
-          258049,
+          {
+            ["itemID"] = 258049,
+            ["source"] = "Skyreach",
+          },
         },
         ["Head"] = {
-          249961,
+          {
+            ["itemID"] = 249961,
+            ["source"] = "Lightblinded Vanguard",
+          },
         },
         ["Neck"] = {
-          250247,
+          {
+            ["itemID"] = 250247,
+            ["source"] = "Midnight Falls",
+          },
         },
         ["Shoulders"] = {
-          249959,
+          {
+            ["itemID"] = 249959,
+            ["source"] = "Fallen-King Salhadaar",
+          },
         },
         ["Back"] = {
-          258575,
+          {
+            ["itemID"] = 258575,
+            ["source"] = "Skyreach",
+          },
         },
         ["Chest"] = {
-          249964,
+          {
+            ["itemID"] = 249964,
+            ["source"] = "Chimaerus",
+          },
         },
         ["Wrist"] = {
-          263193,
+          {
+            ["itemID"] = 263193,
+            ["source"] = "Maisara Caverns",
+          },
         },
         ["Hands"] = {
-          249962,
+          {
+            ["itemID"] = 249962,
+            ["source"] = "Vorasius",
+          },
         },
         ["Waist"] = {
-          249331,
+          {
+            ["itemID"] = 249331,
+            ["source"] = "Vaelgor & Ezzorak",
+          },
         },
         ["Legs"] = {
-          249915,
+          {
+            ["itemID"] = 249915,
+            ["source"] = "Midnight Falls",
+          },
         },
         ["Feet"] = {
-          249332,
+          {
+            ["itemID"] = 249332,
+            ["source"] = "Vorasius",
+          },
         },
         ["Ring"] = {
-          249920,
-          249919,
+          {
+            ["itemID"] = 249920,
+            ["source"] = "Midnight Falls",
+          },
+          {
+            ["itemID"] = 249919,
+            ["source"] = "Belo'ren",
+          },
         },
         ["Trinket"] = {
-          249809,
-          249343,
+          {
+            ["itemID"] = 249809,
+            ["source"] = "Crown of the Cosmos",
+          },
+          {
+            ["itemID"] = 249343,
+            ["source"] = "Chimaerus",
+          },
         },
       },
       ["bisItems"] = {
@@ -1566,6 +2975,24 @@ ns.BisData = {
         [258575] = true,
         [263193] = true,
       },
+      ["itemSources"] = {
+        [193710] = "Algeth'ar Academy",
+        [249331] = "Vaelgor & Ezzorak",
+        [249332] = "Vorasius",
+        [249343] = "Chimaerus",
+        [249809] = "Crown of the Cosmos",
+        [249915] = "Midnight Falls",
+        [249919] = "Belo'ren",
+        [249920] = "Midnight Falls",
+        [249959] = "Fallen-King Salhadaar",
+        [249961] = "Lightblinded Vanguard",
+        [249962] = "Vorasius",
+        [249964] = "Chimaerus",
+        [250247] = "Midnight Falls",
+        [258049] = "Skyreach",
+        [258575] = "Skyreach",
+        [263193] = "Maisara Caverns",
+      },
     },
     ["paladin/protection"] = {
       ["specID"] = 66,
@@ -1574,48 +3001,96 @@ ns.BisData = {
       ["sourceUrl"] = "https://www.wowhead.com/guide/classes/paladin/protection/bis-gear",
       ["itemsBySlot"] = {
         ["Weapon"] = {
-          249295,
+          {
+            ["itemID"] = 249295,
+            ["source"] = "Crown of the Cosmos",
+          },
         },
         ["Offhand"] = {
-          249921,
+          {
+            ["itemID"] = 249921,
+            ["source"] = "Belo'ren",
+          },
         },
         ["Head"] = {
-          249961,
+          {
+            ["itemID"] = 249961,
+            ["source"] = "Tier Set",
+          },
         },
         ["Neck"] = {
-          249368,
+          {
+            ["itemID"] = 249368,
+            ["source"] = "Crown of the Cosmos",
+          },
         },
         ["Shoulders"] = {
-          249959,
+          {
+            ["itemID"] = 249959,
+            ["source"] = "Tier Set",
+          },
         },
         ["Back"] = {
-          249370,
+          {
+            ["itemID"] = 249370,
+            ["source"] = "Vaelgor & Ezzorak",
+          },
         },
         ["Chest"] = {
-          249964,
+          {
+            ["itemID"] = 249964,
+            ["source"] = "Tier Set",
+          },
         },
         ["Wrist"] = {
-          249326,
+          {
+            ["itemID"] = 249326,
+            ["source"] = "Imperator Averzian",
+          },
         },
         ["Hands"] = {
-          151332,
+          {
+            ["itemID"] = 151332,
+            ["source"] = "Seat of the Triumvirate",
+          },
         },
         ["Waist"] = {
-          249331,
+          {
+            ["itemID"] = 249331,
+            ["source"] = "Vaelgor & Ezzorak",
+          },
         },
         ["Legs"] = {
-          249960,
+          {
+            ["itemID"] = 249960,
+            ["source"] = "Tier Set",
+          },
         },
         ["Feet"] = {
-          249381,
+          {
+            ["itemID"] = 249381,
+            ["source"] = "Chimaerus",
+          },
         },
         ["Ring"] = {
-          249920,
-          151311,
+          {
+            ["itemID"] = 249920,
+            ["source"] = "Midnight Falls",
+          },
+          {
+            ["itemID"] = 151311,
+            ["source"] = "Seat of the Triumvirate",
+          },
         },
         ["Trinket"] = {
-          249343,
-          249342,
+          {
+            ["itemID"] = 249343,
+            ["source"] = "Chimaerus",
+          },
+          {
+            ["itemID"] = 249342,
+            ["source"] = "Vorasius",
+          },
         },
       },
       ["bisItems"] = {
@@ -1636,6 +3111,24 @@ ns.BisData = {
         [249961] = true,
         [249964] = true,
       },
+      ["itemSources"] = {
+        [151311] = "Seat of the Triumvirate",
+        [151332] = "Seat of the Triumvirate",
+        [249295] = "Crown of the Cosmos",
+        [249326] = "Imperator Averzian",
+        [249331] = "Vaelgor & Ezzorak",
+        [249342] = "Vorasius",
+        [249343] = "Chimaerus",
+        [249368] = "Crown of the Cosmos",
+        [249370] = "Vaelgor & Ezzorak",
+        [249381] = "Chimaerus",
+        [249920] = "Midnight Falls",
+        [249921] = "Belo'ren",
+        [249959] = "Tier Set",
+        [249960] = "Tier Set",
+        [249961] = "Tier Set",
+        [249964] = "Tier Set",
+      },
     },
     ["paladin/retribution"] = {
       ["specID"] = 70,
@@ -1644,45 +3137,90 @@ ns.BisData = {
       ["sourceUrl"] = "https://www.wowhead.com/guide/classes/paladin/retribution/bis-gear",
       ["itemsBySlot"] = {
         ["Weapon"] = {
-          249277,
+          {
+            ["itemID"] = 249277,
+            ["source"] = "Lightblinded Vanguard",
+          },
         },
         ["Head"] = {
-          249961,
+          {
+            ["itemID"] = 249961,
+            ["source"] = "Tier Set",
+          },
         },
         ["Neck"] = {
-          250247,
+          {
+            ["itemID"] = 250247,
+            ["source"] = "Midnight Falls",
+          },
         },
         ["Shoulders"] = {
-          249959,
+          {
+            ["itemID"] = 249959,
+            ["source"] = "Tier Set",
+          },
         },
         ["Back"] = {
-          239656,
+          {
+            ["itemID"] = 239656,
+            ["source"] = "Crafting/Misc",
+          },
         },
         ["Chest"] = {
-          249964,
+          {
+            ["itemID"] = 249964,
+            ["source"] = "Tier Set",
+          },
         },
         ["Wrist"] = {
-          237834,
+          {
+            ["itemID"] = 237834,
+            ["source"] = "Crafting/Misc",
+          },
         },
         ["Hands"] = {
-          151332,
+          {
+            ["itemID"] = 151332,
+            ["source"] = "Seat of the Triumvirate",
+          },
         },
         ["Waist"] = {
-          249380,
+          {
+            ["itemID"] = 249380,
+            ["source"] = "Crown of the Cosmos",
+          },
         },
         ["Legs"] = {
-          249960,
+          {
+            ["itemID"] = 249960,
+            ["source"] = "Tier Set",
+          },
         },
         ["Feet"] = {
-          249381,
+          {
+            ["itemID"] = 249381,
+            ["source"] = "Chimaerus",
+          },
         },
         ["Ring"] = {
-          249919,
-          249920,
+          {
+            ["itemID"] = 249919,
+            ["source"] = "Belo'ren",
+          },
+          {
+            ["itemID"] = 249920,
+            ["source"] = "Midnight Falls",
+          },
         },
         ["Trinket"] = {
-          260235,
-          193701,
+          {
+            ["itemID"] = 260235,
+            ["source"] = "Belo'ren",
+          },
+          {
+            ["itemID"] = 193701,
+            ["source"] = "Algeth'ar Academy",
+          },
         },
       },
       ["bisItems"] = {
@@ -1702,6 +3240,23 @@ ns.BisData = {
         [250247] = true,
         [260235] = true,
       },
+      ["itemSources"] = {
+        [151332] = "Seat of the Triumvirate",
+        [193701] = "Algeth'ar Academy",
+        [237834] = "Crafting/Misc",
+        [239656] = "Crafting/Misc",
+        [249277] = "Lightblinded Vanguard",
+        [249380] = "Crown of the Cosmos",
+        [249381] = "Chimaerus",
+        [249919] = "Belo'ren",
+        [249920] = "Midnight Falls",
+        [249959] = "Tier Set",
+        [249960] = "Tier Set",
+        [249961] = "Tier Set",
+        [249964] = "Tier Set",
+        [250247] = "Midnight Falls",
+        [260235] = "Belo'ren",
+      },
     },
     ["priest/discipline"] = {
       ["specID"] = 256,
@@ -1710,41 +3265,80 @@ ns.BisData = {
       ["sourceUrl"] = "https://www.wowhead.com/guide/classes/priest/discipline/bis-gear",
       ["itemsBySlot"] = {
         ["Head"] = {
-          250051,
+          {
+            ["itemID"] = 250051,
+            ["source"] = "Raid",
+          },
         },
         ["Neck"] = {
-          249368,
+          {
+            ["itemID"] = 249368,
+            ["source"] = "Crown of the Cosmos",
+          },
         },
         ["Shoulders"] = {
-          250049,
+          {
+            ["itemID"] = 250049,
+            ["source"] = "Raid",
+          },
         },
         ["Back"] = {
-          249370,
+          {
+            ["itemID"] = 249370,
+            ["source"] = "Vaelgor & Ezzorak",
+          },
         },
         ["Chest"] = {
-          249912,
+          {
+            ["itemID"] = 249912,
+            ["source"] = "Midnight Falls",
+          },
         },
         ["Wrist"] = {
-          249315,
+          {
+            ["itemID"] = 249315,
+            ["source"] = "Vorasius",
+          },
         },
         ["Hands"] = {
-          250052,
+          {
+            ["itemID"] = 250052,
+            ["source"] = "Raid",
+          },
         },
         ["Waist"] = {
-          239664,
+          {
+            ["itemID"] = 239664,
+            ["source"] = "Crafting/Misc",
+          },
         },
         ["Legs"] = {
-          250050,
+          {
+            ["itemID"] = 250050,
+            ["source"] = "Raid",
+          },
         },
         ["Feet"] = {
-          258584,
+          {
+            ["itemID"] = 258584,
+            ["source"] = "Skyreach",
+          },
         },
         ["Ring"] = {
-          249920,
-          251093,
+          {
+            ["itemID"] = 249920,
+            ["source"] = "Midnight Falls",
+          },
+          {
+            ["itemID"] = 251093,
+            ["source"] = "Nexus Point Xenas",
+          },
         },
         ["Offhand"] = {
-          245769,
+          {
+            ["itemID"] = 245769,
+            ["source"] = "Crafting/Misc",
+          },
         },
       },
       ["bisItems"] = {
@@ -1762,6 +3356,21 @@ ns.BisData = {
         [251093] = true,
         [258584] = true,
       },
+      ["itemSources"] = {
+        [239664] = "Crafting/Misc",
+        [245769] = "Crafting/Misc",
+        [249315] = "Vorasius",
+        [249368] = "Crown of the Cosmos",
+        [249370] = "Vaelgor & Ezzorak",
+        [249912] = "Midnight Falls",
+        [249920] = "Midnight Falls",
+        [250049] = "Raid",
+        [250050] = "Raid",
+        [250051] = "Raid",
+        [250052] = "Raid",
+        [251093] = "Nexus Point Xenas",
+        [258584] = "Skyreach",
+      },
     },
     ["priest/holy"] = {
       ["specID"] = 257,
@@ -1770,41 +3379,80 @@ ns.BisData = {
       ["sourceUrl"] = "https://www.wowhead.com/guide/classes/priest/holy/bis-gear",
       ["itemsBySlot"] = {
         ["Head"] = {
-          250051,
+          {
+            ["itemID"] = 250051,
+            ["source"] = "Raid",
+          },
         },
         ["Neck"] = {
-          250247,
+          {
+            ["itemID"] = 250247,
+            ["source"] = "Midnight Falls",
+          },
         },
         ["Shoulders"] = {
-          250049,
+          {
+            ["itemID"] = 250049,
+            ["source"] = "Raid",
+          },
         },
         ["Back"] = {
-          249335,
+          {
+            ["itemID"] = 249335,
+            ["source"] = "Imperator Averzian",
+          },
         },
         ["Chest"] = {
-          249912,
+          {
+            ["itemID"] = 249912,
+            ["source"] = "Midnight Falls",
+          },
         },
         ["Wrist"] = {
-          250047,
+          {
+            ["itemID"] = 250047,
+            ["source"] = "Raid",
+          },
         },
         ["Hands"] = {
-          250052,
+          {
+            ["itemID"] = 250052,
+            ["source"] = "Raid",
+          },
         },
         ["Waist"] = {
-          239664,
+          {
+            ["itemID"] = 239664,
+            ["source"] = "Crafting/Misc",
+          },
         },
         ["Legs"] = {
-          250050,
+          {
+            ["itemID"] = 250050,
+            ["source"] = "Raid",
+          },
         },
         ["Feet"] = {
-          249373,
+          {
+            ["itemID"] = 249373,
+            ["source"] = "Chimaerus",
+          },
         },
         ["Ring"] = {
-          249336,
-          249919,
+          {
+            ["itemID"] = 249336,
+            ["source"] = "Vorasius",
+          },
+          {
+            ["itemID"] = 249919,
+            ["source"] = "Belo'ren",
+          },
         },
         ["Offhand"] = {
-          245769,
+          {
+            ["itemID"] = 245769,
+            ["source"] = "Crafting/Misc",
+          },
         },
       },
       ["bisItems"] = {
@@ -1822,6 +3470,21 @@ ns.BisData = {
         [250052] = true,
         [250247] = true,
       },
+      ["itemSources"] = {
+        [239664] = "Crafting/Misc",
+        [245769] = "Crafting/Misc",
+        [249335] = "Imperator Averzian",
+        [249336] = "Vorasius",
+        [249373] = "Chimaerus",
+        [249912] = "Midnight Falls",
+        [249919] = "Belo'ren",
+        [250047] = "Raid",
+        [250049] = "Raid",
+        [250050] = "Raid",
+        [250051] = "Raid",
+        [250052] = "Raid",
+        [250247] = "Midnight Falls",
+      },
     },
     ["priest/shadow"] = {
       ["specID"] = 258,
@@ -1830,41 +3493,80 @@ ns.BisData = {
       ["sourceUrl"] = "https://www.wowhead.com/guide/classes/priest/shadow/bis-gear",
       ["itemsBySlot"] = {
         ["Head"] = {
-          250051,
+          {
+            ["itemID"] = 250051,
+            ["source"] = "Raid",
+          },
         },
         ["Neck"] = {
-          250247,
+          {
+            ["itemID"] = 250247,
+            ["source"] = "Midnight Falls",
+          },
         },
         ["Shoulders"] = {
-          250049,
+          {
+            ["itemID"] = 250049,
+            ["source"] = "Raid",
+          },
         },
         ["Back"] = {
-          249370,
+          {
+            ["itemID"] = 249370,
+            ["source"] = "Vaelgor & Ezzorak",
+          },
         },
         ["Chest"] = {
-          250054,
+          {
+            ["itemID"] = 250054,
+            ["source"] = "Raid",
+          },
         },
         ["Wrist"] = {
-          251108,
+          {
+            ["itemID"] = 251108,
+            ["source"] = "Magister's Terrace",
+          },
         },
         ["Hands"] = {
-          250052,
+          {
+            ["itemID"] = 250052,
+            ["source"] = "Raid",
+          },
         },
         ["Waist"] = {
-          249376,
+          {
+            ["itemID"] = 249376,
+            ["source"] = "Belo'ren",
+          },
         },
         ["Legs"] = {
-          250050,
+          {
+            ["itemID"] = 250050,
+            ["source"] = "Raid",
+          },
         },
         ["Feet"] = {
-          249373,
+          {
+            ["itemID"] = 249373,
+            ["source"] = "Chimaerus",
+          },
         },
         ["Ring"] = {
-          249920,
-          249369,
+          {
+            ["itemID"] = 249920,
+            ["source"] = "Midnight Falls",
+          },
+          {
+            ["itemID"] = 249369,
+            ["source"] = "Lightblinded Vanguard",
+          },
         },
         ["Offhand"] = {
-          249922,
+          {
+            ["itemID"] = 249922,
+            ["source"] = "Chimaerus",
+          },
         },
       },
       ["bisItems"] = {
@@ -1882,6 +3584,21 @@ ns.BisData = {
         [250247] = true,
         [251108] = true,
       },
+      ["itemSources"] = {
+        [249369] = "Lightblinded Vanguard",
+        [249370] = "Vaelgor & Ezzorak",
+        [249373] = "Chimaerus",
+        [249376] = "Belo'ren",
+        [249920] = "Midnight Falls",
+        [249922] = "Chimaerus",
+        [250049] = "Raid",
+        [250050] = "Raid",
+        [250051] = "Raid",
+        [250052] = "Raid",
+        [250054] = "Raid",
+        [250247] = "Midnight Falls",
+        [251108] = "Magister's Terrace",
+      },
     },
     ["rogue/assassination"] = {
       ["specID"] = 259,
@@ -1890,48 +3607,96 @@ ns.BisData = {
       ["sourceUrl"] = "https://www.wowhead.com/guide/classes/rogue/assassination/bis-gear",
       ["itemsBySlot"] = {
         ["Weapon"] = {
-          249925,
+          {
+            ["itemID"] = 249925,
+            ["source"] = "Vorasius",
+          },
         },
         ["Offhand"] = {
-          237837,
+          {
+            ["itemID"] = 237837,
+            ["source"] = "Crafting",
+          },
         },
         ["Head"] = {
-          250006,
+          {
+            ["itemID"] = 250006,
+            ["source"] = "Tier Set",
+          },
         },
         ["Neck"] = {
-          249337,
+          {
+            ["itemID"] = 249337,
+            ["source"] = "Fallen-King Salhadaar",
+          },
         },
         ["Shoulders"] = {
-          250004,
+          {
+            ["itemID"] = 250004,
+            ["source"] = "Tier Set",
+          },
         },
         ["Back"] = {
-          260312,
+          {
+            ["itemID"] = 260312,
+            ["source"] = "Magister's Terrace",
+          },
         },
         ["Chest"] = {
-          250009,
+          {
+            ["itemID"] = 250009,
+            ["source"] = "Tier Set",
+          },
         },
         ["Wrist"] = {
-          244576,
+          {
+            ["itemID"] = 244576,
+            ["source"] = "Crafting",
+          },
         },
         ["Hands"] = {
-          250007,
+          {
+            ["itemID"] = 250007,
+            ["source"] = "Tier Set",
+          },
         },
         ["Waist"] = {
-          249374,
+          {
+            ["itemID"] = 249374,
+            ["source"] = "Chimaerus",
+          },
         },
         ["Legs"] = {
-          251087,
+          {
+            ["itemID"] = 251087,
+            ["source"] = "Windrunner Spire",
+          },
         },
         ["Feet"] = {
-          249382,
+          {
+            ["itemID"] = 249382,
+            ["source"] = "Crown of the Cosmos",
+          },
         },
         ["Ring"] = {
-          249919,
-          249920,
+          {
+            ["itemID"] = 249919,
+            ["source"] = "Belo'ren",
+          },
+          {
+            ["itemID"] = 249920,
+            ["source"] = "Midnight Falls",
+          },
         },
         ["Trinket"] = {
-          249343,
-          193701,
+          {
+            ["itemID"] = 249343,
+            ["source"] = "Chimaerus",
+          },
+          {
+            ["itemID"] = 193701,
+            ["source"] = "Algeth'ar Academy",
+          },
         },
       },
       ["bisItems"] = {
@@ -1952,6 +3717,24 @@ ns.BisData = {
         [251087] = true,
         [260312] = true,
       },
+      ["itemSources"] = {
+        [193701] = "Algeth'ar Academy",
+        [237837] = "Crafting",
+        [244576] = "Crafting",
+        [249337] = "Fallen-King Salhadaar",
+        [249343] = "Chimaerus",
+        [249374] = "Chimaerus",
+        [249382] = "Crown of the Cosmos",
+        [249919] = "Belo'ren",
+        [249920] = "Midnight Falls",
+        [249925] = "Vorasius",
+        [250004] = "Tier Set",
+        [250006] = "Tier Set",
+        [250007] = "Tier Set",
+        [250009] = "Tier Set",
+        [251087] = "Windrunner Spire",
+        [260312] = "Magister's Terrace",
+      },
     },
     ["rogue/outlaw"] = {
       ["specID"] = 260,
@@ -1960,48 +3743,96 @@ ns.BisData = {
       ["sourceUrl"] = "https://www.wowhead.com/guide/classes/rogue/outlaw/bis-gear",
       ["itemsBySlot"] = {
         ["Weapon"] = {
-          260423,
+          {
+            ["itemID"] = 260423,
+            ["source"] = "Crown of the Cosmos",
+          },
         },
         ["Offhand"] = {
-          133491,
+          {
+            ["itemID"] = 133491,
+            ["source"] = "Pit of Saron",
+          },
         },
         ["Head"] = {
-          151336,
+          {
+            ["itemID"] = 151336,
+            ["source"] = "Seat of the Triumvirate",
+          },
         },
         ["Neck"] = {
-          50228,
+          {
+            ["itemID"] = 50228,
+            ["source"] = "Pit of Saron",
+          },
         },
         ["Shoulders"] = {
-          250004,
+          {
+            ["itemID"] = 250004,
+            ["source"] = "Tier Set",
+          },
         },
         ["Back"] = {
-          249335,
+          {
+            ["itemID"] = 249335,
+            ["source"] = "Imperator Averzian",
+          },
         },
         ["Chest"] = {
-          250009,
+          {
+            ["itemID"] = 250009,
+            ["source"] = "Tier Set",
+          },
         },
         ["Wrist"] = {
-          50264,
+          {
+            ["itemID"] = 50264,
+            ["source"] = "Pit of Saron",
+          },
         },
         ["Hands"] = {
-          250007,
+          {
+            ["itemID"] = 250007,
+            ["source"] = "Tier Set",
+          },
         },
         ["Waist"] = {
-          249374,
+          {
+            ["itemID"] = 249374,
+            ["source"] = "Chimaerus",
+          },
         },
         ["Legs"] = {
-          250005,
+          {
+            ["itemID"] = 250005,
+            ["source"] = "Tier Set",
+          },
         },
         ["Feet"] = {
-          244569,
+          {
+            ["itemID"] = 244569,
+            ["source"] = "Crafting",
+          },
         },
         ["Ring"] = {
-          249336,
-          240949,
+          {
+            ["itemID"] = 249336,
+            ["source"] = "Vorasius",
+          },
+          {
+            ["itemID"] = 240949,
+            ["source"] = "Crafting",
+          },
         },
         ["Trinket"] = {
-          249343,
-          260235,
+          {
+            ["itemID"] = 249343,
+            ["source"] = "Chimaerus",
+          },
+          {
+            ["itemID"] = 260235,
+            ["source"] = "Belo'ren",
+          },
         },
       },
       ["bisItems"] = {
@@ -2022,6 +3853,24 @@ ns.BisData = {
         [260235] = true,
         [260423] = true,
       },
+      ["itemSources"] = {
+        [50228] = "Pit of Saron",
+        [50264] = "Pit of Saron",
+        [133491] = "Pit of Saron",
+        [151336] = "Seat of the Triumvirate",
+        [240949] = "Crafting",
+        [244569] = "Crafting",
+        [249335] = "Imperator Averzian",
+        [249336] = "Vorasius",
+        [249343] = "Chimaerus",
+        [249374] = "Chimaerus",
+        [250004] = "Tier Set",
+        [250005] = "Tier Set",
+        [250007] = "Tier Set",
+        [250009] = "Tier Set",
+        [260235] = "Belo'ren",
+        [260423] = "Crown of the Cosmos",
+      },
     },
     ["rogue/subtlety"] = {
       ["specID"] = 261,
@@ -2030,48 +3879,96 @@ ns.BisData = {
       ["sourceUrl"] = "https://www.wowhead.com/guide/classes/rogue/subtlety/bis-gear",
       ["itemsBySlot"] = {
         ["Head"] = {
-          250006,
+          {
+            ["itemID"] = 250006,
+            ["source"] = "Tier Set",
+          },
         },
         ["Neck"] = {
-          249368,
+          {
+            ["itemID"] = 249368,
+            ["source"] = "Crown of the Cosmos",
+          },
         },
         ["Shoulders"] = {
-          250004,
+          {
+            ["itemID"] = 250004,
+            ["source"] = "Tier Set",
+          },
         },
         ["Back"] = {
-          258575,
+          {
+            ["itemID"] = 258575,
+            ["source"] = "Skyreach",
+          },
         },
         ["Chest"] = {
-          250009,
+          {
+            ["itemID"] = 250009,
+            ["source"] = "Tier Set",
+          },
         },
         ["Wrist"] = {
-          249327,
+          {
+            ["itemID"] = 249327,
+            ["source"] = "Vorasius",
+          },
         },
         ["Hands"] = {
-          250007,
+          {
+            ["itemID"] = 250007,
+            ["source"] = "Tier Set",
+          },
         },
         ["Waist"] = {
-          244573,
+          {
+            ["itemID"] = 244573,
+            ["source"] = "Crafting",
+          },
         },
         ["Legs"] = {
-          49817,
+          {
+            ["itemID"] = 49817,
+            ["source"] = "Pit of Saron",
+          },
         },
         ["Feet"] = {
-          258577,
+          {
+            ["itemID"] = 258577,
+            ["source"] = "Skyreach",
+          },
         },
         ["Ring"] = {
-          193708,
-          251115,
+          {
+            ["itemID"] = 193708,
+            ["source"] = "Algeth'ar Academy",
+          },
+          {
+            ["itemID"] = 251115,
+            ["source"] = "Magister's Terrace",
+          },
         },
         ["Trinket"] = {
-          249344,
-          249343,
+          {
+            ["itemID"] = 249344,
+            ["source"] = "Imperator Averzian",
+          },
+          {
+            ["itemID"] = 249343,
+            ["source"] = "Chimaerus",
+          },
         },
         ["Weapon"] = {
-          249925,
+          {
+            ["itemID"] = 249925,
+            ["source"] = "Vorasius",
+          },
         },
         ["Offhand"] = {
-          237837,
+          {
+            ["itemID"] = 237837,
+            ["source"] = "Crafting",
+          },
         },
       },
       ["bisItems"] = {
@@ -2092,6 +3989,24 @@ ns.BisData = {
         [258575] = true,
         [258577] = true,
       },
+      ["itemSources"] = {
+        [49817] = "Pit of Saron",
+        [193708] = "Algeth'ar Academy",
+        [237837] = "Crafting",
+        [244573] = "Crafting",
+        [249327] = "Vorasius",
+        [249343] = "Chimaerus",
+        [249344] = "Imperator Averzian",
+        [249368] = "Crown of the Cosmos",
+        [249925] = "Vorasius",
+        [250004] = "Tier Set",
+        [250006] = "Tier Set",
+        [250007] = "Tier Set",
+        [250009] = "Tier Set",
+        [251115] = "Magister's Terrace",
+        [258575] = "Skyreach",
+        [258577] = "Skyreach",
+      },
     },
     ["shaman/elemental"] = {
       ["specID"] = 262,
@@ -2100,48 +4015,96 @@ ns.BisData = {
       ["sourceUrl"] = "https://www.wowhead.com/guide/classes/shaman/elemental/bis-gear",
       ["itemsBySlot"] = {
         ["Weapon"] = {
-          251083,
+          {
+            ["itemID"] = 251083,
+            ["source"] = "Windrunner Spire",
+          },
         },
         ["Offhand"] = {
-          251105,
+          {
+            ["itemID"] = 251105,
+            ["source"] = "Magister's Terrace",
+          },
         },
         ["Head"] = {
-          249979,
+          {
+            ["itemID"] = 249979,
+            ["source"] = "Tier Set",
+          },
         },
         ["Neck"] = {
-          250247,
+          {
+            ["itemID"] = 250247,
+            ["source"] = "Midnight Falls",
+          },
         },
         ["Shoulders"] = {
-          249977,
+          {
+            ["itemID"] = 249977,
+            ["source"] = "Tier Set",
+          },
         },
         ["Back"] = {
-          249974,
+          {
+            ["itemID"] = 249974,
+            ["source"] = "Catalyst",
+          },
         },
         ["Chest"] = {
-          249982,
+          {
+            ["itemID"] = 249982,
+            ["source"] = "Tier Set",
+          },
         },
         ["Wrist"] = {
-          249304,
+          {
+            ["itemID"] = 249304,
+            ["source"] = "Fallen-King Salhadaar",
+          },
         },
         ["Hands"] = {
-          249980,
+          {
+            ["itemID"] = 249980,
+            ["source"] = "Tier Set",
+          },
         },
         ["Waist"] = {
-          244611,
+          {
+            ["itemID"] = 244611,
+            ["source"] = "Crafting",
+          },
         },
         ["Legs"] = {
-          251215,
+          {
+            ["itemID"] = 251215,
+            ["source"] = "Nexus Point Xenas",
+          },
         },
         ["Feet"] = {
-          244610,
+          {
+            ["itemID"] = 244610,
+            ["source"] = "Crafting",
+          },
         },
         ["Ring"] = {
-          193708,
-          249919,
+          {
+            ["itemID"] = 193708,
+            ["source"] = "Algeth'ar Academy",
+          },
+          {
+            ["itemID"] = 249919,
+            ["source"] = "Belo'ren",
+          },
         },
         ["Trinket"] = {
-          249343,
-          250144,
+          {
+            ["itemID"] = 249343,
+            ["source"] = "Chimaerus",
+          },
+          {
+            ["itemID"] = 250144,
+            ["source"] = "Windrunner Spire",
+          },
         },
       },
       ["bisItems"] = {
@@ -2162,6 +4125,24 @@ ns.BisData = {
         [251105] = true,
         [251215] = true,
       },
+      ["itemSources"] = {
+        [193708] = "Algeth'ar Academy",
+        [244610] = "Crafting",
+        [244611] = "Crafting",
+        [249304] = "Fallen-King Salhadaar",
+        [249343] = "Chimaerus",
+        [249919] = "Belo'ren",
+        [249974] = "Catalyst",
+        [249977] = "Tier Set",
+        [249979] = "Tier Set",
+        [249980] = "Tier Set",
+        [249982] = "Tier Set",
+        [250144] = "Windrunner Spire",
+        [250247] = "Midnight Falls",
+        [251083] = "Windrunner Spire",
+        [251105] = "Magister's Terrace",
+        [251215] = "Nexus Point Xenas",
+      },
     },
     ["shaman/enhancement"] = {
       ["specID"] = 263,
@@ -2170,40 +4151,76 @@ ns.BisData = {
       ["sourceUrl"] = "https://www.wowhead.com/guide/classes/shaman/enhancement/bis-gear",
       ["itemsBySlot"] = {
         ["Weapon"] = {
-          249287,
+          {
+            ["itemID"] = 249287,
+            ["source"] = "Vaelgor & Ezzorak",
+          },
         },
         ["Offhand"] = {
-          237850,
+          {
+            ["itemID"] = 237850,
+            ["source"] = "Crafted",
+          },
         },
         ["Head"] = {
-          249979,
+          {
+            ["itemID"] = 249979,
+            ["source"] = "Catalyst |  Raid |  Vault",
+          },
         },
         ["Neck"] = {
-          250247,
+          {
+            ["itemID"] = 250247,
+            ["source"] = "Midnight Falls",
+          },
         },
         ["Shoulders"] = {
-          249977,
+          {
+            ["itemID"] = 249977,
+            ["source"] = "Catalyst |  Raid |  Vault",
+          },
         },
         ["Back"] = {
-          239656,
+          {
+            ["itemID"] = 239656,
+            ["source"] = "Crafted",
+          },
         },
         ["Chest"] = {
-          249982,
+          {
+            ["itemID"] = 249982,
+            ["source"] = "Catalyst |  Raid |  Vault",
+          },
         },
         ["Wrist"] = {
-          249304,
+          {
+            ["itemID"] = 249304,
+            ["source"] = "Salhadaar",
+          },
         },
         ["Hands"] = {
-          249980,
+          {
+            ["itemID"] = 249980,
+            ["source"] = "Raid",
+          },
         },
         ["Waist"] = {
-          249976,
+          {
+            ["itemID"] = 249976,
+            ["source"] = "Catalyst",
+          },
         },
         ["Legs"] = {
-          249324,
+          {
+            ["itemID"] = 249324,
+            ["source"] = "Belo'ren",
+          },
         },
         ["Feet"] = {
-          251084,
+          {
+            ["itemID"] = 251084,
+            ["source"] = "Windrunner Spire",
+          },
         },
       },
       ["bisItems"] = {
@@ -2220,6 +4237,20 @@ ns.BisData = {
         [250247] = true,
         [251084] = true,
       },
+      ["itemSources"] = {
+        [237850] = "Crafted",
+        [239656] = "Crafted",
+        [249287] = "Vaelgor & Ezzorak",
+        [249304] = "Salhadaar",
+        [249324] = "Belo'ren",
+        [249976] = "Catalyst",
+        [249977] = "Catalyst |  Raid |  Vault",
+        [249979] = "Catalyst |  Raid |  Vault",
+        [249980] = "Raid",
+        [249982] = "Catalyst |  Raid |  Vault",
+        [250247] = "Midnight Falls",
+        [251084] = "Windrunner Spire",
+      },
     },
     ["shaman/restoration"] = {
       ["specID"] = 264,
@@ -2228,41 +4259,80 @@ ns.BisData = {
       ["sourceUrl"] = "https://www.wowhead.com/guide/classes/shaman/restoration/bis-gear",
       ["itemsBySlot"] = {
         ["Head"] = {
-          249914,
+          {
+            ["itemID"] = 249914,
+            ["source"] = "Midnight Falls",
+          },
         },
         ["Neck"] = {
-          249337,
+          {
+            ["itemID"] = 249337,
+            ["source"] = "Fallen-King Salhadaar",
+          },
         },
         ["Shoulders"] = {
-          249977,
+          {
+            ["itemID"] = 249977,
+            ["source"] = "Raid",
+          },
         },
         ["Back"] = {
-          249974,
+          {
+            ["itemID"] = 249974,
+            ["source"] = "Catalyst",
+          },
         },
         ["Chest"] = {
-          249982,
+          {
+            ["itemID"] = 249982,
+            ["source"] = "Raid",
+          },
         },
         ["Wrist"] = {
-          249975,
+          {
+            ["itemID"] = 249975,
+            ["source"] = "Catalyst",
+          },
         },
         ["Hands"] = {
-          249980,
+          {
+            ["itemID"] = 249980,
+            ["source"] = "Raid",
+          },
         },
         ["Waist"] = {
-          249303,
+          {
+            ["itemID"] = 249303,
+            ["source"] = "Lightblinded Vanguard",
+          },
         },
         ["Legs"] = {
-          249978,
+          {
+            ["itemID"] = 249978,
+            ["source"] = "Raid",
+          },
         },
         ["Feet"] = {
-          249320,
+          {
+            ["itemID"] = 249320,
+            ["source"] = "Imperator Averzian",
+          },
         },
         ["Ring"] = {
-          249919,
-          193708,
+          {
+            ["itemID"] = 249919,
+            ["source"] = "Belo'ren",
+          },
+          {
+            ["itemID"] = 193708,
+            ["source"] = "Algeth'ar Academy",
+          },
         },
         ["Offhand"] = {
-          251202,
+          {
+            ["itemID"] = 251202,
+            ["source"] = "Nexus Point Xenas",
+          },
         },
       },
       ["bisItems"] = {
@@ -2280,6 +4350,21 @@ ns.BisData = {
         [249982] = true,
         [251202] = true,
       },
+      ["itemSources"] = {
+        [193708] = "Algeth'ar Academy",
+        [249303] = "Lightblinded Vanguard",
+        [249320] = "Imperator Averzian",
+        [249337] = "Fallen-King Salhadaar",
+        [249914] = "Midnight Falls",
+        [249919] = "Belo'ren",
+        [249974] = "Catalyst",
+        [249975] = "Catalyst",
+        [249977] = "Raid",
+        [249978] = "Raid",
+        [249980] = "Raid",
+        [249982] = "Raid",
+        [251202] = "Nexus Point Xenas",
+      },
     },
     ["warlock/affliction"] = {
       ["specID"] = 265,
@@ -2288,48 +4373,96 @@ ns.BisData = {
       ["sourceUrl"] = "https://www.wowhead.com/guide/classes/warlock/affliction/bis-gear",
       ["itemsBySlot"] = {
         ["Weapon"] = {
-          249283,
+          {
+            ["itemID"] = 249283,
+            ["source"] = "Belo'ren",
+          },
         },
         ["Offhand"] = {
-          249276,
+          {
+            ["itemID"] = 249276,
+            ["source"] = "Vorasius",
+          },
         },
         ["Head"] = {
-          250042,
+          {
+            ["itemID"] = 250042,
+            ["source"] = "Tier Set",
+          },
         },
         ["Neck"] = {
-          249368,
+          {
+            ["itemID"] = 249368,
+            ["source"] = "Crown of the Cosmos",
+          },
         },
         ["Shoulders"] = {
-          251085,
+          {
+            ["itemID"] = 251085,
+            ["source"] = "Windrunner Spire",
+          },
         },
         ["Back"] = {
-          239656,
+          {
+            ["itemID"] = 239656,
+            ["source"] = "Crafting",
+          },
         },
         ["Chest"] = {
-          250045,
+          {
+            ["itemID"] = 250045,
+            ["source"] = "Tier Set",
+          },
         },
         ["Wrist"] = {
-          239648,
+          {
+            ["itemID"] = 239648,
+            ["source"] = "Crafted",
+          },
         },
         ["Hands"] = {
-          250043,
+          {
+            ["itemID"] = 250043,
+            ["source"] = "Tier Set",
+          },
         },
         ["Waist"] = {
-          249376,
+          {
+            ["itemID"] = 249376,
+            ["source"] = "Belo'ren",
+          },
         },
         ["Legs"] = {
-          250041,
+          {
+            ["itemID"] = 250041,
+            ["source"] = "Tier Set",
+          },
         },
         ["Feet"] = {
-          249305,
+          {
+            ["itemID"] = 249305,
+            ["source"] = "Vaelgor",
+          },
         },
         ["Ring"] = {
-          249920,
-          251217,
+          {
+            ["itemID"] = 249920,
+            ["source"] = "Midnight Falls",
+          },
+          {
+            ["itemID"] = 251217,
+            ["source"] = "Nexus Point Xenas",
+          },
         },
         ["Trinket"] = {
-          249343,
-          250144,
+          {
+            ["itemID"] = 249343,
+            ["source"] = "Chimaerus",
+          },
+          {
+            ["itemID"] = 250144,
+            ["source"] = "Windrunner Spire",
+          },
         },
       },
       ["bisItems"] = {
@@ -2350,6 +4483,24 @@ ns.BisData = {
         [251085] = true,
         [251217] = true,
       },
+      ["itemSources"] = {
+        [239648] = "Crafted",
+        [239656] = "Crafting",
+        [249276] = "Vorasius",
+        [249283] = "Belo'ren",
+        [249305] = "Vaelgor",
+        [249343] = "Chimaerus",
+        [249368] = "Crown of the Cosmos",
+        [249376] = "Belo'ren",
+        [249920] = "Midnight Falls",
+        [250041] = "Tier Set",
+        [250042] = "Tier Set",
+        [250043] = "Tier Set",
+        [250045] = "Tier Set",
+        [250144] = "Windrunner Spire",
+        [251085] = "Windrunner Spire",
+        [251217] = "Nexus Point Xenas",
+      },
     },
     ["warlock/demonology"] = {
       ["specID"] = 266,
@@ -2358,48 +4509,96 @@ ns.BisData = {
       ["sourceUrl"] = "https://www.wowhead.com/guide/classes/warlock/demonology/bis-gear",
       ["itemsBySlot"] = {
         ["Weapon"] = {
-          249283,
+          {
+            ["itemID"] = 249283,
+            ["source"] = "Belo'ren",
+          },
         },
         ["Offhand"] = {
-          249276,
+          {
+            ["itemID"] = 249276,
+            ["source"] = "Vorasius",
+          },
         },
         ["Head"] = {
-          250042,
+          {
+            ["itemID"] = 250042,
+            ["source"] = "Tier Set",
+          },
         },
         ["Neck"] = {
-          249368,
+          {
+            ["itemID"] = 249368,
+            ["source"] = "Crown of the Cosmos",
+          },
         },
         ["Shoulders"] = {
-          249328,
+          {
+            ["itemID"] = 249328,
+            ["source"] = "Belo'ren",
+          },
         },
         ["Back"] = {
-          239656,
+          {
+            ["itemID"] = 239656,
+            ["source"] = "Crafting",
+          },
         },
         ["Chest"] = {
-          250045,
+          {
+            ["itemID"] = 250045,
+            ["source"] = "Tier Set",
+          },
         },
         ["Wrist"] = {
-          249315,
+          {
+            ["itemID"] = 249315,
+            ["source"] = "Vorasius",
+          },
         },
         ["Hands"] = {
-          250043,
+          {
+            ["itemID"] = 250043,
+            ["source"] = "Tier Set",
+          },
         },
         ["Waist"] = {
-          249376,
+          {
+            ["itemID"] = 249376,
+            ["source"] = "Belo'ren",
+          },
         },
         ["Legs"] = {
-          250041,
+          {
+            ["itemID"] = 250041,
+            ["source"] = "Tier Set",
+          },
         },
         ["Feet"] = {
-          249305,
+          {
+            ["itemID"] = 249305,
+            ["source"] = "Vaelgor",
+          },
         },
         ["Ring"] = {
-          249920,
-          241140,
+          {
+            ["itemID"] = 249920,
+            ["source"] = "Midnight Falls",
+          },
+          {
+            ["itemID"] = 241140,
+            ["source"] = "Crafting",
+          },
         },
         ["Trinket"] = {
-          249343,
-          249346,
+          {
+            ["itemID"] = 249343,
+            ["source"] = "Chimaerus",
+          },
+          {
+            ["itemID"] = 249346,
+            ["source"] = "Vaelgor",
+          },
         },
       },
       ["bisItems"] = {
@@ -2419,6 +4618,24 @@ ns.BisData = {
         [250042] = true,
         [250043] = true,
         [250045] = true,
+      },
+      ["itemSources"] = {
+        [239656] = "Crafting",
+        [241140] = "Crafting",
+        [249276] = "Vorasius",
+        [249283] = "Belo'ren",
+        [249305] = "Vaelgor",
+        [249315] = "Vorasius",
+        [249328] = "Belo'ren",
+        [249343] = "Chimaerus",
+        [249346] = "Vaelgor",
+        [249368] = "Crown of the Cosmos",
+        [249376] = "Belo'ren",
+        [249920] = "Midnight Falls",
+        [250041] = "Tier Set",
+        [250042] = "Tier Set",
+        [250043] = "Tier Set",
+        [250045] = "Tier Set",
       },
     },
     ["warlock/destruction"] = {
@@ -2428,48 +4645,96 @@ ns.BisData = {
       ["sourceUrl"] = "https://www.wowhead.com/guide/classes/warlock/destruction/bis-gear",
       ["itemsBySlot"] = {
         ["Weapon"] = {
-          249283,
+          {
+            ["itemID"] = 249283,
+            ["source"] = "Belo'ren",
+          },
         },
         ["Offhand"] = {
-          249276,
+          {
+            ["itemID"] = 249276,
+            ["source"] = "Vorasius",
+          },
         },
         ["Head"] = {
-          250042,
+          {
+            ["itemID"] = 250042,
+            ["source"] = "Tier Set",
+          },
         },
         ["Neck"] = {
-          249368,
+          {
+            ["itemID"] = 249368,
+            ["source"] = "Crown of the Cosmos",
+          },
         },
         ["Shoulders"] = {
-          249328,
+          {
+            ["itemID"] = 249328,
+            ["source"] = "Belo'ren",
+          },
         },
         ["Back"] = {
-          239656,
+          {
+            ["itemID"] = 239656,
+            ["source"] = "Crafting",
+          },
         },
         ["Chest"] = {
-          250045,
+          {
+            ["itemID"] = 250045,
+            ["source"] = "Tier Set",
+          },
         },
         ["Wrist"] = {
-          249315,
+          {
+            ["itemID"] = 249315,
+            ["source"] = "Vorasius",
+          },
         },
         ["Hands"] = {
-          250043,
+          {
+            ["itemID"] = 250043,
+            ["source"] = "Tier Set",
+          },
         },
         ["Waist"] = {
-          249376,
+          {
+            ["itemID"] = 249376,
+            ["source"] = "Belo'ren",
+          },
         },
         ["Legs"] = {
-          250041,
+          {
+            ["itemID"] = 250041,
+            ["source"] = "Tier Set",
+          },
         },
         ["Feet"] = {
-          249305,
+          {
+            ["itemID"] = 249305,
+            ["source"] = "Vaelgor",
+          },
         },
         ["Ring"] = {
-          249920,
-          241140,
+          {
+            ["itemID"] = 249920,
+            ["source"] = "Midnight Falls",
+          },
+          {
+            ["itemID"] = 241140,
+            ["source"] = "Crafting",
+          },
         },
         ["Trinket"] = {
-          249343,
-          249346,
+          {
+            ["itemID"] = 249343,
+            ["source"] = "Chimaerus",
+          },
+          {
+            ["itemID"] = 249346,
+            ["source"] = "Vaelgor",
+          },
         },
       },
       ["bisItems"] = {
@@ -2490,6 +4755,24 @@ ns.BisData = {
         [250043] = true,
         [250045] = true,
       },
+      ["itemSources"] = {
+        [239656] = "Crafting",
+        [241140] = "Crafting",
+        [249276] = "Vorasius",
+        [249283] = "Belo'ren",
+        [249305] = "Vaelgor",
+        [249315] = "Vorasius",
+        [249328] = "Belo'ren",
+        [249343] = "Chimaerus",
+        [249346] = "Vaelgor",
+        [249368] = "Crown of the Cosmos",
+        [249376] = "Belo'ren",
+        [249920] = "Midnight Falls",
+        [250041] = "Tier Set",
+        [250042] = "Tier Set",
+        [250043] = "Tier Set",
+        [250045] = "Tier Set",
+      },
     },
     ["warrior/arms"] = {
       ["specID"] = 71,
@@ -2498,45 +4781,90 @@ ns.BisData = {
       ["sourceUrl"] = "https://www.wowhead.com/guide/classes/warrior/arms/bis-gear",
       ["itemsBySlot"] = {
         ["Head"] = {
-          249952,
+          {
+            ["itemID"] = 249952,
+            ["source"] = "Tier Set",
+          },
         },
         ["Neck"] = {
-          249337,
+          {
+            ["itemID"] = 249337,
+            ["source"] = "Fallen-King Salhadaar",
+          },
         },
         ["Shoulders"] = {
-          249950,
+          {
+            ["itemID"] = 249950,
+            ["source"] = "Tier Set",
+          },
         },
         ["Back"] = {
-          239656,
+          {
+            ["itemID"] = 239656,
+            ["source"] = "Crafted",
+          },
         },
         ["Chest"] = {
-          249955,
+          {
+            ["itemID"] = 249955,
+            ["source"] = "Chimaerus",
+          },
         },
         ["Wrist"] = {
-          237834,
+          {
+            ["itemID"] = 237834,
+            ["source"] = "Crafted",
+          },
         },
         ["Hands"] = {
-          251081,
+          {
+            ["itemID"] = 251081,
+            ["source"] = "Windrunner Spire",
+          },
         },
         ["Waist"] = {
-          249949,
+          {
+            ["itemID"] = 249949,
+            ["source"] = "Catalyst",
+          },
         },
         ["Legs"] = {
-          249951,
+          {
+            ["itemID"] = 249951,
+            ["source"] = "Tier Set",
+          },
         },
         ["Feet"] = {
-          249381,
+          {
+            ["itemID"] = 249381,
+            ["source"] = "Chimaerus",
+          },
         },
         ["Ring"] = {
-          249920,
-          251217,
+          {
+            ["itemID"] = 249920,
+            ["source"] = "Midnight Falls",
+          },
+          {
+            ["itemID"] = 251217,
+            ["source"] = "Nexus Point Xenas",
+          },
         },
         ["Trinket"] = {
-          249343,
-          249342,
+          {
+            ["itemID"] = 249343,
+            ["source"] = "Chimaerus",
+          },
+          {
+            ["itemID"] = 249342,
+            ["source"] = "Vorasius",
+          },
         },
         ["Weapon"] = {
-          249296,
+          {
+            ["itemID"] = 249296,
+            ["source"] = "Midnight Falls",
+          },
         },
       },
       ["bisItems"] = {
@@ -2556,6 +4884,23 @@ ns.BisData = {
         [251081] = true,
         [251217] = true,
       },
+      ["itemSources"] = {
+        [237834] = "Crafted",
+        [239656] = "Crafted",
+        [249296] = "Midnight Falls",
+        [249337] = "Fallen-King Salhadaar",
+        [249342] = "Vorasius",
+        [249343] = "Chimaerus",
+        [249381] = "Chimaerus",
+        [249920] = "Midnight Falls",
+        [249949] = "Catalyst",
+        [249950] = "Tier Set",
+        [249951] = "Tier Set",
+        [249952] = "Tier Set",
+        [249955] = "Chimaerus",
+        [251081] = "Windrunner Spire",
+        [251217] = "Nexus Point Xenas",
+      },
     },
     ["warrior/fury"] = {
       ["specID"] = 72,
@@ -2564,48 +4909,96 @@ ns.BisData = {
       ["sourceUrl"] = "https://www.wowhead.com/guide/classes/warrior/fury/bis-gear",
       ["itemsBySlot"] = {
         ["Head"] = {
-          249952,
+          {
+            ["itemID"] = 249952,
+            ["source"] = "Tier Set",
+          },
         },
         ["Neck"] = {
-          250247,
+          {
+            ["itemID"] = 250247,
+            ["source"] = "Midnight Falls",
+          },
         },
         ["Shoulders"] = {
-          249950,
+          {
+            ["itemID"] = 249950,
+            ["source"] = "Tier Set",
+          },
         },
         ["Back"] = {
-          258575,
+          {
+            ["itemID"] = 258575,
+            ["source"] = "Skyreach",
+          },
         },
         ["Chest"] = {
-          249955,
+          {
+            ["itemID"] = 249955,
+            ["source"] = "Chimaerus",
+          },
         },
         ["Wrist"] = {
-          237834,
+          {
+            ["itemID"] = 237834,
+            ["source"] = "Crafted",
+          },
         },
         ["Hands"] = {
-          151332,
+          {
+            ["itemID"] = 151332,
+            ["source"] = "Seat of the Triumvirate",
+          },
         },
         ["Waist"] = {
-          249949,
+          {
+            ["itemID"] = 249949,
+            ["source"] = "Catalyst",
+          },
         },
         ["Legs"] = {
-          249951,
+          {
+            ["itemID"] = 249951,
+            ["source"] = "Tier Set",
+          },
         },
         ["Feet"] = {
-          249954,
+          {
+            ["itemID"] = 249954,
+            ["source"] = "Catalyst",
+          },
         },
         ["Ring"] = {
-          249920,
-          193708,
+          {
+            ["itemID"] = 249920,
+            ["source"] = "Midnight Falls",
+          },
+          {
+            ["itemID"] = 193708,
+            ["source"] = "Algeth'ar Academy",
+          },
         },
         ["Trinket"] = {
-          249343,
-          249342,
+          {
+            ["itemID"] = 249343,
+            ["source"] = "Chimaerus",
+          },
+          {
+            ["itemID"] = 249342,
+            ["source"] = "Vorasius",
+          },
         },
         ["Weapon"] = {
-          249277,
+          {
+            ["itemID"] = 249277,
+            ["source"] = "Lightblinded Vanguard",
+          },
         },
         ["Offhand"] = {
-          237846,
+          {
+            ["itemID"] = 237846,
+            ["source"] = "Crafted",
+          },
         },
       },
       ["bisItems"] = {
@@ -2626,6 +5019,24 @@ ns.BisData = {
         [250247] = true,
         [258575] = true,
       },
+      ["itemSources"] = {
+        [151332] = "Seat of the Triumvirate",
+        [193708] = "Algeth'ar Academy",
+        [237834] = "Crafted",
+        [237846] = "Crafted",
+        [249277] = "Lightblinded Vanguard",
+        [249342] = "Vorasius",
+        [249343] = "Chimaerus",
+        [249920] = "Midnight Falls",
+        [249949] = "Catalyst",
+        [249950] = "Tier Set",
+        [249951] = "Tier Set",
+        [249952] = "Tier Set",
+        [249954] = "Catalyst",
+        [249955] = "Chimaerus",
+        [250247] = "Midnight Falls",
+        [258575] = "Skyreach",
+      },
     },
     ["warrior/protection"] = {
       ["specID"] = 73,
@@ -2634,48 +5045,96 @@ ns.BisData = {
       ["sourceUrl"] = "https://www.wowhead.com/guide/classes/warrior/protection/bis-gear",
       ["itemsBySlot"] = {
         ["Weapon"] = {
-          249295,
+          {
+            ["itemID"] = 249295,
+            ["source"] = "Crown of the Cosmos",
+          },
         },
         ["Offhand"] = {
-          249921,
+          {
+            ["itemID"] = 249921,
+            ["source"] = "Belo'ren",
+          },
         },
         ["Head"] = {
-          249952,
+          {
+            ["itemID"] = 249952,
+            ["source"] = "Tier Set",
+          },
         },
         ["Neck"] = {
-          249368,
+          {
+            ["itemID"] = 249368,
+            ["source"] = "Crown of the Cosmos",
+          },
         },
         ["Shoulders"] = {
-          249950,
+          {
+            ["itemID"] = 249950,
+            ["source"] = "Tier Set",
+          },
         },
         ["Back"] = {
-          249370,
+          {
+            ["itemID"] = 249370,
+            ["source"] = "Vaelgor & Ezzorak",
+          },
         },
         ["Chest"] = {
-          249955,
+          {
+            ["itemID"] = 249955,
+            ["source"] = "Tier Set",
+          },
         },
         ["Wrist"] = {
-          249326,
+          {
+            ["itemID"] = 249326,
+            ["source"] = "Imperator Averzian",
+          },
         },
         ["Hands"] = {
-          151332,
+          {
+            ["itemID"] = 151332,
+            ["source"] = "Seat of the Triumvirate",
+          },
         },
         ["Waist"] = {
-          249331,
+          {
+            ["itemID"] = 249331,
+            ["source"] = "Vaelgor & Ezzorak",
+          },
         },
         ["Legs"] = {
-          249951,
+          {
+            ["itemID"] = 249951,
+            ["source"] = "Tier Set",
+          },
         },
         ["Feet"] = {
-          249381,
+          {
+            ["itemID"] = 249381,
+            ["source"] = "Chimaerus",
+          },
         },
         ["Ring"] = {
-          249920,
-          151311,
+          {
+            ["itemID"] = 249920,
+            ["source"] = "Midnight Falls",
+          },
+          {
+            ["itemID"] = 151311,
+            ["source"] = "Seat of the Triumvirate",
+          },
         },
         ["Trinket"] = {
-          249343,
-          249342,
+          {
+            ["itemID"] = 249343,
+            ["source"] = "Chimaerus",
+          },
+          {
+            ["itemID"] = 249342,
+            ["source"] = "Vorasius",
+          },
         },
       },
       ["bisItems"] = {
@@ -2695,6 +5154,24 @@ ns.BisData = {
         [249951] = true,
         [249952] = true,
         [249955] = true,
+      },
+      ["itemSources"] = {
+        [151311] = "Seat of the Triumvirate",
+        [151332] = "Seat of the Triumvirate",
+        [249295] = "Crown of the Cosmos",
+        [249326] = "Imperator Averzian",
+        [249331] = "Vaelgor & Ezzorak",
+        [249342] = "Vorasius",
+        [249343] = "Chimaerus",
+        [249368] = "Crown of the Cosmos",
+        [249370] = "Vaelgor & Ezzorak",
+        [249381] = "Chimaerus",
+        [249920] = "Midnight Falls",
+        [249921] = "Belo'ren",
+        [249950] = "Tier Set",
+        [249951] = "Tier Set",
+        [249952] = "Tier Set",
+        [249955] = "Tier Set",
       },
     },
   },

@@ -66,8 +66,8 @@ def fetch_bis_for_url(url: str) -> dict[str, object]:
         return result
 
     all_ids = []
-    for slot_ids in items.values():
-        all_ids.extend(slot_ids)
+    for slot_items in items.values():
+        all_ids.extend(entry["itemID"] for entry in slot_items)
 
     result.update(
         {
@@ -98,8 +98,13 @@ def build_dataset(results: list[dict[str, object]]) -> dict[str, object]:
         all_item_ids = result["allItemIDs"]
         items_by_slot = result["itemsBySlot"]
 
-        # Build a lookup: itemID -> true
+        # Build lookups: itemID -> true, itemID -> source
         item_set: dict[int, bool] = {item_id: True for item_id in all_item_ids}
+        item_sources: dict[int, str] = {}
+        for slot_items in items_by_slot.values():
+            for entry in slot_items:
+                if entry["source"]:
+                    item_sources[entry["itemID"]] = entry["source"]
 
         specs[slug] = {
             "specID": spec_id,
@@ -108,6 +113,7 @@ def build_dataset(results: list[dict[str, object]]) -> dict[str, object]:
             "sourceUrl": url,
             "itemsBySlot": items_by_slot,
             "bisItems": dict(sorted(item_set.items())),
+            "itemSources": dict(sorted(item_sources.items())),
         }
         spec_ids[spec_id] = slug
 
