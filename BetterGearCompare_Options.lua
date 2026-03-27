@@ -285,8 +285,13 @@ function ns.Options:Init()
   end
 
   SLASH_BETTERGEARCOMPARE1 = "/bgc"
-  SlashCmdList.BETTERGEARCOMPARE = function()
-    ns.Options:Open()
+  SlashCmdList.BETTERGEARCOMPARE = function(msg)
+    msg = strlower(strtrim(msg or ""))
+    if msg == "bis" then
+      ns.BisUI:Toggle()
+    else
+      ns.Options:Open()
+    end
   end
 
   SLASH_BETTERGEARCOMPAREDEBUG1 = "/bgcdebug"

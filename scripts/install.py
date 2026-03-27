@@ -18,11 +18,14 @@ INCLUDE = [
     "BetterGearCompare_Stats.lua",
     "BetterGearCompare_SpecRules.lua",
     "BetterGearCompare_TrinketData.lua",
+    "BetterGearCompare_BisData.lua",
+    "BetterGearCompare_BisUI.lua",
     "BetterGearCompare_Compare.lua",
     "BetterGearCompare_Tooltip.lua",
     "BetterGearCompare_Options.lua",
     "BetterGearCompare_Icons.lua",
     "Locales",
+    "Media",
 ]
 
 

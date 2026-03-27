@@ -13,6 +13,9 @@ $addonRoot = Join-Path $stagingRoot $addonName
 $generatorScript = Join-Path $source "scripts\generate_wowhead_trinket_lua.py"
 $generatedLuaPath = Join-Path $source "BetterGearCompare_TrinketData.lua"
 
+$bisGeneratorScript = Join-Path $source "scripts\generate_wowhead_bis_lua.py"
+$generatedBisLuaPath = Join-Path $source "BetterGearCompare_BisData.lua"
+
 function Get-PythonCommand {
     $candidates = @(
         @("python.exe"),
@@ -39,6 +42,10 @@ if (-not (Test-Path $generatorScript)) {
     throw "Generator script not found: $generatorScript"
 }
 
+if (-not (Test-Path $bisGeneratorScript)) {
+    throw "BIS generator script not found: $bisGeneratorScript"
+}
+
 $pythonCommand = Get-PythonCommand
 Write-Host "Generating trinket data Lua file..."
 if ($pythonCommand.Length -gt 1) {
@@ -50,6 +57,18 @@ if ($pythonCommand.Length -gt 1) {
 
 if (-not (Test-Path $generatedLuaPath)) {
     throw "Generated Lua file not found after running generator: $generatedLuaPath"
+}
+
+Write-Host "Generating BIS gear data Lua file..."
+if ($pythonCommand.Length -gt 1) {
+    $pythonArgs = @($pythonCommand[1..($pythonCommand.Length - 1)]) + @($bisGeneratorScript)
+    & $pythonCommand[0] @pythonArgs
+} else {
+    & $pythonCommand[0] $bisGeneratorScript
+}
+
+if (-not (Test-Path $generatedBisLuaPath)) {
+    throw "Generated BIS Lua file not found after running generator: $generatedBisLuaPath"
 }
 
 if (-not $Version) {
@@ -72,6 +91,8 @@ $files = @(
     "BetterGearCompare_Stats.lua",
     "BetterGearCompare_SpecRules.lua",
     "BetterGearCompare_TrinketData.lua",
+    "BetterGearCompare_BisData.lua",
+    "BetterGearCompare_BisUI.lua",
     "BetterGearCompare_Compare.lua",
     "BetterGearCompare_Tooltip.lua",
     "BetterGearCompare_Options.lua",
@@ -86,6 +107,10 @@ foreach ($file in $files) {
 $localeTarget = Join-Path $addonRoot "Locales"
 New-Item -ItemType Directory -Path $localeTarget -Force | Out-Null
 Copy-Item -Path (Join-Path $source "Locales\*") -Destination $localeTarget -Recurse -Force
+
+$mediaTarget = Join-Path $addonRoot "Media"
+New-Item -ItemType Directory -Path $mediaTarget -Force | Out-Null
+Copy-Item -Path (Join-Path $source "Media\*") -Destination $mediaTarget -Recurse -Force
 
 $zipName = "{0}-{1}.zip" -f $addonName, $Version
 $zipPath = Join-Path $releaseRoot $zipName

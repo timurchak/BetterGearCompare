@@ -86,6 +86,9 @@ local function AddSingleComparisonLines(tooltip, comparison)
     end
 
     tooltip:AddLine(string.format(L.TOOLTIP_TRINKET_TIER, newTier, equippedTier), 0.8, 0.8, 0.8)
+    if comparison.isBis then
+      tooltip:AddLine(L.TOOLTIP_BIS, 1, 0.84, 0)
+    end
     return
   end
 
@@ -103,6 +106,10 @@ local function AddSingleComparisonLines(tooltip, comparison)
   end
 
   tooltip:AddLine(string.format(L.TOOLTIP_SCORE, comparison.newScore, comparison.equippedScore), 0.8, 0.8, 0.8)
+
+  if comparison.isBis then
+    tooltip:AddLine(L.TOOLTIP_BIS, 1, 0.84, 0)
+  end
 end
 
 local function AddComparisonLines(tooltip, itemLink)
