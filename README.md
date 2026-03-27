@@ -1,77 +1,106 @@
 # BetterGearCompare
 
-BetterGearCompare is a lightweight World of Warcraft addon for Retail that helps you decide whether a new item is better or worse for your current specialization.
+Lightweight WoW Retail addon — weighted stat comparison in gear tooltips, trinket tier lists, and Best-in-Slot tracking.
 
-Instead of relying on generic item level alone, the addon compares gear based on stat weights that you set yourself. This makes it useful for players who want a simple recommendation system without a full simulation workflow inside the game.
+## Architecture
 
-## What the addon does
+```
+BetterGearCompare.lua            -- Entry point, event handling
+BetterGearCompare_Localization.lua -- Locale framework (L table)
+Locales/                         -- Per-language translations (enUS, ruRU, deDE, itIT, zhCN, zhTW)
+BetterGearCompare_Constants.lua  -- Stat IDs, slot mappings
+BetterGearCompare_DB.lua         -- SavedVariables, profile management
+BetterGearCompare_Stats.lua      -- Stat extraction from item links
+BetterGearCompare_SpecRules.lua  -- Per-spec comparison rules (dual wield, 2H, ranged)
+BetterGearCompare_TrinketData.lua -- Generated trinket tier data (from Wowhead)
+BetterGearCompare_BisData.lua    -- Generated BIS gear data (from Wowhead)
+BetterGearCompare_BisUI.lua      -- BIS browser window (/bgc bis)
+BetterGearCompare_Compare.lua    -- Core comparison logic, score calculation
+BetterGearCompare_Tooltip.lua    -- Tooltip hooks, annotation rendering
+BetterGearCompare_Options.lua    -- Settings UI, slash commands
+BetterGearCompare_Icons.lua      -- Bag item upgrade icons
+Media/                           -- Addon textures (wowhead.tga)
+```
 
-- Adds a short comparison block to item tooltips.
-- Compares regular gear using your custom stat priority weights.
-- Supports separate setups for different specializations.
-- Shows an upgrade icon on bag items.
-- Uses a separate tier-based system for trinkets.
+## Data Generation
 
-## How to open the settings
+Trinket tiers and BIS gear data are scraped from Wowhead guides at build time. Scripts live in `scripts/`:
 
-You can open the addon settings in two ways:
+| Script | Purpose |
+|--------|---------|
+| `extract_wowhead_trinket_tiers.py` | Parse trinket tier lists from Wowhead guide markup |
+| `generate_wowhead_trinket_lua.py` | Generate `BetterGearCompare_TrinketData.lua` for all 40 specs |
+| `extract_wowhead_bis_gear.py` | Parse BIS gear tables from Wowhead guide markup |
+| `generate_wowhead_bis_lua.py` | Generate `BetterGearCompare_BisData.lua` for all 40 specs |
+| `verify_wowhead_trinket_guides.py` | Validate guide URLs are still reachable |
+| `install.py` | Copy addon files to local WoW AddOns directory |
 
-- Type `/bgc` in chat.
-- Open `Game Menu -> Options -> AddOns -> BetterGearCompare`.
+### Dependencies
 
-## Stat weights
+```
+pip install curl_cffi
+```
 
-For most items, BetterGearCompare uses weighted stat comparison.
+`curl_cffi` is required because Wowhead blocks standard HTTP clients. It impersonates Chrome via `impersonate='chrome'`.
 
-You choose how valuable each stat is for your specialization. You can use priorities from sites such as Archon, Wowhead, or other class guides.
+### Running generators
 
-A common example looks like this:
+```bash
+cd scripts
+python generate_wowhead_trinket_lua.py   # writes BetterGearCompare_TrinketData.lua
+python generate_wowhead_bis_lua.py       # writes BetterGearCompare_BisData.lua
+```
 
-- Main stat: `10`
-- Secondary stats: `7.52`, `6.80`, and so on
+BIS guide URLs are listed in `scripts/wowhead_bis_guide_urls.txt` (one per line, 40 total).
 
-The exact numbers are up to you. The addon will compare items based on the weights you enter and estimate whether a new piece of gear is better, worse, or roughly equal for your spec.
+## BIS Item Strings
 
-## Trinket support
+Items in the BIS window use WoW item strings with bonus IDs to show correct item levels per difficulty tier:
 
-Trinkets are handled differently.
+```
+item:ITEMID::::::::::::NUM_BONUSES:BONUSID[:CONTEXT_BONUS]
+```
 
-Because trinkets usually cannot be evaluated well through normal stat weights alone, BetterGearCompare uses spec-based trinket tier data instead of standard stat comparison.
+Upgrade tracks (fixed at 6/8 per tier):
 
-For each class and specialization, the addon includes a trinket tier list based on official Wowhead guides. When you hover a trinket, the addon can show which tier it belongs to:
+| Tier | Bonus ID | Context Bonus |
+|------|----------|---------------|
+| Veteran (LFR) | 12782 | 13332 |
+| Champion (Normal) | 12790 | — |
+| Hero (Heroic) | 12798 | 13334 |
+| Myth (Mythic) | 12806 | 13335 |
 
-- `S`
-- `A`
-- `B`
-- `C`
-- `D`
+## Build & Release
 
-If a trinket is not present in the tier list for your specialization, the addon will tell you that it is not included in the tier list instead of making a misleading stat-based comparison.
+### Local install
 
-## Localization
+```bash
+python scripts/install.py
+```
 
-BetterGearCompare includes built-in localization support.
+Copies addon to `/Applications/World of Warcraft/_retail_/Interface/AddOns/BetterGearCompare`.
 
-Current language support:
+### Release build
 
-- English
-- German
-- Italian
-- Russian
-- Simplified Chinese
-- Traditional Chinese
+```bash
+./build-release.sh 0.4.0
+```
 
-## Notes
+Generates trinket + BIS data, packages everything into `Release/BetterGearCompare-0.4.0.zip`.
 
-- Stat weights are only as good as the values you enter.
-- Trinket recommendations depend on the current Wowhead guide data included with the addon.
-- Different specs should usually have different weight profiles.
+### CI
 
-## Summary
+GitHub Actions workflow (`.github/workflows/release.yml`) triggers on `v*` tags:
 
-BetterGearCompare is built for players who want fast and practical tooltip advice:
+1. Installs `curl_cffi`
+2. Runs both data generators (fetches live Wowhead data)
+3. Packages release zip
+4. Publishes GitHub release
 
-- weighted comparison for normal gear
-- specialization-specific profiles
-- trinket recommendations based on Wowhead tier lists
-- quick setup directly in-game
+## Slash Commands
+
+| Command | Action |
+|---------|--------|
+| `/bgc` | Open settings |
+| `/bgc bis` | Open BIS gear browser |
+| `/bgc debug` | Toggle debug mode |
