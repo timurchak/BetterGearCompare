@@ -104,3 +104,9 @@ GitHub Actions workflow (`.github/workflows/release.yml`) triggers on `v*` tags:
 | `/bgc` | Open settings |
 | `/bgc bis` | Open BIS gear browser |
 | `/bgc debug` | Toggle debug mode |
+
+## TODO
+- [ ] Add game icon
+- [ ] Add minimap button
+- [ ] Compare both weapons if dual
+- [ ] Compare max level item (findout bonusID)
