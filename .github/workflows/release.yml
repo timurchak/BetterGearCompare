@@ -10,7 +10,7 @@ permissions:
 
 jobs:
   release:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout
@@ -24,35 +24,32 @@ jobs:
           python-version: "3.11"
 
       - name: Install Python dependencies
-        shell: pwsh
-        run: |
-          python -m pip install --upgrade pip
-          python -m pip install curl_cffi
+        run: pip install curl_cffi
 
       - name: Derive version from tag
         id: version
-        shell: pwsh
         run: |
-          $tag = "${{ github.ref_name }}"
-          $version = $tag -replace '^v', ''
-          if ($version -notmatch '^\d+\.\d+\.\d+(-[0-9A-Za-z.-]+)?$') {
-            throw "Tag '$tag' must look like v1.2.3 or v1.2.3-beta"
-          }
-          "tag=$tag" | Out-File -FilePath $env:GITHUB_OUTPUT -Encoding utf8 -Append
-          "version=$version" | Out-File -FilePath $env:GITHUB_OUTPUT -Encoding utf8 -Append
+          TAG="${GITHUB_REF_NAME}"
+          VERSION="${TAG#v}"
+          if [[ ! "$VERSION" =~ ^[0-9]+\.[0-9]+\.[0-9]+(-[0-9A-Za-z.-]+)?$ ]]; then
+            echo "Tag '$TAG' must look like v1.2.3 or v1.2.3-beta" >&2
+            exit 1
+          fi
+          echo "tag=$TAG" >> "$GITHUB_OUTPUT"
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
 
       - name: Build release archive
-        shell: pwsh
-        run: |
-          ./build-release.ps1 -Version "${{ steps.version.outputs.version }}"
+        run: ./build-release.sh "${{ steps.version.outputs.version }}"
 
       - name: Detect prerelease
         id: prerelease
-        shell: pwsh
         run: |
-          $version = "${{ steps.version.outputs.version }}"
-          $isPrerelease = if ($version -match '-') { 'true' } else { 'false' }
-          "value=$isPrerelease" | Out-File -FilePath $env:GITHUB_OUTPUT -Encoding utf8 -Append
+          VERSION="${{ steps.version.outputs.version }}"
+          if [[ "$VERSION" == *-* ]]; then
+            echo "value=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "value=false" >> "$GITHUB_OUTPUT"
+          fi
 
       - name: Publish GitHub release
         uses: softprops/action-gh-release@v2
