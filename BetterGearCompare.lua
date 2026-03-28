@@ -99,3 +99,14 @@ ns.frame:RegisterEvent("ADDON_LOADED")
 ns.frame:RegisterEvent("PLAYER_ENTERING_WORLD")
 ns.frame:RegisterEvent("PLAYER_SPECIALIZATION_CHANGED")
 ns.frame:RegisterEvent("ACTIVE_TALENT_GROUP_CHANGED")
+
+-- Public API for external addons (e.g. PopularSlotsAndChants)
+function ns:ImportWeights(profileName, weights)
+  if not profileName or not weights then return false end
+  self.DB:SaveProfile(profileName, weights)
+  local specID = self.DB:GetCurrentSpecID()
+  self.DB:SetProfileForSpec(specID, profileName)
+  if self.Options then self.Options:Refresh() end
+  if self.Icons then self.Icons:Refresh() end
+  return true
+end
