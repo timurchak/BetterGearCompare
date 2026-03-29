@@ -58,6 +58,15 @@ ns.Constants = {
     [INVSLOT_MAINHAND] = INVTYPE_WEAPONMAINHAND or "main hand",
     [INVSLOT_OFFHAND] = INVTYPE_WEAPONOFFHAND or "off hand",
   },
+  UPGRADE_BONUS_MIN = 12769,
+  UPGRADE_BONUS_MAX = 12808,
+  upgradeTracks = {
+    { key = "ADVENTURER", baseBonus = 12769, maxBonus = 12774, contextBonus = nil },
+    { key = "VETERAN",    baseBonus = 12777, maxBonus = 12782, contextBonus = 13332 },
+    { key = "CHAMPION", baseBonus = 12785, maxBonus = 12790, contextBonus = nil },
+    { key = "HERO",     baseBonus = 12793, maxBonus = 12798, contextBonus = 13334 },
+    { key = "MYTH",     baseBonus = 12801, maxBonus = 12806, contextBonus = 13335 },
+  },
   tooltipMethods = {
     "SetBagItem",
     "SetHyperlink",

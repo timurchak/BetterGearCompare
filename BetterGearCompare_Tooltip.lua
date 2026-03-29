@@ -110,6 +110,18 @@ local function AddSingleComparisonLines(tooltip, comparison)
   if comparison.isBis then
     tooltip:AddLine(L.TOOLTIP_BIS, 1, 0.84, 0)
   end
+
+  local maxComp = comparison.maxUpgradeComparison
+  if maxComp and maxComp.state ~= "no_compare" then
+    if maxComp.state == "better" then
+      tooltip:AddLine(string.format(L.TOOLTIP_MAX_BETTER, maxComp.percent), 0.1, 0.8, 0.1)
+    elseif maxComp.state == "worse" then
+      tooltip:AddLine(string.format(L.TOOLTIP_MAX_WORSE, math.abs(maxComp.percent)), 0.8, 0.15, 0.15)
+    else
+      tooltip:AddLine(L.TOOLTIP_MAX_EQUAL, 0.65, 0.65, 0.65)
+    end
+    tooltip:AddLine(string.format(L.TOOLTIP_MAX_SCORE, maxComp.newScore, maxComp.equippedScore), 0.6, 0.6, 0.6)
+  end
 end
 
 local function AddComparisonLines(tooltip, itemLink)

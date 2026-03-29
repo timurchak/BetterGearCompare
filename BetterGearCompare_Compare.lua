@@ -37,6 +37,38 @@ local function Debug(...)
   end
 end
 
+local function FindUpgradeTrackBonus(itemLink)
+  if not itemLink then return nil end
+
+  local itemString = itemLink:match("item:[%-?%d:]+")
+  if not itemString then return nil end
+
+  local parts = { strsplit(":", itemString) }
+  local numBonuses = tonumber(parts[14]) or 0
+
+  for i = 15, 14 + numBonuses do
+    local bonusID = tonumber(parts[i])
+    if bonusID and bonusID >= Constants.UPGRADE_BONUS_MIN and bonusID <= Constants.UPGRADE_BONUS_MAX then
+      for _, track in ipairs(Constants.upgradeTracks) do
+        if bonusID >= track.baseBonus and bonusID <= track.baseBonus + 7 then
+          return track, bonusID, i, parts
+        end
+      end
+    end
+  end
+
+  return nil
+end
+
+local function BuildMaxUpgradeLink(itemLink)
+  local track, currentBonus, bonusIndex, parts = FindUpgradeTrackBonus(itemLink)
+  if not track then return nil end
+  if currentBonus == track.maxBonus then return nil end
+
+  parts[bonusIndex] = tostring(track.maxBonus)
+  return table.concat(parts, ":")
+end
+
 local function GetEquipLocation(itemLink)
   return select(4, C_Item.GetItemInfoInstant(itemLink))
 end
@@ -369,6 +401,36 @@ local function GetStateFromDelta(delta)
   return "equal"
 end
 
+local function BuildMaxUpgradeComparison(itemLink, equippedLink, slotID, weights)
+  if not itemLink or not equippedLink then return nil end
+  if equippedLink:find("\n") then return nil end
+
+  local newMaxLink = BuildMaxUpgradeLink(itemLink)
+  local equippedMaxLink = BuildMaxUpgradeLink(equippedLink)
+  if not newMaxLink and not equippedMaxLink then return nil end
+
+  local effectiveNewLink = newMaxLink or itemLink
+  local effectiveEquippedLink = equippedMaxLink or equippedLink
+
+  local newMaxScore = ns.Stats:CalculateScore(effectiveNewLink, weights)
+  local equippedMaxScore = ns.Stats:CalculateScore(effectiveEquippedLink, weights)
+  local newMaxIlvl = ns.Stats:GetItemLevel(effectiveNewLink)
+  local equippedMaxIlvl = ns.Stats:GetItemLevel(effectiveEquippedLink)
+  local delta = newMaxScore - equippedMaxScore
+
+  return BuildComparisonResult(
+    GetStateFromDelta(delta),
+    slotID,
+    effectiveNewLink,
+    effectiveEquippedLink,
+    newMaxScore,
+    equippedMaxScore,
+    nil,
+    newMaxIlvl,
+    equippedMaxIlvl
+  )
+end
+
 local function GetEquippedWeaponState(weights)
   local main = GetEquippedItemState(INVSLOT_MAINHAND, weights)
   local off = GetEquippedItemState(INVSLOT_OFFHAND, weights)
@@ -606,7 +668,7 @@ function ns.Compare:GetComparison(itemLink)
     local bestWeaponCandidate = ChooseBestCandidate(weaponCandidates)
     if bestWeaponCandidate then
       Debug("branch", "spec-rule weapon candidate", "slot=", bestWeaponCandidate.slotID, "delta=", bestWeaponCandidate.delta)
-      return BuildComparisonResult(
+      local result = BuildComparisonResult(
         GetStateFromDelta(bestWeaponCandidate.delta),
         bestWeaponCandidate.slotID,
         bestWeaponCandidate.itemLink,
@@ -617,6 +679,8 @@ function ns.Compare:GetComparison(itemLink)
         bestWeaponCandidate.newItemLevel,
         bestWeaponCandidate.equippedItemLevel
       )
+      result.maxUpgradeComparison = BuildMaxUpgradeComparison(itemLink, bestWeaponCandidate.equippedLink, bestWeaponCandidate.slotID, weights)
+      return result
     end
 
     Debug("branch miss", "no valid weapon candidates")
@@ -650,7 +714,7 @@ function ns.Compare:GetComparison(itemLink)
   end
 
   Debug("fallback branch", "slot=", chosenState.slotID, "equippedScore=", chosenState.score, "equippedIlvl=", chosenState.itemLevel)
-  return BuildComparisonResult(
+  local result = BuildComparisonResult(
     GetStateFromDelta(baseNewScore - chosenState.score),
     chosenState.slotID,
     itemLink,
@@ -661,6 +725,8 @@ function ns.Compare:GetComparison(itemLink)
     baseNewItemLevel,
     chosenState.itemLevel
   )
+  result.maxUpgradeComparison = BuildMaxUpgradeComparison(itemLink, chosenState.itemLink, chosenState.slotID, weights)
+  return result
 end
 
 function ns.Compare:IsUpgrade(itemLink)
@@ -736,6 +802,7 @@ function ns.Compare:GetAllComparisons(itemLink)
         baseNewItemLevel,
         equippedState.itemLevel
       )
+      result.maxUpgradeComparison = BuildMaxUpgradeComparison(itemLink, equippedState.itemLink, slotID, weights)
       results[#results + 1] = result
     end
   end

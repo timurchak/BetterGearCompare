@@ -4,15 +4,15 @@ local L = ns.L
 
 ns.BisUI = {}
 
--- Upgrade tracks: fixed at 6/8 for each difficulty tier
--- Bonus IDs sourced from Wowhead bonusOptions for raid items
--- 6/8 = baseBonus + 5
-local UPGRADE_TRACKS = {
-  { key = "VETERAN",  bonusID = 12782, contextBonus = 13332 }, -- LFR 6/8
-  { key = "CHAMPION", bonusID = 12790, contextBonus = nil },   -- Normal 6/8
-  { key = "HERO",     bonusID = 12798, contextBonus = 13334 }, -- Heroic 6/8
-  { key = "MYTH",     bonusID = 12806, contextBonus = 13335 }, -- Mythic 6/8
-}
+-- Upgrade tracks derived from shared Constants (6/8 = maxBonus for each track)
+local UPGRADE_TRACKS = {}
+for _, track in ipairs(ns.Constants.upgradeTracks) do
+  UPGRADE_TRACKS[#UPGRADE_TRACKS + 1] = {
+    key = track.key,
+    bonusID = track.maxBonus,
+    contextBonus = track.contextBonus,
+  }
+end
 
 local selectedTrackIndex = 4 -- Myth by default
 
