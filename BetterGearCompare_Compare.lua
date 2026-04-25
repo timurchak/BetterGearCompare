@@ -734,6 +734,36 @@ function ns.Compare:IsUpgrade(itemLink)
   return comparison and comparison.state == "better" or false
 end
 
+local function GetBagItemLevel(itemLink)
+  if not itemLink or not C_Item or not C_Item.GetCurrentItemLevel or not ItemLocation or not C_Container then
+    return nil
+  end
+  for bag = 0, (NUM_BAG_SLOTS or 4) do
+    local numSlots = C_Container.GetContainerNumSlots(bag) or 0
+    for slot = 1, numSlots do
+      local link = C_Container.GetContainerItemLink(bag, slot)
+      if link and link == itemLink then
+        local loc = ItemLocation:CreateFromBagAndSlot(bag, slot)
+        if C_Item.DoesItemExist(loc) then
+          return C_Item.GetCurrentItemLevel(loc)
+        end
+      end
+    end
+  end
+  return nil
+end
+
+local function GetEquippedSlotItemLevel(slotID)
+  if not slotID or not C_Item or not C_Item.GetCurrentItemLevel or not ItemLocation then
+    return nil
+  end
+  local loc = ItemLocation:CreateFromEquipmentSlot(slotID)
+  if C_Item.DoesItemExist(loc) then
+    return C_Item.GetCurrentItemLevel(loc)
+  end
+  return nil
+end
+
 function ns.Compare:ShouldShowUpgradeIcon(itemLink)
   local comparison = self:GetComparison(itemLink)
   if not comparison or comparison.state == "no_compare" then
@@ -748,11 +778,14 @@ function ns.Compare:ShouldShowUpgradeIcon(itemLink)
     return comparison.state == "better"
   end
 
-  if comparison.newItemLevel > comparison.equippedItemLevel then
+  local newItemLevel = GetBagItemLevel(itemLink) or comparison.newItemLevel
+  local equippedItemLevel = GetEquippedSlotItemLevel(comparison.slotID) or comparison.equippedItemLevel
+
+  if newItemLevel > equippedItemLevel then
     return true
   end
 
-  if comparison.newItemLevel < comparison.equippedItemLevel then
+  if newItemLevel < equippedItemLevel then
     return false
   end
 
