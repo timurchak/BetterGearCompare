@@ -191,6 +191,25 @@ local function IsAllowedBySpecRules(itemLink)
   return allowed
 end
 
+local function FindEquippedSameIdSlot(itemLink, slots)
+  local itemID = GetItemID(itemLink)
+  if not itemID or not slots then
+    return nil
+  end
+
+  for _, slotID in ipairs(slots) do
+    local equippedLink = GetInventoryItemLink("player", slotID)
+    if equippedLink then
+      local equippedID = GetItemID(equippedLink)
+      if equippedID == itemID then
+        return slotID
+      end
+    end
+  end
+
+  return nil
+end
+
 local function GetEquippedItemState(slotID, weights)
   local itemLink = GetInventoryItemLink("player", slotID)
   if not itemLink then
@@ -291,17 +310,22 @@ local function BuildTrinketComparison(itemLink)
   end
 
   local slots = Constants.slotCandidates.INVTYPE_TRINKET
+  local sameIdSlot = FindEquippedSameIdSlot(itemLink, slots)
   local chosenState
 
-  for _, slotID in ipairs(slots) do
-    local equippedState = GetEquippedTrinketState(slotID, specData)
-    if equippedState then
-      if not chosenState or equippedState.score < chosenState.score then
-        chosenState = equippedState
-      end
+  if sameIdSlot then
+    chosenState = GetEquippedTrinketState(sameIdSlot, specData)
+  else
+    for _, slotID in ipairs(slots) do
+      local equippedState = GetEquippedTrinketState(slotID, specData)
+      if equippedState then
+        if not chosenState or equippedState.score < chosenState.score then
+          chosenState = equippedState
+        end
 
-      if #slots == 1 then
-        chosenState = equippedState
+        if #slots == 1 then
+          chosenState = equippedState
+        end
       end
     end
   end
@@ -687,17 +711,22 @@ function ns.Compare:GetComparison(itemLink)
     return nil
   end
 
+  local sameIdSlot = FindEquippedSameIdSlot(itemLink, slots)
   local chosenState
 
-  for _, slotID in ipairs(slots) do
-    local equippedState = GetEquippedItemState(slotID, weights)
-    if equippedState then
-      if not chosenState or equippedState.score < chosenState.score then
-        chosenState = equippedState
-      end
+  if sameIdSlot then
+    chosenState = GetEquippedItemState(sameIdSlot, weights)
+  else
+    for _, slotID in ipairs(slots) do
+      local equippedState = GetEquippedItemState(slotID, weights)
+      if equippedState then
+        if not chosenState or equippedState.score < chosenState.score then
+          chosenState = equippedState
+        end
 
-      if #slots == 1 then
-        chosenState = equippedState
+        if #slots == 1 then
+          chosenState = equippedState
+        end
       end
     end
   end
@@ -818,9 +847,11 @@ function ns.Compare:GetAllComparisons(itemLink)
   local baseNewScore = ns.Stats:CalculateScore(itemLink, weights)
   local baseNewItemLevel = GetItemLevel(itemLink)
   local slots = Constants.slotCandidates[equipLocation]
+  local sameIdSlot = FindEquippedSameIdSlot(itemLink, slots)
+  local iterSlots = sameIdSlot and { sameIdSlot } or slots
   local results = {}
 
-  for _, slotID in ipairs(slots) do
+  for _, slotID in ipairs(iterSlots) do
     local equippedState = GetEquippedItemState(slotID, weights)
     if equippedState then
       local delta = baseNewScore - equippedState.score
