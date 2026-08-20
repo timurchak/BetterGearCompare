@@ -58,14 +58,41 @@ ns.Constants = {
     [INVSLOT_MAINHAND] = INVTYPE_WEAPONMAINHAND or "main hand",
     [INVSLOT_OFFHAND] = INVTYPE_WEAPONOFFHAND or "off hand",
   },
-  UPGRADE_BONUS_MIN = 12769,
-  UPGRADE_BONUS_MAX = 12808,
-  upgradeTracks = {
-    { key = "ADVENTURER", baseBonus = 12769, maxBonus = 12774, contextBonus = nil },
-    { key = "VETERAN",    baseBonus = 12777, maxBonus = 12782, contextBonus = 13332 },
-    { key = "CHAMPION", baseBonus = 12785, maxBonus = 12790, contextBonus = nil },
-    { key = "HERO",     baseBonus = 12793, maxBonus = 12798, contextBonus = 13334 },
-    { key = "MYTH",     baseBonus = 12801, maxBonus = 12806, contextBonus = 13335 },
+  -- Gear upgrade tracks. Every track owns `ranks` consecutive bonus IDs starting
+  -- at baseBonus, one per upgrade rank, and Blizzard hands out a fresh block of
+  -- IDs each season. Gear from an older season keeps the previous block's IDs, so
+  -- all blocks have to be recognised to rebuild an item link at its max rank.
+  -- Refresh with: python scripts/extract_upgrade_tracks.py
+  upgradeTrackBlocks = {
+    { -- bonus 12761-12806, Midnight season 1
+      { key = "EXPLORER", baseBonus = 12761, ranks = 8 },
+      { key = "ADVENTURER", baseBonus = 12769, ranks = 6 },
+      { key = "VETERAN", baseBonus = 12777, ranks = 6 },
+      { key = "CHAMPION", baseBonus = 12785, ranks = 6 },
+      { key = "HERO", baseBonus = 12793, ranks = 6 },
+      { key = "MYTH", baseBonus = 12801, ranks = 6 },
+    },
+    { -- bonus 12817-12854, Midnight season 2, current season
+      { key = "ADVENTURER", baseBonus = 12817, ranks = 6 },
+      { key = "VETERAN", baseBonus = 12825, ranks = 6 },
+      { key = "CHAMPION", baseBonus = 12833, ranks = 6 },
+      { key = "HERO", baseBonus = 12841, ranks = 6 },
+      { key = "MYTH", baseBonus = 12849, ranks = 6 },
+    },
+    { -- bonus 12865-12904, next season
+      { key = "ADVENTURER", baseBonus = 12865, ranks = 8 },
+      { key = "VETERAN", baseBonus = 12873, ranks = 8 },
+      { key = "CHAMPION", baseBonus = 12881, ranks = 8 },
+      { key = "HERO", baseBonus = 12889, ranks = 8 },
+      { key = "MYTH", baseBonus = 12897, ranks = 8 },
+    },
+  },
+  currentUpgradeBlock = 2,
+  -- Raid difficulty context bonus IDs, shared by all seasons.
+  upgradeTrackContextBonus = {
+    VETERAN = 13332,
+    HERO = 13334,
+    MYTH = 13335,
   },
   tooltipMethods = {
     "SetBagItem",
@@ -84,3 +111,30 @@ ns.Constants = {
     "SetItemInteractionItem",
   },
 }
+
+-- Flatten the upgrade tracks: comparisons match a bonus ID against every season,
+-- while the BIS window only offers the tracks of the current one.
+local allUpgradeTracks = {}
+local minBonus, maxBonus
+
+for blockIndex, block in ipairs(ns.Constants.upgradeTrackBlocks) do
+  for _, track in ipairs(block) do
+    track.blockIndex = blockIndex
+    track.maxBonus = track.baseBonus + track.ranks - 1
+    track.contextBonus = ns.Constants.upgradeTrackContextBonus[track.key]
+
+    allUpgradeTracks[#allUpgradeTracks + 1] = track
+
+    if not minBonus or track.baseBonus < minBonus then
+      minBonus = track.baseBonus
+    end
+    if not maxBonus or track.maxBonus > maxBonus then
+      maxBonus = track.maxBonus
+    end
+  end
+end
+
+ns.Constants.allUpgradeTracks = allUpgradeTracks
+ns.Constants.upgradeTracks = ns.Constants.upgradeTrackBlocks[ns.Constants.currentUpgradeBlock] or {}
+ns.Constants.UPGRADE_BONUS_MIN = minBonus or 0
+ns.Constants.UPGRADE_BONUS_MAX = maxBonus or 0

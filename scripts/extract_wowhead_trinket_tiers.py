@@ -21,7 +21,10 @@ from pathlib import Path
 
 
 DEFAULT_URL = "https://www.wowhead.com/guide/classes/death-knight/blood/bis-gear"
-DEFAULT_TIERS = ("A", "B", "C", "D")
+# Guides label tiers freely: besides S/A/B/C/D they also use S+, A+, F and even G.
+# Tiers are kept in the order the guide lists them (best first), so no fixed list
+# of labels is required anymore.
+DEFAULT_TIERS = ()
 BROWSER_HEADERS = {
     "User-Agent": (
         "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
@@ -57,8 +60,11 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument(
         "--tiers",
-        default=",".join(DEFAULT_TIERS),
-        help="Comma-separated tier labels to keep, for example A,B,C,D or S,A,B,C,D.",
+        default="",
+        help=(
+            "Optional comma-separated tier labels to keep, for example S,A,B. "
+            "By default every tier the guide lists is kept, in guide order."
+        ),
     )
     parser.add_argument(
         "--pretty",
@@ -228,8 +234,9 @@ def extract_trinket_tier_list(markup: str) -> str:
     return section_match.group(1)
 
 
-def parse_tiers(tier_list_markup: str) -> dict[str, list[int]]:
-    tiers: dict[str, list[int]] = {}
+def parse_tiers(tier_list_markup: str) -> list[dict[str, object]]:
+    """Return tiers in guide order: [{"label": "S+", "itemIDs": [...]}, ...]."""
+    tiers: list[dict[str, object]] = []
 
     for tier_match in re.finditer(
         r"\[tier\](.*?)\[/tier\]",
@@ -238,18 +245,21 @@ def parse_tiers(tier_list_markup: str) -> dict[str, list[int]]:
     ):
         tier_block = tier_match.group(1)
         label_match = re.search(
-            r"\[tier-label[^\]]*\]\s*([A-Z])\s*\[/tier-label\]",
+            r"\[tier-label[^\]]*\]\s*([^\[\]]+?)\s*\[/tier-label\]",
             tier_block,
         )
         if not label_match:
             continue
 
-        label = label_match.group(1)
+        label = normalize_tier_label(label_match.group(1))
+        if not label:
+            continue
+
         ids = [
             int(item_id)
             for item_id in re.findall(r"\[icon-badge=(\d+)\b", tier_block)
         ]
-        tiers[label] = ids
+        tiers.append({"label": label, "itemIDs": ids})
 
     if not tiers:
         raise ValueError("No tier entries were parsed from the Trinket Tier List block.")
@@ -257,12 +267,30 @@ def parse_tiers(tier_list_markup: str) -> dict[str, list[int]]:
     return tiers
 
 
-def filter_tiers(tiers: dict[str, list[int]], requested_tiers: str) -> dict[str, list[int]]:
-    wanted = [tier.strip().upper() for tier in requested_tiers.split(",") if tier.strip()]
-    if not wanted:
-        raise ValueError("No tier labels were provided in --tiers.")
+def normalize_tier_label(raw_label: str) -> str:
+    """Collapse a tier label to its printable form, for example "s+" -> "S+"."""
+    label = re.sub(r"\s+", "", raw_label).upper()
+    return label if re.fullmatch(r"[A-Z][+-]?", label) else ""
 
-    return {tier: tiers.get(tier, []) for tier in wanted}
+
+def filter_tiers(
+    tiers: list[dict[str, object]], requested_tiers: str
+) -> list[dict[str, object]]:
+    """Keep only the requested labels; an empty request keeps every tier."""
+    wanted = [
+        normalize_tier_label(tier)
+        for tier in requested_tiers.split(",")
+        if tier.strip()
+    ]
+    if not wanted:
+        return tiers
+
+    return [tier for tier in tiers if tier["label"] in wanted]
+
+
+def tiers_as_mapping(tiers: list[dict[str, object]]) -> dict[str, list[int]]:
+    """Flatten parsed tiers into {label: [itemID, ...]} for reporting."""
+    return {str(tier["label"]): list(tier["itemIDs"]) for tier in tiers}
 
 
 def main() -> int:
@@ -279,9 +307,9 @@ def main() -> int:
         return 1
 
     if args.pretty:
-        print(json.dumps(filtered, indent=2, ensure_ascii=False))
+        print(json.dumps(tiers_as_mapping(filtered), indent=2, ensure_ascii=False))
     else:
-        print(json.dumps(filtered, ensure_ascii=False))
+        print(json.dumps(tiers_as_mapping(filtered), ensure_ascii=False))
 
     return 0
 

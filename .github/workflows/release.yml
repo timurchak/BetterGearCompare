@@ -38,6 +38,13 @@ jobs:
           echo "tag=$TAG" >> "$GITHUB_OUTPUT"
           echo "version=$VERSION" >> "$GITHUB_OUTPUT"
 
+      - name: Check upgrade tracks against Wowhead
+        continue-on-error: true
+        run: |
+          if ! python scripts/extract_upgrade_tracks.py --verify; then
+            echo "::warning::Upgrade tracks in BetterGearCompare_Constants.lua look stale — run scripts/extract_upgrade_tracks.py"
+          fi
+
       - name: Build release archive
         run: ./build-release.sh "${{ steps.version.outputs.version }}"
 

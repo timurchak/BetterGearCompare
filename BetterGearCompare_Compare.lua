@@ -49,8 +49,8 @@ local function FindUpgradeTrackBonus(itemLink)
   for i = 15, 14 + numBonuses do
     local bonusID = tonumber(parts[i])
     if bonusID and bonusID >= Constants.UPGRADE_BONUS_MIN and bonusID <= Constants.UPGRADE_BONUS_MAX then
-      for _, track in ipairs(Constants.upgradeTracks) do
-        if bonusID >= track.baseBonus and bonusID <= track.baseBonus + 7 then
+      for _, track in ipairs(Constants.allUpgradeTracks) do
+        if bonusID >= track.baseBonus and bonusID <= track.maxBonus then
           return track, bonusID, i, parts
         end
       end
@@ -425,6 +425,9 @@ local function GetStateFromDelta(delta)
   return "equal"
 end
 
+-- Compares both items at their highest upgrade rank. An item without an upgrade
+-- track (older season gear, mythic raid drops) has no higher rank, so it takes
+-- part with the item level it already has.
 local function BuildMaxUpgradeComparison(itemLink, equippedLink, slotID, weights)
   if not itemLink or not equippedLink then return nil end
   if equippedLink:find("\n") then return nil end
@@ -441,6 +444,16 @@ local function BuildMaxUpgradeComparison(itemLink, equippedLink, slotID, weights
   local newMaxIlvl = ns.Stats:GetItemLevel(effectiveNewLink)
   local equippedMaxIlvl = ns.Stats:GetItemLevel(effectiveEquippedLink)
   local delta = newMaxScore - equippedMaxScore
+
+  Debug(
+    "max upgrade",
+    "newUpgradeable=", newMaxLink ~= nil,
+    "equippedUpgradeable=", equippedMaxLink ~= nil,
+    "newScore=", newMaxScore,
+    "equippedScore=", equippedMaxScore,
+    "newIlvl=", newMaxIlvl,
+    "equippedIlvl=", equippedMaxIlvl
+  )
 
   return BuildComparisonResult(
     GetStateFromDelta(delta),

@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import urlparse
@@ -14,14 +15,10 @@ from verify_wowhead_trinket_guides import read_urls, verify_url
 
 DEFAULT_URLS_FILE = Path(__file__).with_name("wowhead_bis_guide_urls.txt")
 DEFAULT_OUTPUT_FILE = Path(__file__).resolve().parent.parent / "BetterGearCompare_TrinketData.lua"
-DEFAULT_TIERS = "S,A,B,C,D"
-TIER_SCORES = {
-    "S": 5,
-    "A": 4,
-    "B": 3,
-    "C": 2,
-    "D": 1,
-}
+# Guides use their own label sets (S+, S, A+, A, B, C, D, F, ...), so scores are
+# derived from the order the guide lists its tiers in: best tier scores highest,
+# worst listed tier scores 1, an item missing from the list scores 0.
+DEFAULT_TIERS = ""
 SPEC_ID_BY_SLUG = {
     "death-knight/blood": 250,
     "death-knight/frost": 251,
@@ -85,7 +82,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--tiers",
         default=DEFAULT_TIERS,
-        help="Comma-separated tier labels to include in the generated file.",
+        help="Optional comma-separated tier labels to keep (default: every tier the guide lists).",
     )
     return parser.parse_args()
 
@@ -98,7 +95,9 @@ def build_slug(url: str) -> tuple[str, str, str]:
 
 
 def lua_quote(value: str) -> str:
-    escaped = value.replace("\\", "\\\\").replace('"', '\\"')
+    # Guide cells can span several lines; Lua string literals cannot.
+    collapsed = re.sub(r"\s+", " ", value).strip()
+    escaped = collapsed.replace("\\", "\\\\").replace('"', '\\"')
     return f'"{escaped}"'
 
 
@@ -147,9 +146,10 @@ def format_lua_table(value: object, indent: int = 0) -> str:
     return lua_scalar(value)
 
 
-def build_dataset(results: list[dict[str, object]], ordered_tiers: list[str]) -> dict[str, object]:
+def build_dataset(results: list[dict[str, object]]) -> dict[str, object]:
     specs: dict[str, object] = {}
     spec_ids: dict[int, str] = {}
+    tier_labels: list[str] = []
 
     for result in results:
         if not result.get("ok"):
@@ -160,21 +160,34 @@ def build_dataset(results: list[dict[str, object]], ordered_tiers: list[str]) ->
         spec_id = SPEC_ID_BY_SLUG.get(slug)
         if spec_id is None:
             raise ValueError(f"Missing spec ID mapping for {slug}")
-        tiers = result["tiers"]
+
+        tiers = result["orderedTiers"]
+        tier_order = [str(tier["label"]) for tier in tiers]
+        tier_scores = {label: len(tier_order) - index for index, label in enumerate(tier_order)}
 
         item_tiers: dict[int, str] = {}
         item_scores: dict[int, int] = {}
-        for tier in ordered_tiers:
-            for item_id in tiers.get(tier, []):
-                item_tiers[item_id] = tier
-                item_scores[item_id] = TIER_SCORES.get(tier, 0)
+        for tier in tiers:
+            label = str(tier["label"])
+            for item_id in tier["itemIDs"]:
+                # First (best) tier wins if a guide lists an item twice.
+                if item_id in item_tiers:
+                    continue
+                item_tiers[item_id] = label
+                item_scores[item_id] = tier_scores[label]
+
+        for label in tier_order:
+            if label not in tier_labels:
+                tier_labels.append(label)
 
         specs[slug] = {
             "specID": spec_id,
             "classSlug": class_slug,
             "specSlug": spec_slug,
             "sourceUrl": url,
-            "tiers": {tier: tiers.get(tier, []) for tier in ordered_tiers},
+            "tierOrder": tier_order,
+            "tierScores": tier_scores,
+            "tiers": {str(tier["label"]): list(tier["itemIDs"]) for tier in tiers},
             "itemTiers": dict(sorted(item_tiers.items())),
             "itemScores": dict(sorted(item_scores.items())),
         }
@@ -183,8 +196,7 @@ def build_dataset(results: list[dict[str, object]], ordered_tiers: list[str]) ->
     return {
         "generatedAtUtc": datetime.now(timezone.utc).replace(microsecond=0).isoformat(),
         "source": "Wowhead Trinket Tier List",
-        "orderedTiers": ordered_tiers,
-        "tierScores": {tier: TIER_SCORES[tier] for tier in ordered_tiers if tier in TIER_SCORES},
+        "tierLabels": tier_labels,
         "specIDs": dict(sorted(spec_ids.items())),
         "specs": specs,
     }
@@ -192,7 +204,6 @@ def build_dataset(results: list[dict[str, object]], ordered_tiers: list[str]) ->
 
 def main() -> int:
     args = parse_args()
-    ordered_tiers = [tier.strip().upper() for tier in args.tiers.split(",") if tier.strip()]
     urls = read_urls(args.urls_file)
 
     if not urls:
@@ -204,7 +215,7 @@ def main() -> int:
         summary = "\n".join(f"- {result['url']}: {result['error']}" for result in failed)
         raise SystemExit(f"error: some guides failed verification:\n{summary}")
 
-    dataset = build_dataset(results, ordered_tiers)
+    dataset = build_dataset(results)
     lua_content = (
         "local _, ns = ...\n\n"
         f"ns.TrinketData = {format_lua_table(dataset)}\n"
@@ -214,7 +225,8 @@ def main() -> int:
     summary = {
         "output": str(args.output),
         "specCount": len(dataset["specs"]),
-        "orderedTiers": ordered_tiers,
+        "tierLabels": dataset["tierLabels"],
+        "trinketCount": sum(len(spec["itemTiers"]) for spec in dataset["specs"].values()),
     }
     print(json.dumps(summary, ensure_ascii=False))
     return 0

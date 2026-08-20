@@ -32,8 +32,16 @@ Trinket tiers and BIS gear data are scraped from Wowhead guides at build time. S
 | `generate_wowhead_trinket_lua.py` | Generate `BetterGearCompare_TrinketData.lua` for all 40 specs |
 | `extract_wowhead_bis_gear.py` | Parse BIS gear tables from Wowhead guide markup |
 | `generate_wowhead_bis_lua.py` | Generate `BetterGearCompare_BisData.lua` for all 40 specs |
+| `extract_upgrade_tracks.py` | Discover upgrade-track bonus IDs for `BetterGearCompare_Constants.lua` |
 | `verify_wowhead_trinket_guides.py` | Validate guide URLs are still reachable |
 | `install.py` | Copy addon files to local WoW AddOns directory |
+
+### Tier labels
+
+Tier labels come from the guide itself — besides `S`–`D` the authors also use `S+`,
+`A+`, `F` and `G`, and each spec may use its own set. Scores are derived from the
+order a guide lists its tiers in: the best tier scores highest, the worst listed
+tier scores 1, a trinket that is not listed at all scores 0.
 
 ### Dependencies
 
@@ -53,6 +61,32 @@ python generate_wowhead_bis_lua.py       # writes BetterGearCompare_BisData.lua
 
 BIS guide URLs are listed in `scripts/wowhead_bis_guide_urls.txt` (one per line, 40 total).
 
+## Upgrade Tracks
+
+Every upgrade track owns a run of consecutive item bonus IDs — one per rank — and
+Blizzard hands out a fresh block of IDs each season. Gear from an older season
+keeps the previous block's IDs, and some gear (mythic raid drops, older loot) has
+no track at all. Comparisons therefore match a bonus ID against every block, while
+the BIS window only offers the tracks of the current season.
+
+Blocks live in `BetterGearCompare_Constants.lua` (`upgradeTrackBlocks`,
+`currentUpgradeBlock`). Current data:
+
+| Block | Bonus IDs | Tracks | Ranks |
+|-------|-----------|--------|-------|
+| Midnight season 1 | 12761–12806 | Explorer, Adventurer, Veteran, Champion, Hero, Myth | 8 / 6 |
+| Midnight season 2 (current) | 12817–12854 | Adventurer, Veteran, Champion, Hero, Myth | 6 |
+| Next season | 12865–12904 | Adventurer, Veteran, Champion, Hero, Myth | 8 |
+
+When a season starts, refresh the table:
+
+```bash
+python scripts/extract_upgrade_tracks.py            # prints the Lua block to paste
+python scripts/extract_upgrade_tracks.py --verify   # exits 2 when Constants is stale
+```
+
+The release workflow runs `--verify` and prints a warning if the table is stale.
+
 ## BIS Item Strings
 
 Items in the BIS window use WoW item strings with bonus IDs to show correct item levels per difficulty tier:
@@ -61,14 +95,14 @@ Items in the BIS window use WoW item strings with bonus IDs to show correct item
 item:ITEMID::::::::::::NUM_BONUSES:BONUSID[:CONTEXT_BONUS]
 ```
 
-Upgrade tracks (fixed at 6/8 per tier):
+`BONUSID` is the highest rank of the selected track from the current block, and the
+optional context bonus only sets the difficulty label shown in the tooltip:
 
-| Tier | Bonus ID | Context Bonus |
-|------|----------|---------------|
-| Veteran (LFR) | 12782 | 13332 |
-| Champion (Normal) | 12790 | — |
-| Hero (Heroic) | 12798 | 13334 |
-| Myth (Mythic) | 12806 | 13335 |
+| Difficulty label | Context bonus |
+|------------------|---------------|
+| Raid Finder | 13332 |
+| Heroic | 13334 |
+| Mythic | 13335 |
 
 ## Build & Release
 
@@ -93,9 +127,10 @@ Generates trinket + BIS data, packages everything into `Release/BetterGearCompar
 GitHub Actions workflow (`.github/workflows/release.yml`) triggers on `v*` tags:
 
 1. Installs `curl_cffi`
-2. Runs both data generators (fetches live Wowhead data)
-3. Packages release zip
-4. Publishes GitHub release
+2. Checks the upgrade-track table against Wowhead (warning only)
+3. Runs both data generators (fetches live Wowhead data)
+4. Packages release zip
+5. Publishes GitHub release
 
 ## Slash Commands
 
@@ -109,4 +144,4 @@ GitHub Actions workflow (`.github/workflows/release.yml`) triggers on `v*` tags:
 - [ ] Add game icon
 - [ ] Add minimap button
 - [ ] Compare both weapons if dual
-- [ ] Compare max level item (findout bonusID)
+- [x] Compare max level item (findout bonusID)

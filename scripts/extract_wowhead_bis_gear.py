@@ -55,38 +55,92 @@ def parse_args() -> argparse.Namespace:
 SLOT_NORMALIZE = {
     "head": "Head",
     "helm": "Head",
+    "helmet": "Head",
     "neck": "Neck",
+    "necklace": "Neck",
+    "amulet": "Neck",
     "shoulders": "Shoulders",
     "shoulder": "Shoulders",
+    "shoulderpads": "Shoulders",
     "cloak": "Back",
     "back": "Back",
     "cape": "Back",
     "chest": "Chest",
+    "chestpiece": "Chest",
+    "robe": "Chest",
     "bracers": "Wrist",
+    "bracer": "Wrist",
     "wrist": "Wrist",
+    "wrists": "Wrist",
     "gloves": "Hands",
     "hands": "Hands",
+    "handwraps": "Hands",
     "belt": "Waist",
     "waist": "Waist",
     "legs": "Legs",
+    "pants": "Legs",
+    "leggings": "Legs",
     "boots": "Feet",
     "feet": "Feet",
     "ring": "Ring",
+    "rings": "Ring",
     "finger": "Ring",
+    "fingers": "Ring",
     "trinket": "Trinket",
+    "trinkets": "Trinket",
     "weapon": "Weapon",
+    "weapons": "Weapon",
+    "1h weapon": "Weapon",
+    "1h weapons": "Weapon",
+    "2h weapon": "Weapon",
+    "2h weapons": "Weapon",
+    "one hand": "Weapon",
+    "one-hand": "Weapon",
+    "one-handed weapon": "Weapon",
+    "two hand": "Weapon",
+    "two-hand": "Weapon",
+    "two-handed weapon": "Weapon",
     "mainhand": "Weapon",
     "main hand": "Weapon",
+    "main-hand": "Weapon",
+    "main hand weapon": "Weapon",
+    "ranged": "Weapon",
+    "ranged weapon": "Weapon",
     "offhand": "Offhand",
     "off hand": "Offhand",
     "off-hand": "Offhand",
+    "off hand weapon": "Offhand",
     "shield": "Offhand",
     "holdable": "Offhand",
 }
 
+# Slot labels the guides use for grouped or duplicated rows: "Ring 1", "Ring 2",
+# "Trinket (Raid)", "Weapons (1h)", "Ring ()".
+SLOT_QUALIFIER_RE = re.compile(r"\([^)]*\)")
+SLOT_INDEX_RE = re.compile(r"[\s\d]+$")
+
 
 def normalize_slot(raw_slot: str) -> str | None:
-    return SLOT_NORMALIZE.get(raw_slot.strip().lower())
+    text = SLOT_QUALIFIER_RE.sub(" ", raw_slot.lower())
+    text = SLOT_INDEX_RE.sub("", text)
+    text = re.sub(r"\s+", " ", text).strip(" -_:/")
+
+    slot = SLOT_NORMALIZE.get(text)
+    if slot:
+        return slot
+
+    # Last resort: recognise the slot by keyword so a new qualifier style does not
+    # silently drop the row. Off-hand has to win over the generic weapon match.
+    if "trinket" in text:
+        return "Trinket"
+    if "ring" in text or "finger" in text:
+        return "Ring"
+    if "shield" in text or "off" in text:
+        return "Offhand"
+    if "weapon" in text or "hand" in text:
+        return "Weapon"
+
+    return None
 
 
 def extract_bis_table(markup: str) -> str:
@@ -127,16 +181,21 @@ def _extract_source(cells: list[str], row: str) -> str:
         # Guide URL: [url guide=33231]Chimaerus[/url]
         guide = re.search(r"\[url guide=\d+\]([^\[]+)\[/url\]", cell)
         if guide:
-            return guide.group(1).strip()
+            return _collapse(guide.group(1))
         # Skill (crafting): [skill=164]
         if re.search(r"\[skill=\d+\]", cell):
             return "Crafted"
     # Fallback: strip all tags from last non-empty cell
     for cell in reversed(cells):
-        text = re.sub(r"\[/?[^\]]+\]", "", cell).strip()
+        text = _collapse(re.sub(r"\[/?[^\]]+\]", "", cell))
         if text and not re.search(r"^\d+$", text):
             return text
     return ""
+
+
+def _collapse(text: str) -> str:
+    """Squash the multi-line cell text guides use into a single line."""
+    return re.sub(r"\s+", " ", text).strip()
 
 
 def parse_bis_items(table_markup: str) -> dict[str, list[dict]]:

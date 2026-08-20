@@ -121,6 +121,12 @@ local function AddSingleComparisonLines(tooltip, comparison)
       tooltip:AddLine(L.TOOLTIP_MAX_EQUAL, 0.65, 0.65, 0.65)
     end
     tooltip:AddLine(string.format(L.TOOLTIP_MAX_SCORE, maxComp.newScore, maxComp.equippedScore), 0.6, 0.6, 0.6)
+    if (maxComp.newItemLevel or 0) > 0 and (maxComp.equippedItemLevel or 0) > 0 then
+      tooltip:AddLine(
+        string.format(L.TOOLTIP_MAX_ITEM_LEVEL, maxComp.newItemLevel, maxComp.equippedItemLevel),
+        0.6, 0.6, 0.6
+      )
+    end
   end
 end
 

@@ -15,6 +15,7 @@ from extract_wowhead_trinket_tiers import (
     fetch_html,
     filter_tiers,
     parse_tiers,
+    tiers_as_mapping,
 )
 
 
@@ -40,8 +41,8 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument(
         "--tiers",
-        default="S,A,B,C,D",
-        help="Comma-separated tier labels to include in the report.",
+        default="",
+        help="Optional comma-separated tier labels to keep (default: every tier the guide lists).",
     )
     parser.add_argument(
         "--timeout-note",
@@ -85,15 +86,17 @@ def verify_url(url: str, tiers_arg: str) -> dict[str, object]:
         result["error"] = str(exc)
         return result
 
-    total_items = sum(len(item_ids) for item_ids in filtered.values())
-    non_empty_tiers = [tier for tier, item_ids in filtered.items() if item_ids]
+    total_items = sum(len(tier["itemIDs"]) for tier in filtered)
+    non_empty_tiers = [tier["label"] for tier in filtered if tier["itemIDs"]]
 
     result.update(
         {
             "ok": True,
             "total_items": total_items,
+            "tier_order": [tier["label"] for tier in filtered],
             "non_empty_tiers": non_empty_tiers,
-            "tiers": filtered,
+            "tiers": tiers_as_mapping(filtered),
+            "orderedTiers": filtered,
         }
     )
     return result
@@ -113,7 +116,7 @@ def main() -> int:
 
     report = {
         "source_file": str(args.urls_file),
-        "tiers": [tier.strip().upper() for tier in args.tiers.split(",") if tier.strip()],
+        "tier_filter": [tier.strip().upper() for tier in args.tiers.split(",") if tier.strip()],
         "total_urls": len(urls),
         "ok_urls": ok_count,
         "failed_urls": len(failed),

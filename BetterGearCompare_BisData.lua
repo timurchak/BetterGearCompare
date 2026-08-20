@@ -1,7 +1,7 @@
 local _, ns = ...
 
 ns.BisData = {
-  ["generatedAtUtc"] = "2026-03-27T14:04:37+00:00",
+  ["generatedAtUtc"] = "2026-08-20T11:59:13+00:00",
   ["source"] = "Wowhead Best in Slot Guides",
   ["specIDs"] = {
     [62] = "mage/arcane",
@@ -54,38 +54,38 @@ ns.BisData = {
       ["itemsBySlot"] = {
         ["Weapon"] = {
           {
-            ["itemID"] = 49802,
-            ["source"] = "Pit of Saron",
+            ["itemID"] = 268213,
+            ["source"] = "The Coiled Altar",
           },
         },
         ["Head"] = {
           {
-            ["itemID"] = 249970,
-            ["source"] = "Tier Set",
+            ["itemID"] = 271474,
+            ["source"] = "Nek'zali the Soulcoiler",
           },
         },
         ["Neck"] = {
           {
-            ["itemID"] = 249368,
-            ["source"] = "Crown of the Cosmos",
+            ["itemID"] = 268265,
+            ["source"] = "Ula'tek",
           },
         },
         ["Shoulders"] = {
           {
-            ["itemID"] = 249968,
-            ["source"] = "Tier Set",
+            ["itemID"] = 271472,
+            ["source"] = "Temple of Sethraliss",
           },
         },
         ["Back"] = {
           {
-            ["itemID"] = 260312,
-            ["source"] = "Magister's Terrace",
+            ["itemID"] = 268253,
+            ["source"] = "The Coiled Altar",
           },
         },
         ["Chest"] = {
           {
-            ["itemID"] = 249973,
-            ["source"] = "",
+            ["itemID"] = 271477,
+            ["source"] = "The Coiled Altar",
           },
         },
         ["Wrist"] = {
@@ -96,81 +96,94 @@ ns.BisData = {
         },
         ["Hands"] = {
           {
-            ["itemID"] = 151332,
-            ["source"] = "Seat of the Triumvirate",
+            ["itemID"] = 271475,
+            ["source"] = "King's Rest",
           },
         },
         ["Waist"] = {
           {
-            ["itemID"] = 49808,
-            ["source"] = "Pit of Saron",
+            ["itemID"] = 268259,
+            ["source"] = "The Coiled Altar",
           },
         },
         ["Legs"] = {
           {
-            ["itemID"] = 249969,
-            ["source"] = "Tier Set",
+            ["itemID"] = 271878,
+            ["source"] = "Ula'tek",
           },
         },
         ["Feet"] = {
           {
-            ["itemID"] = 249381,
-            ["source"] = "Chimaerus",
+            ["itemID"] = 273777,
+            ["source"] = "Altar of Fangs",
           },
         },
         ["Ring"] = {
           {
-            ["itemID"] = 249920,
-            ["source"] = "Midnight Falls",
+            ["itemID"] = 273066,
+            ["source"] = "Crafting",
           },
           {
-            ["itemID"] = 251513,
+            ["itemID"] = 240949,
             ["source"] = "Crafting",
+          },
+          {
+            ["itemID"] = 268249,
+            ["source"] = "Vashnik the Malignant",
+          },
+          {
+            ["itemID"] = 251194,
+            ["source"] = "Blinding Vale",
           },
         },
         ["Trinket"] = {
           {
-            ["itemID"] = 249343,
-            ["source"] = "Chimaerus",
+            ["itemID"] = 270175,
+            ["source"] = "Ula'tek",
           },
           {
-            ["itemID"] = 249344,
-            ["source"] = "Imperator Averzian",
+            ["itemID"] = 270173,
+            ["source"] = "The Coiled Altar",
           },
         },
       },
       ["bisItems"] = {
-        [49802] = true,
-        [49808] = true,
-        [151332] = true,
         [237834] = true,
-        [249343] = true,
-        [249344] = true,
-        [249368] = true,
-        [249381] = true,
-        [249920] = true,
-        [249968] = true,
-        [249969] = true,
-        [249970] = true,
-        [249973] = true,
-        [251513] = true,
-        [260312] = true,
+        [240949] = true,
+        [251194] = true,
+        [268213] = true,
+        [268249] = true,
+        [268253] = true,
+        [268259] = true,
+        [268265] = true,
+        [270173] = true,
+        [270175] = true,
+        [271472] = true,
+        [271474] = true,
+        [271475] = true,
+        [271477] = true,
+        [271878] = true,
+        [273066] = true,
+        [273777] = true,
       },
       ["itemSources"] = {
-        [49802] = "Pit of Saron",
-        [49808] = "Pit of Saron",
-        [151332] = "Seat of the Triumvirate",
         [237834] = "Crafting",
-        [249343] = "Chimaerus",
-        [249344] = "Imperator Averzian",
-        [249368] = "Crown of the Cosmos",
-        [249381] = "Chimaerus",
-        [249920] = "Midnight Falls",
-        [249968] = "Tier Set",
-        [249969] = "Tier Set",
-        [249970] = "Tier Set",
-        [251513] = "Crafting",
-        [260312] = "Magister's Terrace",
+        [240949] = "Crafting",
+        [251194] = "Blinding Vale",
+        [268213] = "The Coiled Altar",
+        [268249] = "Vashnik the Malignant",
+        [268253] = "The Coiled Altar",
+        [268259] = "The Coiled Altar",
+        [268265] = "Ula'tek",
+        [270173] = "The Coiled Altar",
+        [270175] = "Ula'tek",
+        [271472] = "Temple of Sethraliss",
+        [271474] = "Nek'zali the Soulcoiler",
+        [271475] = "King's Rest",
+        [271477] = "The Coiled Altar",
+        [271878] = "Ula'tek",
+        [273066] = "Crafting",
+        [273777] = "Altar of Fangs",
       },
     },
     ["death-knight/frost"] = {
@@ -179,34 +192,46 @@ ns.BisData = {
       ["specSlug"] = "frost",
       ["sourceUrl"] = "https://www.wowhead.com/guide/classes/death-knight/frost/bis-gear",
       ["itemsBySlot"] = {
+        ["Weapon"] = {
+          {
+            ["itemID"] = 268202,
+            ["source"] = "Ula'tek",
+          },
+        },
+        ["Offhand"] = {
+          {
+            ["itemID"] = 268209,
+            ["source"] = "The Coiled Altar",
+          },
+        },
         ["Head"] = {
           {
-            ["itemID"] = 249970,
+            ["itemID"] = 271474,
             ["source"] = "Tier Set",
           },
         },
         ["Neck"] = {
           {
-            ["itemID"] = 250247,
-            ["source"] = "Midnight Falls",
+            ["itemID"] = 268265,
+            ["source"] = "Ula'tek",
           },
         },
         ["Shoulders"] = {
           {
-            ["itemID"] = 50234,
-            ["source"] = "Pit of Saron",
+            ["itemID"] = 271472,
+            ["source"] = "Tier Set",
           },
         },
         ["Back"] = {
           {
-            ["itemID"] = 239656,
-            ["source"] = "Crafting/Misc",
+            ["itemID"] = 268253,
+            ["source"] = "The Coiled Altar",
           },
         },
         ["Chest"] = {
           {
-            ["itemID"] = 249973,
-            ["source"] = "Tier Set",
+            ["itemID"] = 271474,
+            ["source"] = "The Coiled Altar",
           },
         },
         ["Wrist"] = {
@@ -217,80 +242,82 @@ ns.BisData = {
         },
         ["Hands"] = {
           {
-            ["itemID"] = 249971,
+            ["itemID"] = 271475,
             ["source"] = "Tier Set",
           },
         },
         ["Waist"] = {
           {
-            ["itemID"] = 249380,
-            ["source"] = "Crown of the Cosmos",
+            ["itemID"] = 268259,
+            ["source"] = "The Coiled Altar",
           },
         },
         ["Legs"] = {
           {
-            ["itemID"] = 249969,
-            ["source"] = "Tier Set",
+            ["itemID"] = 271878,
+            ["source"] = "Ula'tek",
           },
         },
         ["Feet"] = {
           {
-            ["itemID"] = 249381,
-            ["source"] = "Chimaerus",
+            ["itemID"] = 268260,
+            ["source"] = "Vashnik the Malignant",
           },
         },
         ["Ring"] = {
           {
-            ["itemID"] = 193708,
-            ["source"] = "Algeth'ar Academy",
+            ["itemID"] = 268249,
+            ["source"] = "Vashnik the Malignant",
           },
           {
-            ["itemID"] = 249919,
-            ["source"] = "Belo'ren",
+            ["itemID"] = 251513,
+            ["source"] = "Crafting/Misc",
           },
         },
         ["Trinket"] = {
           {
-            ["itemID"] = 249344,
-            ["source"] = "Imperator Averzian",
+            ["itemID"] = 270173,
+            ["source"] = "The Coiled Altar",
           },
           {
-            ["itemID"] = 249343,
-            ["source"] = "Chimaerus",
+            ["itemID"] = 270175,
+            ["source"] = "Ula'tek",
           },
         },
       },
       ["bisItems"] = {
-        [50234] = true,
-        [193708] = true,
         [237834] = true,
-        [239656] = true,
-        [249343] = true,
-        [249344] = true,
-        [249380] = true,
-        [249381] = true,
-        [249919] = true,
-        [249969] = true,
-        [249970] = true,
-        [249971] = true,
-        [249973] = true,
-        [250247] = true,
+        [251513] = true,
+        [268202] = true,
+        [268209] = true,
+        [268249] = true,
+        [268253] = true,
+        [268259] = true,
+        [268260] = true,
+        [268265] = true,
+        [270173] = true,
+        [270175] = true,
+        [271472] = true,
+        [271474] = true,
+        [271475] = true,
+        [271878] = true,
       },
       ["itemSources"] = {
-        [50234] = "Pit of Saron",
-        [193708] = "Algeth'ar Academy",
         [237834] = "Crafting/Misc",
-        [239656] = "Crafting/Misc",
-        [249343] = "Chimaerus",
-        [249344] = "Imperator Averzian",
-        [249380] = "Crown of the Cosmos",
-        [249381] = "Chimaerus",
-        [249919] = "Belo'ren",
-        [249969] = "Tier Set",
-        [249970] = "Tier Set",
-        [249971] = "Tier Set",
-        [249973] = "Tier Set",
-        [250247] = "Midnight Falls",
+        [251513] = "Crafting/Misc",
+        [268202] = "Ula'tek",
+        [268209] = "The Coiled Altar",
+        [268249] = "Vashnik the Malignant",
+        [268253] = "The Coiled Altar",
+        [268259] = "The Coiled Altar",
+        [268260] = "Vashnik the Malignant",
+        [268265] = "Ula'tek",
+        [270173] = "The Coiled Altar",
+        [270175] = "Ula'tek",
+        [271472] = "Tier Set",
+        [271474] = "The Coiled Altar",
+        [271475] = "Tier Set",
+        [271878] = "Ula'tek",
       },
     },
     ["death-knight/unholy"] = {
@@ -301,37 +328,37 @@ ns.BisData = {
       ["itemsBySlot"] = {
         ["Weapon"] = {
           {
-            ["itemID"] = 249277,
-            ["source"] = "Lightblinded Vanguard",
+            ["itemID"] = 268213,
+            ["source"] = "The Coiled Altar",
           },
         },
         ["Head"] = {
           {
-            ["itemID"] = 249970,
+            ["itemID"] = 271474,
             ["source"] = "Tier Set",
           },
         },
         ["Neck"] = {
           {
-            ["itemID"] = 250247,
-            ["source"] = "Midnight Falls",
+            ["itemID"] = 268265,
+            ["source"] = "Ula'tek",
           },
         },
         ["Shoulders"] = {
           {
-            ["itemID"] = 50234,
-            ["source"] = "Pit of Saron",
+            ["itemID"] = 271472,
+            ["source"] = "Tier Set",
           },
         },
         ["Back"] = {
           {
-            ["itemID"] = 239656,
-            ["source"] = "Crafting",
+            ["itemID"] = 268253,
+            ["source"] = "The Coiled Altar",
           },
         },
         ["Chest"] = {
           {
-            ["itemID"] = 249973,
+            ["itemID"] = 271477,
             ["source"] = "Tier Set",
           },
         },
@@ -343,82 +370,82 @@ ns.BisData = {
         },
         ["Hands"] = {
           {
-            ["itemID"] = 249971,
+            ["itemID"] = 271475,
             ["source"] = "Tier Set",
           },
         },
         ["Waist"] = {
           {
-            ["itemID"] = 249967,
-            ["source"] = "Catalyst",
+            ["itemID"] = 268259,
+            ["source"] = "The Coiled Altar",
           },
         },
         ["Legs"] = {
           {
-            ["itemID"] = 249969,
-            ["source"] = "Tier Set",
+            ["itemID"] = 271878,
+            ["source"] = "Ula'tek",
           },
         },
         ["Feet"] = {
           {
-            ["itemID"] = 249381,
-            ["source"] = "Chimaerus",
+            ["itemID"] = 237828,
+            ["source"] = "Crafting",
           },
         },
         ["Ring"] = {
           {
-            ["itemID"] = 193708,
-            ["source"] = "Algeth'ar Academy",
+            ["itemID"] = 273792,
+            ["source"] = "Altar of Fangs",
           },
           {
-            ["itemID"] = 249919,
-            ["source"] = "Belo'ren",
+            ["itemID"] = 252258,
+            ["source"] = "Voidscar Arena",
           },
         },
         ["Trinket"] = {
           {
-            ["itemID"] = 249343,
-            ["source"] = "Chimaerus",
+            ["itemID"] = 270175,
+            ["source"] = "Ula'tek",
           },
           {
-            ["itemID"] = 249344,
-            ["source"] = "Imperator Averzian",
+            ["itemID"] = 270173,
+            ["source"] = "The Coiled Altar",
           },
         },
       },
       ["bisItems"] = {
-        [50234] = true,
-        [193708] = true,
+        [237828] = true,
         [237834] = true,
-        [239656] = true,
-        [249277] = true,
-        [249343] = true,
-        [249344] = true,
-        [249381] = true,
-        [249919] = true,
-        [249967] = true,
-        [249969] = true,
-        [249970] = true,
-        [249971] = true,
-        [249973] = true,
-        [250247] = true,
+        [252258] = true,
+        [268213] = true,
+        [268253] = true,
+        [268259] = true,
+        [268265] = true,
+        [270173] = true,
+        [270175] = true,
+        [271472] = true,
+        [271474] = true,
+        [271475] = true,
+        [271477] = true,
+        [271878] = true,
+        [273792] = true,
       },
       ["itemSources"] = {
-        [50234] = "Pit of Saron",
-        [193708] = "Algeth'ar Academy",
+        [237828] = "Crafting",
         [237834] = "Crafting",
-        [239656] = "Crafting",
-        [249277] = "Lightblinded Vanguard",
-        [249343] = "Chimaerus",
-        [249344] = "Imperator Averzian",
-        [249381] = "Chimaerus",
-        [249919] = "Belo'ren",
-        [249967] = "Catalyst",
-        [249969] = "Tier Set",
-        [249970] = "Tier Set",
-        [249971] = "Tier Set",
-        [249973] = "Tier Set",
-        [250247] = "Midnight Falls",
+        [252258] = "Voidscar Arena",
+        [268213] = "The Coiled Altar",
+        [268253] = "The Coiled Altar",
+        [268259] = "The Coiled Altar",
+        [268265] = "Ula'tek",
+        [270173] = "The Coiled Altar",
+        [270175] = "Ula'tek",
+        [271472] = "Tier Set",
+        [271474] = "Tier Set",
+        [271475] = "Tier Set",
+        [271477] = "Tier Set",
+        [271878] = "Ula'tek",
+        [273792] = "Altar of Fangs",
       },
     },
     ["demon-hunter/devourer"] = {
@@ -429,144 +456,148 @@ ns.BisData = {
       ["itemsBySlot"] = {
         ["Weapon"] = {
           {
-            ["itemID"] = 260408,
-            ["source"] = "Midnight Falls",
+            ["itemID"] = 271092,
+            ["source"] = "Ula'tek",
           },
         },
         ["Offhand"] = {
           {
-            ["itemID"] = 237840,
-            ["source"] = "Crafting",
-          },
-          {
-            ["itemID"] = 245876,
-            ["source"] = "Crafting",
+            ["itemID"] = 268211,
+            ["source"] = "The Coiled Altar",
           },
         },
         ["Head"] = {
           {
-            ["itemID"] = 250033,
-            ["source"] = "Tier Set",
+            ["itemID"] = 271537,
+            ["source"] = "Ula'tek",
           },
         },
         ["Neck"] = {
           {
-            ["itemID"] = 249368,
-            ["source"] = "Crown of the Cosmos",
+            ["itemID"] = 268265,
+            ["source"] = "Ula'tek",
           },
         },
         ["Shoulders"] = {
           {
-            ["itemID"] = 250031,
-            ["source"] = "Tier Set",
+            ["itemID"] = 271535,
+            ["source"] = "Voidscar Arena",
           },
         },
         ["Back"] = {
           {
-            ["itemID"] = 249370,
-            ["source"] = "Vaelgor & Ezzorak",
+            ["itemID"] = 268253,
+            ["source"] = "The Coiled Altar",
           },
         },
         ["Chest"] = {
           {
-            ["itemID"] = 250036,
-            ["source"] = "Tier Set",
+            ["itemID"] = 271540,
+            ["source"] = "Den of Nalorakk",
           },
         },
         ["Wrist"] = {
           {
-            ["itemID"] = 193714,
-            ["source"] = "Algeth'ar Academy",
+            ["itemID"] = 244576,
+            ["source"] = "Crafting/Misc",
+          },
+          {
+            ["itemID"] = 240166,
+            ["source"] = "Crafting/Misc",
           },
         },
         ["Hands"] = {
           {
-            ["itemID"] = 250034,
+            ["itemID"] = 271538,
             ["source"] = "Tier Set",
           },
         },
         ["Waist"] = {
           {
-            ["itemID"] = 244573,
-            ["source"] = "Crafting",
-          },
-          {
-            ["itemID"] = 240167,
-            ["source"] = "Crafting",
+            ["itemID"] = 268256,
+            ["source"] = "The Coiled Altar",
           },
         },
         ["Legs"] = {
           {
-            ["itemID"] = 49817,
-            ["source"] = "Pit of Saron",
+            ["itemID"] = 271536,
+            ["source"] = "The Coiled Altar",
           },
         },
         ["Feet"] = {
           {
-            ["itemID"] = 250035,
-            ["source"] = "Catalyst",
+            ["itemID"] = 244569,
+            ["source"] = "Crafting/Misc",
+          },
+          {
+            ["itemID"] = 240166,
+            ["source"] = "Crafting/Misc",
           },
         },
         ["Ring"] = {
           {
-            ["itemID"] = 249369,
-            ["source"] = "Lightblinded Vanguard",
+            ["itemID"] = 268249,
+            ["source"] = "Vashnik the Malignant",
           },
           {
-            ["itemID"] = 249920,
-            ["source"] = "Midnight Falls",
+            ["itemID"] = 158366,
+            ["source"] = "Temple of Sethraliss",
           },
         },
         ["Trinket"] = {
           {
-            ["itemID"] = 249343,
-            ["source"] = "Chimaerus",
+            ["itemID"] = 250215,
+            ["source"] = "Murder Row",
           },
           {
-            ["itemID"] = 249346,
-            ["source"] = "Vaelgor & Ezzorak",
+            ["itemID"] = 270167,
+            ["source"] = "Nymrissa Wavecaller",
+          },
+          {
+            ["itemID"] = 270164,
+            ["source"] = "The Lost Explorers",
           },
         },
       },
       ["bisItems"] = {
-        [49817] = true,
-        [193714] = true,
-        [237840] = true,
-        [240167] = true,
-        [244573] = true,
-        [245876] = true,
-        [249343] = true,
-        [249346] = true,
-        [249368] = true,
-        [249369] = true,
-        [249370] = true,
-        [249920] = true,
-        [250031] = true,
-        [250033] = true,
-        [250034] = true,
-        [250035] = true,
-        [250036] = true,
-        [260408] = true,
+        [158366] = true,
+        [240166] = true,
+        [244569] = true,
+        [244576] = true,
+        [250215] = true,
+        [268211] = true,
+        [268249] = true,
+        [268253] = true,
+        [268256] = true,
+        [268265] = true,
+        [270164] = true,
+        [270167] = true,
+        [271092] = true,
+        [271535] = true,
+        [271536] = true,
+        [271537] = true,
+        [271538] = true,
+        [271540] = true,
       },
       ["itemSources"] = {
-        [49817] = "Pit of Saron",
-        [193714] = "Algeth'ar Academy",
-        [237840] = "Crafting",
-        [240167] = "Crafting",
-        [244573] = "Crafting",
-        [245876] = "Crafting",
-        [249343] = "Chimaerus",
-        [249346] = "Vaelgor & Ezzorak",
-        [249368] = "Crown of the Cosmos",
-        [249369] = "Lightblinded Vanguard",
-        [249370] = "Vaelgor & Ezzorak",
-        [249920] = "Midnight Falls",
-        [250031] = "Tier Set",
-        [250033] = "Tier Set",
-        [250034] = "Tier Set",
-        [250035] = "Catalyst",
-        [250036] = "Tier Set",
-        [260408] = "Midnight Falls",
+        [158366] = "Temple of Sethraliss",
+        [240166] = "Crafting/Misc",
+        [244569] = "Crafting/Misc",
+        [244576] = "Crafting/Misc",
+        [250215] = "Murder Row",
+        [268211] = "The Coiled Altar",
+        [268249] = "Vashnik the Malignant",
+        [268253] = "The Coiled Altar",
+        [268256] = "The Coiled Altar",
+        [268265] = "Ula'tek",
+        [270164] = "The Lost Explorers",
+        [270167] = "Nymrissa Wavecaller",
+        [271092] = "Ula'tek",
+        [271535] = "Voidscar Arena",
+        [271536] = "The Coiled Altar",
+        [271537] = "Ula'tek",
+        [271538] = "Tier Set",
+        [271540] = "Den of Nalorakk",
       },
     },
     ["demon-hunter/havoc"] = {
@@ -577,44 +608,44 @@ ns.BisData = {
       ["itemsBySlot"] = {
         ["Weapon"] = {
           {
-            ["itemID"] = 260408,
-            ["source"] = "Midnight Falls",
+            ["itemID"] = 268209,
+            ["source"] = "The Coiled Altar",
           },
         },
         ["Offhand"] = {
           {
-            ["itemID"] = 249280,
-            ["source"] = "Vaelgor & Ezzorak",
+            ["itemID"] = 237840,
+            ["source"] = "Crafting/Misc",
           },
         },
         ["Head"] = {
           {
-            ["itemID"] = 251109,
-            ["source"] = "Magister's Terrace",
+            ["itemID"] = 271875,
+            ["source"] = "Ula'tek",
           },
         },
         ["Neck"] = {
           {
-            ["itemID"] = 250247,
-            ["source"] = "Midnight Falls",
+            ["itemID"] = 268265,
+            ["source"] = "Ula'tek",
           },
         },
         ["Shoulders"] = {
           {
-            ["itemID"] = 250031,
-            ["source"] = "Tier Set",
+            ["itemID"] = 271535,
+            ["source"] = "Vashnik the Malignant",
           },
         },
         ["Back"] = {
           {
-            ["itemID"] = 239656,
-            ["source"] = "Crafting/Misc",
+            ["itemID"] = 268253,
+            ["source"] = "The Coiled Altar",
           },
         },
         ["Chest"] = {
           {
-            ["itemID"] = 250036,
-            ["source"] = "Tier Set",
+            ["itemID"] = 271540,
+            ["source"] = "King's Rest",
           },
         },
         ["Wrist"] = {
@@ -625,84 +656,84 @@ ns.BisData = {
         },
         ["Hands"] = {
           {
-            ["itemID"] = 250034,
-            ["source"] = "Tier Set",
+            ["itemID"] = 271538,
+            ["source"] = "Entombed Sentinels",
           },
         },
         ["Waist"] = {
           {
-            ["itemID"] = 251082,
-            ["source"] = "Windrunner Spire",
+            ["itemID"] = 268256,
+            ["source"] = "The Coiled Altar",
           },
         },
         ["Legs"] = {
           {
-            ["itemID"] = 250032,
-            ["source"] = "Tier Set",
+            ["itemID"] = 271536,
+            ["source"] = "The Coiled Altar",
           },
         },
         ["Feet"] = {
           {
-            ["itemID"] = 258577,
-            ["source"] = "Skyreach",
+            ["itemID"] = 159327,
+            ["source"] = "Temple of Sethraliss",
           },
         },
         ["Ring"] = {
           {
-            ["itemID"] = 249919,
-            ["source"] = "Belo'ren",
+            ["itemID"] = 268249,
+            ["source"] = "Vashnik the Malignant",
           },
           {
-            ["itemID"] = 193708,
-            ["source"] = "Algeth'ar Academy",
+            ["itemID"] = 158366,
+            ["source"] = "Temple of Sethraliss",
           },
         },
         ["Trinket"] = {
           {
-            ["itemID"] = 193701,
-            ["source"] = "Algeth'ar Academy",
+            ["itemID"] = 270173,
+            ["source"] = "The Coiled Altar",
           },
           {
-            ["itemID"] = 260235,
-            ["source"] = "Belo'ren",
+            ["itemID"] = 270175,
+            ["source"] = "Ula'tek",
           },
         },
       },
       ["bisItems"] = {
-        [193701] = true,
-        [193708] = true,
-        [239656] = true,
+        [158366] = true,
+        [159327] = true,
+        [237840] = true,
         [244576] = true,
-        [249280] = true,
-        [249919] = true,
-        [250031] = true,
-        [250032] = true,
-        [250034] = true,
-        [250036] = true,
-        [250247] = true,
-        [251082] = true,
-        [251109] = true,
-        [258577] = true,
-        [260235] = true,
-        [260408] = true,
+        [268209] = true,
+        [268249] = true,
+        [268253] = true,
+        [268256] = true,
+        [268265] = true,
+        [270173] = true,
+        [270175] = true,
+        [271535] = true,
+        [271536] = true,
+        [271538] = true,
+        [271540] = true,
+        [271875] = true,
       },
       ["itemSources"] = {
-        [193701] = "Algeth'ar Academy",
-        [193708] = "Algeth'ar Academy",
-        [239656] = "Crafting/Misc",
+        [158366] = "Temple of Sethraliss",
+        [159327] = "Temple of Sethraliss",
+        [237840] = "Crafting/Misc",
         [244576] = "Crafting/Misc",
-        [249280] = "Vaelgor & Ezzorak",
-        [249919] = "Belo'ren",
-        [250031] = "Tier Set",
-        [250032] = "Tier Set",
-        [250034] = "Tier Set",
-        [250036] = "Tier Set",
-        [250247] = "Midnight Falls",
-        [251082] = "Windrunner Spire",
-        [251109] = "Magister's Terrace",
-        [258577] = "Skyreach",
-        [260235] = "Belo'ren",
-        [260408] = "Midnight Falls",
+        [268209] = "The Coiled Altar",
+        [268249] = "Vashnik the Malignant",
+        [268253] = "The Coiled Altar",
+        [268256] = "The Coiled Altar",
+        [268265] = "Ula'tek",
+        [270173] = "The Coiled Altar",
+        [270175] = "Ula'tek",
+        [271535] = "Vashnik the Malignant",
+        [271536] = "The Coiled Altar",
+        [271538] = "Entombed Sentinels",
+        [271540] = "King's Rest",
+        [271875] = "Ula'tek",
       },
     },
     ["demon-hunter/vengeance"] = {
@@ -713,136 +744,138 @@ ns.BisData = {
       ["itemsBySlot"] = {
         ["Weapon"] = {
           {
-            ["itemID"] = 260408,
-            ["source"] = "Midnight Falls",
+            ["itemID"] = 268209,
+            ["source"] = "The Coiled Altar",
           },
         },
         ["Offhand"] = {
           {
-            ["itemID"] = 249298,
-            ["source"] = "Fallen-King Salhadaar",
-          },
-          {
             ["itemID"] = 237840,
-            ["source"] = "Fallen-King Salhadaar",
+            ["source"] = "Crafted",
           },
         },
         ["Head"] = {
           {
-            ["itemID"] = 250033,
-            ["source"] = "Lightblinded Vanguard",
+            ["itemID"] = 271537,
+            ["source"] = "Ula'tek",
           },
         },
         ["Neck"] = {
           {
-            ["itemID"] = 151309,
-            ["source"] = "Seat of the Triumvirate",
+            ["itemID"] = 268265,
+            ["source"] = "Ula'tek",
           },
         },
         ["Shoulders"] = {
           {
-            ["itemID"] = 250031,
-            ["source"] = "Fallen-King Salhadaar",
+            ["itemID"] = 271535,
+            ["source"] = "Voidscar Arena",
           },
         },
         ["Back"] = {
           {
-            ["itemID"] = 239656,
-            ["source"] = "Crafting",
-          },
-          {
-            ["itemID"] = 239656,
-            ["source"] = "Crafting",
+            ["itemID"] = 268253,
+            ["source"] = "The Coiled Altar",
           },
         },
         ["Chest"] = {
           {
-            ["itemID"] = 151313,
-            ["source"] = "Seat of the Triumvirate",
+            ["itemID"] = 271540,
+            ["source"] = "Vashnik the Malignant",
           },
         },
         ["Wrist"] = {
           {
-            ["itemID"] = 50264,
-            ["source"] = "Pit of Saron",
+            ["itemID"] = 244576,
+            ["source"] = "Crafted",
           },
         },
         ["Hands"] = {
           {
-            ["itemID"] = 250034,
-            ["source"] = "Vorasius",
+            ["itemID"] = 271538,
+            ["source"] = "Murder Row",
           },
         },
         ["Waist"] = {
           {
-            ["itemID"] = 49806,
-            ["source"] = "Pit of Saron",
+            ["itemID"] = 268256,
+            ["source"] = "The Coiled Altar",
           },
         },
         ["Legs"] = {
           {
-            ["itemID"] = 250032,
-            ["source"] = "Vaelgor & Ezzorak",
+            ["itemID"] = 271536,
+            ["source"] = "The Coiled Altar",
           },
         },
         ["Feet"] = {
           {
-            ["itemID"] = 251210,
-            ["source"] = "Nexus Point Xenas",
+            ["itemID"] = 251153,
+            ["source"] = "Den of Nalorakk",
           },
         },
         ["Ring"] = {
           {
-            ["itemID"] = 251513,
-            ["source"] = "Crafting",
+            ["itemID"] = 268252,
+            ["source"] = "Sszorak",
+          },
+          {
+            ["itemID"] = 159459,
+            ["source"] = "King's Rest",
           },
         },
         ["Trinket"] = {
           {
-            ["itemID"] = 249343,
-            ["source"] = "Chimaerus",
+            ["itemID"] = 270164,
+            ["source"] = "The Lost Explorers",
           },
           {
-            ["itemID"] = 249344,
-            ["source"] = "Imperator Averzian",
+            ["itemID"] = 270175,
+            ["source"] = "Ula'tek",
+          },
+          {
+            ["itemID"] = 270173,
+            ["source"] = "The Coiled Altar",
           },
         },
       },
       ["bisItems"] = {
-        [49806] = true,
-        [50264] = true,
-        [151309] = true,
-        [151313] = true,
+        [159459] = true,
         [237840] = true,
-        [239656] = true,
-        [249298] = true,
-        [249343] = true,
-        [249344] = true,
-        [250031] = true,
-        [250032] = true,
-        [250033] = true,
-        [250034] = true,
-        [251210] = true,
-        [251513] = true,
-        [260408] = true,
+        [244576] = true,
+        [251153] = true,
+        [268209] = true,
+        [268252] = true,
+        [268253] = true,
+        [268256] = true,
+        [268265] = true,
+        [270164] = true,
+        [270173] = true,
+        [270175] = true,
+        [271535] = true,
+        [271536] = true,
+        [271537] = true,
+        [271538] = true,
+        [271540] = true,
       },
       ["itemSources"] = {
-        [49806] = "Pit of Saron",
-        [50264] = "Pit of Saron",
-        [151309] = "Seat of the Triumvirate",
-        [151313] = "Seat of the Triumvirate",
-        [237840] = "Fallen-King Salhadaar",
-        [239656] = "Crafting",
-        [249298] = "Fallen-King Salhadaar",
-        [249343] = "Chimaerus",
-        [249344] = "Imperator Averzian",
-        [250031] = "Fallen-King Salhadaar",
-        [250032] = "Vaelgor & Ezzorak",
-        [250033] = "Lightblinded Vanguard",
-        [250034] = "Vorasius",
-        [251210] = "Nexus Point Xenas",
-        [251513] = "Crafting",
-        [260408] = "Midnight Falls",
+        [159459] = "King's Rest",
+        [237840] = "Crafted",
+        [244576] = "Crafted",
+        [251153] = "Den of Nalorakk",
+        [268209] = "The Coiled Altar",
+        [268252] = "Sszorak",
+        [268253] = "The Coiled Altar",
+        [268256] = "The Coiled Altar",
+        [268265] = "Ula'tek",
+        [270164] = "The Lost Explorers",
+        [270173] = "The Coiled Altar",
+        [270175] = "Ula'tek",
+        [271535] = "Voidscar Arena",
+        [271536] = "The Coiled Altar",
+        [271537] = "Ula'tek",
+        [271538] = "Murder Row",
+        [271540] = "Vashnik the Malignant",
       },
     },
     ["druid/balance"] = {
@@ -853,132 +886,132 @@ ns.BisData = {
       ["itemsBySlot"] = {
         ["Weapon"] = {
           {
-            ["itemID"] = 249283,
-            ["source"] = "Belo'ren",
+            ["itemID"] = 271092,
+            ["source"] = "Ula'tek",
           },
         },
         ["Offhand"] = {
           {
             ["itemID"] = 245769,
-            ["source"] = "Crafting",
+            ["source"] = "Crafting/Misc",
           },
         },
         ["Head"] = {
           {
-            ["itemID"] = 250024,
-            ["source"] = "Tier Set",
+            ["itemID"] = 271875,
+            ["source"] = "Ula'tek",
           },
         },
         ["Neck"] = {
           {
-            ["itemID"] = 250247,
-            ["source"] = "Midnight Falls",
+            ["itemID"] = 268265,
+            ["source"] = "Ula'tek",
           },
         },
         ["Shoulders"] = {
           {
-            ["itemID"] = 250022,
-            ["source"] = "Tier Set",
+            ["itemID"] = 268246,
+            ["source"] = "The Lost Explorers",
           },
         },
         ["Back"] = {
           {
-            ["itemID"] = 249370,
-            ["source"] = "Vaelgor & Ezzorak",
+            ["itemID"] = 268253,
+            ["source"] = "The Coiled Altar",
           },
         },
         ["Chest"] = {
           {
-            ["itemID"] = 250027,
-            ["source"] = "Tier Set",
+            ["itemID"] = 251159,
+            ["source"] = "Den of Nalorakk",
           },
         },
         ["Wrist"] = {
           {
             ["itemID"] = 244576,
-            ["source"] = "Crafting",
+            ["source"] = "Crafting/Misc",
           },
         },
         ["Hands"] = {
           {
-            ["itemID"] = 251113,
-            ["source"] = "Magister's Terrace",
+            ["itemID"] = 268234,
+            ["source"] = "Sszorak",
           },
         },
         ["Waist"] = {
           {
-            ["itemID"] = 251082,
-            ["source"] = "Windrunner Spire",
+            ["itemID"] = 268256,
+            ["source"] = "The Coiled Altar",
           },
         },
         ["Legs"] = {
           {
-            ["itemID"] = 250023,
-            ["source"] = "Tier Set",
+            ["itemID"] = 268225,
+            ["source"] = "The Coiled Altar",
           },
         },
         ["Feet"] = {
           {
-            ["itemID"] = 249382,
-            ["source"] = "Crown of the Cosmos",
+            ["itemID"] = 268261,
+            ["source"] = "The Twin Fangs",
           },
         },
         ["Ring"] = {
           {
-            ["itemID"] = 193708,
-            ["source"] = "Algeth'ar Academy",
+            ["itemID"] = 158366,
+            ["source"] = "Temple of Sethraliss",
           },
           {
-            ["itemID"] = 251217,
-            ["source"] = "Nexus-Point Xenas",
+            ["itemID"] = 268249,
+            ["source"] = "Vashnik the Malignant",
           },
         },
         ["Trinket"] = {
           {
-            ["itemID"] = 249346,
-            ["source"] = "Vaelgor & Ezzorak",
+            ["itemID"] = 270167,
+            ["source"] = "Nymrissa Wavecaller",
           },
           {
-            ["itemID"] = 249809,
-            ["source"] = "Crown of the Cosmos",
+            ["itemID"] = 273796,
+            ["source"] = "Altar of Fangs",
           },
         },
       },
       ["bisItems"] = {
-        [193708] = true,
+        [158366] = true,
         [244576] = true,
         [245769] = true,
-        [249283] = true,
-        [249346] = true,
-        [249370] = true,
-        [249382] = true,
-        [249809] = true,
-        [250022] = true,
-        [250023] = true,
-        [250024] = true,
-        [250027] = true,
-        [250247] = true,
-        [251082] = true,
-        [251113] = true,
-        [251217] = true,
+        [251159] = true,
+        [268225] = true,
+        [268234] = true,
+        [268246] = true,
+        [268249] = true,
+        [268253] = true,
+        [268256] = true,
+        [268261] = true,
+        [268265] = true,
+        [270167] = true,
+        [271092] = true,
+        [271875] = true,
+        [273796] = true,
       },
       ["itemSources"] = {
-        [193708] = "Algeth'ar Academy",
-        [244576] = "Crafting",
-        [245769] = "Crafting",
-        [249283] = "Belo'ren",
-        [249346] = "Vaelgor & Ezzorak",
-        [249370] = "Vaelgor & Ezzorak",
-        [249382] = "Crown of the Cosmos",
-        [249809] = "Crown of the Cosmos",
-        [250022] = "Tier Set",
-        [250023] = "Tier Set",
-        [250024] = "Tier Set",
-        [250027] = "Tier Set",
-        [250247] = "Midnight Falls",
-        [251082] = "Windrunner Spire",
-        [251113] = "Magister's Terrace",
-        [251217] = "Nexus-Point Xenas",
+        [158366] = "Temple of Sethraliss",
+        [244576] = "Crafting/Misc",
+        [245769] = "Crafting/Misc",
+        [251159] = "Den of Nalorakk",
+        [268225] = "The Coiled Altar",
+        [268234] = "Sszorak",
+        [268246] = "The Lost Explorers",
+        [268249] = "Vashnik the Malignant",
+        [268253] = "The Coiled Altar",
+        [268256] = "The Coiled Altar",
+        [268261] = "The Twin Fangs",
+        [268265] = "Ula'tek",
+        [270167] = "Nymrissa Wavecaller",
+        [271092] = "Ula'tek",
+        [271875] = "Ula'tek",
+        [273796] = "Altar of Fangs",
       },
     },
     ["druid/feral"] = {
@@ -989,38 +1022,38 @@ ns.BisData = {
       ["itemsBySlot"] = {
         ["Weapon"] = {
           {
-            ["itemID"] = 249302,
-            ["source"] = "Vorasius",
+            ["itemID"] = 268215,
+            ["source"] = "Ula'tek",
           },
         },
         ["Head"] = {
           {
-            ["itemID"] = 250024,
-            ["source"] = "Tier Set",
+            ["itemID"] = 271528,
+            ["source"] = "Catalyst",
           },
         },
         ["Neck"] = {
           {
-            ["itemID"] = 250247,
-            ["source"] = "Midnight Falls",
+            ["itemID"] = 268265,
+            ["source"] = "Ula'tek",
           },
         },
         ["Shoulders"] = {
           {
-            ["itemID"] = 250022,
-            ["source"] = "Tier Set",
+            ["itemID"] = 271526,
+            ["source"] = "Catalyst",
           },
         },
         ["Back"] = {
           {
-            ["itemID"] = 249370,
-            ["source"] = "Vaelgor & Ezzorak",
+            ["itemID"] = 268253,
+            ["source"] = "The Coiled Altar",
           },
         },
         ["Chest"] = {
           {
-            ["itemID"] = 250027,
-            ["source"] = "Tier Set",
+            ["itemID"] = 271531,
+            ["source"] = "Vashnik the Malignant",
           },
         },
         ["Wrist"] = {
@@ -1037,76 +1070,76 @@ ns.BisData = {
         },
         ["Waist"] = {
           {
-            ["itemID"] = 251082,
-            ["source"] = "Windrunner Spire",
+            ["itemID"] = 268256,
+            ["source"] = "The Coiled Altar",
           },
         },
         ["Legs"] = {
           {
-            ["itemID"] = 250023,
-            ["source"] = "Tier Set",
+            ["itemID"] = 271527,
+            ["source"] = "Catalyst",
           },
         },
         ["Feet"] = {
           {
-            ["itemID"] = 249382,
-            ["source"] = "Crown of the Cosmos",
+            ["itemID"] = 268261,
+            ["source"] = "The Twin Fangs",
           },
         },
         ["Ring"] = {
           {
-            ["itemID"] = 249920,
-            ["source"] = "Midnight Falls",
+            ["itemID"] = 268249,
+            ["source"] = "Vashnik the Malignant",
           },
           {
-            ["itemID"] = 251115,
-            ["source"] = "Magister's Terrace",
+            ["itemID"] = 252258,
+            ["source"] = "Voidscar Arena",
           },
         },
         ["Trinket"] = {
           {
-            ["itemID"] = 193701,
-            ["source"] = "Algeth'ar Academy",
+            ["itemID"] = 270173,
+            ["source"] = "The Coiled Altar",
           },
           {
-            ["itemID"] = 249806,
-            ["source"] = "Belo'ren",
+            ["itemID"] = 270175,
+            ["source"] = "Ula'tek",
           },
         },
       },
       ["bisItems"] = {
-        [193701] = true,
         [244575] = true,
         [244576] = true,
-        [249302] = true,
-        [249370] = true,
-        [249382] = true,
-        [249806] = true,
-        [249920] = true,
-        [250022] = true,
-        [250023] = true,
-        [250024] = true,
-        [250027] = true,
-        [250247] = true,
-        [251082] = true,
-        [251115] = true,
+        [252258] = true,
+        [268215] = true,
+        [268249] = true,
+        [268253] = true,
+        [268256] = true,
+        [268261] = true,
+        [268265] = true,
+        [270173] = true,
+        [270175] = true,
+        [271526] = true,
+        [271527] = true,
+        [271528] = true,
+        [271531] = true,
       },
       ["itemSources"] = {
-        [193701] = "Algeth'ar Academy",
         [244575] = "Crafting/Misc",
         [244576] = "Crafting/Misc",
-        [249302] = "Vorasius",
-        [249370] = "Vaelgor & Ezzorak",
-        [249382] = "Crown of the Cosmos",
-        [249806] = "Belo'ren",
-        [249920] = "Midnight Falls",
-        [250022] = "Tier Set",
-        [250023] = "Tier Set",
-        [250024] = "Tier Set",
-        [250027] = "Tier Set",
-        [250247] = "Midnight Falls",
-        [251082] = "Windrunner Spire",
-        [251115] = "Magister's Terrace",
+        [252258] = "Voidscar Arena",
+        [268215] = "Ula'tek",
+        [268249] = "Vashnik the Malignant",
+        [268253] = "The Coiled Altar",
+        [268256] = "The Coiled Altar",
+        [268261] = "The Twin Fangs",
+        [268265] = "Ula'tek",
+        [270173] = "The Coiled Altar",
+        [270175] = "Ula'tek",
+        [271526] = "Catalyst",
+        [271527] = "Catalyst",
+        [271528] = "Catalyst",
+        [271531] = "Vashnik the Malignant",
       },
     },
     ["druid/guardian"] = {
@@ -1117,124 +1150,124 @@ ns.BisData = {
       ["itemsBySlot"] = {
         ["Weapon"] = {
           {
-            ["itemID"] = 249278,
-            ["source"] = "Chimaerus",
+            ["itemID"] = 268215,
+            ["source"] = "Ula'tek",
           },
         },
         ["Head"] = {
           {
-            ["itemID"] = 249913,
-            ["source"] = "Midnight Falls",
+            ["itemID"] = 271875,
+            ["source"] = "Ula'tek",
           },
         },
         ["Neck"] = {
           {
-            ["itemID"] = 249368,
-            ["source"] = "Crown of the Cosmos",
+            ["itemID"] = 268265,
+            ["source"] = "Ula'tek",
           },
         },
         ["Shoulders"] = {
           {
-            ["itemID"] = 250022,
+            ["itemID"] = 271526,
             ["source"] = "Tier Set",
           },
         },
         ["Back"] = {
           {
-            ["itemID"] = 249370,
-            ["source"] = "Vaelgor & Ezzorak",
+            ["itemID"] = 268253,
+            ["source"] = "The Coiled Altar",
           },
         },
         ["Chest"] = {
           {
-            ["itemID"] = 250027,
+            ["itemID"] = 271531,
             ["source"] = "Tier Set",
           },
         },
         ["Wrist"] = {
           {
-            ["itemID"] = 249327,
-            ["source"] = "Vorasius",
+            ["itemID"] = 268240,
+            ["source"] = "Nek'zali the Soulcoiler",
           },
         },
         ["Hands"] = {
           {
-            ["itemID"] = 250025,
+            ["itemID"] = 271529,
             ["source"] = "Tier Set",
           },
         },
         ["Waist"] = {
           {
-            ["itemID"] = 249374,
-            ["source"] = "Chimaerus",
+            ["itemID"] = 268256,
+            ["source"] = "The Coiled Altar",
           },
         },
         ["Legs"] = {
           {
-            ["itemID"] = 250023,
+            ["itemID"] = 271527,
             ["source"] = "Tier Set",
           },
         },
         ["Feet"] = {
           {
-            ["itemID"] = 249334,
-            ["source"] = "Imperator Averzian",
+            ["itemID"] = 268261,
+            ["source"] = "The Twin Fangs",
           },
         },
         ["Ring"] = {
           {
-            ["itemID"] = 251093,
-            ["source"] = "Nexus Point Xenas",
+            ["itemID"] = 268252,
+            ["source"] = "Sszorak",
           },
           {
-            ["itemID"] = 249920,
-            ["source"] = "Midnight Falls",
+            ["itemID"] = 268249,
+            ["source"] = "Vashnik the Malignant",
           },
         },
         ["Trinket"] = {
           {
-            ["itemID"] = 249343,
-            ["source"] = "Chimaerus",
+            ["itemID"] = 270164,
+            ["source"] = "The Lost Explorers",
           },
           {
-            ["itemID"] = 193701,
-            ["source"] = "Algeth'ar Academy",
+            ["itemID"] = 270173,
+            ["source"] = "The Coiled Altar",
           },
         },
       },
       ["bisItems"] = {
-        [193701] = true,
-        [249278] = true,
-        [249327] = true,
-        [249334] = true,
-        [249343] = true,
-        [249368] = true,
-        [249370] = true,
-        [249374] = true,
-        [249913] = true,
-        [249920] = true,
-        [250022] = true,
-        [250023] = true,
-        [250025] = true,
-        [250027] = true,
-        [251093] = true,
+        [268215] = true,
+        [268240] = true,
+        [268249] = true,
+        [268252] = true,
+        [268253] = true,
+        [268256] = true,
+        [268261] = true,
+        [268265] = true,
+        [270164] = true,
+        [270173] = true,
+        [271526] = true,
+        [271527] = true,
+        [271529] = true,
+        [271531] = true,
+        [271875] = true,
       },
       ["itemSources"] = {
-        [193701] = "Algeth'ar Academy",
-        [249278] = "Chimaerus",
-        [249327] = "Vorasius",
-        [249334] = "Imperator Averzian",
-        [249343] = "Chimaerus",
-        [249368] = "Crown of the Cosmos",
-        [249370] = "Vaelgor & Ezzorak",
-        [249374] = "Chimaerus",
-        [249913] = "Midnight Falls",
-        [249920] = "Midnight Falls",
-        [250022] = "Tier Set",
-        [250023] = "Tier Set",
-        [250025] = "Tier Set",
-        [250027] = "Tier Set",
-        [251093] = "Nexus Point Xenas",
+        [268215] = "Ula'tek",
+        [268240] = "Nek'zali the Soulcoiler",
+        [268249] = "Vashnik the Malignant",
+        [268252] = "Sszorak",
+        [268253] = "The Coiled Altar",
+        [268256] = "The Coiled Altar",
+        [268261] = "The Twin Fangs",
+        [268265] = "Ula'tek",
+        [270164] = "The Lost Explorers",
+        [270173] = "The Coiled Altar",
+        [271526] = "Tier Set",
+        [271527] = "Tier Set",
+        [271529] = "Tier Set",
+        [271531] = "Tier Set",
+        [271875] = "Ula'tek",
       },
     },
     ["druid/restoration"] = {
@@ -1245,110 +1278,132 @@ ns.BisData = {
       ["itemsBySlot"] = {
         ["Head"] = {
           {
-            ["itemID"] = 250024,
-            ["source"] = "Raid",
+            ["itemID"] = 271528,
+            ["source"] = "Ula'tek",
           },
         },
         ["Neck"] = {
           {
-            ["itemID"] = 250247,
-            ["source"] = "Midnight Falls",
+            ["itemID"] = 268251,
+            ["source"] = "The Twin Fangs",
           },
         },
         ["Shoulders"] = {
           {
-            ["itemID"] = 250022,
-            ["source"] = "Raid",
+            ["itemID"] = 244572,
+            ["source"] = "Crafted",
           },
         },
         ["Back"] = {
           {
-            ["itemID"] = 249370,
-            ["source"] = "Vaelgor & Ezzorak",
+            ["itemID"] = 268253,
+            ["source"] = "The Coiled Alter",
           },
         },
         ["Chest"] = {
           {
-            ["itemID"] = 251216,
-            ["source"] = "Nexus Point Xenas",
+            ["itemID"] = 271531,
+            ["source"] = "Nek'zali the Soulcoiler",
           },
         },
         ["Wrist"] = {
           {
-            ["itemID"] = 193714,
-            ["source"] = "Algeth'ar Academy",
+            ["itemID"] = 244576,
+            ["source"] = "Crafted",
           },
         },
         ["Hands"] = {
           {
-            ["itemID"] = 250025,
-            ["source"] = "Raid",
+            ["itemID"] = 271529,
+            ["source"] = "Entomed Sentinels",
           },
         },
         ["Waist"] = {
           {
-            ["itemID"] = 249314,
-            ["source"] = "Fallen-King Salhadaar",
+            ["itemID"] = 268256,
+            ["source"] = "The Coiled Alter",
           },
         },
         ["Legs"] = {
           {
-            ["itemID"] = 250023,
-            ["source"] = "Raid",
+            ["itemID"] = 271527,
+            ["source"] = "The Coiled Alter",
           },
         },
         ["Feet"] = {
           {
-            ["itemID"] = 251210,
-            ["source"] = "Nexus Point Xenas",
+            ["itemID"] = 244569,
+            ["source"] = "Crafted",
           },
         },
         ["Ring"] = {
           {
-            ["itemID"] = 249920,
-            ["source"] = "Midnight Falls",
+            ["itemID"] = 268266,
+            ["source"] = "Nymrissa Wavebinder",
           },
           {
-            ["itemID"] = 251115,
-            ["source"] = "Magister's Terrace",
+            ["itemID"] = 252258,
+            ["source"] = "Voidscar Arena",
+          },
+        },
+        ["Trinket"] = {
+          {
+            ["itemID"] = 270167,
+            ["source"] = "Nymrissa Wavebinder",
+          },
+          {
+            ["itemID"] = 270162,
+            ["source"] = "Nek'zali the Soulcoiler",
+          },
+        },
+        ["Weapon"] = {
+          {
+            ["itemID"] = 271092,
+            ["source"] = "Ula'tek",
           },
         },
         ["Offhand"] = {
           {
-            ["itemID"] = 249922,
-            ["source"] = "Chimaerus",
+            ["itemID"] = 268197,
+            ["source"] = "Entomed Sentinels",
           },
         },
       },
       ["bisItems"] = {
-        [193714] = true,
-        [249314] = true,
-        [249370] = true,
-        [249920] = true,
-        [249922] = true,
-        [250022] = true,
-        [250023] = true,
-        [250024] = true,
-        [250025] = true,
-        [250247] = true,
-        [251115] = true,
-        [251210] = true,
-        [251216] = true,
+        [244569] = true,
+        [244572] = true,
+        [244576] = true,
+        [252258] = true,
+        [268197] = true,
+        [268251] = true,
+        [268253] = true,
+        [268256] = true,
+        [268266] = true,
+        [270162] = true,
+        [270167] = true,
+        [271092] = true,
+        [271527] = true,
+        [271528] = true,
+        [271529] = true,
+        [271531] = true,
       },
       ["itemSources"] = {
-        [193714] = "Algeth'ar Academy",
-        [249314] = "Fallen-King Salhadaar",
-        [249370] = "Vaelgor & Ezzorak",
-        [249920] = "Midnight Falls",
-        [249922] = "Chimaerus",
-        [250022] = "Raid",
-        [250023] = "Raid",
-        [250024] = "Raid",
-        [250025] = "Raid",
-        [250247] = "Midnight Falls",
-        [251115] = "Magister's Terrace",
-        [251210] = "Nexus Point Xenas",
-        [251216] = "Nexus Point Xenas",
+        [244569] = "Crafted",
+        [244572] = "Crafted",
+        [244576] = "Crafted",
+        [252258] = "Voidscar Arena",
+        [268197] = "Entomed Sentinels",
+        [268251] = "The Twin Fangs",
+        [268253] = "The Coiled Alter",
+        [268256] = "The Coiled Alter",
+        [268266] = "Nymrissa Wavebinder",
+        [270162] = "Nek'zali the Soulcoiler",
+        [270167] = "Nymrissa Wavebinder",
+        [271092] = "Ula'tek",
+        [271527] = "The Coiled Alter",
+        [271528] = "Ula'tek",
+        [271529] = "Entomed Sentinels",
+        [271531] = "Nek'zali the Soulcoiler",
       },
     },
     ["evoker/augmentation"] = {
@@ -1359,43 +1414,43 @@ ns.BisData = {
       ["itemsBySlot"] = {
         ["Weapon"] = {
           {
-            ["itemID"] = 251178,
-            ["source"] = "Maisara Caverns",
+            ["itemID"] = 271092,
+            ["source"] = "Ula'tek",
           },
         },
         ["Offhand"] = {
           {
-            ["itemID"] = 249276,
-            ["source"] = "Vorasius",
+            ["itemID"] = 245769,
+            ["source"] = "Crafting",
           },
         },
         ["Head"] = {
           {
-            ["itemID"] = 133506,
-            ["source"] = "Pit of Saron",
+            ["itemID"] = 271501,
+            ["source"] = "Tier Set",
           },
         },
         ["Neck"] = {
           {
-            ["itemID"] = 249337,
-            ["source"] = "Fallen-King Salhadaar",
+            ["itemID"] = 268265,
+            ["source"] = "Ula'tek",
           },
         },
         ["Shoulders"] = {
           {
-            ["itemID"] = 249995,
+            ["itemID"] = 271499,
             ["source"] = "Tier Set",
           },
         },
         ["Back"] = {
           {
-            ["itemID"] = 239656,
-            ["source"] = "Crafting",
+            ["itemID"] = 268253,
+            ["source"] = "The Coiled Altar",
           },
         },
         ["Chest"] = {
           {
-            ["itemID"] = 250000,
+            ["itemID"] = 271504,
             ["source"] = "Tier Set",
           },
         },
@@ -1407,84 +1462,84 @@ ns.BisData = {
         },
         ["Hands"] = {
           {
-            ["itemID"] = 249998,
+            ["itemID"] = 271502,
             ["source"] = "Tier Set",
           },
         },
         ["Waist"] = {
           {
-            ["itemID"] = 49810,
-            ["source"] = "Pit of Saron",
+            ["itemID"] = 268254,
+            ["source"] = "Vashnik the Malignant",
           },
         },
         ["Legs"] = {
           {
-            ["itemID"] = 249996,
+            ["itemID"] = 271500,
             ["source"] = "Tier Set",
           },
         },
         ["Feet"] = {
           {
-            ["itemID"] = 249999,
-            ["source"] = "The Catalyst",
+            ["itemID"] = 268233,
+            ["source"] = "Sszorak",
           },
         },
         ["Ring"] = {
           {
-            ["itemID"] = 249920,
-            ["source"] = "Midnight Falls",
+            ["itemID"] = 268249,
+            ["source"] = "Vashnik the Malignant",
           },
           {
-            ["itemID"] = 49812,
-            ["source"] = "Pit of Saron",
+            ["itemID"] = 158366,
+            ["source"] = "Temple of Sethraliss",
           },
         },
         ["Trinket"] = {
           {
-            ["itemID"] = 249810,
-            ["source"] = "Midnight Falls",
+            ["itemID"] = 250224,
+            ["source"] = "Voidscar Arena",
           },
           {
-            ["itemID"] = 250256,
-            ["source"] = "Windrunner Spire",
+            ["itemID"] = 270164,
+            ["source"] = "The Lost Explorers",
           },
         },
       },
       ["bisItems"] = {
-        [49810] = true,
-        [49812] = true,
-        [133506] = true,
-        [239656] = true,
+        [158366] = true,
         [244584] = true,
-        [249276] = true,
-        [249337] = true,
-        [249810] = true,
-        [249920] = true,
-        [249995] = true,
-        [249996] = true,
-        [249998] = true,
-        [249999] = true,
-        [250000] = true,
-        [250256] = true,
-        [251178] = true,
+        [245769] = true,
+        [250224] = true,
+        [268233] = true,
+        [268249] = true,
+        [268253] = true,
+        [268254] = true,
+        [268265] = true,
+        [270164] = true,
+        [271092] = true,
+        [271499] = true,
+        [271500] = true,
+        [271501] = true,
+        [271502] = true,
+        [271504] = true,
       },
       ["itemSources"] = {
-        [49810] = "Pit of Saron",
-        [49812] = "Pit of Saron",
-        [133506] = "Pit of Saron",
-        [239656] = "Crafting",
+        [158366] = "Temple of Sethraliss",
         [244584] = "Crafting",
-        [249276] = "Vorasius",
-        [249337] = "Fallen-King Salhadaar",
-        [249810] = "Midnight Falls",
-        [249920] = "Midnight Falls",
-        [249995] = "Tier Set",
-        [249996] = "Tier Set",
-        [249998] = "Tier Set",
-        [249999] = "The Catalyst",
-        [250000] = "Tier Set",
-        [250256] = "Windrunner Spire",
-        [251178] = "Maisara Caverns",
+        [245769] = "Crafting",
+        [250224] = "Voidscar Arena",
+        [268233] = "Sszorak",
+        [268249] = "Vashnik the Malignant",
+        [268253] = "The Coiled Altar",
+        [268254] = "Vashnik the Malignant",
+        [268265] = "Ula'tek",
+        [270164] = "The Lost Explorers",
+        [271092] = "Ula'tek",
+        [271499] = "Tier Set",
+        [271500] = "Tier Set",
+        [271501] = "Tier Set",
+        [271502] = "Tier Set",
+        [271504] = "Tier Set",
       },
     },
     ["evoker/devastation"] = {
@@ -1495,43 +1550,43 @@ ns.BisData = {
       ["itemsBySlot"] = {
         ["Weapon"] = {
           {
-            ["itemID"] = 249283,
-            ["source"] = "Belo'ren",
+            ["itemID"] = 271092,
+            ["source"] = "Ula'tek",
           },
         },
         ["Offhand"] = {
           {
-            ["itemID"] = 249276,
-            ["source"] = "Vorasius",
+            ["itemID"] = 245769,
+            ["source"] = "Crafting",
           },
         },
         ["Head"] = {
           {
-            ["itemID"] = 249997,
+            ["itemID"] = 271501,
             ["source"] = "Tier Set",
           },
         },
         ["Neck"] = {
           {
-            ["itemID"] = 250247,
-            ["source"] = "Midnight Falls",
+            ["itemID"] = 268265,
+            ["source"] = "Ula'tek",
           },
         },
         ["Shoulders"] = {
           {
-            ["itemID"] = 249995,
+            ["itemID"] = 271499,
             ["source"] = "Tier Set",
           },
         },
         ["Back"] = {
           {
-            ["itemID"] = 239656,
-            ["source"] = "Crafting",
+            ["itemID"] = 268253,
+            ["source"] = "The Coiled Altar",
           },
         },
         ["Chest"] = {
           {
-            ["itemID"] = 250000,
+            ["itemID"] = 271504,
             ["source"] = "Tier Set",
           },
         },
@@ -1543,84 +1598,84 @@ ns.BisData = {
         },
         ["Hands"] = {
           {
-            ["itemID"] = 249325,
-            ["source"] = "Crown of the Cosmos",
+            ["itemID"] = 271502,
+            ["source"] = "Tier Set",
           },
         },
         ["Waist"] = {
           {
-            ["itemID"] = 49810,
-            ["source"] = "Pit of Saron",
+            ["itemID"] = 268254,
+            ["source"] = "Vashnik the Malignant",
           },
         },
         ["Legs"] = {
           {
-            ["itemID"] = 249996,
+            ["itemID"] = 271500,
             ["source"] = "Tier Set",
           },
         },
         ["Feet"] = {
           {
-            ["itemID"] = 249377,
-            ["source"] = "Belo'ren",
+            ["itemID"] = 268233,
+            ["source"] = "Sszorak",
           },
         },
         ["Ring"] = {
           {
-            ["itemID"] = 249919,
-            ["source"] = "Belo'ren",
+            ["itemID"] = 268249,
+            ["source"] = "Vashnik the Malignant",
           },
           {
-            ["itemID"] = 249920,
-            ["source"] = "Midnight Falls",
+            ["itemID"] = 158366,
+            ["source"] = "Temple of Sethraliss",
           },
         },
         ["Trinket"] = {
           {
-            ["itemID"] = 249346,
-            ["source"] = "Vaelgor & Ezzorak",
+            ["itemID"] = 270164,
+            ["source"] = "The Lost Explorers",
           },
           {
-            ["itemID"] = 249809,
-            ["source"] = "Crown of the Cosmos",
+            ["itemID"] = 270167,
+            ["source"] = "Nymrissa Wavecaller",
           },
         },
       },
       ["bisItems"] = {
-        [49810] = true,
-        [239656] = true,
+        [158366] = true,
         [244584] = true,
-        [249276] = true,
-        [249283] = true,
-        [249325] = true,
-        [249346] = true,
-        [249377] = true,
-        [249809] = true,
-        [249919] = true,
-        [249920] = true,
-        [249995] = true,
-        [249996] = true,
-        [249997] = true,
-        [250000] = true,
-        [250247] = true,
+        [245769] = true,
+        [268233] = true,
+        [268249] = true,
+        [268253] = true,
+        [268254] = true,
+        [268265] = true,
+        [270164] = true,
+        [270167] = true,
+        [271092] = true,
+        [271499] = true,
+        [271500] = true,
+        [271501] = true,
+        [271502] = true,
+        [271504] = true,
       },
       ["itemSources"] = {
-        [49810] = "Pit of Saron",
-        [239656] = "Crafting",
+        [158366] = "Temple of Sethraliss",
         [244584] = "Crafting",
-        [249276] = "Vorasius",
-        [249283] = "Belo'ren",
-        [249325] = "Crown of the Cosmos",
-        [249346] = "Vaelgor & Ezzorak",
-        [249377] = "Belo'ren",
-        [249809] = "Crown of the Cosmos",
-        [249919] = "Belo'ren",
-        [249920] = "Midnight Falls",
-        [249995] = "Tier Set",
-        [249996] = "Tier Set",
-        [249997] = "Tier Set",
-        [250000] = "Tier Set",
-        [250247] = "Midnight Falls",
+        [245769] = "Crafting",
+        [268233] = "Sszorak",
+        [268249] = "Vashnik the Malignant",
+        [268253] = "The Coiled Altar",
+        [268254] = "Vashnik the Malignant",
+        [268265] = "Ula'tek",
+        [270164] = "The Lost Explorers",
+        [270167] = "Nymrissa Wavecaller",
+        [271092] = "Ula'tek",
+        [271499] = "Tier Set",
+        [271500] = "Tier Set",
+        [271501] = "Tier Set",
+        [271502] = "Tier Set",
+        [271504] = "Tier Set",
       },
     },
     ["evoker/preservation"] = {
@@ -1631,102 +1686,132 @@ ns.BisData = {
       ["itemsBySlot"] = {
         ["Head"] = {
           {
-            ["itemID"] = 249914,
-            ["source"] = "Midnight Falls",
+            ["itemID"] = 271501,
+            ["source"] = "Temple of Sethraliss",
           },
         },
         ["Neck"] = {
           {
-            ["itemID"] = 250247,
-            ["source"] = "Midnight Falls",
+            ["itemID"] = 268265,
+            ["source"] = "Ula'tek",
           },
         },
         ["Shoulders"] = {
           {
-            ["itemID"] = 249995,
-            ["source"] = "Raid",
+            ["itemID"] = 271499,
+            ["source"] = "The Coiled Altar",
           },
         },
         ["Back"] = {
           {
-            ["itemID"] = 251206,
-            ["source"] = "Nexus Point Xenas",
+            ["itemID"] = 268253,
+            ["source"] = "The Coiled Altar",
           },
         },
         ["Chest"] = {
           {
-            ["itemID"] = 250000,
-            ["source"] = "Raid",
+            ["itemID"] = 271504,
+            ["source"] = "Ula'tek",
           },
         },
         ["Wrist"] = {
           {
-            ["itemID"] = 251079,
-            ["source"] = "Windrunner Spire",
+            ["itemID"] = 268217,
+            ["source"] = "Nymrissa Wavebinder",
           },
         },
         ["Hands"] = {
           {
-            ["itemID"] = 249998,
-            ["source"] = "Raid",
+            ["itemID"] = 271502,
+            ["source"] = "Kings Rest",
           },
         },
         ["Waist"] = {
           {
-            ["itemID"] = 193722,
-            ["source"] = "Algeth'ar Academy",
+            ["itemID"] = 268254,
+            ["source"] = "Vashnik the Malignant",
           },
         },
         ["Legs"] = {
           {
-            ["itemID"] = 249996,
-            ["source"] = "Raid",
+            ["itemID"] = 271500,
+            ["source"] = "The Coiled Altar",
           },
         },
         ["Feet"] = {
           {
-            ["itemID"] = 251084,
-            ["source"] = "Windrunner Spire",
+            ["itemID"] = 159388,
+            ["source"] = "Temple of Sethraliss",
           },
         },
         ["Ring"] = {
           {
-            ["itemID"] = 249369,
-            ["source"] = "Lightblinded Vanguard",
+            ["itemID"] = 268249,
+            ["source"] = "Vashnik the Malignant",
           },
           {
-            ["itemID"] = 249920,
-            ["source"] = "Midnight Falls",
+            ["itemID"] = 158366,
+            ["source"] = "Temple of Sethraliss",
+          },
+        },
+        ["Trinket"] = {
+          {
+            ["itemID"] = 270164,
+            ["source"] = "The Lost Explorers",
+          },
+          {
+            ["itemID"] = 270162,
+            ["source"] = "Nek'zali the Soulcoiler",
+          },
+        },
+        ["Weapon"] = {
+          {
+            ["itemID"] = 271092,
+            ["source"] = "Ula'tek",
+          },
+        },
+        ["Offhand"] = {
+          {
+            ["itemID"] = 268197,
+            ["source"] = "Entomed Sentinels",
           },
         },
       },
       ["bisItems"] = {
-        [193722] = true,
-        [249369] = true,
-        [249914] = true,
-        [249920] = true,
-        [249995] = true,
-        [249996] = true,
-        [249998] = true,
-        [250000] = true,
-        [250247] = true,
-        [251079] = true,
-        [251084] = true,
-        [251206] = true,
+        [158366] = true,
+        [159388] = true,
+        [268197] = true,
+        [268217] = true,
+        [268249] = true,
+        [268253] = true,
+        [268254] = true,
+        [268265] = true,
+        [270162] = true,
+        [270164] = true,
+        [271092] = true,
+        [271499] = true,
+        [271500] = true,
+        [271501] = true,
+        [271502] = true,
+        [271504] = true,
       },
       ["itemSources"] = {
-        [193722] = "Algeth'ar Academy",
-        [249369] = "Lightblinded Vanguard",
-        [249914] = "Midnight Falls",
-        [249920] = "Midnight Falls",
-        [249995] = "Raid",
-        [249996] = "Raid",
-        [249998] = "Raid",
-        [250000] = "Raid",
-        [250247] = "Midnight Falls",
-        [251079] = "Windrunner Spire",
-        [251084] = "Windrunner Spire",
-        [251206] = "Nexus Point Xenas",
+        [158366] = "Temple of Sethraliss",
+        [159388] = "Temple of Sethraliss",
+        [268197] = "Entomed Sentinels",
+        [268217] = "Nymrissa Wavebinder",
+        [268249] = "Vashnik the Malignant",
+        [268253] = "The Coiled Altar",
+        [268254] = "Vashnik the Malignant",
+        [268265] = "Ula'tek",
+        [270162] = "Nek'zali the Soulcoiler",
+        [270164] = "The Lost Explorers",
+        [271092] = "Ula'tek",
+        [271499] = "The Coiled Altar",
+        [271500] = "The Coiled Altar",
+        [271501] = "Temple of Sethraliss",
+        [271502] = "Kings Rest",
+        [271504] = "Ula'tek",
       },
     },
     ["hunter/beast-mastery"] = {
@@ -1737,124 +1822,130 @@ ns.BisData = {
       ["itemsBySlot"] = {
         ["Weapon"] = {
           {
-            ["itemID"] = 251174,
-            ["source"] = "Maisara Caverns",
+            ["itemID"] = 268207,
+            ["source"] = "Ula'tek",
           },
         },
         ["Head"] = {
           {
-            ["itemID"] = 249988,
-            ["source"] = "Tier Set",
+            ["itemID"] = 271492,
+            ["source"] = "The Twin Fangs",
           },
         },
         ["Neck"] = {
           {
-            ["itemID"] = 250247,
-            ["source"] = "Midnight Falls",
+            ["itemID"] = 268265,
+            ["source"] = "Ula'tek",
           },
         },
         ["Shoulders"] = {
           {
-            ["itemID"] = 151323,
-            ["source"] = "Seat of the Triumvirate",
+            ["itemID"] = 271490,
+            ["source"] = "The Coiled Altar",
           },
         },
         ["Back"] = {
           {
-            ["itemID"] = 258575,
-            ["source"] = "Skyreach",
+            ["itemID"] = 268253,
+            ["source"] = "The Coiled Altar",
           },
         },
         ["Chest"] = {
           {
-            ["itemID"] = 249991,
-            ["source"] = "Tier Set",
+            ["itemID"] = 271495,
+            ["source"] = "Ula'tek",
           },
         },
         ["Wrist"] = {
           {
-            ["itemID"] = 251209,
-            ["source"] = "Nexus Point Xenas",
+            ["itemID"] = 244584,
+            ["source"] = "Crafted",
           },
         },
         ["Hands"] = {
           {
-            ["itemID"] = 249989,
-            ["source"] = "Tier Set",
+            ["itemID"] = 271493,
+            ["source"] = "King's Rest",
           },
         },
         ["Waist"] = {
           {
-            ["itemID"] = 244611,
+            ["itemID"] = 244581,
             ["source"] = "Crafted",
           },
         },
         ["Legs"] = {
           {
-            ["itemID"] = 249987,
-            ["source"] = "Tier Set",
+            ["itemID"] = 271491,
+            ["source"] = "The Coiled Altar",
           },
         },
         ["Feet"] = {
           {
-            ["itemID"] = 244610,
-            ["source"] = "Crafted",
+            ["itemID"] = 268233,
+            ["source"] = "Sszorak",
           },
         },
         ["Ring"] = {
           {
-            ["itemID"] = 249920,
-            ["source"] = "Midnight Falls",
+            ["itemID"] = 268249,
+            ["source"] = "Vashnik the Malignant",
           },
           {
-            ["itemID"] = 249369,
-            ["source"] = "Lightblinded Vanguard",
+            ["itemID"] = 252258,
+            ["source"] = "Voidscar Arena",
           },
         },
         ["Trinket"] = {
           {
-            ["itemID"] = 249806,
-            ["source"] = "Belo'ren",
+            ["itemID"] = 270173,
+            ["source"] = "The Coiled Altar",
           },
           {
-            ["itemID"] = 193701,
-            ["source"] = "Algeth'ar Academy",
+            ["itemID"] = 270175,
+            ["source"] = "Ula'tek",
+          },
+          {
+            ["itemID"] = 270165,
+            ["source"] = "Entombed Sentinels",
           },
         },
       },
       ["bisItems"] = {
-        [151323] = true,
-        [193701] = true,
-        [244610] = true,
-        [244611] = true,
-        [249369] = true,
-        [249806] = true,
-        [249920] = true,
-        [249987] = true,
-        [249988] = true,
-        [249989] = true,
-        [249991] = true,
-        [250247] = true,
-        [251174] = true,
-        [251209] = true,
-        [258575] = true,
+        [244581] = true,
+        [244584] = true,
+        [252258] = true,
+        [268207] = true,
+        [268233] = true,
+        [268249] = true,
+        [268253] = true,
+        [268265] = true,
+        [270165] = true,
+        [270173] = true,
+        [270175] = true,
+        [271490] = true,
+        [271491] = true,
+        [271492] = true,
+        [271493] = true,
+        [271495] = true,
       },
       ["itemSources"] = {
-        [151323] = "Seat of the Triumvirate",
-        [193701] = "Algeth'ar Academy",
-        [244610] = "Crafted",
-        [244611] = "Crafted",
-        [249369] = "Lightblinded Vanguard",
-        [249806] = "Belo'ren",
-        [249920] = "Midnight Falls",
-        [249987] = "Tier Set",
-        [249988] = "Tier Set",
-        [249989] = "Tier Set",
-        [249991] = "Tier Set",
-        [250247] = "Midnight Falls",
-        [251174] = "Maisara Caverns",
-        [251209] = "Nexus Point Xenas",
-        [258575] = "Skyreach",
+        [244581] = "Crafted",
+        [244584] = "Crafted",
+        [252258] = "Voidscar Arena",
+        [268207] = "Ula'tek",
+        [268233] = "Sszorak",
+        [268249] = "Vashnik the Malignant",
+        [268253] = "The Coiled Altar",
+        [268265] = "Ula'tek",
+        [270165] = "Entombed Sentinels",
+        [270173] = "The Coiled Altar",
+        [270175] = "Ula'tek",
+        [271490] = "The Coiled Altar",
+        [271491] = "The Coiled Altar",
+        [271492] = "The Twin Fangs",
+        [271493] = "King's Rest",
+        [271495] = "Ula'tek",
       },
     },
     ["hunter/marksmanship"] = {
@@ -1865,124 +1956,124 @@ ns.BisData = {
       ["itemsBySlot"] = {
         ["Weapon"] = {
           {
-            ["itemID"] = 249288,
-            ["source"] = "Crown of the Cosmos",
+            ["itemID"] = 268207,
+            ["source"] = "Ula'tek",
           },
         },
         ["Head"] = {
           {
-            ["itemID"] = 249988,
-            ["source"] = "Tier Set",
+            ["itemID"] = 271492,
+            ["source"] = "Nek'zali the Soulcoiler",
           },
         },
         ["Neck"] = {
           {
-            ["itemID"] = 250247,
-            ["source"] = "Midnight Falls",
+            ["itemID"] = 268265,
+            ["source"] = "Ula'tek",
           },
         },
         ["Shoulders"] = {
           {
-            ["itemID"] = 151323,
-            ["source"] = "Seat of the Triumvirate",
+            ["itemID"] = 271490,
+            ["source"] = "The Coiled Altar",
           },
         },
         ["Back"] = {
           {
-            ["itemID"] = 249335,
-            ["source"] = "Imperator Averzian",
+            ["itemID"] = 268253,
+            ["source"] = "The Coiled Altar",
           },
         },
         ["Chest"] = {
           {
-            ["itemID"] = 249991,
-            ["source"] = "Tier Set",
+            ["itemID"] = 271495,
+            ["source"] = "Ula'tek",
           },
         },
         ["Wrist"] = {
           {
-            ["itemID"] = 249304,
-            ["source"] = "Fallen-King Salhadaar",
+            ["itemID"] = 244584,
+            ["source"] = "Crafting/Misc",
           },
         },
         ["Hands"] = {
           {
-            ["itemID"] = 249989,
-            ["source"] = "Tier Set",
+            ["itemID"] = 271493,
+            ["source"] = "Ruby Life Pools",
           },
         },
         ["Waist"] = {
           {
-            ["itemID"] = 244611,
-            ["source"] = "Crafting",
+            ["itemID"] = 244581,
+            ["source"] = "Crafting/Misc",
           },
         },
         ["Legs"] = {
           {
-            ["itemID"] = 249987,
-            ["source"] = "Tier Set",
+            ["itemID"] = 271491,
+            ["source"] = "The Coiled Altar",
           },
         },
         ["Feet"] = {
           {
-            ["itemID"] = 244610,
-            ["source"] = "Crafting",
+            ["itemID"] = 268233,
+            ["source"] = "Sszorak",
           },
         },
         ["Ring"] = {
           {
-            ["itemID"] = 249919,
-            ["source"] = "Belo'ren",
+            ["itemID"] = 251136,
+            ["source"] = "Murder Row",
           },
           {
-            ["itemID"] = 249336,
-            ["source"] = "Vorasius",
+            ["itemID"] = 268249,
+            ["source"] = "Vashnik the Malignant",
           },
         },
         ["Trinket"] = {
           {
-            ["itemID"] = 193701,
-            ["source"] = "Algeth'ar Academy",
+            ["itemID"] = 270175,
+            ["source"] = "Ula'tek",
           },
           {
-            ["itemID"] = 260235,
-            ["source"] = "Belo'ren",
+            ["itemID"] = 270173,
+            ["source"] = "The Coiled Altar",
           },
         },
       },
       ["bisItems"] = {
-        [151323] = true,
-        [193701] = true,
-        [244610] = true,
-        [244611] = true,
-        [249288] = true,
-        [249304] = true,
-        [249335] = true,
-        [249336] = true,
-        [249919] = true,
-        [249987] = true,
-        [249988] = true,
-        [249989] = true,
-        [249991] = true,
-        [250247] = true,
-        [260235] = true,
+        [244581] = true,
+        [244584] = true,
+        [251136] = true,
+        [268207] = true,
+        [268233] = true,
+        [268249] = true,
+        [268253] = true,
+        [268265] = true,
+        [270173] = true,
+        [270175] = true,
+        [271490] = true,
+        [271491] = true,
+        [271492] = true,
+        [271493] = true,
+        [271495] = true,
       },
       ["itemSources"] = {
-        [151323] = "Seat of the Triumvirate",
-        [193701] = "Algeth'ar Academy",
-        [244610] = "Crafting",
-        [244611] = "Crafting",
-        [249288] = "Crown of the Cosmos",
-        [249304] = "Fallen-King Salhadaar",
-        [249335] = "Imperator Averzian",
-        [249336] = "Vorasius",
-        [249919] = "Belo'ren",
-        [249987] = "Tier Set",
-        [249988] = "Tier Set",
-        [249989] = "Tier Set",
-        [249991] = "Tier Set",
-        [250247] = "Midnight Falls",
-        [260235] = "Belo'ren",
+        [244581] = "Crafting/Misc",
+        [244584] = "Crafting/Misc",
+        [251136] = "Murder Row",
+        [268207] = "Ula'tek",
+        [268233] = "Sszorak",
+        [268249] = "Vashnik the Malignant",
+        [268253] = "The Coiled Altar",
+        [268265] = "Ula'tek",
+        [270173] = "The Coiled Altar",
+        [270175] = "Ula'tek",
+        [271490] = "The Coiled Altar",
+        [271491] = "The Coiled Altar",
+        [271492] = "Nek'zali the Soulcoiler",
+        [271493] = "Ruby Life Pools",
+        [271495] = "Ula'tek",
       },
     },
     ["hunter/survival"] = {
@@ -1993,67 +2084,2232 @@ ns.BisData = {
       ["itemsBySlot"] = {
         ["Weapon"] = {
           {
-            ["itemID"] = 249284,
-            ["source"] = "Belo'ren",
-          },
-        },
-        ["Offhand"] = {
-          {
-            ["itemID"] = 237837,
-            ["source"] = "Crafting",
+            ["itemID"] = 268215,
+            ["source"] = "Ula'tek",
           },
         },
         ["Head"] = {
           {
-            ["itemID"] = 249988,
+            ["itemID"] = 271492,
+            ["source"] = "Tier Set",
+          },
+          {
+            ["itemID"] = 251220,
             ["source"] = "Tier Set",
           },
         },
         ["Neck"] = {
           {
-            ["itemID"] = 250247,
-            ["source"] = "March on Quel'Danas",
+            ["itemID"] = 268265,
+            ["source"] = "Ula'tek",
           },
         },
         ["Shoulders"] = {
           {
-            ["itemID"] = 151323,
-            ["source"] = "",
+            ["itemID"] = 271490,
+            ["source"] = "Tier Set",
+          },
+          {
+            ["itemID"] = 268231,
+            ["source"] = "Tier Set",
           },
         },
         ["Back"] = {
           {
-            ["itemID"] = 249370,
-            ["source"] = "Vaelgor",
+            ["itemID"] = 268253,
+            ["source"] = "The Coiled Altar",
           },
         },
         ["Chest"] = {
           {
-            ["itemID"] = 249991,
-            ["source"] = "Tier Set",
+            ["itemID"] = 271876,
+            ["source"] = "Ula'tek",
           },
         },
         ["Wrist"] = {
           {
-            ["itemID"] = 249304,
-            ["source"] = "Fallen-King Salhadaar",
+            ["itemID"] = 244584,
+            ["source"] = "Crafting",
           },
         },
         ["Hands"] = {
           {
-            ["itemID"] = 249989,
+            ["itemID"] = 271493,
+            ["source"] = "Tier Set",
+          },
+          {
+            ["itemID"] = 160213,
             ["source"] = "Tier Set",
           },
         },
         ["Waist"] = {
           {
-            ["itemID"] = 249371,
-            ["source"] = "Chimaerus",
+            ["itemID"] = 244581,
+            ["source"] = "Crafting",
           },
         },
         ["Legs"] = {
           {
-            ["itemID"] = 249987,
+            ["itemID"] = 271491,
+            ["source"] = "Tier Set",
+          },
+          {
+            ["itemID"] = 268237,
+            ["source"] = "Tier Set",
+          },
+        },
+        ["Feet"] = {
+          {
+            ["itemID"] = 268233,
+            ["source"] = "Sszorak",
+          },
+        },
+        ["Ring"] = {
+          {
+            ["itemID"] = 273792,
+            ["source"] = "The Coiled Altar",
+          },
+          {
+            ["itemID"] = 252258,
+            ["source"] = "Voidscar Arena",
+          },
+        },
+        ["Trinket"] = {
+          {
+            ["itemID"] = 270175,
+            ["source"] = "Ula'tek",
+          },
+          {
+            ["itemID"] = 270173,
+            ["source"] = "The Coiled Altar",
+          },
+        },
+      },
+      ["bisItems"] = {
+        [160213] = true,
+        [244581] = true,
+        [244584] = true,
+        [251220] = true,
+        [252258] = true,
+        [268215] = true,
+        [268231] = true,
+        [268233] = true,
+        [268237] = true,
+        [268253] = true,
+        [268265] = true,
+        [270173] = true,
+        [270175] = true,
+        [271490] = true,
+        [271491] = true,
+        [271492] = true,
+        [271493] = true,
+        [271876] = true,
+        [273792] = true,
+      },
+      ["itemSources"] = {
+        [160213] = "Tier Set",
+        [244581] = "Crafting",
+        [244584] = "Crafting",
+        [251220] = "Tier Set",
+        [252258] = "Voidscar Arena",
+        [268215] = "Ula'tek",
+        [268231] = "Tier Set",
+        [268233] = "Sszorak",
+        [268237] = "Tier Set",
+        [268253] = "The Coiled Altar",
+        [268265] = "Ula'tek",
+        [270173] = "The Coiled Altar",
+        [270175] = "Ula'tek",
+        [271490] = "Tier Set",
+        [271491] = "Tier Set",
+        [271492] = "Tier Set",
+        [271493] = "Tier Set",
+        [271876] = "Ula'tek",
+        [273792] = "The Coiled Altar",
+      },
+    },
+    ["mage/arcane"] = {
+      ["specID"] = 62,
+      ["classSlug"] = "mage",
+      ["specSlug"] = "arcane",
+      ["sourceUrl"] = "https://www.wowhead.com/guide/classes/mage/arcane/bis-gear",
+      ["itemsBySlot"] = {
+        ["Weapon"] = {
+          {
+            ["itemID"] = 271092,
+            ["source"] = "Ula'tek",
+          },
+        },
+        ["Offhand"] = {
+          {
+            ["itemID"] = 245769,
+            ["source"] = "Crafting",
+          },
+        },
+        ["Head"] = {
+          {
+            ["itemID"] = 271564,
+            ["source"] = "Ula'tek",
+          },
+        },
+        ["Neck"] = {
+          {
+            ["itemID"] = 268265,
+            ["source"] = "Ula'tek",
+          },
+        },
+        ["Shoulders"] = {
+          {
+            ["itemID"] = 271562,
+            ["source"] = "The Twin Fangs",
+          },
+        },
+        ["Back"] = {
+          {
+            ["itemID"] = 268253,
+            ["source"] = "The Coiled Altar",
+          },
+        },
+        ["Chest"] = {
+          {
+            ["itemID"] = 271567,
+            ["source"] = "Altar of Fangs",
+          },
+        },
+        ["Wrist"] = {
+          {
+            ["itemID"] = 239648,
+            ["source"] = "Crafting",
+          },
+        },
+        ["Hands"] = {
+          {
+            ["itemID"] = 271565,
+            ["source"] = "The Coiled Altar",
+          },
+        },
+        ["Waist"] = {
+          {
+            ["itemID"] = 268257,
+            ["source"] = "Sszorak",
+          },
+        },
+        ["Legs"] = {
+          {
+            ["itemID"] = 271563,
+            ["source"] = "Nek'zali the Soulcoiler",
+          },
+        },
+        ["Feet"] = {
+          {
+            ["itemID"] = 268255,
+            ["source"] = "The Coiled Altar",
+          },
+        },
+        ["Ring"] = {
+          {
+            ["itemID"] = 268266,
+            ["source"] = "Nymrissa Wavecaller",
+          },
+          {
+            ["itemID"] = 251148,
+            ["source"] = "Den of Nalorakk",
+          },
+        },
+        ["Trinket"] = {
+          {
+            ["itemID"] = 250215,
+            ["source"] = "Murder Row",
+          },
+          {
+            ["itemID"] = 270164,
+            ["source"] = "The Lost Explorers",
+          },
+        },
+      },
+      ["bisItems"] = {
+        [239648] = true,
+        [245769] = true,
+        [250215] = true,
+        [251148] = true,
+        [268253] = true,
+        [268255] = true,
+        [268257] = true,
+        [268265] = true,
+        [268266] = true,
+        [270164] = true,
+        [271092] = true,
+        [271562] = true,
+        [271563] = true,
+        [271564] = true,
+        [271565] = true,
+        [271567] = true,
+      },
+      ["itemSources"] = {
+        [239648] = "Crafting",
+        [245769] = "Crafting",
+        [250215] = "Murder Row",
+        [251148] = "Den of Nalorakk",
+        [268253] = "The Coiled Altar",
+        [268255] = "The Coiled Altar",
+        [268257] = "Sszorak",
+        [268265] = "Ula'tek",
+        [268266] = "Nymrissa Wavecaller",
+        [270164] = "The Lost Explorers",
+        [271092] = "Ula'tek",
+        [271562] = "The Twin Fangs",
+        [271563] = "Nek'zali the Soulcoiler",
+        [271564] = "Ula'tek",
+        [271565] = "The Coiled Altar",
+        [271567] = "Altar of Fangs",
+      },
+    },
+    ["mage/fire"] = {
+      ["specID"] = 63,
+      ["classSlug"] = "mage",
+      ["specSlug"] = "fire",
+      ["sourceUrl"] = "https://www.wowhead.com/guide/classes/mage/fire/bis-gear",
+      ["itemsBySlot"] = {
+        ["Weapon"] = {
+          {
+            ["itemID"] = 271092,
+            ["source"] = "Ula'tek",
+          },
+        },
+        ["Offhand"] = {
+          {
+            ["itemID"] = 245769,
+            ["source"] = "Crafting",
+          },
+        },
+        ["Head"] = {
+          {
+            ["itemID"] = 271564,
+            ["source"] = "Tier Set",
+          },
+        },
+        ["Neck"] = {
+          {
+            ["itemID"] = 251142,
+            ["source"] = "Murder Row",
+          },
+        },
+        ["Shoulders"] = {
+          {
+            ["itemID"] = 271562,
+            ["source"] = "Tier Set",
+          },
+        },
+        ["Back"] = {
+          {
+            ["itemID"] = 268253,
+            ["source"] = "The Coiled Altar",
+          },
+        },
+        ["Chest"] = {
+          {
+            ["itemID"] = 271567,
+            ["source"] = "Tier Set",
+          },
+        },
+        ["Wrist"] = {
+          {
+            ["itemID"] = 239648,
+            ["source"] = "Crafting/Misc",
+          },
+        },
+        ["Hands"] = {
+          {
+            ["itemID"] = 271565,
+            ["source"] = "Tier Set",
+          },
+        },
+        ["Waist"] = {
+          {
+            ["itemID"] = 268257,
+            ["source"] = "Sszorak",
+          },
+        },
+        ["Legs"] = {
+          {
+            ["itemID"] = 271563,
+            ["source"] = "Tier Set",
+          },
+        },
+        ["Feet"] = {
+          {
+            ["itemID"] = 268255,
+            ["source"] = "The Coiled Altar",
+          },
+        },
+        ["Ring"] = {
+          {
+            ["itemID"] = 268266,
+            ["source"] = "Nymrissa Wavecaller",
+          },
+          {
+            ["itemID"] = 159459,
+            ["source"] = "King's Rest",
+          },
+        },
+        ["Trinket"] = {
+          {
+            ["itemID"] = 273796,
+            ["source"] = "Altar of Fangs",
+          },
+          {
+            ["itemID"] = 270164,
+            ["source"] = "The Lost Explorers",
+          },
+        },
+      },
+      ["bisItems"] = {
+        [159459] = true,
+        [239648] = true,
+        [245769] = true,
+        [251142] = true,
+        [268253] = true,
+        [268255] = true,
+        [268257] = true,
+        [268266] = true,
+        [270164] = true,
+        [271092] = true,
+        [271562] = true,
+        [271563] = true,
+        [271564] = true,
+        [271565] = true,
+        [271567] = true,
+        [273796] = true,
+      },
+      ["itemSources"] = {
+        [159459] = "King's Rest",
+        [239648] = "Crafting/Misc",
+        [245769] = "Crafting",
+        [251142] = "Murder Row",
+        [268253] = "The Coiled Altar",
+        [268255] = "The Coiled Altar",
+        [268257] = "Sszorak",
+        [268266] = "Nymrissa Wavecaller",
+        [270164] = "The Lost Explorers",
+        [271092] = "Ula'tek",
+        [271562] = "Tier Set",
+        [271563] = "Tier Set",
+        [271564] = "Tier Set",
+        [271565] = "Tier Set",
+        [271567] = "Tier Set",
+        [273796] = "Altar of Fangs",
+      },
+    },
+    ["mage/frost"] = {
+      ["specID"] = 64,
+      ["classSlug"] = "mage",
+      ["specSlug"] = "frost",
+      ["sourceUrl"] = "https://www.wowhead.com/guide/classes/mage/frost/bis-gear",
+      ["itemsBySlot"] = {
+        ["Weapon"] = {
+          {
+            ["itemID"] = 271092,
+            ["source"] = "Ula'tek",
+          },
+        },
+        ["Offhand"] = {
+          {
+            ["itemID"] = 268263,
+            ["source"] = "Nymrissa Wavecaller",
+          },
+        },
+        ["Head"] = {
+          {
+            ["itemID"] = 271564,
+            ["source"] = "Tier Set",
+          },
+        },
+        ["Neck"] = {
+          {
+            ["itemID"] = 268265,
+            ["source"] = "Ula'tek",
+          },
+        },
+        ["Shoulders"] = {
+          {
+            ["itemID"] = 271562,
+            ["source"] = "Tier Set",
+          },
+        },
+        ["Back"] = {
+          {
+            ["itemID"] = 268253,
+            ["source"] = "The Coiled Altar",
+          },
+        },
+        ["Chest"] = {
+          {
+            ["itemID"] = 271567,
+            ["source"] = "Tier Set",
+          },
+        },
+        ["Wrist"] = {
+          {
+            ["itemID"] = 239648,
+            ["source"] = "Crafting/Misc",
+          },
+        },
+        ["Hands"] = {
+          {
+            ["itemID"] = 271565,
+            ["source"] = "Tier Set",
+          },
+        },
+        ["Waist"] = {
+          {
+            ["itemID"] = 239649,
+            ["source"] = "Crafting/Misc",
+          },
+        },
+        ["Legs"] = {
+          {
+            ["itemID"] = 271563,
+            ["source"] = "Tier Set",
+          },
+        },
+        ["Feet"] = {
+          {
+            ["itemID"] = 268255,
+            ["source"] = "The Coiled Altar",
+          },
+        },
+        ["Ring"] = {
+          {
+            ["itemID"] = 268249,
+            ["source"] = "Vashnik the Malignant",
+          },
+          {
+            ["itemID"] = 158366,
+            ["source"] = "Temple of Sethraliss",
+          },
+        },
+        ["Trinket"] = {
+          {
+            ["itemID"] = 270164,
+            ["source"] = "The Lost Explorers",
+          },
+          {
+            ["itemID"] = 270167,
+            ["source"] = "Nymrissa Wavecaller",
+          },
+        },
+      },
+      ["bisItems"] = {
+        [158366] = true,
+        [239648] = true,
+        [239649] = true,
+        [268249] = true,
+        [268253] = true,
+        [268255] = true,
+        [268263] = true,
+        [268265] = true,
+        [270164] = true,
+        [270167] = true,
+        [271092] = true,
+        [271562] = true,
+        [271563] = true,
+        [271564] = true,
+        [271565] = true,
+        [271567] = true,
+      },
+      ["itemSources"] = {
+        [158366] = "Temple of Sethraliss",
+        [239648] = "Crafting/Misc",
+        [239649] = "Crafting/Misc",
+        [268249] = "Vashnik the Malignant",
+        [268253] = "The Coiled Altar",
+        [268255] = "The Coiled Altar",
+        [268263] = "Nymrissa Wavecaller",
+        [268265] = "Ula'tek",
+        [270164] = "The Lost Explorers",
+        [270167] = "Nymrissa Wavecaller",
+        [271092] = "Ula'tek",
+        [271562] = "Tier Set",
+        [271563] = "Tier Set",
+        [271564] = "Tier Set",
+        [271565] = "Tier Set",
+        [271567] = "Tier Set",
+      },
+    },
+    ["monk/brewmaster"] = {
+      ["specID"] = 268,
+      ["classSlug"] = "monk",
+      ["specSlug"] = "brewmaster",
+      ["sourceUrl"] = "https://www.wowhead.com/guide/classes/monk/brewmaster/bis-gear",
+      ["itemsBySlot"] = {
+        ["Weapon"] = {
+          {
+            ["itemID"] = 268215,
+            ["source"] = "Ula'tek",
+          },
+          {
+            ["itemID"] = 268209,
+            ["source"] = "The Coiled Altar Sszorak",
+          },
+          {
+            ["itemID"] = 268206,
+            ["source"] = "The Coiled Altar Sszorak",
+          },
+        },
+        ["Head"] = {
+          {
+            ["itemID"] = 271519,
+            ["source"] = "Catalyst",
+          },
+        },
+        ["Neck"] = {
+          {
+            ["itemID"] = 268265,
+            ["source"] = "Ula'tek",
+          },
+        },
+        ["Shoulders"] = {
+          {
+            ["itemID"] = 271517,
+            ["source"] = "Catalyst",
+          },
+        },
+        ["Back"] = {
+          {
+            ["itemID"] = 268253,
+            ["source"] = "The Coiled Altar",
+          },
+        },
+        ["Chest"] = {
+          {
+            ["itemID"] = 271522,
+            ["source"] = "Catalyst",
+          },
+        },
+        ["Wrist"] = {
+          {
+            ["itemID"] = 244576,
+            ["source"] = "Leatherworking",
+          },
+        },
+        ["Hands"] = {
+          {
+            ["itemID"] = 271520,
+            ["source"] = "Catalyst",
+          },
+        },
+        ["Waist"] = {
+          {
+            ["itemID"] = 268256,
+            ["source"] = "The Coiled Altar",
+          },
+        },
+        ["Legs"] = {
+          {
+            ["itemID"] = 271518,
+            ["source"] = "Catalyst",
+          },
+        },
+        ["Feet"] = {
+          {
+            ["itemID"] = 159304,
+            ["source"] = "Kings' Rest",
+          },
+        },
+        ["Ring"] = {
+          {
+            ["itemID"] = 251148,
+            ["source"] = "Den of Nalorakk",
+          },
+          {
+            ["itemID"] = 251513,
+            ["source"] = "Jewelcrafting",
+          },
+        },
+        ["Trinket"] = {
+          {
+            ["itemID"] = 270175,
+            ["source"] = "Ula'tek",
+          },
+          {
+            ["itemID"] = 270173,
+            ["source"] = "The Coiled Altar",
+          },
+          {
+            ["itemID"] = 270160,
+            ["source"] = "The Lost Explorers",
+          },
+          {
+            ["itemID"] = 159617,
+            ["source"] = "Kings' Rest",
+          },
+        },
+      },
+      ["bisItems"] = {
+        [159304] = true,
+        [159617] = true,
+        [244576] = true,
+        [251148] = true,
+        [251513] = true,
+        [268206] = true,
+        [268209] = true,
+        [268215] = true,
+        [268253] = true,
+        [268256] = true,
+        [268265] = true,
+        [270160] = true,
+        [270173] = true,
+        [270175] = true,
+        [271517] = true,
+        [271518] = true,
+        [271519] = true,
+        [271520] = true,
+        [271522] = true,
+      },
+      ["itemSources"] = {
+        [159304] = "Kings' Rest",
+        [159617] = "Kings' Rest",
+        [244576] = "Leatherworking",
+        [251148] = "Den of Nalorakk",
+        [251513] = "Jewelcrafting",
+        [268206] = "The Coiled Altar Sszorak",
+        [268209] = "The Coiled Altar Sszorak",
+        [268215] = "Ula'tek",
+        [268253] = "The Coiled Altar",
+        [268256] = "The Coiled Altar",
+        [268265] = "Ula'tek",
+        [270160] = "The Lost Explorers",
+        [270173] = "The Coiled Altar",
+        [270175] = "Ula'tek",
+        [271517] = "Catalyst",
+        [271518] = "Catalyst",
+        [271519] = "Catalyst",
+        [271520] = "Catalyst",
+        [271522] = "Catalyst",
+      },
+    },
+    ["monk/mistweaver"] = {
+      ["specID"] = 270,
+      ["classSlug"] = "monk",
+      ["specSlug"] = "mistweaver",
+      ["sourceUrl"] = "https://www.wowhead.com/guide/classes/monk/mistweaver/bis-gear",
+      ["itemsBySlot"] = {
+        ["Head"] = {
+          {
+            ["itemID"] = 271519,
+            ["source"] = "Ula'tek",
+          },
+        },
+        ["Neck"] = {
+          {
+            ["itemID"] = 268265,
+            ["source"] = "Ula'tek",
+          },
+        },
+        ["Shoulders"] = {
+          {
+            ["itemID"] = 271517,
+            ["source"] = "Den of Nalorakk",
+          },
+        },
+        ["Back"] = {
+          {
+            ["itemID"] = 193763,
+            ["source"] = "Ruby Life Pools",
+          },
+        },
+        ["Chest"] = {
+          {
+            ["itemID"] = 271522,
+            ["source"] = "Voidscar Arena",
+          },
+        },
+        ["Wrist"] = {
+          {
+            ["itemID"] = 251135,
+            ["source"] = "Murder Row",
+          },
+        },
+        ["Hands"] = {
+          {
+            ["itemID"] = 271520,
+            ["source"] = "Murder Row",
+          },
+        },
+        ["Waist"] = {
+          {
+            ["itemID"] = 251189,
+            ["source"] = "The Blinding Vale",
+          },
+        },
+        ["Legs"] = {
+          {
+            ["itemID"] = 271518,
+            ["source"] = "Kings' Rest",
+          },
+        },
+        ["Feet"] = {
+          {
+            ["itemID"] = 268247,
+            ["source"] = "Nymrissa Wavebinder",
+          },
+        },
+        ["Ring"] = {
+          {
+            ["itemID"] = 268266,
+            ["source"] = "Nymrissa Wavebinder",
+          },
+          {
+            ["itemID"] = 159459,
+            ["source"] = "Kings' Rest",
+          },
+        },
+        ["Trinket"] = {
+          {
+            ["itemID"] = 270167,
+            ["source"] = "Nymrissa Wavebinder",
+          },
+          {
+            ["itemID"] = 270162,
+            ["source"] = "Nek'zali the Soulcoiler",
+          },
+        },
+        ["Weapon"] = {
+          {
+            ["itemID"] = 268211,
+            ["source"] = "The Coiled Altar",
+          },
+        },
+        ["Offhand"] = {
+          {
+            ["itemID"] = 159667,
+            ["source"] = "Kings' Rest",
+          },
+        },
+      },
+      ["bisItems"] = {
+        [159459] = true,
+        [159667] = true,
+        [193763] = true,
+        [251135] = true,
+        [251189] = true,
+        [268211] = true,
+        [268247] = true,
+        [268265] = true,
+        [268266] = true,
+        [270162] = true,
+        [270167] = true,
+        [271517] = true,
+        [271518] = true,
+        [271519] = true,
+        [271520] = true,
+        [271522] = true,
+      },
+      ["itemSources"] = {
+        [159459] = "Kings' Rest",
+        [159667] = "Kings' Rest",
+        [193763] = "Ruby Life Pools",
+        [251135] = "Murder Row",
+        [251189] = "The Blinding Vale",
+        [268211] = "The Coiled Altar",
+        [268247] = "Nymrissa Wavebinder",
+        [268265] = "Ula'tek",
+        [268266] = "Nymrissa Wavebinder",
+        [270162] = "Nek'zali the Soulcoiler",
+        [270167] = "Nymrissa Wavebinder",
+        [271517] = "Den of Nalorakk",
+        [271518] = "Kings' Rest",
+        [271519] = "Ula'tek",
+        [271520] = "Murder Row",
+        [271522] = "Voidscar Arena",
+      },
+    },
+    ["monk/windwalker"] = {
+      ["specID"] = 269,
+      ["classSlug"] = "monk",
+      ["specSlug"] = "windwalker",
+      ["sourceUrl"] = "https://www.wowhead.com/guide/classes/monk/windwalker/bis-gear",
+      ["itemsBySlot"] = {
+        ["Weapon"] = {
+          {
+            ["itemID"] = 268215,
+            ["source"] = "Ula'tek",
+          },
+        },
+        ["Head"] = {
+          {
+            ["itemID"] = 271875,
+            ["source"] = "Ula'tek",
+          },
+        },
+        ["Neck"] = {
+          {
+            ["itemID"] = 268265,
+            ["source"] = "Ula'tek",
+          },
+        },
+        ["Shoulders"] = {
+          {
+            ["itemID"] = 271517,
+            ["source"] = "Tier Set",
+          },
+        },
+        ["Back"] = {
+          {
+            ["itemID"] = 268253,
+            ["source"] = "The Coiled Altar",
+          },
+        },
+        ["Chest"] = {
+          {
+            ["itemID"] = 268235,
+            ["source"] = "Nek'zali the Soulcoiler",
+          },
+        },
+        ["Wrist"] = {
+          {
+            ["itemID"] = 244576,
+            ["source"] = "Crafting",
+          },
+        },
+        ["Hands"] = {
+          {
+            ["itemID"] = 251124,
+            ["source"] = "Murder Row",
+          },
+        },
+        ["Waist"] = {
+          {
+            ["itemID"] = 268256,
+            ["source"] = "The Coiled Altar",
+          },
+        },
+        ["Legs"] = {
+          {
+            ["itemID"] = 268225,
+            ["source"] = "The Coiled Altar",
+          },
+        },
+        ["Feet"] = {
+          {
+            ["itemID"] = 244569,
+            ["source"] = "Crafting",
+          },
+        },
+        ["Ring"] = {
+          {
+            ["itemID"] = 158366,
+            ["source"] = "Temple of Sethraliss",
+          },
+          {
+            ["itemID"] = 252258,
+            ["source"] = "Voidscar Arena",
+          },
+        },
+        ["Trinket"] = {
+          {
+            ["itemID"] = 270175,
+            ["source"] = "Ula'tek",
+          },
+          {
+            ["itemID"] = 270173,
+            ["source"] = "The Coiled Altar",
+          },
+        },
+      },
+      ["bisItems"] = {
+        [158366] = true,
+        [244569] = true,
+        [244576] = true,
+        [251124] = true,
+        [252258] = true,
+        [268215] = true,
+        [268225] = true,
+        [268235] = true,
+        [268253] = true,
+        [268256] = true,
+        [268265] = true,
+        [270173] = true,
+        [270175] = true,
+        [271517] = true,
+        [271875] = true,
+      },
+      ["itemSources"] = {
+        [158366] = "Temple of Sethraliss",
+        [244569] = "Crafting",
+        [244576] = "Crafting",
+        [251124] = "Murder Row",
+        [252258] = "Voidscar Arena",
+        [268215] = "Ula'tek",
+        [268225] = "The Coiled Altar",
+        [268235] = "Nek'zali the Soulcoiler",
+        [268253] = "The Coiled Altar",
+        [268256] = "The Coiled Altar",
+        [268265] = "Ula'tek",
+        [270173] = "The Coiled Altar",
+        [270175] = "Ula'tek",
+        [271517] = "Tier Set",
+        [271875] = "Ula'tek",
+      },
+    },
+    ["paladin/holy"] = {
+      ["specID"] = 65,
+      ["classSlug"] = "paladin",
+      ["specSlug"] = "holy",
+      ["sourceUrl"] = "https://www.wowhead.com/guide/classes/paladin/holy/bis-gear",
+      ["itemsBySlot"] = {
+        ["Weapon"] = {
+          {
+            ["itemID"] = 268211,
+            ["source"] = "The Coiled Altar",
+          },
+        },
+        ["Offhand"] = {
+          {
+            ["itemID"] = 268262,
+            ["source"] = "Nymrissa Wavecaller",
+          },
+        },
+        ["Head"] = {
+          {
+            ["itemID"] = 271465,
+            ["source"] = "Murder Row",
+          },
+        },
+        ["Neck"] = {
+          {
+            ["itemID"] = 268265,
+            ["source"] = "Ula'tek",
+          },
+        },
+        ["Shoulders"] = {
+          {
+            ["itemID"] = 271463,
+            ["source"] = "Murder Row",
+          },
+        },
+        ["Back"] = {
+          {
+            ["itemID"] = 268253,
+            ["source"] = "The Coiled Altar",
+          },
+        },
+        ["Chest"] = {
+          {
+            ["itemID"] = 271468,
+            ["source"] = "The Coiled Altar",
+          },
+        },
+        ["Wrist"] = {
+          {
+            ["itemID"] = 268239,
+            ["source"] = "The Lost Explorers",
+          },
+        },
+        ["Hands"] = {
+          {
+            ["itemID"] = 271466,
+            ["source"] = "Entombed Sentinels",
+          },
+        },
+        ["Waist"] = {
+          {
+            ["itemID"] = 268259,
+            ["source"] = "The Coiled Altar",
+          },
+        },
+        ["Legs"] = {
+          {
+            ["itemID"] = 271464,
+            ["source"] = "Ula'tek",
+          },
+        },
+        ["Feet"] = {
+          {
+            ["itemID"] = 268260,
+            ["source"] = "Vashnik the Malignant",
+          },
+        },
+        ["Ring"] = {
+          {
+            ["itemID"] = 268249,
+            ["source"] = "Vashnik the Malignant",
+          },
+          {
+            ["itemID"] = 252258,
+            ["source"] = "Voidscar Arena",
+          },
+        },
+        ["Trinket"] = {
+          {
+            ["itemID"] = 270162,
+            ["source"] = "Nek'zali the Soulcoiler",
+          },
+          {
+            ["itemID"] = 270164,
+            ["source"] = "The Lost Explorers",
+          },
+        },
+      },
+      ["bisItems"] = {
+        [252258] = true,
+        [268211] = true,
+        [268239] = true,
+        [268249] = true,
+        [268253] = true,
+        [268259] = true,
+        [268260] = true,
+        [268262] = true,
+        [268265] = true,
+        [270162] = true,
+        [270164] = true,
+        [271463] = true,
+        [271464] = true,
+        [271465] = true,
+        [271466] = true,
+        [271468] = true,
+      },
+      ["itemSources"] = {
+        [252258] = "Voidscar Arena",
+        [268211] = "The Coiled Altar",
+        [268239] = "The Lost Explorers",
+        [268249] = "Vashnik the Malignant",
+        [268253] = "The Coiled Altar",
+        [268259] = "The Coiled Altar",
+        [268260] = "Vashnik the Malignant",
+        [268262] = "Nymrissa Wavecaller",
+        [268265] = "Ula'tek",
+        [270162] = "Nek'zali the Soulcoiler",
+        [270164] = "The Lost Explorers",
+        [271463] = "Murder Row",
+        [271464] = "Ula'tek",
+        [271465] = "Murder Row",
+        [271466] = "Entombed Sentinels",
+        [271468] = "The Coiled Altar",
+      },
+    },
+    ["paladin/protection"] = {
+      ["specID"] = 66,
+      ["classSlug"] = "paladin",
+      ["specSlug"] = "protection",
+      ["sourceUrl"] = "https://www.wowhead.com/guide/classes/paladin/protection/bis-gear",
+      ["itemsBySlot"] = {
+        ["Weapon"] = {
+          {
+            ["itemID"] = 268209,
+            ["source"] = "The Coiled Altar",
+          },
+        },
+        ["Offhand"] = {
+          {
+            ["itemID"] = 268196,
+            ["source"] = "The Lost Explorers",
+          },
+        },
+        ["Head"] = {
+          {
+            ["itemID"] = 271465,
+            ["source"] = "Tier Set",
+          },
+        },
+        ["Neck"] = {
+          {
+            ["itemID"] = 268265,
+            ["source"] = "Ula'tek",
+          },
+        },
+        ["Shoulders"] = {
+          {
+            ["itemID"] = 271463,
+            ["source"] = "Tier Set",
+          },
+        },
+        ["Back"] = {
+          {
+            ["itemID"] = 268253,
+            ["source"] = "The Coiled Altar",
+          },
+        },
+        ["Chest"] = {
+          {
+            ["itemID"] = 271468,
+            ["source"] = "Tier Set",
+          },
+        },
+        ["Wrist"] = {
+          {
+            ["itemID"] = 237834,
+            ["source"] = "Crafting Blacksmithing",
+          },
+        },
+        ["Hands"] = {
+          {
+            ["itemID"] = 271466,
+            ["source"] = "Tier Set",
+          },
+        },
+        ["Waist"] = {
+          {
+            ["itemID"] = 268259,
+            ["source"] = "The Coiled Altar",
+          },
+        },
+        ["Legs"] = {
+          {
+            ["itemID"] = 271878,
+            ["source"] = "Ula'tek",
+          },
+        },
+        ["Feet"] = {
+          {
+            ["itemID"] = 237828,
+            ["source"] = "Crafting Blacksmithing",
+          },
+        },
+        ["Ring"] = {
+          {
+            ["itemID"] = 268252,
+            ["source"] = "Sszorak",
+          },
+          {
+            ["itemID"] = 268249,
+            ["source"] = "Vashnik the Malignant",
+          },
+        },
+        ["Trinket"] = {
+          {
+            ["itemID"] = 270173,
+            ["source"] = "The Coiled Altar",
+          },
+          {
+            ["itemID"] = 270175,
+            ["source"] = "Ula'tek",
+          },
+        },
+      },
+      ["bisItems"] = {
+        [237828] = true,
+        [237834] = true,
+        [268196] = true,
+        [268209] = true,
+        [268249] = true,
+        [268252] = true,
+        [268253] = true,
+        [268259] = true,
+        [268265] = true,
+        [270173] = true,
+        [270175] = true,
+        [271463] = true,
+        [271465] = true,
+        [271466] = true,
+        [271468] = true,
+        [271878] = true,
+      },
+      ["itemSources"] = {
+        [237828] = "Crafting Blacksmithing",
+        [237834] = "Crafting Blacksmithing",
+        [268196] = "The Lost Explorers",
+        [268209] = "The Coiled Altar",
+        [268249] = "Vashnik the Malignant",
+        [268252] = "Sszorak",
+        [268253] = "The Coiled Altar",
+        [268259] = "The Coiled Altar",
+        [268265] = "Ula'tek",
+        [270173] = "The Coiled Altar",
+        [270175] = "Ula'tek",
+        [271463] = "Tier Set",
+        [271465] = "Tier Set",
+        [271466] = "Tier Set",
+        [271468] = "Tier Set",
+        [271878] = "Ula'tek",
+      },
+    },
+    ["paladin/retribution"] = {
+      ["specID"] = 70,
+      ["classSlug"] = "paladin",
+      ["specSlug"] = "retribution",
+      ["sourceUrl"] = "https://www.wowhead.com/guide/classes/paladin/retribution/bis-gear",
+      ["itemsBySlot"] = {
+        ["Weapon"] = {
+          {
+            ["itemID"] = 268213,
+            ["source"] = "The Coiled Altar",
+          },
+        },
+        ["Head"] = {
+          {
+            ["itemID"] = 271465,
+            ["source"] = "Tier Set",
+          },
+        },
+        ["Neck"] = {
+          {
+            ["itemID"] = 268265,
+            ["source"] = "Ula'tek",
+          },
+        },
+        ["Shoulders"] = {
+          {
+            ["itemID"] = 271463,
+            ["source"] = "Tier Set",
+          },
+        },
+        ["Back"] = {
+          {
+            ["itemID"] = 268253,
+            ["source"] = "The Coiled Altar",
+          },
+        },
+        ["Chest"] = {
+          {
+            ["itemID"] = 271468,
+            ["source"] = "Tier Set",
+          },
+        },
+        ["Wrist"] = {
+          {
+            ["itemID"] = 237834,
+            ["source"] = "Blacksmithing",
+          },
+        },
+        ["Hands"] = {
+          {
+            ["itemID"] = 271466,
+            ["source"] = "Tier Set",
+          },
+        },
+        ["Waist"] = {
+          {
+            ["itemID"] = 268259,
+            ["source"] = "The Coiled Altar",
+          },
+        },
+        ["Legs"] = {
+          {
+            ["itemID"] = 271464,
+            ["source"] = "Ula'tek",
+          },
+        },
+        ["Feet"] = {
+          {
+            ["itemID"] = 268260,
+            ["source"] = "Vashnik the Malignant",
+          },
+        },
+        ["Ring"] = {
+          {
+            ["itemID"] = 252258,
+            ["source"] = "Voidscar Arena",
+          },
+          {
+            ["itemID"] = 251513,
+            ["source"] = "Jewelcrafting",
+          },
+        },
+        ["Trinket"] = {
+          {
+            ["itemID"] = 270173,
+            ["source"] = "The Coiled Altar",
+          },
+          {
+            ["itemID"] = 270175,
+            ["source"] = "Ula'tek",
+          },
+        },
+      },
+      ["bisItems"] = {
+        [237834] = true,
+        [251513] = true,
+        [252258] = true,
+        [268213] = true,
+        [268253] = true,
+        [268259] = true,
+        [268260] = true,
+        [268265] = true,
+        [270173] = true,
+        [270175] = true,
+        [271463] = true,
+        [271464] = true,
+        [271465] = true,
+        [271466] = true,
+        [271468] = true,
+      },
+      ["itemSources"] = {
+        [237834] = "Blacksmithing",
+        [251513] = "Jewelcrafting",
+        [252258] = "Voidscar Arena",
+        [268213] = "The Coiled Altar",
+        [268253] = "The Coiled Altar",
+        [268259] = "The Coiled Altar",
+        [268260] = "Vashnik the Malignant",
+        [268265] = "Ula'tek",
+        [270173] = "The Coiled Altar",
+        [270175] = "Ula'tek",
+        [271463] = "Tier Set",
+        [271464] = "Ula'tek",
+        [271465] = "Tier Set",
+        [271466] = "Tier Set",
+        [271468] = "Tier Set",
+      },
+    },
+    ["priest/discipline"] = {
+      ["specID"] = 256,
+      ["classSlug"] = "priest",
+      ["specSlug"] = "discipline",
+      ["sourceUrl"] = "https://www.wowhead.com/guide/classes/priest/discipline/bis-gear",
+      ["itemsBySlot"] = {
+        ["Weapon"] = {
+          {
+            ["itemID"] = 271092,
+            ["source"] = "",
+          },
+        },
+        ["Offhand"] = {
+          {
+            ["itemID"] = 159667,
+            ["source"] = "",
+          },
+        },
+        ["Head"] = {
+          {
+            ["itemID"] = 271874,
+            ["source"] = "",
+          },
+        },
+        ["Neck"] = {
+          {
+            ["itemID"] = 268265,
+            ["source"] = "",
+          },
+        },
+        ["Shoulders"] = {
+          {
+            ["itemID"] = 271553,
+            ["source"] = "",
+          },
+        },
+        ["Back"] = {
+          {
+            ["itemID"] = 268253,
+            ["source"] = "",
+          },
+        },
+        ["Chest"] = {
+          {
+            ["itemID"] = 271558,
+            ["source"] = "",
+          },
+        },
+        ["Wrist"] = {
+          {
+            ["itemID"] = 239648,
+            ["source"] = "Crafting",
+          },
+        },
+        ["Hands"] = {
+          {
+            ["itemID"] = 271556,
+            ["source"] = "The Coiled Altar",
+          },
+        },
+        ["Waist"] = {
+          {
+            ["itemID"] = 239649,
+            ["source"] = "Crafting",
+          },
+        },
+        ["Legs"] = {
+          {
+            ["itemID"] = 271554,
+            ["source"] = "",
+          },
+        },
+        ["Feet"] = {
+          {
+            ["itemID"] = 268255,
+            ["source"] = "",
+          },
+        },
+        ["Ring"] = {
+          {
+            ["itemID"] = 268266,
+            ["source"] = "",
+          },
+          {
+            ["itemID"] = 252258,
+            ["source"] = "",
+          },
+        },
+        ["Trinket"] = {
+          {
+            ["itemID"] = 270167,
+            ["source"] = "",
+          },
+          {
+            ["itemID"] = 270162,
+            ["source"] = "",
+          },
+        },
+      },
+      ["bisItems"] = {
+        [159667] = true,
+        [239648] = true,
+        [239649] = true,
+        [252258] = true,
+        [268253] = true,
+        [268255] = true,
+        [268265] = true,
+        [268266] = true,
+        [270162] = true,
+        [270167] = true,
+        [271092] = true,
+        [271553] = true,
+        [271554] = true,
+        [271556] = true,
+        [271558] = true,
+        [271874] = true,
+      },
+      ["itemSources"] = {
+        [239648] = "Crafting",
+        [239649] = "Crafting",
+        [271556] = "The Coiled Altar",
+      },
+    },
+    ["priest/holy"] = {
+      ["specID"] = 257,
+      ["classSlug"] = "priest",
+      ["specSlug"] = "holy",
+      ["sourceUrl"] = "https://www.wowhead.com/guide/classes/priest/holy/bis-gear",
+      ["itemsBySlot"] = {
+        ["Weapon"] = {
+          {
+            ["itemID"] = 271092,
+            ["source"] = "",
+          },
+        },
+        ["Offhand"] = {
+          {
+            ["itemID"] = 268263,
+            ["source"] = "",
+          },
+        },
+        ["Head"] = {
+          {
+            ["itemID"] = 271874,
+            ["source"] = "",
+          },
+        },
+        ["Neck"] = {
+          {
+            ["itemID"] = 268265,
+            ["source"] = "",
+          },
+        },
+        ["Shoulders"] = {
+          {
+            ["itemID"] = 271553,
+            ["source"] = "",
+          },
+        },
+        ["Back"] = {
+          {
+            ["itemID"] = 251132,
+            ["source"] = "",
+          },
+        },
+        ["Chest"] = {
+          {
+            ["itemID"] = 271558,
+            ["source"] = "",
+          },
+        },
+        ["Wrist"] = {
+          {
+            ["itemID"] = 239648,
+            ["source"] = "Crafting",
+          },
+        },
+        ["Hands"] = {
+          {
+            ["itemID"] = 271556,
+            ["source"] = "",
+          },
+        },
+        ["Waist"] = {
+          {
+            ["itemID"] = 239649,
+            ["source"] = "Crafting",
+          },
+        },
+        ["Legs"] = {
+          {
+            ["itemID"] = 271554,
+            ["source"] = "",
+          },
+        },
+        ["Feet"] = {
+          {
+            ["itemID"] = 268218,
+            ["source"] = "",
+          },
+        },
+        ["Ring"] = {
+          {
+            ["itemID"] = 268252,
+            ["source"] = "",
+          },
+          {
+            ["itemID"] = 251148,
+            ["source"] = "",
+          },
+        },
+        ["Trinket"] = {
+          {
+            ["itemID"] = 270164,
+            ["source"] = "",
+          },
+          {
+            ["itemID"] = 270162,
+            ["source"] = "",
+          },
+        },
+      },
+      ["bisItems"] = {
+        [239648] = true,
+        [239649] = true,
+        [251132] = true,
+        [251148] = true,
+        [268218] = true,
+        [268252] = true,
+        [268263] = true,
+        [268265] = true,
+        [270162] = true,
+        [270164] = true,
+        [271092] = true,
+        [271553] = true,
+        [271554] = true,
+        [271556] = true,
+        [271558] = true,
+        [271874] = true,
+      },
+      ["itemSources"] = {
+        [239648] = "Crafting",
+        [239649] = "Crafting",
+      },
+    },
+    ["priest/shadow"] = {
+      ["specID"] = 258,
+      ["classSlug"] = "priest",
+      ["specSlug"] = "shadow",
+      ["sourceUrl"] = "https://www.wowhead.com/guide/classes/priest/shadow/bis-gear",
+      ["itemsBySlot"] = {
+        ["Weapon"] = {
+          {
+            ["itemID"] = 271092,
+            ["source"] = "Ula'tek",
+          },
+        },
+        ["Offhand"] = {
+          {
+            ["itemID"] = 268197,
+            ["source"] = "Entombed Sentinels",
+          },
+        },
+        ["Head"] = {
+          {
+            ["itemID"] = 271555,
+            ["source"] = "Ula'tek",
+          },
+        },
+        ["Neck"] = {
+          {
+            ["itemID"] = 268265,
+            ["source"] = "Ula'tek",
+          },
+        },
+        ["Shoulders"] = {
+          {
+            ["itemID"] = 239045,
+            ["source"] = "King's Rest",
+          },
+        },
+        ["Back"] = {
+          {
+            ["itemID"] = 268253,
+            ["source"] = "The Coiled Altar",
+          },
+        },
+        ["Chest"] = {
+          {
+            ["itemID"] = 271558,
+            ["source"] = "Vashnik the Malignant",
+          },
+        },
+        ["Wrist"] = {
+          {
+            ["itemID"] = 239648,
+            ["source"] = "Crafting/Misc",
+          },
+        },
+        ["Hands"] = {
+          {
+            ["itemID"] = 271556,
+            ["source"] = "The Coiled Altar",
+          },
+        },
+        ["Waist"] = {
+          {
+            ["itemID"] = 239649,
+            ["source"] = "Crafting/Misc",
+          },
+        },
+        ["Legs"] = {
+          {
+            ["itemID"] = 271554,
+            ["source"] = "Den of Nalorakk",
+          },
+        },
+        ["Feet"] = {
+          {
+            ["itemID"] = 268255,
+            ["source"] = "The Coiled Altar",
+          },
+        },
+        ["Ring"] = {
+          {
+            ["itemID"] = 252258,
+            ["source"] = "Voidscar Arena",
+          },
+          {
+            ["itemID"] = 268249,
+            ["source"] = "Vashnik the Malignant",
+          },
+        },
+        ["Trinket"] = {
+          {
+            ["itemID"] = 270164,
+            ["source"] = "The Lost Explorers",
+          },
+          {
+            ["itemID"] = 250215,
+            ["source"] = "Murder Row",
+          },
+        },
+      },
+      ["bisItems"] = {
+        [239045] = true,
+        [239648] = true,
+        [239649] = true,
+        [250215] = true,
+        [252258] = true,
+        [268197] = true,
+        [268249] = true,
+        [268253] = true,
+        [268255] = true,
+        [268265] = true,
+        [270164] = true,
+        [271092] = true,
+        [271554] = true,
+        [271555] = true,
+        [271556] = true,
+        [271558] = true,
+      },
+      ["itemSources"] = {
+        [239045] = "King's Rest",
+        [239648] = "Crafting/Misc",
+        [239649] = "Crafting/Misc",
+        [250215] = "Murder Row",
+        [252258] = "Voidscar Arena",
+        [268197] = "Entombed Sentinels",
+        [268249] = "Vashnik the Malignant",
+        [268253] = "The Coiled Altar",
+        [268255] = "The Coiled Altar",
+        [268265] = "Ula'tek",
+        [270164] = "The Lost Explorers",
+        [271092] = "Ula'tek",
+        [271554] = "Den of Nalorakk",
+        [271555] = "Ula'tek",
+        [271556] = "The Coiled Altar",
+        [271558] = "Vashnik the Malignant",
+      },
+    },
+    ["rogue/assassination"] = {
+      ["specID"] = 259,
+      ["classSlug"] = "rogue",
+      ["specSlug"] = "assassination",
+      ["sourceUrl"] = "https://www.wowhead.com/guide/classes/rogue/assassination/bis-gear",
+      ["itemsBySlot"] = {
+        ["Weapon"] = {
+          {
+            ["itemID"] = 271093,
+            ["source"] = "Ula'tek",
+          },
+        },
+        ["Offhand"] = {
+          {
+            ["itemID"] = 237837,
+            ["source"] = "Crafting/Misc",
+          },
+        },
+        ["Head"] = {
+          {
+            ["itemID"] = 271510,
+            ["source"] = "Ula'tek",
+          },
+        },
+        ["Neck"] = {
+          {
+            ["itemID"] = 268265,
+            ["source"] = "Ula'tek",
+          },
+        },
+        ["Shoulders"] = {
+          {
+            ["itemID"] = 271508,
+            ["source"] = "Voidscar Arena",
+          },
+        },
+        ["Back"] = {
+          {
+            ["itemID"] = 268253,
+            ["source"] = "The Coiled Altar",
+          },
+        },
+        ["Chest"] = {
+          {
+            ["itemID"] = 271513,
+            ["source"] = "Den of Nalorakk",
+          },
+        },
+        ["Wrist"] = {
+          {
+            ["itemID"] = 244576,
+            ["source"] = "Crafting/Misc",
+          },
+        },
+        ["Hands"] = {
+          {
+            ["itemID"] = 271511,
+            ["source"] = "Entombed Sentinels",
+          },
+        },
+        ["Waist"] = {
+          {
+            ["itemID"] = 268256,
+            ["source"] = "The Coiled Altar",
+          },
+        },
+        ["Legs"] = {
+          {
+            ["itemID"] = 271509,
+            ["source"] = "The Coiled Altar",
+          },
+        },
+        ["Feet"] = {
+          {
+            ["itemID"] = 251153,
+            ["source"] = "Den of Nalorakk",
+          },
+        },
+        ["Ring"] = {
+          {
+            ["itemID"] = 273792,
+            ["source"] = "Altar of Fangs",
+          },
+          {
+            ["itemID"] = 268249,
+            ["source"] = "Vashnik the Malignant",
+          },
+        },
+        ["Trinket"] = {
+          {
+            ["itemID"] = 270175,
+            ["source"] = "Ula'tek",
+          },
+          {
+            ["itemID"] = 270168,
+            ["source"] = "Ula'tek",
+          },
+        },
+      },
+      ["bisItems"] = {
+        [237837] = true,
+        [244576] = true,
+        [251153] = true,
+        [268249] = true,
+        [268253] = true,
+        [268256] = true,
+        [268265] = true,
+        [270168] = true,
+        [270175] = true,
+        [271093] = true,
+        [271508] = true,
+        [271509] = true,
+        [271510] = true,
+        [271511] = true,
+        [271513] = true,
+        [273792] = true,
+      },
+      ["itemSources"] = {
+        [237837] = "Crafting/Misc",
+        [244576] = "Crafting/Misc",
+        [251153] = "Den of Nalorakk",
+        [268249] = "Vashnik the Malignant",
+        [268253] = "The Coiled Altar",
+        [268256] = "The Coiled Altar",
+        [268265] = "Ula'tek",
+        [270168] = "Ula'tek",
+        [270175] = "Ula'tek",
+        [271093] = "Ula'tek",
+        [271508] = "Voidscar Arena",
+        [271509] = "The Coiled Altar",
+        [271510] = "Ula'tek",
+        [271511] = "Entombed Sentinels",
+        [271513] = "Den of Nalorakk",
+        [273792] = "Altar of Fangs",
+      },
+    },
+    ["rogue/outlaw"] = {
+      ["specID"] = 260,
+      ["classSlug"] = "rogue",
+      ["specSlug"] = "outlaw",
+      ["sourceUrl"] = "https://www.wowhead.com/guide/classes/rogue/outlaw/bis-gear",
+      ["itemsBySlot"] = {
+        ["Weapon"] = {
+          {
+            ["itemID"] = 268209,
+            ["source"] = "The Coiled Altar",
+          },
+        },
+        ["Offhand"] = {
+          {
+            ["itemID"] = 275070,
+            ["source"] = "Altar of Fangs",
+          },
+        },
+        ["Head"] = {
+          {
+            ["itemID"] = 271875,
+            ["source"] = "Ula'tek",
+          },
+        },
+        ["Neck"] = {
+          {
+            ["itemID"] = 268265,
+            ["source"] = "Ula'tek",
+          },
+        },
+        ["Shoulders"] = {
+          {
+            ["itemID"] = 271508,
+            ["source"] = "Tier Set",
+          },
+        },
+        ["Back"] = {
+          {
+            ["itemID"] = 268248,
+            ["source"] = "Nek'zali the Soulcoiler",
+          },
+        },
+        ["Chest"] = {
+          {
+            ["itemID"] = 271513,
+            ["source"] = "Tier Set",
+          },
+        },
+        ["Wrist"] = {
+          {
+            ["itemID"] = 268240,
+            ["source"] = "Nek'zali the Soulcoiler",
+          },
+        },
+        ["Hands"] = {
+          {
+            ["itemID"] = 271511,
+            ["source"] = "Tier Set",
+          },
+        },
+        ["Waist"] = {
+          {
+            ["itemID"] = 244573,
+            ["source"] = "Crafting/Misc",
+          },
+        },
+        ["Legs"] = {
+          {
+            ["itemID"] = 271509,
+            ["source"] = "Tier Set",
+          },
+        },
+        ["Feet"] = {
+          {
+            ["itemID"] = 244569,
+            ["source"] = "Crafting/Misc",
+          },
+        },
+        ["Ring"] = {
+          {
+            ["itemID"] = 268266,
+            ["source"] = "Nymrissa Wavecaller",
+          },
+          {
+            ["itemID"] = 268252,
+            ["source"] = "Sszorak",
+          },
+        },
+        ["Trinket"] = {
+          {
+            ["itemID"] = 270173,
+            ["source"] = "The Coiled Altar",
+          },
+          {
+            ["itemID"] = 270175,
+            ["source"] = "Ula'tek",
+          },
+        },
+      },
+      ["bisItems"] = {
+        [244569] = true,
+        [244573] = true,
+        [268209] = true,
+        [268240] = true,
+        [268248] = true,
+        [268252] = true,
+        [268265] = true,
+        [268266] = true,
+        [270173] = true,
+        [270175] = true,
+        [271508] = true,
+        [271509] = true,
+        [271511] = true,
+        [271513] = true,
+        [271875] = true,
+        [275070] = true,
+      },
+      ["itemSources"] = {
+        [244569] = "Crafting/Misc",
+        [244573] = "Crafting/Misc",
+        [268209] = "The Coiled Altar",
+        [268240] = "Nek'zali the Soulcoiler",
+        [268248] = "Nek'zali the Soulcoiler",
+        [268252] = "Sszorak",
+        [268265] = "Ula'tek",
+        [268266] = "Nymrissa Wavecaller",
+        [270173] = "The Coiled Altar",
+        [270175] = "Ula'tek",
+        [271508] = "Tier Set",
+        [271509] = "Tier Set",
+        [271511] = "Tier Set",
+        [271513] = "Tier Set",
+        [271875] = "Ula'tek",
+        [275070] = "Altar of Fangs",
+      },
+    },
+    ["rogue/subtlety"] = {
+      ["specID"] = 261,
+      ["classSlug"] = "rogue",
+      ["specSlug"] = "subtlety",
+      ["sourceUrl"] = "https://www.wowhead.com/guide/classes/rogue/subtlety/bis-gear",
+      ["itemsBySlot"] = {
+        ["Weapon"] = {
+          {
+            ["itemID"] = 271093,
+            ["source"] = "Ula'tek",
+          },
+        },
+        ["Offhand"] = {
+          {
+            ["itemID"] = 237837,
+            ["source"] = "Crafting/Misc",
+          },
+        },
+        ["Head"] = {
+          {
+            ["itemID"] = 271510,
+            ["source"] = "Tier Set",
+          },
+        },
+        ["Neck"] = {
+          {
+            ["itemID"] = 268265,
+            ["source"] = "Ula'tek",
+          },
+        },
+        ["Shoulders"] = {
+          {
+            ["itemID"] = 271508,
+            ["source"] = "Tier Set",
+          },
+        },
+        ["Back"] = {
+          {
+            ["itemID"] = 268253,
+            ["source"] = "The Coiled Altar",
+          },
+        },
+        ["Chest"] = {
+          {
+            ["itemID"] = 271513,
+            ["source"] = "Tier Set",
+          },
+        },
+        ["Wrist"] = {
+          {
+            ["itemID"] = 244576,
+            ["source"] = "Crafting/Misc",
+          },
+        },
+        ["Hands"] = {
+          {
+            ["itemID"] = 271511,
+            ["source"] = "Tier Set",
+          },
+        },
+        ["Waist"] = {
+          {
+            ["itemID"] = 268256,
+            ["source"] = "The Coiled Altar",
+          },
+        },
+        ["Legs"] = {
+          {
+            ["itemID"] = 271509,
+            ["source"] = "The Coiled Altar",
+          },
+        },
+        ["Feet"] = {
+          {
+            ["itemID"] = 159304,
+            ["source"] = "King's Rest",
+          },
+        },
+        ["Ring"] = {
+          {
+            ["itemID"] = 251194,
+            ["source"] = "Blinding Vale",
+          },
+          {
+            ["itemID"] = 162544,
+            ["source"] = "Temple of Sethraliss",
+          },
+        },
+        ["Trinket"] = {
+          {
+            ["itemID"] = 270173,
+            ["source"] = "The Coiled Altar",
+          },
+          {
+            ["itemID"] = 270175,
+            ["source"] = "Ula'tek",
+          },
+        },
+      },
+      ["bisItems"] = {
+        [159304] = true,
+        [162544] = true,
+        [237837] = true,
+        [244576] = true,
+        [251194] = true,
+        [268253] = true,
+        [268256] = true,
+        [268265] = true,
+        [270173] = true,
+        [270175] = true,
+        [271093] = true,
+        [271508] = true,
+        [271509] = true,
+        [271510] = true,
+        [271511] = true,
+        [271513] = true,
+      },
+      ["itemSources"] = {
+        [159304] = "King's Rest",
+        [162544] = "Temple of Sethraliss",
+        [237837] = "Crafting/Misc",
+        [244576] = "Crafting/Misc",
+        [251194] = "Blinding Vale",
+        [268253] = "The Coiled Altar",
+        [268256] = "The Coiled Altar",
+        [268265] = "Ula'tek",
+        [270173] = "The Coiled Altar",
+        [270175] = "Ula'tek",
+        [271093] = "Ula'tek",
+        [271508] = "Tier Set",
+        [271509] = "The Coiled Altar",
+        [271510] = "Tier Set",
+        [271511] = "Tier Set",
+        [271513] = "Tier Set",
+      },
+    },
+    ["shaman/elemental"] = {
+      ["specID"] = 262,
+      ["classSlug"] = "shaman",
+      ["specSlug"] = "elemental",
+      ["sourceUrl"] = "https://www.wowhead.com/guide/classes/shaman/elemental/bis-gear",
+      ["itemsBySlot"] = {
+        ["Weapon"] = {
+          {
+            ["itemID"] = 271092,
+            ["source"] = "Ula'tek",
+          },
+        },
+        ["Offhand"] = {
+          {
+            ["itemID"] = 268262,
+            ["source"] = "Nymrissa Wavecaller",
+          },
+        },
+        ["Head"] = {
+          {
+            ["itemID"] = 271483,
+            ["source"] = "Tier Set",
+          },
+        },
+        ["Neck"] = {
+          {
+            ["itemID"] = 268265,
+            ["source"] = "Ula'tek",
+          },
+        },
+        ["Shoulders"] = {
+          {
+            ["itemID"] = 271481,
+            ["source"] = "Tier Set",
+          },
+        },
+        ["Back"] = {
+          {
+            ["itemID"] = 268253,
+            ["source"] = "The Coiled Altar",
+          },
+        },
+        ["Chest"] = {
+          {
+            ["itemID"] = 271486,
+            ["source"] = "Tier Set",
+          },
+        },
+        ["Wrist"] = {
+          {
+            ["itemID"] = 244584,
+            ["source"] = "Crafting",
+          },
+        },
+        ["Hands"] = {
+          {
+            ["itemID"] = 271484,
+            ["source"] = "Tier Set",
+          },
+        },
+        ["Waist"] = {
+          {
+            ["itemID"] = 268254,
+            ["source"] = "Vashnik the Malignant",
+          },
+        },
+        ["Legs"] = {
+          {
+            ["itemID"] = 271482,
             ["source"] = "Tier Set",
           },
         },
@@ -2065,2083 +4321,60 @@ ns.BisData = {
         },
         ["Ring"] = {
           {
-            ["itemID"] = 251093,
-            ["source"] = "Nexus Point Xenas",
+            ["itemID"] = 268249,
+            ["source"] = "Vashnik the Malignant",
           },
           {
-            ["itemID"] = 251217,
-            ["source"] = "Nexus Point Xenas",
+            ["itemID"] = 252258,
+            ["source"] = "Voidscar Arena",
           },
         },
         ["Trinket"] = {
           {
-            ["itemID"] = 249343,
-            ["source"] = "Chimaerus",
+            ["itemID"] = 270164,
+            ["source"] = "The Lost Explorers",
           },
           {
-            ["itemID"] = 249806,
-            ["source"] = "Belo'ren",
+            ["itemID"] = 273796,
+            ["source"] = "Altar of Fangs",
           },
         },
       },
       ["bisItems"] = {
-        [151323] = true,
-        [237837] = true,
         [244577] = true,
-        [249284] = true,
-        [249304] = true,
-        [249343] = true,
-        [249370] = true,
-        [249371] = true,
-        [249806] = true,
-        [249987] = true,
-        [249988] = true,
-        [249989] = true,
-        [249991] = true,
-        [250247] = true,
-        [251093] = true,
-        [251217] = true,
+        [244584] = true,
+        [252258] = true,
+        [268249] = true,
+        [268253] = true,
+        [268254] = true,
+        [268262] = true,
+        [268265] = true,
+        [270164] = true,
+        [271092] = true,
+        [271481] = true,
+        [271482] = true,
+        [271483] = true,
+        [271484] = true,
+        [271486] = true,
+        [273796] = true,
       },
       ["itemSources"] = {
-        [237837] = "Crafting",
         [244577] = "Crafting",
-        [249284] = "Belo'ren",
-        [249304] = "Fallen-King Salhadaar",
-        [249343] = "Chimaerus",
-        [249370] = "Vaelgor",
-        [249371] = "Chimaerus",
-        [249806] = "Belo'ren",
-        [249987] = "Tier Set",
-        [249988] = "Tier Set",
-        [249989] = "Tier Set",
-        [249991] = "Tier Set",
-        [250247] = "March on Quel'Danas",
-        [251093] = "Nexus Point Xenas",
-        [251217] = "Nexus Point Xenas",
-      },
-    },
-    ["mage/arcane"] = {
-      ["specID"] = 62,
-      ["classSlug"] = "mage",
-      ["specSlug"] = "arcane",
-      ["sourceUrl"] = "https://www.wowhead.com/guide/classes/mage/arcane/bis-gear",
-      ["itemsBySlot"] = {
-        ["Weapon"] = {
-          {
-            ["itemID"] = 258218,
-            ["source"] = "Skyreach",
-          },
-        },
-        ["Offhand"] = {
-          {
-            ["itemID"] = 251094,
-            ["source"] = "Windrunner Spire",
-          },
-        },
-        ["Head"] = {
-          {
-            ["itemID"] = 250060,
-            ["source"] = "Tier Set",
-          },
-        },
-        ["Neck"] = {
-          {
-            ["itemID"] = 250247,
-            ["source"] = "Midnight Falls",
-          },
-        },
-        ["Shoulders"] = {
-          {
-            ["itemID"] = 250058,
-            ["source"] = "Tier Set",
-          },
-        },
-        ["Back"] = {
-          {
-            ["itemID"] = 239661,
-            ["source"] = "Crafting",
-          },
-        },
-        ["Chest"] = {
-          {
-            ["itemID"] = 250063,
-            ["source"] = "Tier Set",
-          },
-        },
-        ["Wrist"] = {
-          {
-            ["itemID"] = 239660,
-            ["source"] = "Crafting",
-          },
-        },
-        ["Hands"] = {
-          {
-            ["itemID"] = 250061,
-            ["source"] = "Tier Set",
-          },
-        },
-        ["Waist"] = {
-          {
-            ["itemID"] = 249376,
-            ["source"] = "Belo'ren",
-          },
-        },
-        ["Legs"] = {
-          {
-            ["itemID"] = 251090,
-            ["source"] = "Windrunner Spire",
-          },
-        },
-        ["Feet"] = {
-          {
-            ["itemID"] = 249373,
-            ["source"] = "Chimaerus",
-          },
-        },
-        ["Ring"] = {
-          {
-            ["itemID"] = 249919,
-            ["source"] = "Belo'ren",
-          },
-          {
-            ["itemID"] = 249920,
-            ["source"] = "Midnight Falls",
-          },
-        },
-        ["Trinket"] = {
-          {
-            ["itemID"] = 249346,
-            ["source"] = "Vaelgor & Ezzorak",
-          },
-          {
-            ["itemID"] = 249343,
-            ["source"] = "Chimaerus",
-          },
-        },
-      },
-      ["bisItems"] = {
-        [239660] = true,
-        [239661] = true,
-        [249343] = true,
-        [249346] = true,
-        [249373] = true,
-        [249376] = true,
-        [249919] = true,
-        [249920] = true,
-        [250058] = true,
-        [250060] = true,
-        [250061] = true,
-        [250063] = true,
-        [250247] = true,
-        [251090] = true,
-        [251094] = true,
-        [258218] = true,
-      },
-      ["itemSources"] = {
-        [239660] = "Crafting",
-        [239661] = "Crafting",
-        [249343] = "Chimaerus",
-        [249346] = "Vaelgor & Ezzorak",
-        [249373] = "Chimaerus",
-        [249376] = "Belo'ren",
-        [249919] = "Belo'ren",
-        [249920] = "Midnight Falls",
-        [250058] = "Tier Set",
-        [250060] = "Tier Set",
-        [250061] = "Tier Set",
-        [250063] = "Tier Set",
-        [250247] = "Midnight Falls",
-        [251090] = "Windrunner Spire",
-        [251094] = "Windrunner Spire",
-        [258218] = "Skyreach",
-      },
-    },
-    ["mage/fire"] = {
-      ["specID"] = 63,
-      ["classSlug"] = "mage",
-      ["specSlug"] = "fire",
-      ["sourceUrl"] = "https://www.wowhead.com/guide/classes/mage/fire/bis-gear",
-      ["itemsBySlot"] = {
-        ["Weapon"] = {
-          {
-            ["itemID"] = 249286,
-            ["source"] = "Midnight Falls",
-          },
-        },
-        ["Head"] = {
-          {
-            ["itemID"] = 250060,
-            ["source"] = "Tier Set",
-          },
-        },
-        ["Neck"] = {
-          {
-            ["itemID"] = 250247,
-            ["source"] = "Midnight Falls",
-          },
-        },
-        ["Shoulders"] = {
-          {
-            ["itemID"] = 250058,
-            ["source"] = "Tier Set",
-          },
-        },
-        ["Back"] = {
-          {
-            ["itemID"] = 239656,
-            ["source"] = "Crafting",
-          },
-        },
-        ["Chest"] = {
-          {
-            ["itemID"] = 249912,
-            ["source"] = "Midnight Falls",
-          },
-        },
-        ["Wrist"] = {
-          {
-            ["itemID"] = 239648,
-            ["source"] = "Crafting",
-          },
-        },
-        ["Hands"] = {
-          {
-            ["itemID"] = 250061,
-            ["source"] = "Tier Set",
-          },
-        },
-        ["Waist"] = {
-          {
-            ["itemID"] = 249376,
-            ["source"] = "Belo'ren",
-          },
-        },
-        ["Legs"] = {
-          {
-            ["itemID"] = 250059,
-            ["source"] = "Tier Set",
-          },
-        },
-        ["Feet"] = {
-          {
-            ["itemID"] = 258584,
-            ["source"] = "Skyreach",
-          },
-        },
-        ["Ring"] = {
-          {
-            ["itemID"] = 249920,
-            ["source"] = "Midnight Falls",
-          },
-          {
-            ["itemID"] = 249369,
-            ["source"] = "Lightblinded Vanguard",
-          },
-        },
-        ["Trinket"] = {
-          {
-            ["itemID"] = 250144,
-            ["source"] = "Windrunner Spire",
-          },
-          {
-            ["itemID"] = 249809,
-            ["source"] = "Crown of the Cosmos",
-          },
-        },
-      },
-      ["bisItems"] = {
-        [239648] = true,
-        [239656] = true,
-        [249286] = true,
-        [249369] = true,
-        [249376] = true,
-        [249809] = true,
-        [249912] = true,
-        [249920] = true,
-        [250058] = true,
-        [250059] = true,
-        [250060] = true,
-        [250061] = true,
-        [250144] = true,
-        [250247] = true,
-        [258584] = true,
-      },
-      ["itemSources"] = {
-        [239648] = "Crafting",
-        [239656] = "Crafting",
-        [249286] = "Midnight Falls",
-        [249369] = "Lightblinded Vanguard",
-        [249376] = "Belo'ren",
-        [249809] = "Crown of the Cosmos",
-        [249912] = "Midnight Falls",
-        [249920] = "Midnight Falls",
-        [250058] = "Tier Set",
-        [250059] = "Tier Set",
-        [250060] = "Tier Set",
-        [250061] = "Tier Set",
-        [250144] = "Windrunner Spire",
-        [250247] = "Midnight Falls",
-        [258584] = "Skyreach",
-      },
-    },
-    ["mage/frost"] = {
-      ["specID"] = 64,
-      ["classSlug"] = "mage",
-      ["specSlug"] = "frost",
-      ["sourceUrl"] = "https://www.wowhead.com/guide/classes/mage/frost/bis-gear",
-      ["itemsBySlot"] = {
-        ["Weapon"] = {
-          {
-            ["itemID"] = 258514,
-            ["source"] = "Seat of the Triumvirate",
-          },
-        },
-        ["Head"] = {
-          {
-            ["itemID"] = 250060,
-            ["source"] = "Tier Set",
-          },
-        },
-        ["Neck"] = {
-          {
-            ["itemID"] = 250247,
-            ["source"] = "Midnight Falls",
-          },
-        },
-        ["Shoulders"] = {
-          {
-            ["itemID"] = 251085,
-            ["source"] = "Windrunner Spire",
-          },
-        },
-        ["Back"] = {
-          {
-            ["itemID"] = 258575,
-            ["source"] = "Skyreach",
-          },
-        },
-        ["Chest"] = {
-          {
-            ["itemID"] = 250063,
-            ["source"] = "Tier Set",
-          },
-        },
-        ["Wrist"] = {
-          {
-            ["itemID"] = 258580,
-            ["source"] = "Skyreach",
-          },
-        },
-        ["Hands"] = {
-          {
-            ["itemID"] = 250061,
-            ["source"] = "Tier Set",
-          },
-        },
-        ["Waist"] = {
-          {
-            ["itemID"] = 250057,
-            ["source"] = "The Catalyst",
-          },
-        },
-        ["Legs"] = {
-          {
-            ["itemID"] = 250059,
-            ["source"] = "Tier Set",
-          },
-        },
-        ["Feet"] = {
-          {
-            ["itemID"] = 249373,
-            ["source"] = "Chimaerus",
-          },
-        },
-        ["Ring"] = {
-          {
-            ["itemID"] = 249919,
-            ["source"] = "Belo'ren",
-          },
-          {
-            ["itemID"] = 193708,
-            ["source"] = "Algeth'ar Academy",
-          },
-        },
-        ["Trinket"] = {
-          {
-            ["itemID"] = 249343,
-            ["source"] = "Chimaerus",
-          },
-          {
-            ["itemID"] = 249346,
-            ["source"] = "Vaelgor & Ezzorak",
-          },
-        },
-      },
-      ["bisItems"] = {
-        [193708] = true,
-        [249343] = true,
-        [249346] = true,
-        [249373] = true,
-        [249919] = true,
-        [250057] = true,
-        [250059] = true,
-        [250060] = true,
-        [250061] = true,
-        [250063] = true,
-        [250247] = true,
-        [251085] = true,
-        [258514] = true,
-        [258575] = true,
-        [258580] = true,
-      },
-      ["itemSources"] = {
-        [193708] = "Algeth'ar Academy",
-        [249343] = "Chimaerus",
-        [249346] = "Vaelgor & Ezzorak",
-        [249373] = "Chimaerus",
-        [249919] = "Belo'ren",
-        [250057] = "The Catalyst",
-        [250059] = "Tier Set",
-        [250060] = "Tier Set",
-        [250061] = "Tier Set",
-        [250063] = "Tier Set",
-        [250247] = "Midnight Falls",
-        [251085] = "Windrunner Spire",
-        [258514] = "Seat of the Triumvirate",
-        [258575] = "Skyreach",
-        [258580] = "Skyreach",
-      },
-    },
-    ["monk/brewmaster"] = {
-      ["specID"] = 268,
-      ["classSlug"] = "monk",
-      ["specSlug"] = "brewmaster",
-      ["sourceUrl"] = "https://www.wowhead.com/guide/classes/monk/brewmaster/bis-gear",
-      ["itemsBySlot"] = {
-        ["Head"] = {
-          {
-            ["itemID"] = 250015,
-            ["source"] = "Catalyst",
-          },
-        },
-        ["Neck"] = {
-          {
-            ["itemID"] = 240950,
-            ["source"] = "Jewelcrafting",
-          },
-          {
-            ["itemID"] = 245792,
-            ["source"] = "Jewelcrafting",
-          },
-          {
-            ["itemID"] = 251490,
-            ["source"] = "Jewelcrafting",
-          },
-        },
-        ["Shoulders"] = {
-          {
-            ["itemID"] = 250013,
-            ["source"] = "Catalyst",
-          },
-        },
-        ["Back"] = {
-          {
-            ["itemID"] = 249335,
-            ["source"] = "Imperator Averzian",
-          },
-        },
-        ["Chest"] = {
-          {
-            ["itemID"] = 250018,
-            ["source"] = "Catalyst",
-          },
-        },
-        ["Wrist"] = {
-          {
-            ["itemID"] = 250011,
-            ["source"] = "Catalyst",
-          },
-        },
-        ["Hands"] = {
-          {
-            ["itemID"] = 250016,
-            ["source"] = "Catalyst",
-          },
-        },
-        ["Waist"] = {
-          {
-            ["itemID"] = 251082,
-            ["source"] = "Windrunner Spire",
-          },
-        },
-        ["Legs"] = {
-          {
-            ["itemID"] = 151314,
-            ["source"] = "Seat of the Triumvirate",
-          },
-        },
-        ["Feet"] = {
-          {
-            ["itemID"] = 151317,
-            ["source"] = "Seat of the Triumvirate",
-          },
-        },
-      },
-      ["bisItems"] = {
-        [151314] = true,
-        [151317] = true,
-        [240950] = true,
-        [245792] = true,
-        [249335] = true,
-        [250011] = true,
-        [250013] = true,
-        [250015] = true,
-        [250016] = true,
-        [250018] = true,
-        [251082] = true,
-        [251490] = true,
-      },
-      ["itemSources"] = {
-        [151314] = "Seat of the Triumvirate",
-        [151317] = "Seat of the Triumvirate",
-        [240950] = "Jewelcrafting",
-        [245792] = "Jewelcrafting",
-        [249335] = "Imperator Averzian",
-        [250011] = "Catalyst",
-        [250013] = "Catalyst",
-        [250015] = "Catalyst",
-        [250016] = "Catalyst",
-        [250018] = "Catalyst",
-        [251082] = "Windrunner Spire",
-        [251490] = "Jewelcrafting",
-      },
-    },
-    ["monk/mistweaver"] = {
-      ["specID"] = 270,
-      ["classSlug"] = "monk",
-      ["specSlug"] = "mistweaver",
-      ["sourceUrl"] = "https://www.wowhead.com/guide/classes/monk/mistweaver/bis-gear",
-      ["itemsBySlot"] = {
-        ["Weapon"] = {
-          {
-            ["itemID"] = 258050,
-            ["source"] = "Skyreach",
-          },
-        },
-        ["Offhand"] = {
-          {
-            ["itemID"] = 249276,
-            ["source"] = "Vorasius",
-          },
-        },
-        ["Head"] = {
-          {
-            ["itemID"] = 249913,
-            ["source"] = "Midnight Falls",
-          },
-        },
-        ["Neck"] = {
-          {
-            ["itemID"] = 249337,
-            ["source"] = "Fallen-King Salhadaar",
-          },
-        },
-        ["Shoulders"] = {
-          {
-            ["itemID"] = 250013,
-            ["source"] = "Tier Set",
-          },
-        },
-        ["Back"] = {
-          {
-            ["itemID"] = 260312,
-            ["source"] = "Magister's Terrace",
-          },
-        },
-        ["Chest"] = {
-          {
-            ["itemID"] = 250018,
-            ["source"] = "Tier Set",
-          },
-        },
-        ["Wrist"] = {
-          {
-            ["itemID"] = 50264,
-            ["source"] = "Pit of Saron",
-          },
-        },
-        ["Hands"] = {
-          {
-            ["itemID"] = 250016,
-            ["source"] = "Tier Set",
-          },
-        },
-        ["Waist"] = {
-          {
-            ["itemID"] = 49806,
-            ["source"] = "Pit of Saron",
-          },
-        },
-        ["Legs"] = {
-          {
-            ["itemID"] = 250014,
-            ["source"] = "Tier Set",
-          },
-        },
-        ["Feet"] = {
-          {
-            ["itemID"] = 251210,
-            ["source"] = "Nexus-Point Xenas",
-          },
-        },
-        ["Ring"] = {
-          {
-            ["itemID"] = 249920,
-            ["source"] = "Midnight Falls",
-          },
-          {
-            ["itemID"] = 151311,
-            ["source"] = "Seat of the Triumvirate",
-          },
-        },
-        ["Trinket"] = {
-          {
-            ["itemID"] = 250256,
-            ["source"] = "Windrunner Spire",
-          },
-          {
-            ["itemID"] = 249808,
-            ["source"] = "Lightblinded Vanguard",
-          },
-        },
-      },
-      ["bisItems"] = {
-        [49806] = true,
-        [50264] = true,
-        [151311] = true,
-        [249276] = true,
-        [249337] = true,
-        [249808] = true,
-        [249913] = true,
-        [249920] = true,
-        [250013] = true,
-        [250014] = true,
-        [250016] = true,
-        [250018] = true,
-        [250256] = true,
-        [251210] = true,
-        [258050] = true,
-        [260312] = true,
-      },
-      ["itemSources"] = {
-        [49806] = "Pit of Saron",
-        [50264] = "Pit of Saron",
-        [151311] = "Seat of the Triumvirate",
-        [249276] = "Vorasius",
-        [249337] = "Fallen-King Salhadaar",
-        [249808] = "Lightblinded Vanguard",
-        [249913] = "Midnight Falls",
-        [249920] = "Midnight Falls",
-        [250013] = "Tier Set",
-        [250014] = "Tier Set",
-        [250016] = "Tier Set",
-        [250018] = "Tier Set",
-        [250256] = "Windrunner Spire",
-        [251210] = "Nexus-Point Xenas",
-        [258050] = "Skyreach",
-        [260312] = "Magister's Terrace",
-      },
-    },
-    ["monk/windwalker"] = {
-      ["specID"] = 269,
-      ["classSlug"] = "monk",
-      ["specSlug"] = "windwalker",
-      ["sourceUrl"] = "https://www.wowhead.com/guide/classes/monk/windwalker/bis-gear",
-      ["itemsBySlot"] = {
-        ["Head"] = {
-          {
-            ["itemID"] = 250015,
-            ["source"] = "Tier Set",
-          },
-        },
-        ["Neck"] = {
-          {
-            ["itemID"] = 250247,
-            ["source"] = "Midnight Falls",
-          },
-        },
-        ["Shoulders"] = {
-          {
-            ["itemID"] = 250013,
-            ["source"] = "Tier Set",
-          },
-        },
-        ["Back"] = {
-          {
-            ["itemID"] = 250010,
-            ["source"] = "The Catalyst",
-          },
-        },
-        ["Chest"] = {
-          {
-            ["itemID"] = 250018,
-            ["source"] = "Tier Set",
-          },
-        },
-        ["Wrist"] = {
-          {
-            ["itemID"] = 249327,
-            ["source"] = "Vorasius",
-          },
-        },
-        ["Hands"] = {
-          {
-            ["itemID"] = 249321,
-            ["source"] = "Vaelgor & Ezzorak",
-          },
-        },
-        ["Waist"] = {
-          {
-            ["itemID"] = 251082,
-            ["source"] = "Windrunner Spire",
-          },
-        },
-        ["Legs"] = {
-          {
-            ["itemID"] = 250014,
-            ["source"] = "Tier Set",
-          },
-        },
-        ["Feet"] = {
-          {
-            ["itemID"] = 250017,
-            ["source"] = "The Catalyst",
-          },
-        },
-        ["Ring"] = {
-          {
-            ["itemID"] = 251513,
-            ["source"] = "Crafting",
-          },
-          {
-            ["itemID"] = 249920,
-            ["source"] = "Midnight Falls",
-          },
-        },
-      },
-      ["bisItems"] = {
-        [249321] = true,
-        [249327] = true,
-        [249920] = true,
-        [250010] = true,
-        [250013] = true,
-        [250014] = true,
-        [250015] = true,
-        [250017] = true,
-        [250018] = true,
-        [250247] = true,
-        [251082] = true,
-        [251513] = true,
-      },
-      ["itemSources"] = {
-        [249321] = "Vaelgor & Ezzorak",
-        [249327] = "Vorasius",
-        [249920] = "Midnight Falls",
-        [250010] = "The Catalyst",
-        [250013] = "Tier Set",
-        [250014] = "Tier Set",
-        [250015] = "Tier Set",
-        [250017] = "The Catalyst",
-        [250018] = "Tier Set",
-        [250247] = "Midnight Falls",
-        [251082] = "Windrunner Spire",
-        [251513] = "Crafting",
-      },
-    },
-    ["paladin/holy"] = {
-      ["specID"] = 65,
-      ["classSlug"] = "paladin",
-      ["specSlug"] = "holy",
-      ["sourceUrl"] = "https://www.wowhead.com/guide/classes/paladin/holy/bis-gear",
-      ["itemsBySlot"] = {
-        ["Weapon"] = {
-          {
-            ["itemID"] = 193710,
-            ["source"] = "Algeth'ar Academy",
-          },
-        },
-        ["Offhand"] = {
-          {
-            ["itemID"] = 258049,
-            ["source"] = "Skyreach",
-          },
-        },
-        ["Head"] = {
-          {
-            ["itemID"] = 249961,
-            ["source"] = "Lightblinded Vanguard",
-          },
-        },
-        ["Neck"] = {
-          {
-            ["itemID"] = 250247,
-            ["source"] = "Midnight Falls",
-          },
-        },
-        ["Shoulders"] = {
-          {
-            ["itemID"] = 249959,
-            ["source"] = "Fallen-King Salhadaar",
-          },
-        },
-        ["Back"] = {
-          {
-            ["itemID"] = 258575,
-            ["source"] = "Skyreach",
-          },
-        },
-        ["Chest"] = {
-          {
-            ["itemID"] = 249964,
-            ["source"] = "Chimaerus",
-          },
-        },
-        ["Wrist"] = {
-          {
-            ["itemID"] = 263193,
-            ["source"] = "Maisara Caverns",
-          },
-        },
-        ["Hands"] = {
-          {
-            ["itemID"] = 249962,
-            ["source"] = "Vorasius",
-          },
-        },
-        ["Waist"] = {
-          {
-            ["itemID"] = 249331,
-            ["source"] = "Vaelgor & Ezzorak",
-          },
-        },
-        ["Legs"] = {
-          {
-            ["itemID"] = 249915,
-            ["source"] = "Midnight Falls",
-          },
-        },
-        ["Feet"] = {
-          {
-            ["itemID"] = 249332,
-            ["source"] = "Vorasius",
-          },
-        },
-        ["Ring"] = {
-          {
-            ["itemID"] = 249920,
-            ["source"] = "Midnight Falls",
-          },
-          {
-            ["itemID"] = 249919,
-            ["source"] = "Belo'ren",
-          },
-        },
-        ["Trinket"] = {
-          {
-            ["itemID"] = 249809,
-            ["source"] = "Crown of the Cosmos",
-          },
-          {
-            ["itemID"] = 249343,
-            ["source"] = "Chimaerus",
-          },
-        },
-      },
-      ["bisItems"] = {
-        [193710] = true,
-        [249331] = true,
-        [249332] = true,
-        [249343] = true,
-        [249809] = true,
-        [249915] = true,
-        [249919] = true,
-        [249920] = true,
-        [249959] = true,
-        [249961] = true,
-        [249962] = true,
-        [249964] = true,
-        [250247] = true,
-        [258049] = true,
-        [258575] = true,
-        [263193] = true,
-      },
-      ["itemSources"] = {
-        [193710] = "Algeth'ar Academy",
-        [249331] = "Vaelgor & Ezzorak",
-        [249332] = "Vorasius",
-        [249343] = "Chimaerus",
-        [249809] = "Crown of the Cosmos",
-        [249915] = "Midnight Falls",
-        [249919] = "Belo'ren",
-        [249920] = "Midnight Falls",
-        [249959] = "Fallen-King Salhadaar",
-        [249961] = "Lightblinded Vanguard",
-        [249962] = "Vorasius",
-        [249964] = "Chimaerus",
-        [250247] = "Midnight Falls",
-        [258049] = "Skyreach",
-        [258575] = "Skyreach",
-        [263193] = "Maisara Caverns",
-      },
-    },
-    ["paladin/protection"] = {
-      ["specID"] = 66,
-      ["classSlug"] = "paladin",
-      ["specSlug"] = "protection",
-      ["sourceUrl"] = "https://www.wowhead.com/guide/classes/paladin/protection/bis-gear",
-      ["itemsBySlot"] = {
-        ["Weapon"] = {
-          {
-            ["itemID"] = 249295,
-            ["source"] = "Crown of the Cosmos",
-          },
-        },
-        ["Offhand"] = {
-          {
-            ["itemID"] = 249921,
-            ["source"] = "Belo'ren",
-          },
-        },
-        ["Head"] = {
-          {
-            ["itemID"] = 249961,
-            ["source"] = "Tier Set",
-          },
-        },
-        ["Neck"] = {
-          {
-            ["itemID"] = 249368,
-            ["source"] = "Crown of the Cosmos",
-          },
-        },
-        ["Shoulders"] = {
-          {
-            ["itemID"] = 249959,
-            ["source"] = "Tier Set",
-          },
-        },
-        ["Back"] = {
-          {
-            ["itemID"] = 249370,
-            ["source"] = "Vaelgor & Ezzorak",
-          },
-        },
-        ["Chest"] = {
-          {
-            ["itemID"] = 249964,
-            ["source"] = "Tier Set",
-          },
-        },
-        ["Wrist"] = {
-          {
-            ["itemID"] = 249326,
-            ["source"] = "Imperator Averzian",
-          },
-        },
-        ["Hands"] = {
-          {
-            ["itemID"] = 151332,
-            ["source"] = "Seat of the Triumvirate",
-          },
-        },
-        ["Waist"] = {
-          {
-            ["itemID"] = 249331,
-            ["source"] = "Vaelgor & Ezzorak",
-          },
-        },
-        ["Legs"] = {
-          {
-            ["itemID"] = 249960,
-            ["source"] = "Tier Set",
-          },
-        },
-        ["Feet"] = {
-          {
-            ["itemID"] = 249381,
-            ["source"] = "Chimaerus",
-          },
-        },
-        ["Ring"] = {
-          {
-            ["itemID"] = 249920,
-            ["source"] = "Midnight Falls",
-          },
-          {
-            ["itemID"] = 151311,
-            ["source"] = "Seat of the Triumvirate",
-          },
-        },
-        ["Trinket"] = {
-          {
-            ["itemID"] = 249343,
-            ["source"] = "Chimaerus",
-          },
-          {
-            ["itemID"] = 249342,
-            ["source"] = "Vorasius",
-          },
-        },
-      },
-      ["bisItems"] = {
-        [151311] = true,
-        [151332] = true,
-        [249295] = true,
-        [249326] = true,
-        [249331] = true,
-        [249342] = true,
-        [249343] = true,
-        [249368] = true,
-        [249370] = true,
-        [249381] = true,
-        [249920] = true,
-        [249921] = true,
-        [249959] = true,
-        [249960] = true,
-        [249961] = true,
-        [249964] = true,
-      },
-      ["itemSources"] = {
-        [151311] = "Seat of the Triumvirate",
-        [151332] = "Seat of the Triumvirate",
-        [249295] = "Crown of the Cosmos",
-        [249326] = "Imperator Averzian",
-        [249331] = "Vaelgor & Ezzorak",
-        [249342] = "Vorasius",
-        [249343] = "Chimaerus",
-        [249368] = "Crown of the Cosmos",
-        [249370] = "Vaelgor & Ezzorak",
-        [249381] = "Chimaerus",
-        [249920] = "Midnight Falls",
-        [249921] = "Belo'ren",
-        [249959] = "Tier Set",
-        [249960] = "Tier Set",
-        [249961] = "Tier Set",
-        [249964] = "Tier Set",
-      },
-    },
-    ["paladin/retribution"] = {
-      ["specID"] = 70,
-      ["classSlug"] = "paladin",
-      ["specSlug"] = "retribution",
-      ["sourceUrl"] = "https://www.wowhead.com/guide/classes/paladin/retribution/bis-gear",
-      ["itemsBySlot"] = {
-        ["Weapon"] = {
-          {
-            ["itemID"] = 249277,
-            ["source"] = "Lightblinded Vanguard",
-          },
-        },
-        ["Head"] = {
-          {
-            ["itemID"] = 249961,
-            ["source"] = "Tier Set",
-          },
-        },
-        ["Neck"] = {
-          {
-            ["itemID"] = 250247,
-            ["source"] = "Midnight Falls",
-          },
-        },
-        ["Shoulders"] = {
-          {
-            ["itemID"] = 249959,
-            ["source"] = "Tier Set",
-          },
-        },
-        ["Back"] = {
-          {
-            ["itemID"] = 239656,
-            ["source"] = "Crafting/Misc",
-          },
-        },
-        ["Chest"] = {
-          {
-            ["itemID"] = 249964,
-            ["source"] = "Tier Set",
-          },
-        },
-        ["Wrist"] = {
-          {
-            ["itemID"] = 237834,
-            ["source"] = "Crafting/Misc",
-          },
-        },
-        ["Hands"] = {
-          {
-            ["itemID"] = 151332,
-            ["source"] = "Seat of the Triumvirate",
-          },
-        },
-        ["Waist"] = {
-          {
-            ["itemID"] = 249380,
-            ["source"] = "Crown of the Cosmos",
-          },
-        },
-        ["Legs"] = {
-          {
-            ["itemID"] = 249960,
-            ["source"] = "Tier Set",
-          },
-        },
-        ["Feet"] = {
-          {
-            ["itemID"] = 249381,
-            ["source"] = "Chimaerus",
-          },
-        },
-        ["Ring"] = {
-          {
-            ["itemID"] = 249919,
-            ["source"] = "Belo'ren",
-          },
-          {
-            ["itemID"] = 249920,
-            ["source"] = "Midnight Falls",
-          },
-        },
-        ["Trinket"] = {
-          {
-            ["itemID"] = 260235,
-            ["source"] = "Belo'ren",
-          },
-          {
-            ["itemID"] = 193701,
-            ["source"] = "Algeth'ar Academy",
-          },
-        },
-      },
-      ["bisItems"] = {
-        [151332] = true,
-        [193701] = true,
-        [237834] = true,
-        [239656] = true,
-        [249277] = true,
-        [249380] = true,
-        [249381] = true,
-        [249919] = true,
-        [249920] = true,
-        [249959] = true,
-        [249960] = true,
-        [249961] = true,
-        [249964] = true,
-        [250247] = true,
-        [260235] = true,
-      },
-      ["itemSources"] = {
-        [151332] = "Seat of the Triumvirate",
-        [193701] = "Algeth'ar Academy",
-        [237834] = "Crafting/Misc",
-        [239656] = "Crafting/Misc",
-        [249277] = "Lightblinded Vanguard",
-        [249380] = "Crown of the Cosmos",
-        [249381] = "Chimaerus",
-        [249919] = "Belo'ren",
-        [249920] = "Midnight Falls",
-        [249959] = "Tier Set",
-        [249960] = "Tier Set",
-        [249961] = "Tier Set",
-        [249964] = "Tier Set",
-        [250247] = "Midnight Falls",
-        [260235] = "Belo'ren",
-      },
-    },
-    ["priest/discipline"] = {
-      ["specID"] = 256,
-      ["classSlug"] = "priest",
-      ["specSlug"] = "discipline",
-      ["sourceUrl"] = "https://www.wowhead.com/guide/classes/priest/discipline/bis-gear",
-      ["itemsBySlot"] = {
-        ["Head"] = {
-          {
-            ["itemID"] = 250051,
-            ["source"] = "Raid",
-          },
-        },
-        ["Neck"] = {
-          {
-            ["itemID"] = 249368,
-            ["source"] = "Crown of the Cosmos",
-          },
-        },
-        ["Shoulders"] = {
-          {
-            ["itemID"] = 250049,
-            ["source"] = "Raid",
-          },
-        },
-        ["Back"] = {
-          {
-            ["itemID"] = 249370,
-            ["source"] = "Vaelgor & Ezzorak",
-          },
-        },
-        ["Chest"] = {
-          {
-            ["itemID"] = 249912,
-            ["source"] = "Midnight Falls",
-          },
-        },
-        ["Wrist"] = {
-          {
-            ["itemID"] = 249315,
-            ["source"] = "Vorasius",
-          },
-        },
-        ["Hands"] = {
-          {
-            ["itemID"] = 250052,
-            ["source"] = "Raid",
-          },
-        },
-        ["Waist"] = {
-          {
-            ["itemID"] = 239664,
-            ["source"] = "Crafting/Misc",
-          },
-        },
-        ["Legs"] = {
-          {
-            ["itemID"] = 250050,
-            ["source"] = "Raid",
-          },
-        },
-        ["Feet"] = {
-          {
-            ["itemID"] = 258584,
-            ["source"] = "Skyreach",
-          },
-        },
-        ["Ring"] = {
-          {
-            ["itemID"] = 249920,
-            ["source"] = "Midnight Falls",
-          },
-          {
-            ["itemID"] = 251093,
-            ["source"] = "Nexus Point Xenas",
-          },
-        },
-        ["Offhand"] = {
-          {
-            ["itemID"] = 245769,
-            ["source"] = "Crafting/Misc",
-          },
-        },
-      },
-      ["bisItems"] = {
-        [239664] = true,
-        [245769] = true,
-        [249315] = true,
-        [249368] = true,
-        [249370] = true,
-        [249912] = true,
-        [249920] = true,
-        [250049] = true,
-        [250050] = true,
-        [250051] = true,
-        [250052] = true,
-        [251093] = true,
-        [258584] = true,
-      },
-      ["itemSources"] = {
-        [239664] = "Crafting/Misc",
-        [245769] = "Crafting/Misc",
-        [249315] = "Vorasius",
-        [249368] = "Crown of the Cosmos",
-        [249370] = "Vaelgor & Ezzorak",
-        [249912] = "Midnight Falls",
-        [249920] = "Midnight Falls",
-        [250049] = "Raid",
-        [250050] = "Raid",
-        [250051] = "Raid",
-        [250052] = "Raid",
-        [251093] = "Nexus Point Xenas",
-        [258584] = "Skyreach",
-      },
-    },
-    ["priest/holy"] = {
-      ["specID"] = 257,
-      ["classSlug"] = "priest",
-      ["specSlug"] = "holy",
-      ["sourceUrl"] = "https://www.wowhead.com/guide/classes/priest/holy/bis-gear",
-      ["itemsBySlot"] = {
-        ["Head"] = {
-          {
-            ["itemID"] = 250051,
-            ["source"] = "Raid",
-          },
-        },
-        ["Neck"] = {
-          {
-            ["itemID"] = 250247,
-            ["source"] = "Midnight Falls",
-          },
-        },
-        ["Shoulders"] = {
-          {
-            ["itemID"] = 250049,
-            ["source"] = "Raid",
-          },
-        },
-        ["Back"] = {
-          {
-            ["itemID"] = 249335,
-            ["source"] = "Imperator Averzian",
-          },
-        },
-        ["Chest"] = {
-          {
-            ["itemID"] = 249912,
-            ["source"] = "Midnight Falls",
-          },
-        },
-        ["Wrist"] = {
-          {
-            ["itemID"] = 250047,
-            ["source"] = "Raid",
-          },
-        },
-        ["Hands"] = {
-          {
-            ["itemID"] = 250052,
-            ["source"] = "Raid",
-          },
-        },
-        ["Waist"] = {
-          {
-            ["itemID"] = 239664,
-            ["source"] = "Crafting/Misc",
-          },
-        },
-        ["Legs"] = {
-          {
-            ["itemID"] = 250050,
-            ["source"] = "Raid",
-          },
-        },
-        ["Feet"] = {
-          {
-            ["itemID"] = 249373,
-            ["source"] = "Chimaerus",
-          },
-        },
-        ["Ring"] = {
-          {
-            ["itemID"] = 249336,
-            ["source"] = "Vorasius",
-          },
-          {
-            ["itemID"] = 249919,
-            ["source"] = "Belo'ren",
-          },
-        },
-        ["Offhand"] = {
-          {
-            ["itemID"] = 245769,
-            ["source"] = "Crafting/Misc",
-          },
-        },
-      },
-      ["bisItems"] = {
-        [239664] = true,
-        [245769] = true,
-        [249335] = true,
-        [249336] = true,
-        [249373] = true,
-        [249912] = true,
-        [249919] = true,
-        [250047] = true,
-        [250049] = true,
-        [250050] = true,
-        [250051] = true,
-        [250052] = true,
-        [250247] = true,
-      },
-      ["itemSources"] = {
-        [239664] = "Crafting/Misc",
-        [245769] = "Crafting/Misc",
-        [249335] = "Imperator Averzian",
-        [249336] = "Vorasius",
-        [249373] = "Chimaerus",
-        [249912] = "Midnight Falls",
-        [249919] = "Belo'ren",
-        [250047] = "Raid",
-        [250049] = "Raid",
-        [250050] = "Raid",
-        [250051] = "Raid",
-        [250052] = "Raid",
-        [250247] = "Midnight Falls",
-      },
-    },
-    ["priest/shadow"] = {
-      ["specID"] = 258,
-      ["classSlug"] = "priest",
-      ["specSlug"] = "shadow",
-      ["sourceUrl"] = "https://www.wowhead.com/guide/classes/priest/shadow/bis-gear",
-      ["itemsBySlot"] = {
-        ["Head"] = {
-          {
-            ["itemID"] = 250051,
-            ["source"] = "Raid",
-          },
-        },
-        ["Neck"] = {
-          {
-            ["itemID"] = 250247,
-            ["source"] = "Midnight Falls",
-          },
-        },
-        ["Shoulders"] = {
-          {
-            ["itemID"] = 250049,
-            ["source"] = "Raid",
-          },
-        },
-        ["Back"] = {
-          {
-            ["itemID"] = 249370,
-            ["source"] = "Vaelgor & Ezzorak",
-          },
-        },
-        ["Chest"] = {
-          {
-            ["itemID"] = 250054,
-            ["source"] = "Raid",
-          },
-        },
-        ["Wrist"] = {
-          {
-            ["itemID"] = 251108,
-            ["source"] = "Magister's Terrace",
-          },
-        },
-        ["Hands"] = {
-          {
-            ["itemID"] = 250052,
-            ["source"] = "Raid",
-          },
-        },
-        ["Waist"] = {
-          {
-            ["itemID"] = 249376,
-            ["source"] = "Belo'ren",
-          },
-        },
-        ["Legs"] = {
-          {
-            ["itemID"] = 250050,
-            ["source"] = "Raid",
-          },
-        },
-        ["Feet"] = {
-          {
-            ["itemID"] = 249373,
-            ["source"] = "Chimaerus",
-          },
-        },
-        ["Ring"] = {
-          {
-            ["itemID"] = 249920,
-            ["source"] = "Midnight Falls",
-          },
-          {
-            ["itemID"] = 249369,
-            ["source"] = "Lightblinded Vanguard",
-          },
-        },
-        ["Offhand"] = {
-          {
-            ["itemID"] = 249922,
-            ["source"] = "Chimaerus",
-          },
-        },
-      },
-      ["bisItems"] = {
-        [249369] = true,
-        [249370] = true,
-        [249373] = true,
-        [249376] = true,
-        [249920] = true,
-        [249922] = true,
-        [250049] = true,
-        [250050] = true,
-        [250051] = true,
-        [250052] = true,
-        [250054] = true,
-        [250247] = true,
-        [251108] = true,
-      },
-      ["itemSources"] = {
-        [249369] = "Lightblinded Vanguard",
-        [249370] = "Vaelgor & Ezzorak",
-        [249373] = "Chimaerus",
-        [249376] = "Belo'ren",
-        [249920] = "Midnight Falls",
-        [249922] = "Chimaerus",
-        [250049] = "Raid",
-        [250050] = "Raid",
-        [250051] = "Raid",
-        [250052] = "Raid",
-        [250054] = "Raid",
-        [250247] = "Midnight Falls",
-        [251108] = "Magister's Terrace",
-      },
-    },
-    ["rogue/assassination"] = {
-      ["specID"] = 259,
-      ["classSlug"] = "rogue",
-      ["specSlug"] = "assassination",
-      ["sourceUrl"] = "https://www.wowhead.com/guide/classes/rogue/assassination/bis-gear",
-      ["itemsBySlot"] = {
-        ["Weapon"] = {
-          {
-            ["itemID"] = 249925,
-            ["source"] = "Vorasius",
-          },
-        },
-        ["Offhand"] = {
-          {
-            ["itemID"] = 237837,
-            ["source"] = "Crafting",
-          },
-        },
-        ["Head"] = {
-          {
-            ["itemID"] = 250006,
-            ["source"] = "Tier Set",
-          },
-        },
-        ["Neck"] = {
-          {
-            ["itemID"] = 249337,
-            ["source"] = "Fallen-King Salhadaar",
-          },
-        },
-        ["Shoulders"] = {
-          {
-            ["itemID"] = 250004,
-            ["source"] = "Tier Set",
-          },
-        },
-        ["Back"] = {
-          {
-            ["itemID"] = 260312,
-            ["source"] = "Magister's Terrace",
-          },
-        },
-        ["Chest"] = {
-          {
-            ["itemID"] = 250009,
-            ["source"] = "Tier Set",
-          },
-        },
-        ["Wrist"] = {
-          {
-            ["itemID"] = 244576,
-            ["source"] = "Crafting",
-          },
-        },
-        ["Hands"] = {
-          {
-            ["itemID"] = 250007,
-            ["source"] = "Tier Set",
-          },
-        },
-        ["Waist"] = {
-          {
-            ["itemID"] = 249374,
-            ["source"] = "Chimaerus",
-          },
-        },
-        ["Legs"] = {
-          {
-            ["itemID"] = 251087,
-            ["source"] = "Windrunner Spire",
-          },
-        },
-        ["Feet"] = {
-          {
-            ["itemID"] = 249382,
-            ["source"] = "Crown of the Cosmos",
-          },
-        },
-        ["Ring"] = {
-          {
-            ["itemID"] = 249919,
-            ["source"] = "Belo'ren",
-          },
-          {
-            ["itemID"] = 249920,
-            ["source"] = "Midnight Falls",
-          },
-        },
-        ["Trinket"] = {
-          {
-            ["itemID"] = 249343,
-            ["source"] = "Chimaerus",
-          },
-          {
-            ["itemID"] = 193701,
-            ["source"] = "Algeth'ar Academy",
-          },
-        },
-      },
-      ["bisItems"] = {
-        [193701] = true,
-        [237837] = true,
-        [244576] = true,
-        [249337] = true,
-        [249343] = true,
-        [249374] = true,
-        [249382] = true,
-        [249919] = true,
-        [249920] = true,
-        [249925] = true,
-        [250004] = true,
-        [250006] = true,
-        [250007] = true,
-        [250009] = true,
-        [251087] = true,
-        [260312] = true,
-      },
-      ["itemSources"] = {
-        [193701] = "Algeth'ar Academy",
-        [237837] = "Crafting",
-        [244576] = "Crafting",
-        [249337] = "Fallen-King Salhadaar",
-        [249343] = "Chimaerus",
-        [249374] = "Chimaerus",
-        [249382] = "Crown of the Cosmos",
-        [249919] = "Belo'ren",
-        [249920] = "Midnight Falls",
-        [249925] = "Vorasius",
-        [250004] = "Tier Set",
-        [250006] = "Tier Set",
-        [250007] = "Tier Set",
-        [250009] = "Tier Set",
-        [251087] = "Windrunner Spire",
-        [260312] = "Magister's Terrace",
-      },
-    },
-    ["rogue/outlaw"] = {
-      ["specID"] = 260,
-      ["classSlug"] = "rogue",
-      ["specSlug"] = "outlaw",
-      ["sourceUrl"] = "https://www.wowhead.com/guide/classes/rogue/outlaw/bis-gear",
-      ["itemsBySlot"] = {
-        ["Weapon"] = {
-          {
-            ["itemID"] = 260423,
-            ["source"] = "Crown of the Cosmos",
-          },
-        },
-        ["Offhand"] = {
-          {
-            ["itemID"] = 133491,
-            ["source"] = "Pit of Saron",
-          },
-        },
-        ["Head"] = {
-          {
-            ["itemID"] = 151336,
-            ["source"] = "Seat of the Triumvirate",
-          },
-        },
-        ["Neck"] = {
-          {
-            ["itemID"] = 50228,
-            ["source"] = "Pit of Saron",
-          },
-        },
-        ["Shoulders"] = {
-          {
-            ["itemID"] = 250004,
-            ["source"] = "Tier Set",
-          },
-        },
-        ["Back"] = {
-          {
-            ["itemID"] = 249335,
-            ["source"] = "Imperator Averzian",
-          },
-        },
-        ["Chest"] = {
-          {
-            ["itemID"] = 250009,
-            ["source"] = "Tier Set",
-          },
-        },
-        ["Wrist"] = {
-          {
-            ["itemID"] = 50264,
-            ["source"] = "Pit of Saron",
-          },
-        },
-        ["Hands"] = {
-          {
-            ["itemID"] = 250007,
-            ["source"] = "Tier Set",
-          },
-        },
-        ["Waist"] = {
-          {
-            ["itemID"] = 249374,
-            ["source"] = "Chimaerus",
-          },
-        },
-        ["Legs"] = {
-          {
-            ["itemID"] = 250005,
-            ["source"] = "Tier Set",
-          },
-        },
-        ["Feet"] = {
-          {
-            ["itemID"] = 244569,
-            ["source"] = "Crafting",
-          },
-        },
-        ["Ring"] = {
-          {
-            ["itemID"] = 249336,
-            ["source"] = "Vorasius",
-          },
-          {
-            ["itemID"] = 240949,
-            ["source"] = "Crafting",
-          },
-        },
-        ["Trinket"] = {
-          {
-            ["itemID"] = 249343,
-            ["source"] = "Chimaerus",
-          },
-          {
-            ["itemID"] = 260235,
-            ["source"] = "Belo'ren",
-          },
-        },
-      },
-      ["bisItems"] = {
-        [50228] = true,
-        [50264] = true,
-        [133491] = true,
-        [151336] = true,
-        [240949] = true,
-        [244569] = true,
-        [249335] = true,
-        [249336] = true,
-        [249343] = true,
-        [249374] = true,
-        [250004] = true,
-        [250005] = true,
-        [250007] = true,
-        [250009] = true,
-        [260235] = true,
-        [260423] = true,
-      },
-      ["itemSources"] = {
-        [50228] = "Pit of Saron",
-        [50264] = "Pit of Saron",
-        [133491] = "Pit of Saron",
-        [151336] = "Seat of the Triumvirate",
-        [240949] = "Crafting",
-        [244569] = "Crafting",
-        [249335] = "Imperator Averzian",
-        [249336] = "Vorasius",
-        [249343] = "Chimaerus",
-        [249374] = "Chimaerus",
-        [250004] = "Tier Set",
-        [250005] = "Tier Set",
-        [250007] = "Tier Set",
-        [250009] = "Tier Set",
-        [260235] = "Belo'ren",
-        [260423] = "Crown of the Cosmos",
-      },
-    },
-    ["rogue/subtlety"] = {
-      ["specID"] = 261,
-      ["classSlug"] = "rogue",
-      ["specSlug"] = "subtlety",
-      ["sourceUrl"] = "https://www.wowhead.com/guide/classes/rogue/subtlety/bis-gear",
-      ["itemsBySlot"] = {
-        ["Head"] = {
-          {
-            ["itemID"] = 250006,
-            ["source"] = "Tier Set",
-          },
-        },
-        ["Neck"] = {
-          {
-            ["itemID"] = 249368,
-            ["source"] = "Crown of the Cosmos",
-          },
-        },
-        ["Shoulders"] = {
-          {
-            ["itemID"] = 250004,
-            ["source"] = "Tier Set",
-          },
-        },
-        ["Back"] = {
-          {
-            ["itemID"] = 258575,
-            ["source"] = "Skyreach",
-          },
-        },
-        ["Chest"] = {
-          {
-            ["itemID"] = 250009,
-            ["source"] = "Tier Set",
-          },
-        },
-        ["Wrist"] = {
-          {
-            ["itemID"] = 249327,
-            ["source"] = "Vorasius",
-          },
-        },
-        ["Hands"] = {
-          {
-            ["itemID"] = 250007,
-            ["source"] = "Tier Set",
-          },
-        },
-        ["Waist"] = {
-          {
-            ["itemID"] = 244573,
-            ["source"] = "Crafting",
-          },
-        },
-        ["Legs"] = {
-          {
-            ["itemID"] = 49817,
-            ["source"] = "Pit of Saron",
-          },
-        },
-        ["Feet"] = {
-          {
-            ["itemID"] = 258577,
-            ["source"] = "Skyreach",
-          },
-        },
-        ["Ring"] = {
-          {
-            ["itemID"] = 193708,
-            ["source"] = "Algeth'ar Academy",
-          },
-          {
-            ["itemID"] = 251115,
-            ["source"] = "Magister's Terrace",
-          },
-        },
-        ["Trinket"] = {
-          {
-            ["itemID"] = 249344,
-            ["source"] = "Imperator Averzian",
-          },
-          {
-            ["itemID"] = 249343,
-            ["source"] = "Chimaerus",
-          },
-        },
-        ["Weapon"] = {
-          {
-            ["itemID"] = 249925,
-            ["source"] = "Vorasius",
-          },
-        },
-        ["Offhand"] = {
-          {
-            ["itemID"] = 237837,
-            ["source"] = "Crafting",
-          },
-        },
-      },
-      ["bisItems"] = {
-        [49817] = true,
-        [193708] = true,
-        [237837] = true,
-        [244573] = true,
-        [249327] = true,
-        [249343] = true,
-        [249344] = true,
-        [249368] = true,
-        [249925] = true,
-        [250004] = true,
-        [250006] = true,
-        [250007] = true,
-        [250009] = true,
-        [251115] = true,
-        [258575] = true,
-        [258577] = true,
-      },
-      ["itemSources"] = {
-        [49817] = "Pit of Saron",
-        [193708] = "Algeth'ar Academy",
-        [237837] = "Crafting",
-        [244573] = "Crafting",
-        [249327] = "Vorasius",
-        [249343] = "Chimaerus",
-        [249344] = "Imperator Averzian",
-        [249368] = "Crown of the Cosmos",
-        [249925] = "Vorasius",
-        [250004] = "Tier Set",
-        [250006] = "Tier Set",
-        [250007] = "Tier Set",
-        [250009] = "Tier Set",
-        [251115] = "Magister's Terrace",
-        [258575] = "Skyreach",
-        [258577] = "Skyreach",
-      },
-    },
-    ["shaman/elemental"] = {
-      ["specID"] = 262,
-      ["classSlug"] = "shaman",
-      ["specSlug"] = "elemental",
-      ["sourceUrl"] = "https://www.wowhead.com/guide/classes/shaman/elemental/bis-gear",
-      ["itemsBySlot"] = {
-        ["Weapon"] = {
-          {
-            ["itemID"] = 251083,
-            ["source"] = "Windrunner Spire",
-          },
-        },
-        ["Offhand"] = {
-          {
-            ["itemID"] = 251105,
-            ["source"] = "Magister's Terrace",
-          },
-        },
-        ["Head"] = {
-          {
-            ["itemID"] = 249979,
-            ["source"] = "Tier Set",
-          },
-        },
-        ["Neck"] = {
-          {
-            ["itemID"] = 250247,
-            ["source"] = "Midnight Falls",
-          },
-        },
-        ["Shoulders"] = {
-          {
-            ["itemID"] = 249977,
-            ["source"] = "Tier Set",
-          },
-        },
-        ["Back"] = {
-          {
-            ["itemID"] = 249974,
-            ["source"] = "Catalyst",
-          },
-        },
-        ["Chest"] = {
-          {
-            ["itemID"] = 249982,
-            ["source"] = "Tier Set",
-          },
-        },
-        ["Wrist"] = {
-          {
-            ["itemID"] = 249304,
-            ["source"] = "Fallen-King Salhadaar",
-          },
-        },
-        ["Hands"] = {
-          {
-            ["itemID"] = 249980,
-            ["source"] = "Tier Set",
-          },
-        },
-        ["Waist"] = {
-          {
-            ["itemID"] = 244611,
-            ["source"] = "Crafting",
-          },
-        },
-        ["Legs"] = {
-          {
-            ["itemID"] = 251215,
-            ["source"] = "Nexus Point Xenas",
-          },
-        },
-        ["Feet"] = {
-          {
-            ["itemID"] = 244610,
-            ["source"] = "Crafting",
-          },
-        },
-        ["Ring"] = {
-          {
-            ["itemID"] = 193708,
-            ["source"] = "Algeth'ar Academy",
-          },
-          {
-            ["itemID"] = 249919,
-            ["source"] = "Belo'ren",
-          },
-        },
-        ["Trinket"] = {
-          {
-            ["itemID"] = 249343,
-            ["source"] = "Chimaerus",
-          },
-          {
-            ["itemID"] = 250144,
-            ["source"] = "Windrunner Spire",
-          },
-        },
-      },
-      ["bisItems"] = {
-        [193708] = true,
-        [244610] = true,
-        [244611] = true,
-        [249304] = true,
-        [249343] = true,
-        [249919] = true,
-        [249974] = true,
-        [249977] = true,
-        [249979] = true,
-        [249980] = true,
-        [249982] = true,
-        [250144] = true,
-        [250247] = true,
-        [251083] = true,
-        [251105] = true,
-        [251215] = true,
-      },
-      ["itemSources"] = {
-        [193708] = "Algeth'ar Academy",
-        [244610] = "Crafting",
-        [244611] = "Crafting",
-        [249304] = "Fallen-King Salhadaar",
-        [249343] = "Chimaerus",
-        [249919] = "Belo'ren",
-        [249974] = "Catalyst",
-        [249977] = "Tier Set",
-        [249979] = "Tier Set",
-        [249980] = "Tier Set",
-        [249982] = "Tier Set",
-        [250144] = "Windrunner Spire",
-        [250247] = "Midnight Falls",
-        [251083] = "Windrunner Spire",
-        [251105] = "Magister's Terrace",
-        [251215] = "Nexus Point Xenas",
+        [244584] = "Crafting",
+        [252258] = "Voidscar Arena",
+        [268249] = "Vashnik the Malignant",
+        [268253] = "The Coiled Altar",
+        [268254] = "Vashnik the Malignant",
+        [268262] = "Nymrissa Wavecaller",
+        [268265] = "Ula'tek",
+        [270164] = "The Lost Explorers",
+        [271092] = "Ula'tek",
+        [271481] = "Tier Set",
+        [271482] = "Tier Set",
+        [271483] = "Tier Set",
+        [271484] = "Tier Set",
+        [271486] = "Tier Set",
+        [273796] = "Altar of Fangs",
       },
     },
     ["shaman/enhancement"] = {
@@ -4152,8 +4385,8 @@ ns.BisData = {
       ["itemsBySlot"] = {
         ["Weapon"] = {
           {
-            ["itemID"] = 249287,
-            ["source"] = "Vaelgor & Ezzorak",
+            ["itemID"] = 268209,
+            ["source"] = "The Coiled Altar",
           },
         },
         ["Offhand"] = {
@@ -4164,92 +4397,120 @@ ns.BisData = {
         },
         ["Head"] = {
           {
-            ["itemID"] = 249979,
-            ["source"] = "Catalyst |  Raid |  Vault",
+            ["itemID"] = 271483,
+            ["source"] = "Catalyst &ndash; Voidscar Arena",
           },
         },
         ["Neck"] = {
           {
-            ["itemID"] = 250247,
-            ["source"] = "Midnight Falls",
+            ["itemID"] = 268265,
+            ["source"] = "Ula'tek",
           },
         },
         ["Shoulders"] = {
           {
-            ["itemID"] = 249977,
-            ["source"] = "Catalyst |  Raid |  Vault",
+            ["itemID"] = 271481,
+            ["source"] = "Catalyst &ndash; The Coiled Altar",
           },
         },
         ["Back"] = {
           {
-            ["itemID"] = 239656,
-            ["source"] = "Crafted",
+            ["itemID"] = 268253,
+            ["source"] = "The Coiled Altar",
           },
         },
         ["Chest"] = {
           {
-            ["itemID"] = 249982,
-            ["source"] = "Catalyst |  Raid |  Vault",
+            ["itemID"] = 271486,
+            ["source"] = "Catalyst &ndash; Ula'tek",
           },
         },
         ["Wrist"] = {
           {
-            ["itemID"] = 249304,
-            ["source"] = "Salhadaar",
+            ["itemID"] = 244584,
+            ["source"] = "Crafted",
           },
         },
         ["Hands"] = {
           {
-            ["itemID"] = 249980,
-            ["source"] = "Raid",
+            ["itemID"] = 271484,
+            ["source"] = "Catalyst &ndash; King's Rest",
           },
         },
         ["Waist"] = {
           {
-            ["itemID"] = 249976,
-            ["source"] = "Catalyst",
+            ["itemID"] = 268254,
+            ["source"] = "Vashnik the Malignant",
           },
         },
         ["Legs"] = {
           {
-            ["itemID"] = 249324,
-            ["source"] = "Belo'ren",
+            ["itemID"] = 271482,
+            ["source"] = "Catalyst &ndash; The Coiled Altar",
           },
         },
         ["Feet"] = {
           {
-            ["itemID"] = 251084,
-            ["source"] = "Windrunner Spire",
+            ["itemID"] = 268233,
+            ["source"] = "Sszorak",
+          },
+        },
+        ["Ring"] = {
+          {
+            ["itemID"] = 268249,
+            ["source"] = "Vashnik the Malignant",
+          },
+          {
+            ["itemID"] = 252258,
+            ["source"] = "Voidscar Arena",
+          },
+        },
+        ["Trinket"] = {
+          {
+            ["itemID"] = 270175,
+            ["source"] = "Ula'tek",
+          },
+          {
+            ["itemID"] = 270173,
+            ["source"] = "The Coiled Altar",
           },
         },
       },
       ["bisItems"] = {
         [237850] = true,
-        [239656] = true,
-        [249287] = true,
-        [249304] = true,
-        [249324] = true,
-        [249976] = true,
-        [249977] = true,
-        [249979] = true,
-        [249980] = true,
-        [249982] = true,
-        [250247] = true,
-        [251084] = true,
+        [244584] = true,
+        [252258] = true,
+        [268209] = true,
+        [268233] = true,
+        [268249] = true,
+        [268253] = true,
+        [268254] = true,
+        [268265] = true,
+        [270173] = true,
+        [270175] = true,
+        [271481] = true,
+        [271482] = true,
+        [271483] = true,
+        [271484] = true,
+        [271486] = true,
       },
       ["itemSources"] = {
         [237850] = "Crafted",
-        [239656] = "Crafted",
-        [249287] = "Vaelgor & Ezzorak",
-        [249304] = "Salhadaar",
-        [249324] = "Belo'ren",
-        [249976] = "Catalyst",
-        [249977] = "Catalyst |  Raid |  Vault",
-        [249979] = "Catalyst |  Raid |  Vault",
-        [249980] = "Raid",
-        [249982] = "Catalyst |  Raid |  Vault",
-        [250247] = "Midnight Falls",
-        [251084] = "Windrunner Spire",
+        [244584] = "Crafted",
+        [252258] = "Voidscar Arena",
+        [268209] = "The Coiled Altar",
+        [268233] = "Sszorak",
+        [268249] = "Vashnik the Malignant",
+        [268253] = "The Coiled Altar",
+        [268254] = "Vashnik the Malignant",
+        [268265] = "Ula'tek",
+        [270173] = "The Coiled Altar",
+        [270175] = "Ula'tek",
+        [271481] = "Catalyst &ndash; The Coiled Altar",
+        [271482] = "Catalyst &ndash; The Coiled Altar",
+        [271483] = "Catalyst &ndash; Voidscar Arena",
+        [271484] = "Catalyst &ndash; King's Rest",
+        [271486] = "Catalyst &ndash; Ula'tek",
       },
     },
     ["shaman/restoration"] = {
@@ -4260,110 +4521,132 @@ ns.BisData = {
       ["itemsBySlot"] = {
         ["Head"] = {
           {
-            ["itemID"] = 249914,
-            ["source"] = "Midnight Falls",
+            ["itemID"] = 271483,
+            ["source"] = "Raid",
           },
         },
         ["Neck"] = {
           {
-            ["itemID"] = 249337,
-            ["source"] = "Fallen-King Salhadaar",
+            ["itemID"] = 268265,
+            ["source"] = "Ula'tek",
           },
         },
         ["Shoulders"] = {
           {
-            ["itemID"] = 249977,
-            ["source"] = "Raid",
+            ["itemID"] = 271481,
+            ["source"] = "The Coiled Altar",
           },
         },
         ["Back"] = {
           {
-            ["itemID"] = 249974,
-            ["source"] = "Catalyst",
+            ["itemID"] = 268253,
+            ["source"] = "The Coiled Altar",
           },
         },
         ["Chest"] = {
           {
-            ["itemID"] = 249982,
-            ["source"] = "Raid",
+            ["itemID"] = 271486,
+            ["source"] = "Ula'tek",
           },
         },
         ["Wrist"] = {
           {
-            ["itemID"] = 249975,
-            ["source"] = "Catalyst",
+            ["itemID"] = 251200,
+            ["source"] = "The Blinding Vale",
           },
         },
         ["Hands"] = {
           {
-            ["itemID"] = 249980,
-            ["source"] = "Raid",
+            ["itemID"] = 271484,
+            ["source"] = "Nymrissa Wavebinder",
           },
         },
         ["Waist"] = {
           {
-            ["itemID"] = 249303,
-            ["source"] = "Lightblinded Vanguard",
+            ["itemID"] = 268216,
+            ["source"] = "Nek'zali the Soulcoiler",
           },
         },
         ["Legs"] = {
           {
-            ["itemID"] = 249978,
-            ["source"] = "Raid",
+            ["itemID"] = 271482,
+            ["source"] = "The Coiled Altar",
           },
         },
         ["Feet"] = {
           {
-            ["itemID"] = 249320,
-            ["source"] = "Imperator Averzian",
+            ["itemID"] = 251125,
+            ["source"] = "Murder Row",
           },
         },
         ["Ring"] = {
           {
-            ["itemID"] = 249919,
-            ["source"] = "Belo'ren",
+            ["itemID"] = 268252,
+            ["source"] = "Sszorak",
           },
           {
-            ["itemID"] = 193708,
-            ["source"] = "Algeth'ar Academy",
+            ["itemID"] = 159459,
+            ["source"] = "Kings Rest",
+          },
+        },
+        ["Trinket"] = {
+          {
+            ["itemID"] = 270162,
+            ["source"] = "Nek'zali the Soulcoiler",
+          },
+          {
+            ["itemID"] = 270164,
+            ["source"] = "The Lost Explorers",
+          },
+        },
+        ["Weapon"] = {
+          {
+            ["itemID"] = 271092,
+            ["source"] = "Ula'tek",
           },
         },
         ["Offhand"] = {
           {
-            ["itemID"] = 251202,
-            ["source"] = "Nexus Point Xenas",
+            ["itemID"] = 268196,
+            ["source"] = "The Lost Explorers",
           },
         },
       },
       ["bisItems"] = {
-        [193708] = true,
-        [249303] = true,
-        [249320] = true,
-        [249337] = true,
-        [249914] = true,
-        [249919] = true,
-        [249974] = true,
-        [249975] = true,
-        [249977] = true,
-        [249978] = true,
-        [249980] = true,
-        [249982] = true,
-        [251202] = true,
+        [159459] = true,
+        [251125] = true,
+        [251200] = true,
+        [268196] = true,
+        [268216] = true,
+        [268252] = true,
+        [268253] = true,
+        [268265] = true,
+        [270162] = true,
+        [270164] = true,
+        [271092] = true,
+        [271481] = true,
+        [271482] = true,
+        [271483] = true,
+        [271484] = true,
+        [271486] = true,
       },
       ["itemSources"] = {
-        [193708] = "Algeth'ar Academy",
-        [249303] = "Lightblinded Vanguard",
-        [249320] = "Imperator Averzian",
-        [249337] = "Fallen-King Salhadaar",
-        [249914] = "Midnight Falls",
-        [249919] = "Belo'ren",
-        [249974] = "Catalyst",
-        [249975] = "Catalyst",
-        [249977] = "Raid",
-        [249978] = "Raid",
-        [249980] = "Raid",
-        [249982] = "Raid",
-        [251202] = "Nexus Point Xenas",
+        [159459] = "Kings Rest",
+        [251125] = "Murder Row",
+        [251200] = "The Blinding Vale",
+        [268196] = "The Lost Explorers",
+        [268216] = "Nek'zali the Soulcoiler",
+        [268252] = "Sszorak",
+        [268253] = "The Coiled Altar",
+        [268265] = "Ula'tek",
+        [270162] = "Nek'zali the Soulcoiler",
+        [270164] = "The Lost Explorers",
+        [271092] = "Ula'tek",
+        [271481] = "The Coiled Altar",
+        [271482] = "The Coiled Altar",
+        [271483] = "Raid",
+        [271484] = "Nymrissa Wavebinder",
+        [271486] = "Ula'tek",
       },
     },
     ["warlock/affliction"] = {
@@ -4374,132 +4657,131 @@ ns.BisData = {
       ["itemsBySlot"] = {
         ["Weapon"] = {
           {
-            ["itemID"] = 249283,
-            ["source"] = "Belo'ren",
+            ["itemID"] = 271092,
+            ["source"] = "Ula'tek",
           },
         },
         ["Offhand"] = {
           {
-            ["itemID"] = 249276,
-            ["source"] = "Vorasius",
+            ["itemID"] = 245769,
+            ["source"] = "Crafting",
           },
         },
         ["Head"] = {
           {
-            ["itemID"] = 250042,
-            ["source"] = "Tier Set",
+            ["itemID"] = 271874,
+            ["source"] = "Ula'tek",
           },
         },
         ["Neck"] = {
           {
-            ["itemID"] = 249368,
-            ["source"] = "Crown of the Cosmos",
+            ["itemID"] = 268265,
+            ["source"] = "Ula'tek",
           },
         },
         ["Shoulders"] = {
           {
-            ["itemID"] = 251085,
-            ["source"] = "Windrunner Spire",
+            ["itemID"] = 271544,
+            ["source"] = "The Lost Explorers",
           },
         },
         ["Back"] = {
           {
-            ["itemID"] = 239656,
-            ["source"] = "Crafting",
+            ["itemID"] = 268253,
+            ["source"] = "The Coiled Altar",
           },
         },
         ["Chest"] = {
           {
-            ["itemID"] = 250045,
-            ["source"] = "Tier Set",
+            ["itemID"] = 271549,
+            ["source"] = "Vashnik the Malignant",
           },
         },
         ["Wrist"] = {
           {
             ["itemID"] = 239648,
-            ["source"] = "Crafted",
+            ["source"] = "Crafting",
           },
         },
         ["Hands"] = {
           {
-            ["itemID"] = 250043,
-            ["source"] = "Tier Set",
+            ["itemID"] = 271547,
+            ["source"] = "Entombed Sentinels",
           },
         },
         ["Waist"] = {
           {
-            ["itemID"] = 249376,
-            ["source"] = "Belo'ren",
+            ["itemID"] = 239649,
+            ["source"] = "Crafting",
           },
         },
         ["Legs"] = {
           {
-            ["itemID"] = 250041,
-            ["source"] = "Tier Set",
+            ["itemID"] = 271545,
+            ["source"] = "Sszorak",
           },
         },
         ["Feet"] = {
           {
-            ["itemID"] = 249305,
-            ["source"] = "Vaelgor",
+            ["itemID"] = 268255,
+            ["source"] = "The Coiled Altar",
           },
         },
         ["Ring"] = {
           {
-            ["itemID"] = 249920,
-            ["source"] = "Midnight Falls",
+            ["itemID"] = 268252,
+            ["source"] = "Sszorak",
           },
           {
-            ["itemID"] = 251217,
-            ["source"] = "Nexus Point Xenas",
+            ["itemID"] = 273792,
+            ["source"] = "The Coiled Altar",
           },
         },
         ["Trinket"] = {
           {
-            ["itemID"] = 249343,
-            ["source"] = "Chimaerus",
+            ["itemID"] = 270164,
+            ["source"] = "The Lost Explorers",
           },
           {
-            ["itemID"] = 250144,
-            ["source"] = "Windrunner Spire",
+            ["itemID"] = 273649,
+            ["source"] = "",
           },
         },
       },
       ["bisItems"] = {
         [239648] = true,
-        [239656] = true,
-        [249276] = true,
-        [249283] = true,
-        [249305] = true,
-        [249343] = true,
-        [249368] = true,
-        [249376] = true,
-        [249920] = true,
-        [250041] = true,
-        [250042] = true,
-        [250043] = true,
-        [250045] = true,
-        [250144] = true,
-        [251085] = true,
-        [251217] = true,
+        [239649] = true,
+        [245769] = true,
+        [268252] = true,
+        [268253] = true,
+        [268255] = true,
+        [268265] = true,
+        [270164] = true,
+        [271092] = true,
+        [271544] = true,
+        [271545] = true,
+        [271547] = true,
+        [271549] = true,
+        [271874] = true,
+        [273649] = true,
+        [273792] = true,
       },
       ["itemSources"] = {
-        [239648] = "Crafted",
-        [239656] = "Crafting",
-        [249276] = "Vorasius",
-        [249283] = "Belo'ren",
-        [249305] = "Vaelgor",
-        [249343] = "Chimaerus",
-        [249368] = "Crown of the Cosmos",
-        [249376] = "Belo'ren",
-        [249920] = "Midnight Falls",
-        [250041] = "Tier Set",
-        [250042] = "Tier Set",
-        [250043] = "Tier Set",
-        [250045] = "Tier Set",
-        [250144] = "Windrunner Spire",
-        [251085] = "Windrunner Spire",
-        [251217] = "Nexus Point Xenas",
+        [239648] = "Crafting",
+        [239649] = "Crafting",
+        [245769] = "Crafting",
+        [268252] = "Sszorak",
+        [268253] = "The Coiled Altar",
+        [268255] = "The Coiled Altar",
+        [268265] = "Ula'tek",
+        [270164] = "The Lost Explorers",
+        [271092] = "Ula'tek",
+        [271544] = "The Lost Explorers",
+        [271545] = "Sszorak",
+        [271547] = "Entombed Sentinels",
+        [271549] = "Vashnik the Malignant",
+        [271874] = "Ula'tek",
+        [273792] = "The Coiled Altar",
       },
     },
     ["warlock/demonology"] = {
@@ -4510,132 +4792,130 @@ ns.BisData = {
       ["itemsBySlot"] = {
         ["Weapon"] = {
           {
-            ["itemID"] = 249283,
-            ["source"] = "Belo'ren",
+            ["itemID"] = 271092,
+            ["source"] = "Ula'tek",
           },
         },
         ["Offhand"] = {
           {
-            ["itemID"] = 249276,
-            ["source"] = "Vorasius",
+            ["itemID"] = 268197,
+            ["source"] = "Entombed Sentinels",
           },
         },
         ["Head"] = {
           {
-            ["itemID"] = 250042,
-            ["source"] = "Tier Set",
+            ["itemID"] = 271874,
+            ["source"] = "Ula'tek",
           },
         },
         ["Neck"] = {
           {
-            ["itemID"] = 249368,
-            ["source"] = "Crown of the Cosmos",
+            ["itemID"] = 268265,
+            ["source"] = "Ula'tek",
           },
         },
         ["Shoulders"] = {
           {
-            ["itemID"] = 249328,
-            ["source"] = "Belo'ren",
+            ["itemID"] = 271544,
+            ["source"] = "The Lost Explorers",
           },
         },
         ["Back"] = {
           {
-            ["itemID"] = 239656,
-            ["source"] = "Crafting",
+            ["itemID"] = 268253,
+            ["source"] = "The Coiled Altar",
           },
         },
         ["Chest"] = {
           {
-            ["itemID"] = 250045,
-            ["source"] = "Tier Set",
+            ["itemID"] = 271549,
+            ["source"] = "Vashnik the Malignant",
           },
         },
         ["Wrist"] = {
           {
-            ["itemID"] = 249315,
-            ["source"] = "Vorasius",
+            ["itemID"] = 239648,
+            ["source"] = "Crafting",
           },
         },
         ["Hands"] = {
           {
-            ["itemID"] = 250043,
-            ["source"] = "Tier Set",
+            ["itemID"] = 271547,
+            ["source"] = "Entombed Sentinels",
           },
         },
         ["Waist"] = {
           {
-            ["itemID"] = 249376,
-            ["source"] = "Belo'ren",
+            ["itemID"] = 239649,
+            ["source"] = "Crafting",
           },
         },
         ["Legs"] = {
           {
-            ["itemID"] = 250041,
-            ["source"] = "Tier Set",
+            ["itemID"] = 271545,
+            ["source"] = "Sszorak",
           },
         },
         ["Feet"] = {
           {
-            ["itemID"] = 249305,
-            ["source"] = "Vaelgor",
+            ["itemID"] = 268255,
+            ["source"] = "The Coiled Altar",
           },
         },
         ["Ring"] = {
           {
-            ["itemID"] = 249920,
-            ["source"] = "Midnight Falls",
+            ["itemID"] = 268252,
+            ["source"] = "Sszorak",
           },
           {
-            ["itemID"] = 241140,
-            ["source"] = "Crafting",
+            ["itemID"] = 158366,
+            ["source"] = "",
           },
         },
         ["Trinket"] = {
           {
-            ["itemID"] = 249343,
-            ["source"] = "Chimaerus",
+            ["itemID"] = 270164,
+            ["source"] = "The Lost Explorers",
           },
           {
-            ["itemID"] = 249346,
-            ["source"] = "Vaelgor",
+            ["itemID"] = 250215,
+            ["source"] = "",
           },
         },
       },
       ["bisItems"] = {
-        [239656] = true,
-        [241140] = true,
-        [249276] = true,
-        [249283] = true,
-        [249305] = true,
-        [249315] = true,
-        [249328] = true,
-        [249343] = true,
-        [249346] = true,
-        [249368] = true,
-        [249376] = true,
-        [249920] = true,
-        [250041] = true,
-        [250042] = true,
-        [250043] = true,
-        [250045] = true,
+        [158366] = true,
+        [239648] = true,
+        [239649] = true,
+        [250215] = true,
+        [268197] = true,
+        [268252] = true,
+        [268253] = true,
+        [268255] = true,
+        [268265] = true,
+        [270164] = true,
+        [271092] = true,
+        [271544] = true,
+        [271545] = true,
+        [271547] = true,
+        [271549] = true,
+        [271874] = true,
       },
       ["itemSources"] = {
-        [239656] = "Crafting",
-        [241140] = "Crafting",
-        [249276] = "Vorasius",
-        [249283] = "Belo'ren",
-        [249305] = "Vaelgor",
-        [249315] = "Vorasius",
-        [249328] = "Belo'ren",
-        [249343] = "Chimaerus",
-        [249346] = "Vaelgor",
-        [249368] = "Crown of the Cosmos",
-        [249376] = "Belo'ren",
-        [249920] = "Midnight Falls",
-        [250041] = "Tier Set",
-        [250042] = "Tier Set",
-        [250043] = "Tier Set",
-        [250045] = "Tier Set",
+        [239648] = "Crafting",
+        [239649] = "Crafting",
+        [268197] = "Entombed Sentinels",
+        [268252] = "Sszorak",
+        [268253] = "The Coiled Altar",
+        [268255] = "The Coiled Altar",
+        [268265] = "Ula'tek",
+        [270164] = "The Lost Explorers",
+        [271092] = "Ula'tek",
+        [271544] = "The Lost Explorers",
+        [271545] = "Sszorak",
+        [271547] = "Entombed Sentinels",
+        [271549] = "Vashnik the Malignant",
+        [271874] = "Ula'tek",
       },
     },
     ["warlock/destruction"] = {
@@ -4646,132 +4926,131 @@ ns.BisData = {
       ["itemsBySlot"] = {
         ["Weapon"] = {
           {
-            ["itemID"] = 249283,
-            ["source"] = "Belo'ren",
+            ["itemID"] = 271092,
+            ["source"] = "Ula'tek",
           },
         },
         ["Offhand"] = {
           {
-            ["itemID"] = 249276,
-            ["source"] = "Vorasius",
+            ["itemID"] = 273779,
+            ["source"] = "",
           },
         },
         ["Head"] = {
           {
-            ["itemID"] = 250042,
-            ["source"] = "Tier Set",
+            ["itemID"] = 271874,
+            ["source"] = "Ula'tek",
           },
         },
         ["Neck"] = {
           {
-            ["itemID"] = 249368,
-            ["source"] = "Crown of the Cosmos",
+            ["itemID"] = 268265,
+            ["source"] = "Ula'tek",
           },
         },
         ["Shoulders"] = {
           {
-            ["itemID"] = 249328,
-            ["source"] = "Belo'ren",
+            ["itemID"] = 271544,
+            ["source"] = "The Lost Explorers",
           },
         },
         ["Back"] = {
           {
-            ["itemID"] = 239656,
-            ["source"] = "Crafting",
+            ["itemID"] = 268253,
+            ["source"] = "The Coiled Altar",
           },
         },
         ["Chest"] = {
           {
-            ["itemID"] = 250045,
-            ["source"] = "Tier Set",
+            ["itemID"] = 271549,
+            ["source"] = "Vashnik the Malignant",
           },
         },
         ["Wrist"] = {
           {
-            ["itemID"] = 249315,
-            ["source"] = "Vorasius",
+            ["itemID"] = 239648,
+            ["source"] = "Crafting",
           },
         },
         ["Hands"] = {
           {
-            ["itemID"] = 250043,
-            ["source"] = "Tier Set",
+            ["itemID"] = 271547,
+            ["source"] = "Entombed Sentinels",
           },
         },
         ["Waist"] = {
           {
-            ["itemID"] = 249376,
-            ["source"] = "Belo'ren",
+            ["itemID"] = 239649,
+            ["source"] = "Crafting",
           },
         },
         ["Legs"] = {
           {
-            ["itemID"] = 250041,
-            ["source"] = "Tier Set",
+            ["itemID"] = 271545,
+            ["source"] = "Sszorak",
           },
         },
         ["Feet"] = {
           {
-            ["itemID"] = 249305,
-            ["source"] = "Vaelgor",
+            ["itemID"] = 268255,
+            ["source"] = "The Coiled Altar",
           },
         },
         ["Ring"] = {
           {
-            ["itemID"] = 249920,
-            ["source"] = "Midnight Falls",
+            ["itemID"] = 268252,
+            ["source"] = "Sszorak",
           },
           {
-            ["itemID"] = 241140,
-            ["source"] = "Crafting",
+            ["itemID"] = 273792,
+            ["source"] = "The Coiled Altar",
           },
         },
         ["Trinket"] = {
           {
-            ["itemID"] = 249343,
-            ["source"] = "Chimaerus",
+            ["itemID"] = 270164,
+            ["source"] = "The Lost Explorers",
           },
           {
-            ["itemID"] = 249346,
-            ["source"] = "Vaelgor",
+            ["itemID"] = 270167,
+            ["source"] = "Nymrissa Wavecaller",
           },
         },
       },
       ["bisItems"] = {
-        [239656] = true,
-        [241140] = true,
-        [249276] = true,
-        [249283] = true,
-        [249305] = true,
-        [249315] = true,
-        [249328] = true,
-        [249343] = true,
-        [249346] = true,
-        [249368] = true,
-        [249376] = true,
-        [249920] = true,
-        [250041] = true,
-        [250042] = true,
-        [250043] = true,
-        [250045] = true,
+        [239648] = true,
+        [239649] = true,
+        [268252] = true,
+        [268253] = true,
+        [268255] = true,
+        [268265] = true,
+        [270164] = true,
+        [270167] = true,
+        [271092] = true,
+        [271544] = true,
+        [271545] = true,
+        [271547] = true,
+        [271549] = true,
+        [271874] = true,
+        [273779] = true,
+        [273792] = true,
       },
       ["itemSources"] = {
-        [239656] = "Crafting",
-        [241140] = "Crafting",
-        [249276] = "Vorasius",
-        [249283] = "Belo'ren",
-        [249305] = "Vaelgor",
-        [249315] = "Vorasius",
-        [249328] = "Belo'ren",
-        [249343] = "Chimaerus",
-        [249346] = "Vaelgor",
-        [249368] = "Crown of the Cosmos",
-        [249376] = "Belo'ren",
-        [249920] = "Midnight Falls",
-        [250041] = "Tier Set",
-        [250042] = "Tier Set",
-        [250043] = "Tier Set",
-        [250045] = "Tier Set",
+        [239648] = "Crafting",
+        [239649] = "Crafting",
+        [268252] = "Sszorak",
+        [268253] = "The Coiled Altar",
+        [268255] = "The Coiled Altar",
+        [268265] = "Ula'tek",
+        [270164] = "The Lost Explorers",
+        [270167] = "Nymrissa Wavecaller",
+        [271092] = "Ula'tek",
+        [271544] = "The Lost Explorers",
+        [271545] = "Sszorak",
+        [271547] = "Entombed Sentinels",
+        [271549] = "Vashnik the Malignant",
+        [271874] = "Ula'tek",
+        [273792] = "The Coiled Altar",
       },
     },
     ["warrior/arms"] = {
@@ -4782,32 +5061,32 @@ ns.BisData = {
       ["itemsBySlot"] = {
         ["Head"] = {
           {
-            ["itemID"] = 249952,
-            ["source"] = "Tier Set",
+            ["itemID"] = 271456,
+            ["source"] = "The Twin Fangs",
           },
         },
         ["Neck"] = {
           {
-            ["itemID"] = 249337,
-            ["source"] = "Fallen-King Salhadaar",
+            ["itemID"] = 268265,
+            ["source"] = "Ula'tek",
           },
         },
         ["Shoulders"] = {
           {
-            ["itemID"] = 249950,
-            ["source"] = "Tier Set",
+            ["itemID"] = 271454,
+            ["source"] = "BoE Trash Drop",
           },
         },
         ["Back"] = {
           {
-            ["itemID"] = 239656,
-            ["source"] = "Crafted",
+            ["itemID"] = 268253,
+            ["source"] = "The Coiled Altar",
           },
         },
         ["Chest"] = {
           {
-            ["itemID"] = 249955,
-            ["source"] = "Chimaerus",
+            ["itemID"] = 271459,
+            ["source"] = "The Coiled Altar",
           },
         },
         ["Wrist"] = {
@@ -4818,88 +5097,88 @@ ns.BisData = {
         },
         ["Hands"] = {
           {
-            ["itemID"] = 251081,
-            ["source"] = "Windrunner Spire",
+            ["itemID"] = 271457,
+            ["source"] = "Entombed Sentinels",
           },
         },
         ["Waist"] = {
           {
-            ["itemID"] = 249949,
-            ["source"] = "Catalyst",
+            ["itemID"] = 268259,
+            ["source"] = "The Coiled Altar",
           },
         },
         ["Legs"] = {
           {
-            ["itemID"] = 249951,
-            ["source"] = "Tier Set",
+            ["itemID"] = 271455,
+            ["source"] = "Ula'tek",
           },
         },
         ["Feet"] = {
           {
-            ["itemID"] = 249381,
-            ["source"] = "Chimaerus",
+            ["itemID"] = 237828,
+            ["source"] = "Crafted",
           },
         },
         ["Ring"] = {
           {
-            ["itemID"] = 249920,
-            ["source"] = "Midnight Falls",
+            ["itemID"] = 252258,
+            ["source"] = "Voidscar Arena",
           },
           {
-            ["itemID"] = 251217,
-            ["source"] = "Nexus Point Xenas",
+            ["itemID"] = 273792,
+            ["source"] = "Altar of Fangs",
           },
         },
         ["Trinket"] = {
           {
-            ["itemID"] = 249343,
-            ["source"] = "Chimaerus",
+            ["itemID"] = 270173,
+            ["source"] = "The Coiled Altar",
           },
           {
-            ["itemID"] = 249342,
-            ["source"] = "Vorasius",
+            ["itemID"] = 270175,
+            ["source"] = "Ula'tek",
           },
         },
         ["Weapon"] = {
           {
-            ["itemID"] = 249296,
-            ["source"] = "Midnight Falls",
+            ["itemID"] = 268213,
+            ["source"] = "The Coiled Altar",
           },
         },
       },
       ["bisItems"] = {
+        [237828] = true,
         [237834] = true,
-        [239656] = true,
-        [249296] = true,
-        [249337] = true,
-        [249342] = true,
-        [249343] = true,
-        [249381] = true,
-        [249920] = true,
-        [249949] = true,
-        [249950] = true,
-        [249951] = true,
-        [249952] = true,
-        [249955] = true,
-        [251081] = true,
-        [251217] = true,
+        [252258] = true,
+        [268213] = true,
+        [268253] = true,
+        [268259] = true,
+        [268265] = true,
+        [270173] = true,
+        [270175] = true,
+        [271454] = true,
+        [271455] = true,
+        [271456] = true,
+        [271457] = true,
+        [271459] = true,
+        [273792] = true,
       },
       ["itemSources"] = {
+        [237828] = "Crafted",
         [237834] = "Crafted",
-        [239656] = "Crafted",
-        [249296] = "Midnight Falls",
-        [249337] = "Fallen-King Salhadaar",
-        [249342] = "Vorasius",
-        [249343] = "Chimaerus",
-        [249381] = "Chimaerus",
-        [249920] = "Midnight Falls",
-        [249949] = "Catalyst",
-        [249950] = "Tier Set",
-        [249951] = "Tier Set",
-        [249952] = "Tier Set",
-        [249955] = "Chimaerus",
-        [251081] = "Windrunner Spire",
-        [251217] = "Nexus Point Xenas",
+        [252258] = "Voidscar Arena",
+        [268213] = "The Coiled Altar",
+        [268253] = "The Coiled Altar",
+        [268259] = "The Coiled Altar",
+        [268265] = "Ula'tek",
+        [270173] = "The Coiled Altar",
+        [270175] = "Ula'tek",
+        [271454] = "BoE Trash Drop",
+        [271455] = "Ula'tek",
+        [271456] = "The Twin Fangs",
+        [271457] = "Entombed Sentinels",
+        [271459] = "The Coiled Altar",
+        [273792] = "Altar of Fangs",
       },
     },
     ["warrior/fury"] = {
@@ -4910,32 +5189,32 @@ ns.BisData = {
       ["itemsBySlot"] = {
         ["Head"] = {
           {
-            ["itemID"] = 249952,
-            ["source"] = "Tier Set",
+            ["itemID"] = 271456,
+            ["source"] = "Murder Row",
           },
         },
         ["Neck"] = {
           {
-            ["itemID"] = 250247,
-            ["source"] = "Midnight Falls",
+            ["itemID"] = 268265,
+            ["source"] = "Ula'tek",
           },
         },
         ["Shoulders"] = {
           {
-            ["itemID"] = 249950,
-            ["source"] = "Tier Set",
+            ["itemID"] = 271454,
+            ["source"] = "Murder Row",
           },
         },
         ["Back"] = {
           {
-            ["itemID"] = 258575,
-            ["source"] = "Skyreach",
+            ["itemID"] = 268253,
+            ["source"] = "The Coiled Altar",
           },
         },
         ["Chest"] = {
           {
-            ["itemID"] = 249955,
-            ["source"] = "Chimaerus",
+            ["itemID"] = 271459,
+            ["source"] = "The Coiled Altar",
           },
         },
         ["Wrist"] = {
@@ -4946,52 +5225,52 @@ ns.BisData = {
         },
         ["Hands"] = {
           {
-            ["itemID"] = 151332,
-            ["source"] = "Seat of the Triumvirate",
+            ["itemID"] = 271457,
+            ["source"] = "Den of Nalorakk",
           },
         },
         ["Waist"] = {
           {
-            ["itemID"] = 249949,
-            ["source"] = "Catalyst",
+            ["itemID"] = 268259,
+            ["source"] = "The Coiled Altar",
           },
         },
         ["Legs"] = {
           {
-            ["itemID"] = 249951,
-            ["source"] = "Tier Set",
+            ["itemID"] = 271455,
+            ["source"] = "Ula'tek",
           },
         },
         ["Feet"] = {
           {
-            ["itemID"] = 249954,
-            ["source"] = "Catalyst",
+            ["itemID"] = 268260,
+            ["source"] = "Vashnik the Malignant",
           },
         },
         ["Ring"] = {
           {
-            ["itemID"] = 249920,
-            ["source"] = "Midnight Falls",
+            ["itemID"] = 252258,
+            ["source"] = "Voidscar Arena",
           },
           {
-            ["itemID"] = 193708,
-            ["source"] = "Algeth'ar Academy",
+            ["itemID"] = 268249,
+            ["source"] = "Vashnik the Malignant",
           },
         },
         ["Trinket"] = {
           {
-            ["itemID"] = 249343,
-            ["source"] = "Chimaerus",
+            ["itemID"] = 270173,
+            ["source"] = "The Coiled Altar",
           },
           {
-            ["itemID"] = 249342,
-            ["source"] = "Vorasius",
+            ["itemID"] = 270175,
+            ["source"] = "Ula'tek",
           },
         },
         ["Weapon"] = {
           {
-            ["itemID"] = 249277,
-            ["source"] = "Lightblinded Vanguard",
+            ["itemID"] = 268213,
+            ["source"] = "The Coiled Altar",
           },
         },
         ["Offhand"] = {
@@ -5002,40 +5281,40 @@ ns.BisData = {
         },
       },
       ["bisItems"] = {
-        [151332] = true,
-        [193708] = true,
         [237834] = true,
         [237846] = true,
-        [249277] = true,
-        [249342] = true,
-        [249343] = true,
-        [249920] = true,
-        [249949] = true,
-        [249950] = true,
-        [249951] = true,
-        [249952] = true,
-        [249954] = true,
-        [249955] = true,
-        [250247] = true,
-        [258575] = true,
+        [252258] = true,
+        [268213] = true,
+        [268249] = true,
+        [268253] = true,
+        [268259] = true,
+        [268260] = true,
+        [268265] = true,
+        [270173] = true,
+        [270175] = true,
+        [271454] = true,
+        [271455] = true,
+        [271456] = true,
+        [271457] = true,
+        [271459] = true,
       },
       ["itemSources"] = {
-        [151332] = "Seat of the Triumvirate",
-        [193708] = "Algeth'ar Academy",
         [237834] = "Crafted",
         [237846] = "Crafted",
-        [249277] = "Lightblinded Vanguard",
-        [249342] = "Vorasius",
-        [249343] = "Chimaerus",
-        [249920] = "Midnight Falls",
-        [249949] = "Catalyst",
-        [249950] = "Tier Set",
-        [249951] = "Tier Set",
-        [249952] = "Tier Set",
-        [249954] = "Catalyst",
-        [249955] = "Chimaerus",
-        [250247] = "Midnight Falls",
-        [258575] = "Skyreach",
+        [252258] = "Voidscar Arena",
+        [268213] = "The Coiled Altar",
+        [268249] = "Vashnik the Malignant",
+        [268253] = "The Coiled Altar",
+        [268259] = "The Coiled Altar",
+        [268260] = "Vashnik the Malignant",
+        [268265] = "Ula'tek",
+        [270173] = "The Coiled Altar",
+        [270175] = "Ula'tek",
+        [271454] = "Murder Row",
+        [271455] = "Ula'tek",
+        [271456] = "Murder Row",
+        [271457] = "Den of Nalorakk",
+        [271459] = "The Coiled Altar",
       },
     },
     ["warrior/protection"] = {
@@ -5046,132 +5325,132 @@ ns.BisData = {
       ["itemsBySlot"] = {
         ["Weapon"] = {
           {
-            ["itemID"] = 249295,
-            ["source"] = "Crown of the Cosmos",
+            ["itemID"] = 268209,
+            ["source"] = "The Coiled Altar",
           },
         },
         ["Offhand"] = {
           {
-            ["itemID"] = 249921,
-            ["source"] = "Belo'ren",
+            ["itemID"] = 268196,
+            ["source"] = "The Lost Explorers",
           },
         },
         ["Head"] = {
           {
-            ["itemID"] = 249952,
+            ["itemID"] = 271456,
             ["source"] = "Tier Set",
           },
         },
         ["Neck"] = {
           {
-            ["itemID"] = 249368,
-            ["source"] = "Crown of the Cosmos",
+            ["itemID"] = 268265,
+            ["source"] = "Ula'tek",
           },
         },
         ["Shoulders"] = {
           {
-            ["itemID"] = 249950,
+            ["itemID"] = 271454,
             ["source"] = "Tier Set",
           },
         },
         ["Back"] = {
           {
-            ["itemID"] = 249370,
-            ["source"] = "Vaelgor & Ezzorak",
+            ["itemID"] = 268253,
+            ["source"] = "The Coiled Altar",
           },
         },
         ["Chest"] = {
           {
-            ["itemID"] = 249955,
+            ["itemID"] = 271459,
             ["source"] = "Tier Set",
           },
         },
         ["Wrist"] = {
           {
-            ["itemID"] = 249326,
-            ["source"] = "Imperator Averzian",
+            ["itemID"] = 237834,
+            ["source"] = "Crafting Blacksmithing",
           },
         },
         ["Hands"] = {
           {
-            ["itemID"] = 151332,
-            ["source"] = "Seat of the Triumvirate",
+            ["itemID"] = 271457,
+            ["source"] = "Tier Set",
           },
         },
         ["Waist"] = {
           {
-            ["itemID"] = 249331,
-            ["source"] = "Vaelgor & Ezzorak",
+            ["itemID"] = 268259,
+            ["source"] = "The Coiled Altar",
           },
         },
         ["Legs"] = {
           {
-            ["itemID"] = 249951,
-            ["source"] = "Tier Set",
+            ["itemID"] = 271878,
+            ["source"] = "Ula'tek",
           },
         },
         ["Feet"] = {
           {
-            ["itemID"] = 249381,
-            ["source"] = "Chimaerus",
+            ["itemID"] = 237828,
+            ["source"] = "Crafting Blacksmithing",
           },
         },
         ["Ring"] = {
           {
-            ["itemID"] = 249920,
-            ["source"] = "Midnight Falls",
+            ["itemID"] = 268252,
+            ["source"] = "Sszorak",
           },
           {
-            ["itemID"] = 151311,
-            ["source"] = "Seat of the Triumvirate",
+            ["itemID"] = 268249,
+            ["source"] = "Vashnik the Malignant",
           },
         },
         ["Trinket"] = {
           {
-            ["itemID"] = 249343,
-            ["source"] = "Chimaerus",
+            ["itemID"] = 270173,
+            ["source"] = "The Coiled Altar",
           },
           {
-            ["itemID"] = 249342,
-            ["source"] = "Vorasius",
+            ["itemID"] = 270175,
+            ["source"] = "Ula'tek",
           },
         },
       },
       ["bisItems"] = {
-        [151311] = true,
-        [151332] = true,
-        [249295] = true,
-        [249326] = true,
-        [249331] = true,
-        [249342] = true,
-        [249343] = true,
-        [249368] = true,
-        [249370] = true,
-        [249381] = true,
-        [249920] = true,
-        [249921] = true,
-        [249950] = true,
-        [249951] = true,
-        [249952] = true,
-        [249955] = true,
+        [237828] = true,
+        [237834] = true,
+        [268196] = true,
+        [268209] = true,
+        [268249] = true,
+        [268252] = true,
+        [268253] = true,
+        [268259] = true,
+        [268265] = true,
+        [270173] = true,
+        [270175] = true,
+        [271454] = true,
+        [271456] = true,
+        [271457] = true,
+        [271459] = true,
+        [271878] = true,
       },
       ["itemSources"] = {
-        [151311] = "Seat of the Triumvirate",
-        [151332] = "Seat of the Triumvirate",
-        [249295] = "Crown of the Cosmos",
-        [249326] = "Imperator Averzian",
-        [249331] = "Vaelgor & Ezzorak",
-        [249342] = "Vorasius",
-        [249343] = "Chimaerus",
-        [249368] = "Crown of the Cosmos",
-        [249370] = "Vaelgor & Ezzorak",
-        [249381] = "Chimaerus",
-        [249920] = "Midnight Falls",
-        [249921] = "Belo'ren",
-        [249950] = "Tier Set",
-        [249951] = "Tier Set",
-        [249952] = "Tier Set",
-        [249955] = "Tier Set",
+        [237828] = "Crafting Blacksmithing",
+        [237834] = "Crafting Blacksmithing",
+        [268196] = "The Lost Explorers",
+        [268209] = "The Coiled Altar",
+        [268249] = "Vashnik the Malignant",
+        [268252] = "Sszorak",
+        [268253] = "The Coiled Altar",
+        [268259] = "The Coiled Altar",
+        [268265] = "Ula'tek",
+        [270173] = "The Coiled Altar",
+        [270175] = "Ula'tek",
+        [271454] = "Tier Set",
+        [271456] = "Tier Set",
+        [271457] = "Tier Set",
+        [271459] = "Tier Set",
+        [271878] = "Ula'tek",
       },
     },
   },

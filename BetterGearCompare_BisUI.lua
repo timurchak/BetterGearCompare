@@ -4,7 +4,7 @@ local L = ns.L
 
 ns.BisUI = {}
 
--- Upgrade tracks derived from shared Constants (6/8 = maxBonus for each track)
+-- Upgrade tracks of the current season, at their highest rank
 local UPGRADE_TRACKS = {}
 for _, track in ipairs(ns.Constants.upgradeTracks) do
   UPGRADE_TRACKS[#UPGRADE_TRACKS + 1] = {
@@ -14,7 +14,12 @@ for _, track in ipairs(ns.Constants.upgradeTracks) do
   }
 end
 
-local selectedTrackIndex = 4 -- Myth by default
+local selectedTrackIndex = #UPGRADE_TRACKS
+for index, track in ipairs(UPGRADE_TRACKS) do
+  if track.key == "MYTH" then
+    selectedTrackIndex = index -- Myth by default
+  end
+end
 
 local SLOT_ORDER = {
   "Head", "Neck", "Shoulders", "Back", "Chest", "Wrist",
@@ -59,6 +64,10 @@ local FRAME_HEIGHT = 550
 
 local function ItemString(itemID)
   local track = UPGRADE_TRACKS[selectedTrackIndex]
+  if not track then
+    return "item:" .. itemID
+  end
+
   if track.contextBonus then
     return "item:" .. itemID .. "::::::::::::2:" .. track.bonusID .. ":" .. track.contextBonus
   else
