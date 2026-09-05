@@ -1,0 +1,263 @@
+{
+  "schema": 1,
+  "environment": "live",
+  "wowBuild": "12.1.0.69587",
+  "contentHash": "cbc0c66f5fe503d7e455cd2463fe0e28",
+  "sourceGeneratedAt": "2026-09-04T19:49:23.735Z",
+  "sources": {
+    "metadata": "https://www.raidbots.com/static/data/live/metadata.json",
+    "upgradeSets": "https://www.raidbots.com/static/data/live/bonus-upgrade-sets.json"
+  },
+  "groups": [
+    {
+      "groupID": 614,
+      "track": "Adventurer",
+      "currencyID": 3442,
+      "currencyName": "Adventurer Mistcrest",
+      "ranks": [
+        {
+          "rank": 1,
+          "maxRank": 6,
+          "bonusID": 12817,
+          "itemLevel": 266,
+          "cost": 0
+        },
+        {
+          "rank": 2,
+          "maxRank": 6,
+          "bonusID": 12818,
+          "itemLevel": 269,
+          "cost": 20
+        },
+        {
+          "rank": 3,
+          "maxRank": 6,
+          "bonusID": 12819,
+          "itemLevel": 272,
+          "cost": 20
+        },
+        {
+          "rank": 4,
+          "maxRank": 6,
+          "bonusID": 12820,
+          "itemLevel": 276,
+          "cost": 20
+        },
+        {
+          "rank": 5,
+          "maxRank": 6,
+          "bonusID": 12821,
+          "itemLevel": 279,
+          "cost": 20
+        },
+        {
+          "rank": 6,
+          "maxRank": 6,
+          "bonusID": 12822,
+          "itemLevel": 282,
+          "cost": 20
+        }
+      ]
+    },
+    {
+      "groupID": 615,
+      "track": "Veteran",
+      "currencyID": 3443,
+      "currencyName": "Veteran Mistcrest",
+      "ranks": [
+        {
+          "rank": 1,
+          "maxRank": 6,
+          "bonusID": 12825,
+          "itemLevel": 279,
+          "cost": 0
+        },
+        {
+          "rank": 2,
+          "maxRank": 6,
+          "bonusID": 12826,
+          "itemLevel": 282,
+          "cost": 20
+        },
+        {
+          "rank": 3,
+          "maxRank": 6,
+          "bonusID": 12827,
+          "itemLevel": 285,
+          "cost": 20
+        },
+        {
+          "rank": 4,
+          "maxRank": 6,
+          "bonusID": 12828,
+          "itemLevel": 289,
+          "cost": 20
+        },
+        {
+          "rank": 5,
+          "maxRank": 6,
+          "bonusID": 12829,
+          "itemLevel": 292,
+          "cost": 20
+        },
+        {
+          "rank": 6,
+          "maxRank": 6,
+          "bonusID": 12830,
+          "itemLevel": 295,
+          "cost": 20
+        }
+      ]
+    },
+    {
+      "groupID": 616,
+      "track": "Champion",
+      "currencyID": 3444,
+      "currencyName": "Champion Mistcrest",
+      "ranks": [
+        {
+          "rank": 1,
+          "maxRank": 6,
+          "bonusID": 12833,
+          "itemLevel": 292,
+          "cost": 0
+        },
+        {
+          "rank": 2,
+          "maxRank": 6,
+          "bonusID": 12834,
+          "itemLevel": 295,
+          "cost": 20
+        },
+        {
+          "rank": 3,
+          "maxRank": 6,
+          "bonusID": 12835,
+          "itemLevel": 298,
+          "cost": 20
+        },
+        {
+          "rank": 4,
+          "maxRank": 6,
+          "bonusID": 12836,
+          "itemLevel": 302,
+          "cost": 20
+        },
+        {
+          "rank": 5,
+          "maxRank": 6,
+          "bonusID": 12837,
+          "itemLevel": 305,
+          "cost": 20
+        },
+        {
+          "rank": 6,
+          "maxRank": 6,
+          "bonusID": 12838,
+          "itemLevel": 308,
+          "cost": 20
+        }
+      ]
+    },
+    {
+      "groupID": 617,
+      "track": "Hero",
+      "currencyID": 3445,
+      "currencyName": "Hero Mistcrest",
+      "ranks": [
+        {
+          "rank": 1,
+          "maxRank": 6,
+          "bonusID": 12841,
+          "itemLevel": 305,
+          "cost": 0
+        },
+        {
+          "rank": 2,
+          "maxRank": 6,
+          "bonusID": 12842,
+          "itemLevel": 308,
+          "cost": 20
+        },
+        {
+          "rank": 3,
+          "maxRank": 6,
+          "bonusID": 12843,
+          "itemLevel": 311,
+          "cost": 20
+        },
+        {
+          "rank": 4,
+          "maxRank": 6,
+          "bonusID": 12844,
+          "itemLevel": 315,
+          "cost": 20
+        },
+        {
+          "rank": 5,
+          "maxRank": 6,
+          "bonusID": 12845,
+          "itemLevel": 318,
+          "cost": 20
+        },
+        {
+          "rank": 6,
+          "maxRank": 6,
+          "bonusID": 12846,
+          "itemLevel": 321,
+          "cost": 20
+        }
+      ]
+    },
+    {
+      "groupID": 618,
+      "track": "Myth",
+      "currencyID": 3446,
+      "currencyName": "Myth Mistcrest",
+      "ranks": [
+        {
+          "rank": 1,
+          "maxRank": 6,
+          "bonusID": 12849,
+          "itemLevel": 318,
+          "cost": 0
+        },
+        {
+          "rank": 2,
+          "maxRank": 6,
+          "bonusID": 12850,
+          "itemLevel": 321,
+          "cost": 20
+        },
+        {
+          "rank": 3,
+          "maxRank": 6,
+          "bonusID": 12851,
+          "itemLevel": 324,
+          "cost": 20
+        },
+        {
+          "rank": 4,
+          "maxRank": 6,
+          "bonusID": 12852,
+          "itemLevel": 328,
+          "cost": 20
+        },
+        {
+          "rank": 5,
+          "maxRank": 6,
+          "bonusID": 12853,
+          "itemLevel": 331,
+          "cost": 20
+        },
+        {
+          "rank": 6,
+          "maxRank": 6,
+          "bonusID": 12854,
+          "itemLevel": 334,
+          "cost": 20
+        }
+      ]
+    }
+  ]
+}

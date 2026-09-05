@@ -1,0 +1,162 @@
+{
+  "schema": 1,
+  "verdict": "PASS",
+  "reason": "all required live-client categories and projection checks passed",
+  "manifestBuild": "12.1.0.69587",
+  "fixtureCount": 8,
+  "passedFixtureCount": 8,
+  "missingCategories": [],
+  "results": [
+    {
+      "fixtureID": "armor-271484-1788611710",
+      "category": "armor",
+      "passed": true,
+      "errors": [],
+      "projections": [
+        {
+          "targetRank": 4,
+          "targetBonusID": 12844,
+          "statDelta": [],
+          "errors": []
+        },
+        {
+          "targetRank": 5,
+          "targetBonusID": 12845,
+          "statDelta": [],
+          "errors": []
+        },
+        {
+          "targetRank": 6,
+          "targetBonusID": 12846,
+          "statDelta": [],
+          "errors": []
+        }
+      ]
+    },
+    {
+      "fixtureID": "crafted-244577-1788611752",
+      "category": "crafted",
+      "passed": true,
+      "errors": [],
+      "projections": []
+    },
+    {
+      "fixtureID": "neck-251173-1788611719",
+      "category": "neck",
+      "passed": true,
+      "errors": [],
+      "projections": [
+        {
+          "targetRank": 4,
+          "targetBonusID": 12844,
+          "statDelta": [],
+          "errors": []
+        },
+        {
+          "targetRank": 5,
+          "targetBonusID": 12845,
+          "statDelta": [],
+          "errors": []
+        },
+        {
+          "targetRank": 6,
+          "targetBonusID": 12846,
+          "statDelta": [],
+          "errors": []
+        }
+      ]
+    },
+    {
+      "fixtureID": "neck-272147-1788611694",
+      "category": "neck",
+      "passed": true,
+      "errors": [],
+      "projections": [
+        {
+          "targetRank": 3,
+          "targetBonusID": 12835,
+          "statDelta": [],
+          "errors": []
+        },
+        {
+          "targetRank": 4,
+          "targetBonusID": 12836,
+          "statDelta": [],
+          "errors": []
+        },
+        {
+          "targetRank": 5,
+          "targetBonusID": 12837,
+          "statDelta": [],
+          "errors": []
+        },
+        {
+          "targetRank": 6,
+          "targetBonusID": 12838,
+          "statDelta": [],
+          "errors": []
+        }
+      ]
+    },
+    {
+      "fixtureID": "old-season-249982-1788612926",
+      "category": "old-season",
+      "passed": true,
+      "errors": [],
+      "projections": []
+    },
+    {
+      "fixtureID": "ring-158366-1788612012",
+      "category": "ring",
+      "passed": true,
+      "errors": [],
+      "projections": [
+        {
+          "targetRank": 6,
+          "targetBonusID": 12838,
+          "statDelta": [],
+          "errors": []
+        }
+      ]
+    },
+    {
+      "fixtureID": "socketed-272147-1788611699",
+      "category": "socketed",
+      "passed": true,
+      "errors": [],
+      "projections": [
+        {
+          "targetRank": 3,
+          "targetBonusID": 12835,
+          "statDelta": [],
+          "errors": []
+        },
+        {
+          "targetRank": 4,
+          "targetBonusID": 12836,
+          "statDelta": [],
+          "errors": []
+        },
+        {
+          "targetRank": 5,
+          "targetBonusID": 12837,
+          "statDelta": [],
+          "errors": []
+        },
+        {
+          "targetRank": 6,
+          "targetBonusID": 12838,
+          "statDelta": [],
+          "errors": []
+        }
+      ]
+    },
+    {
+      "fixtureID": "upgrade-like-ineligible-271482-1788612045",
+      "category": "upgrade-like-ineligible",
+      "passed": true,
+      "errors": [],
+      "projections": []
+    }
+  ]
+}

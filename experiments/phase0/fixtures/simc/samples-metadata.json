@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "seed": 20260905,
+  "strategy": "Latin hypercube over primary/secondary budget plus transformed four-stat simplex; explicit DR-edge and held-out extrapolation points",
+  "counts": {
+    "train": 400,
+    "validation": 128,
+    "testInDomain": 160,
+    "testExtrapolation": 32,
+    "total": 720
+  },
+  "domain": {
+    "primary": [
+      1600,
+      2300
+    ],
+    "totalSecondary": [
+      2600,
+      3900
+    ],
+    "individualSecondary": [
+      0,
+      3900
+    ]
+  },
+  "notes": [
+    "Ratings are whole numbers and exactly sum to total_secondary.",
+    "The weapon, items, effects, talents, race, APL, and encounter remain fixed by the pinned SimC profile.",
+    "Extrapolation samples are never used for fit or hyperparameter choice."
+  ]
+}

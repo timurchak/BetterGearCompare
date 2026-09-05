@@ -1,0 +1,41 @@
+{
+  "schema": 1,
+  "versionLine": "SimulationCraft 1210-01 for World of Warcraft 12.1.0.69587 Live (hotfix 2026-09-04/69587, git build midnight aa9de89, no-networking)",
+  "simcCommit": "aa9de89aac3dd5ead4976db1f091483f462687b4",
+  "wowBuild": "12.1.0.69587",
+  "profile": "profiles/MID2/MID2_Paladin_Retribution.simc",
+  "profileSHA256": "864e857c5d8cdbaa5b03939f077fcb657a4784aa",
+  "configuration": {
+    "fightStyle": "Patchwerk/default profile behavior",
+    "fixedTime": true,
+    "maxTimeSeconds": 300,
+    "varyCombatLength": 0.2,
+    "deterministic": true,
+    "seed": 20260905,
+    "threads": 8
+  },
+  "batches": [
+    {
+      "batch": "train-validation",
+      "states": 528,
+      "iterationsRequested": 400,
+      "maxTimeSeconds": 300,
+      "varyCombatLength": 0.2,
+      "wallSeconds": 134.50243079988286,
+      "profilesetsFile": "profilesets-train-validation.simc",
+      "rawJsonFile": "simc-train-validation.json",
+      "textLogFile": "simc-train-validation.log"
+    },
+    {
+      "batch": "test",
+      "states": 192,
+      "iterationsRequested": 2000,
+      "maxTimeSeconds": 300,
+      "varyCombatLength": 0.2,
+      "wallSeconds": 219.76165550015867,
+      "profilesetsFile": "profilesets-test.simc",
+      "rawJsonFile": "simc-test.json",
+      "textLogFile": "simc-test.log"
+    }
+  ]
+}

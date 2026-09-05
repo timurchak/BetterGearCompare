@@ -1,0 +1,45 @@
+{
+  "schema": 1,
+  "verdict": "PASS",
+  "scope": "offline revision/key state-machine only; not a WoW client integration result",
+  "explicitScenarios": [
+    {
+      "name": "uncached-then-refresh",
+      "passed": true
+    },
+    {
+      "name": "hide-before-resolve",
+      "passed": true
+    },
+    {
+      "name": "item-change-before-resolve",
+      "passed": true
+    },
+    {
+      "name": "coalesced-two-tooltips",
+      "passed": true
+    },
+    {
+      "name": "equipment-refresh-idempotent",
+      "passed": true
+    },
+    {
+      "name": "repeated-pending-postcalls-coalesce",
+      "passed": true
+    },
+    {
+      "name": "rapid-item-churn-reverse-callback-order",
+      "passed": true
+    }
+  ],
+  "randomized": {
+    "seed": 20260905,
+    "actions": 100000,
+    "passed": true,
+    "renders": 15281,
+    "refreshes": 311,
+    "staleRejections": 758,
+    "duplicateSuppressions": 3889,
+    "repositoryEntries": 2048
+  }
+}

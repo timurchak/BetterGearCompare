@@ -1,0 +1,12 @@
+{
+  "repository": "https://github.com/simulationcraft/simc.git",
+  "branch": "midnight",
+  "commit": "aa9de89aac3dd5ead4976db1f091483f462687b4",
+  "reportedVersion": "SimulationCraft 1210-01",
+  "wowBuild": "12.1.0.69587",
+  "hotfixDate": "2026-09-04",
+  "profile": "profiles/MID2/MID2_Paladin_Retribution.simc",
+  "profileActor": "MID2_Paladin_Retribution_Herald",
+  "profilePurpose": "Single-target ordinary non-weapon stat response; all existing item, weapon, talent, APL, and effect context remains fixed."
+}
+

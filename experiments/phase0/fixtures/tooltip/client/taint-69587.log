@@ -1,0 +1,14 @@
+9/5 14:45:38.868  Execution tainted by Phase0UpgradeProbe while reading global SLASH_PHASE0UPGRADEPROBE1 (<table: 000001185901d290>) - Interface/AddOns/Blizzard_ChatFrameBase/Shared/ChatFrameUtil.lua:730
+9/5 14:45:38.868      Interface/AddOns/Blizzard_ChatFrameBase/Shared/ChatFrameUtil.lua:730
+9/5 14:45:38.868      secureexecuterange()
+9/5 14:45:38.868      Interface/AddOns/Blizzard_ChatFrameBase/Shared/ChatFrameUtil.lua:744 ImportListToHash()
+9/5 14:45:38.868      Interface/AddOns/Blizzard_ChatFrameBase/Shared/ChatFrameUtil.lua:750 ImportAllListsToHash()
+9/5 14:45:38.868      Interface/AddOns/Blizzard_ChatFrameBase/Shared/ChatFrameEditBox.lua:247 ChatFrame1EditBox:ParseText()
+9/5 14:45:38.868      Interface/AddOns/Blizzard_ChatFrameBase/Shared/ChatFrameEditBox.lua:441
+9/5 14:45:38.868  Execution tainted by Phase0TooltipProbe while reading global SLASH_PHASE0TOOLTIPPROBE1 (<table: 000001185901d290>) - Interface/AddOns/Blizzard_ChatFrameBase/Shared/ChatFrameUtil.lua:730
+9/5 14:45:38.868      Interface/AddOns/Blizzard_ChatFrameBase/Shared/ChatFrameUtil.lua:730
+9/5 14:45:38.868      secureexecuterange()
+9/5 14:45:38.868      Interface/AddOns/Blizzard_ChatFrameBase/Shared/ChatFrameUtil.lua:744 ImportListToHash()
+9/5 14:45:38.868      Interface/AddOns/Blizzard_ChatFrameBase/Shared/ChatFrameUtil.lua:750 ImportAllListsToHash()
+9/5 14:45:38.868      Interface/AddOns/Blizzard_ChatFrameBase/Shared/ChatFrameEditBox.lua:247 ChatFrame1EditBox:ParseText()
+9/5 14:45:38.868      Interface/AddOns/Blizzard_ChatFrameBase/Shared/ChatFrameEditBox.lua:441

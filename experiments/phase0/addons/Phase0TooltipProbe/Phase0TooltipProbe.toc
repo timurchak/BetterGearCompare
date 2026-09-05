@@ -1,0 +1,9 @@
+## Interface: 120100
+## Title: Phase 0 Tooltip Lifecycle Probe
+## Notes: Isolated Blizzard-tooltip lifecycle diagnostic; not a production addon.
+## Author: Better Gear Advisor research
+## Version: 0.1.0
+## SavedVariables: Phase0TooltipProbeDB
+
+Phase0TooltipProbe.lua
+

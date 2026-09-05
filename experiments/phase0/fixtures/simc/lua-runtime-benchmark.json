@@ -1,0 +1,67 @@
+{
+  "schema": 1,
+  "runtime": "Lua 5.1.5",
+  "iterations": 1000000,
+  "elapsedSeconds": 10.357411,
+  "microsecondsPerEvaluation": 10.357411,
+  "accumulator": 12316754.172064243,
+  "outOfDomainRejected": true,
+  "outOfDomainReason": "OUT_OF_DOMAIN",
+  "vectors": [
+    {
+      "input": [
+        1950,
+        650,
+        700,
+        800,
+        850
+      ],
+      "logScore": 12.294698947829815
+    },
+    {
+      "input": [
+        1750,
+        1100,
+        500,
+        650,
+        700
+      ],
+      "logScore": 12.23612647560219
+    },
+    {
+      "input": [
+        2250,
+        450,
+        900,
+        1200,
+        750
+      ],
+      "logScore": 12.414425032385656
+    },
+    {
+      "input": [
+        2050,
+        950,
+        1000,
+        550,
+        600
+      ],
+      "logScore": 12.331527575450172
+    },
+    {
+      "input": [
+        1850,
+        700,
+        550,
+        950,
+        1050
+      ],
+      "logScore": 12.306992828908928
+    }
+  ],
+  "luaSourceSha256": "2640fc56a795f29d28ef15e13c34a47e223960b0240e8cb0a82d9b0738695333",
+  "selectedRidge": 0.01,
+  "maxPythonLuaAbsoluteLogScoreDifference": 8.881784197001252e-15,
+  "crossLanguageAgreementTolerance": 1e-10,
+  "verdict": "PASS"
+}

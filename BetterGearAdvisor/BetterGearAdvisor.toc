@@ -1,0 +1,61 @@
+## Interface: 120100
+## Title: Better Gear Advisor
+## Notes: Conservative equipment-state advisor with evidence-gated model support.
+## Author: timurchak
+## Version: 0.1.0-dev
+## SavedVariables: BetterGearAdvisorDB
+
+Core\Constants.lua
+Core\TableUtil.lua
+Core\ReasonCodes.lua
+Core\Keys.lua
+Core\Result.lua
+
+Generated\ArtifactManifest.lua
+Generated\SeasonManifest.lua
+Generated\CapabilityManifest.lua
+
+Domain\ItemLink.lua
+Domain\ItemSnapshot.lua
+Domain\EffectClassifier.lua
+Domain\EquipmentState.lua
+Domain\CandidateEnumerator.lua
+Domain\StateValidator.lua
+Domain\ModelRegistry.lua
+Domain\OrdinaryModel.lua
+Domain\ConfidencePolicy.lua
+Domain\RankProjector.lua
+Domain\GearEvaluator.lua
+
+Ports\ItemDataPort.lua
+Ports\InventoryPort.lua
+Ports\CharacterPort.lua
+Ports\UpgradePort.lua
+Ports\TooltipPort.lua
+Ports\ClockPort.lua
+
+Blizzard\ClockAdapter.lua
+Blizzard\UpgradeAdapter.lua
+Blizzard\InventoryAdapter.lua
+Blizzard\CharacterAdapter.lua
+Blizzard\ItemDataAdapter.lua
+Blizzard\EventAdapter.lua
+Blizzard\TooltipAdapter.lua
+
+Application\Revisions.lua
+Application\ItemRepository.lua
+Application\EquipmentRepository.lua
+Application\EvaluationCache.lua
+Application\FutureRankResolver.lua
+Application\EvaluationCoordinator.lua
+Application\Diagnostics.lua
+Application\Settings.lua
+
+Locale\enUS.lua
+Locale\ruRU.lua
+
+Presentation\TooltipPresenter.lua
+Presentation\TooltipController.lua
+Presentation\DebugPresenter.lua
+
+Bootstrap.lua

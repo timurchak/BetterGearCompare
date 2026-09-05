@@ -1,0 +1,10 @@
+## Interface: 120100
+## Title: Phase 0 Upgrade Projection Probe
+## Notes: Isolated diagnostic fixture capture; not a production addon.
+## Author: Better Gear Advisor research
+## Version: 0.1.0
+## SavedVariables: Phase0UpgradeProbeDB
+
+Manifest.lua
+Phase0UpgradeProbe.lua
+

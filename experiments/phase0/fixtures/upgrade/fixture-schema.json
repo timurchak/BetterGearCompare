@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Phase0UpgradeProbe client fixture",
+  "type": "object",
+  "required": ["fixtureID", "category", "capture"],
+  "properties": {
+    "fixtureID": { "type": "string", "minLength": 1 },
+    "category": {
+      "enum": [
+        "armor",
+        "ring",
+        "neck",
+        "socketed",
+        "crafted",
+        "old-season",
+        "upgrade-like-ineligible"
+      ]
+    },
+    "capture": {
+      "type": "object",
+      "required": ["tooltipParsingUsed", "source", "projections"],
+      "properties": {
+        "tooltipParsingUsed": { "const": false },
+        "source": {
+          "type": "object",
+          "required": [
+            "itemID",
+            "fullItemLink",
+            "currentItemLevel",
+            "upgradeBonusID",
+            "currentlyUpgradeable"
+          ]
+        },
+        "projections": { "type": "array" }
+      }
+    }
+  }
+}
+

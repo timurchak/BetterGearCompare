@@ -1,0 +1,207 @@
+{
+  "schema": 1,
+  "verdict": "FAIL",
+  "recommendedCompactFamily": "piecewise-additive-interactions",
+  "selectionRule": "Among polynomial and piecewise compact models: highest held-out >0.5pp winner agreement, then lowest p95 delta error. Local/KNN are challengers but retain the training dataset at runtime.",
+  "materialityPP": 0.5,
+  "samples": {
+    "train": 400,
+    "validation": 128,
+    "testInDomain": 160,
+    "testExtrapolation": 32
+  },
+  "heldoutItemLikePairs": 1336,
+  "validationItemLikePairs": 896,
+  "models": {
+    "fixed-linear-weights": {
+      "family": "fixed-linear-weights",
+      "validationMSELog": 0.0028505341774228915,
+      "hyperparameters": {
+        "ridge": 0.0
+      },
+      "storedNumbers": 16,
+      "estimatedBinaryBytes64": 128,
+      "heldout": {
+        "pairs": 1336,
+        "medianAbsoluteDeltaErrorPP": 4.023921200488309,
+        "p95AbsoluteDeltaErrorPP": 11.04837611197471,
+        "maxAbsoluteDeltaErrorPP": 19.725479465767226,
+        "meanAbsoluteDeltaErrorNearZeroPP": 2.8592361509699638,
+        "nearZeroPairs": 72,
+        "winnerAgreementAll": 0.7395209580838323,
+        "winnerAgreementWeightedNearEqual": 0.7050805452292441,
+        "winnerAgreementTrueGT1PP": 0.7603993344425957,
+        "winnerAgreementTrueGT0_5PP": 0.7515822784810127,
+        "uncertaintyPP": 11.588089502971224,
+        "confidentRecommendations": 26,
+        "confidentCoverage": 0.019461077844311378,
+        "confidentWinnerAgreement": 1.0,
+        "confidentFalsePositiveUpgrades": 0,
+        "confidentFalsePositiveUpgradeRate": 0.0,
+        "intervalPolicyOverlapsZero": 0,
+        "extrapolationRawMedianDpsErrorPercent": 3.9136755094355085,
+        "extrapolationRawMaxDpsErrorPercent": 16.483046751730782,
+        "extrapolationGuardRecommendedCoverage": 0.0,
+        "validationSurrogateP95PP": 11.18362256751329,
+        "heldoutSimPairErrorP95PP": 0.4044669354579338,
+        "stateLogRMSE": 0.05495268741016171
+      }
+    },
+    "quadratic-polynomial": {
+      "family": "quadratic-polynomial",
+      "validationMSELog": 0.0005373872048086332,
+      "hyperparameters": {
+        "ridge": 0.1
+      },
+      "storedNumbers": 31,
+      "estimatedBinaryBytes64": 248,
+      "heldout": {
+        "pairs": 1336,
+        "medianAbsoluteDeltaErrorPP": 1.7127703549150588,
+        "p95AbsoluteDeltaErrorPP": 6.962987267489688,
+        "maxAbsoluteDeltaErrorPP": 11.584497621733474,
+        "meanAbsoluteDeltaErrorNearZeroPP": 1.993321697255811,
+        "nearZeroPairs": 72,
+        "winnerAgreementAll": 0.8922155688622755,
+        "winnerAgreementWeightedNearEqual": 0.8376703841387856,
+        "winnerAgreementTrueGT1PP": 0.9217970049916805,
+        "winnerAgreementTrueGT0_5PP": 0.9129746835443038,
+        "uncertaintyPP": 6.788774217984995,
+        "confidentRecommendations": 384,
+        "confidentCoverage": 0.2874251497005988,
+        "confidentWinnerAgreement": 0.9921875,
+        "confidentFalsePositiveUpgrades": 3,
+        "confidentFalsePositiveUpgradeRate": 0.015384615384615385,
+        "intervalPolicyOverlapsZero": 0,
+        "extrapolationRawMedianDpsErrorPercent": 1.8900141707679272,
+        "extrapolationRawMaxDpsErrorPercent": 10.057770968662455,
+        "extrapolationGuardRecommendedCoverage": 0.0,
+        "validationSurrogateP95PP": 6.384307282527061,
+        "heldoutSimPairErrorP95PP": 0.4044669354579338,
+        "stateLogRMSE": 0.02186033070869318
+      }
+    },
+    "piecewise-additive-interactions": {
+      "family": "piecewise-additive-interactions",
+      "validationMSELog": 0.00019642231959044983,
+      "hyperparameters": {
+        "ridge": 0.0,
+        "knotsPerFeature": 4,
+        "pairInteractions": 10
+      },
+      "storedNumbers": 66,
+      "estimatedBinaryBytes64": 528,
+      "heldout": {
+        "pairs": 1336,
+        "medianAbsoluteDeltaErrorPP": 1.0476894492287925,
+        "p95AbsoluteDeltaErrorPP": 4.350737362540169,
+        "maxAbsoluteDeltaErrorPP": 7.508226863946606,
+        "meanAbsoluteDeltaErrorNearZeroPP": 1.4552354428090102,
+        "nearZeroPairs": 72,
+        "winnerAgreementAll": 0.9446107784431138,
+        "winnerAgreementWeightedNearEqual": 0.9021065675340768,
+        "winnerAgreementTrueGT1PP": 0.9700499168053245,
+        "winnerAgreementTrueGT0_5PP": 0.9596518987341772,
+        "uncertaintyPP": 5.041002576590304,
+        "confidentRecommendations": 619,
+        "confidentCoverage": 0.4633233532934132,
+        "confidentWinnerAgreement": 1.0,
+        "confidentFalsePositiveUpgrades": 0,
+        "confidentFalsePositiveUpgradeRate": 0.0,
+        "intervalPolicyOverlapsZero": 0,
+        "extrapolationRawMedianDpsErrorPercent": 1.3960415363869974,
+        "extrapolationRawMaxDpsErrorPercent": 3.6370439669171937,
+        "extrapolationGuardRecommendedCoverage": 0.0,
+        "validationSurrogateP95PP": 4.636535641132371,
+        "heldoutSimPairErrorP95PP": 0.4044669354579338,
+        "stateLogRMSE": 0.013901428468163137
+      },
+      "luaPayloadBytes": 3044,
+      "pythonScalarEvaluationMicroseconds": 72.14858120121062
+    },
+    "local-dynamic-weights": {
+      "family": "local-dynamic-weights",
+      "validationMSELog": 0.0003806517803252152,
+      "hyperparameters": {
+        "neighbors": 24,
+        "ridge": 0.0001
+      },
+      "storedNumbers": 2410,
+      "estimatedBinaryBytes64": 19280,
+      "heldout": {
+        "pairs": 1336,
+        "medianAbsoluteDeltaErrorPP": 1.2883184626137405,
+        "p95AbsoluteDeltaErrorPP": 5.911907379951678,
+        "maxAbsoluteDeltaErrorPP": 11.572979642638453,
+        "meanAbsoluteDeltaErrorNearZeroPP": 1.9498281758840017,
+        "nearZeroPairs": 72,
+        "winnerAgreementAll": 0.9116766467065869,
+        "winnerAgreementWeightedNearEqual": 0.8655514250309789,
+        "winnerAgreementTrueGT1PP": 0.9392678868552413,
+        "winnerAgreementTrueGT0_5PP": 0.928006329113924,
+        "uncertaintyPP": 5.2434949946719875,
+        "confidentRecommendations": 561,
+        "confidentCoverage": 0.4199101796407186,
+        "confidentWinnerAgreement": 0.9910873440285205,
+        "confidentFalsePositiveUpgrades": 3,
+        "confidentFalsePositiveUpgradeRate": 0.01090909090909091,
+        "intervalPolicyOverlapsZero": 0,
+        "extrapolationRawMedianDpsErrorPercent": 1.146785887580546,
+        "extrapolationRawMaxDpsErrorPercent": 15.278765743047579,
+        "extrapolationGuardRecommendedCoverage": 0.0,
+        "validationSurrogateP95PP": 4.839028059214054,
+        "heldoutSimPairErrorP95PP": 0.4044669354579338,
+        "stateLogRMSE": 0.020922823444270294
+      }
+    },
+    "inverse-distance-lookup": {
+      "family": "inverse-distance-lookup",
+      "validationMSELog": 0.001866866065518931,
+      "hyperparameters": {
+        "neighbors": 8,
+        "distancePower": 3
+      },
+      "storedNumbers": 2410,
+      "estimatedBinaryBytes64": 19280,
+      "heldout": {
+        "pairs": 1336,
+        "medianAbsoluteDeltaErrorPP": 3.2571594573409857,
+        "p95AbsoluteDeltaErrorPP": 9.61928962055075,
+        "maxAbsoluteDeltaErrorPP": 17.048056784706603,
+        "meanAbsoluteDeltaErrorNearZeroPP": 3.4782902047735775,
+        "nearZeroPairs": 72,
+        "winnerAgreementAll": 0.781437125748503,
+        "winnerAgreementWeightedNearEqual": 0.7286245353159851,
+        "winnerAgreementTrueGT1PP": 0.8119800332778702,
+        "winnerAgreementTrueGT0_5PP": 0.8006329113924051,
+        "uncertaintyPP": 9.293680458091933,
+        "confidentRecommendations": 170,
+        "confidentCoverage": 0.12724550898203593,
+        "confidentWinnerAgreement": 0.9941176470588236,
+        "confidentFalsePositiveUpgrades": 0,
+        "confidentFalsePositiveUpgradeRate": 0.0,
+        "intervalPolicyOverlapsZero": 0,
+        "extrapolationRawMedianDpsErrorPercent": 6.655843523711839,
+        "extrapolationRawMaxDpsErrorPercent": 14.738580352535632,
+        "extrapolationGuardRecommendedCoverage": 0.0,
+        "validationSurrogateP95PP": 8.889213522633998,
+        "heldoutSimPairErrorP95PP": 0.4044669354579338,
+        "stateLogRMSE": 0.04578400955708912
+      }
+    }
+  },
+  "gates": {
+    "winnerAgreementTrueGT1PP": false,
+    "winnerAgreementTrueGT0_5PP": false,
+    "confidentFalsePositiveUpgradeRateLTE0_5Pct": true,
+    "noRecommendationWhenIntervalOverlapsZero": true,
+    "compactFootprintUnder32KiB": true,
+    "outOfDomainFailClosedPolicy": true
+  },
+  "limitations": [
+    "One spec, one talent profile, one 60-second fixed single-target profile.",
+    "Weapon, special items, set bonuses, consumables, and all other profile context remain fixed.",
+    "Simulation uncertainty is estimated from SimC mean_error and added to validation residual P95.",
+    "A live Lua timing result is separate; Python scalar timing is diagnostic only."
+  ]
+}
